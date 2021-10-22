@@ -1,0 +1,44 @@
+<!-- File start -->
+<!-- File start -->
+<div module="Order_deferedpaymentguide" id="ec-orderform-defer-layer" class="ec-base-layer typeWide theme1" style="display:none;">
+    <h1>결제 수수료</h1>
+    <div class="wrap">
+        <div class="title">
+            <h2>결제 수수료</h2>
+        </div>
+        <div class="contents">
+            <div class="segment">
+                <div class="ec-base-box">
+                    결제 수수료 계산기준은<span id="{$calculation_standard_title_id}"></span>입니다.
+                    <div id="{$calculation_standard_comment_id}"></div>
+                </div>
+                <div id="{$deferred_payment_commission_list_id}">
+                    <div id="ec-order-company">{$shipping_company_select}</div>
+                    <div class="ec-base-table typeList">
+                        <table border="1">
+                            <caption>결제 수수료</caption>
+                            <colgroup>
+                                <col style="width:auto">
+                                <col style="width:30%">
+                            </colgroup>
+                            <thead>
+                                <th scope="col">범위</th>
+                                <th scope="col">수수료</th>
+                            </thead>
+                            <tbody id="{$deferred_payment_commission_list_body_id}">
+                                <tr class="ec-deferred-payment-commission" style="display:none;">
+                                    <td><span class="ec-deferred-commission-min-amount">{$min_amount}</span> 이상 ~ <span class="ec-deferred-commission-max-amount">{$max_amount}</span> 미만</td>
+                                    <td class="right"><span class="ec-deferred-commission-payment-commission">{$payment_commission}</span><span class="txtWord ec-deferred-commission-payment-commission-ref-price">{$payment_commission_ref_price}</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="ec-button-offLayer btnClose">닫기</button>
+</div>
+        <!-- File end -->
+
+<!-- File end -->

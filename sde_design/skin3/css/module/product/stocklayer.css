@@ -1,0 +1,6 @@
+/* 상품상세 > 재고수량 레이어 */
+.xans-product-stocklayer .layer { width:410px; }
+.xans-product-stocklayer .layer .header h3 { padding:0; border-bottom:0; text-align:left; color:#fff; }
+.xans-product-stocklayer .layer .content table { border:1px solid #d7d5d5; }
+.xans-product-stocklayer .layer .content thead th { text-align:center; }
+.xans-product-stocklayer .layer .content p { line-height:1.4; }

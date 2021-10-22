@@ -1,0 +1,53 @@
+/* 장바구니 토글 */
+.xans-order-basketpackage .ec-base-fold { margin:14px 0 0; }
+.xans-order-basketpackage .ec-base-fold.theme1 > .title { margin-bottom:0; }
+.xans-order-basketpackage .ec-base-fold.theme1 > .contents { background:none; }
+.xans-order-basketpackage .ec-base-fold.theme3 { margin-top:0; border-width:0 0 1px; }
+
+/* 국내배송/해외배송 탭 */
+.xans-order-basketpackage .ec-base-tab { margin:0 -7px; }
+
+/* 상품정보 */
+.xans-order-basketpackage { margin:7px 7px 0; padding:0 0 29px; }
+.xans-order-basketpackage .xans-order-empty { padding:30px 0; color:#212530; font-size:12px; text-align:center; }
+.xans-order-basketpackage .title.subTitle { display:block; padding:0; }
+.xans-order-basketpackage .title.subTitle:after { display:none; }
+.xans-order-basketpackage .title.subTitle h3 { display:block; padding:0 0 0 14px; line-height:43px; font-size:13px; border-bottom:1px solid #d5d5d5; color:#508bed; background-color:#f0f0f0; }
+
+/* 옵션변경 레이어 */
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo { padding-bottom:0; border-bottom:1px solid #d5d5d5; }
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .option > li { position:relative; }
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .option > li .name { display:block; padding:14px 100px 0 0; } /* flex �댁젣 */
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .option > li .btnBasic { position:absolute; right:0; top:14px; }
+.xans-order-basketpackage .ec-base-fold .ec-base-prdInfo .prdFoot { margin:0; padding:14px 0 7px; border-top:1px solid #ececec; font-weight:normal; color: #1b1b1b; background:#fff; }
+
+/* 배송비/합계 금액 */
+.xans-order-basketpackage .ec-base-fold.theme3 span.sale { font-size:13px; }
+.xans-order-basketpackage .ec-base-fold.theme3 span { font-size:11px; }
+
+/* 선택상품 제어버튼 */
+.xans-order-selectorder.ec-base-button.typeMulti { padding:7px 14px; }
+
+/* 결제금액 관련 */
+.xans-order-basketpackage .totalSummary { margin:7px 0 0; }
+.xans-order-basketpackage .totalSummary  + .ec-base-fold.theme1 { margin-top:7px; }
+.xans-order-basketpackage .totalSummary .ec-base-fold.theme2 { margin:0; border:0; }
+.xans-order-basketpackage .ec-base-fold.theme2 > .contents .ec-base-table td { padding-right:34px; }
+.xans-order-basketpackage .totalSummary .ec-base-fold > .contents .ec-base-table { border:1px solid #d5d5d5; border-width:0 1px 1px; }
+.xans-order-basketpackage .totalSummary .total { overflow:hidden; padding:14px 0 14px 14px; font-size:13px; font-weight:bold; color:#fff; background-color:#4a5164; }
+.xans-order-basketpackage .totalSummary .paymentPrice { float:right; padding:0 36px 0 0; text-align:right; }
+.xans-order-basketpackage .totalSummary .paymentPrice strong,
+.xans-order-basketpackage .totalSummary .paymentPrice span { display:inline-block; word-break:break-all; }
+.xans-order-basketpackage .totalSummary .title { overflow:hidden; padding:14px 34px 14px 14px; border:1px solid #d5d5d5; border-top:0; background-color:#f0f0f0; }
+.xans-order-basketpackage .totalSummary .title h3 { float:left; font-size:13px; font-weight:normal; color:#508bed; }
+.xans-order-basketpackage .totalSummary .title span { word-break:break-all; }
+.xans-order-basketpackage .totalSummary .title p,
+.xans-order-basketpackage .totalSummary .title.shipping > div { float:right; font-size:15px; color:#000; text-align:right; }
+.xans-order-basketpackage .totalSummary .title p .refer,
+.xans-order-basketpackage .totalSummary .title div .refer { display:inline-block; font-size:12px; word-break:break-all; }
+.xans-order-basketpackage .totalSummary .title:after { content:""; display:block; clear:both; }
+.xans-order-basketpackage .totalSummary .title.shipping { overflow:visible; }
+.xans-order-basketpackage .totalSummary .title .shippingArea { margin:7px 0 0; font-size:12px; }
+.xans-order-basketpackage .totalSummary .shippingFee .title { padding:0 20px 0 0; border:0; background:#fff; }
+
+#NaverChk_Button { margin:14px 0 0; }

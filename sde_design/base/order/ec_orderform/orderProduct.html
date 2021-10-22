@@ -1,0 +1,475 @@
+<!-- File start -->
+<!--
+        이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+        이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+        원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+-->
+<div id="ec-jigsaw-area-orderProduct" class="ec-base-fold eToggle">
+    <div id="ec-jigsaw-title-orderProduct" class="title">
+        <h2>주문상품</h2>
+        <span id="ec-jigsaw-heading-orderProduct" class="txtStrong gRight">{$item_count}개</span>
+    </div>
+    <div class="contents">
+        <!-- app tag -->
+        <div id="ec-orderform-orderProduct-head"></div>
+
+        <!-- 국내배송상품 주문내역 -->
+        <div class="orderArea {$default_display|display}">
+            <!-- 기본배송 -->
+            <div module="Order_normallist">
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 기본배송 {$product_delv_str}</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 기본배송 {$product_delv_str}</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+            </div>
+            <div class="totalPrice ec-base-fold eToggle {$normal_display|display}">
+                <div class="title">
+                    <h3>[기본배송]</h3>
+                </div>
+                <div class="contents">
+                    <div class="ec-base-table gCellNarrow">
+                        <table border="1">
+                            <caption>금액정보</caption>
+                            <colgroup>
+                                <col style="width:122px" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품구매금액</th>
+                                <td class="right"><span class="txtStrong">+{$normal_total_price_front_head}{$normal_total_product_price}{$normal_total_price_front_tail}<span class="{$normal_total_option_price_display|display}"> ({$normal_total_option_price})</span></span></td>
+                            </tr>
+                            <tr class="{$total_vat_price_display|display}">
+                                <th scope="row">부가세</th>
+                                <td class="right"><span class="txtStrong">+{$normal_total_price_front_head}{$normal_total_vat_price}{$normal_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr id="{$normal_total_benefit_price_area_id}" class="{$normal_total_benefit_price_display|display}">
+                                <th scope="row">할인금액</th>
+                                <td class="right"><span class="txtStrong">-{$normal_total_price_front_head}<span id="{$normal_total_benefit_price_id}">{$normal_total_benefit_price}</span>{$normal_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td class="right"><span class="txtStrong">+{$normal_total_price_front_head}<span id="{$domestic_ship_fee}">{$normal_total_delv_price}</span>{$normal_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr class="displaynone">
+                                <th scope="row">합계</th>
+                                <td class="right"><span class="txtStrong">{$normal_total_price_front_head}<span id="{$domestic_ship_fee_sum}">{$normal_total_price_front}</span>{$normal_total_price_front_tail} <span class="refer {$normal_total_ref_display|display}">({$normal_total_price_back_head}{$normal_total_price_back}{$normal_total_price_back_tail})</span></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 업체기본배송 -->
+            <div module="Order_supplierlist">
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 업체기본배송 {$product_delv_str}</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 업체기본배송 {$product_delv_str}</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+            </div>
+            <div class="totalPrice ec-base-fold eToggle {$supplier_display|display}">
+                <div class="title">
+                    <h3>[업체기본배송]</h3>
+                </div>
+                <div class="contents">
+                    <div class="ec-base-table gCellNarrow">
+                        <table border="1">
+                            <caption>금액정보</caption>
+                            <colgroup>
+                                <col style="width:122px" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품구매금액</th>
+                                <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}{$supplier_total_product_price}{$supplier_total_price_front_tail}<span class="{$supplier_total_option_price_display|display}"> ({$supplier_total_option_price})</span></span></td>
+                            </tr>
+                            <tr class="{$total_vat_price_display|display}">
+                                <th scope="row">부가세</th>
+                                <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}{$supplier_total_vat_price}{$supplier_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr id="{$supplier_total_benefit_price_area_id}" class="{$supplier_total_benefit_price_display|display}">
+                                <th scope="row">할인금액</th>
+                                <td class="right"><span class="txtStrong">-{$supplier_total_price_front_head}<span id="{$supplier_total_benefit_price_id}">{$supplier_total_benefit_price}</span>{$supplier_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}<span id="{$supplier_ship_fee_id}">{$supplier_total_delv_price}</span>{$supplier_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr class="displaynone">
+                                <th scope="row">합계</th>
+                                <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}<span id="{$supplier_ship_fee_sum_id}">{$supplier_total_price_front}</span>{$supplier_total_price_front_tail} <span class="refer {$supplier_total_ref_display|display}">({$supplier_total_price_back_head}{$supplier_total_price_back}{$supplier_total_price_back_tail})</span></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 개별배송 -->
+            <div module="Order_individuallist">
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 개별배송 {$product_delv_str}</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 개별배송 {$product_delv_str}</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+            </div>
+            <div class="totalPrice ec-base-fold eToggle {$individual_display|display}">
+                <div class="title">
+                    <h3>[개별배송]</h3>
+                </div>
+                <div class="contents">
+                    <div class="ec-base-table gCellNarrow">
+                        <table border="1">
+                            <caption>금액정보</caption>
+                            <colgroup>
+                                <col style="width:122px" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품구매금액</th>
+                                <td class="right"><span class="txtStrong">+{$individual_total_price_front_head}{$individual_total_product_price}{$individual_total_price_front_tail}<span class="{$individual_total_option_price_display|display}"> ({$individual_total_option_price})</span></span></td>
+                            </tr>
+                            <tr class="{$total_vat_price_display|display}">
+                                <th scope="row">부가세</th>
+                                <td class="right"><span class="txtStrong">+{$individual_total_price_front_head}{$individual_total_vat_price}{$individual_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr id="{$individual_total_benefit_price_area_id}" class="{$individual_total_benefit_price_display|display}">
+                                <th scope="row">할인금액</th>
+                                <td class="right"><span class="txtStrong">-{$individual_total_price_front_head}<span id="{$individual_total_benefit_price_id}">{$individual_total_benefit_price}</span>{$individual_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td class="right"><span class="txtStrong">+{$individual_total_price_front_head}<span id="{$individual_ship_fee_id}">{$individual_total_delv_price}</span>{$individual_total_price_front_tail}</span></td>
+                            </tr>
+                            <tr class="displaynone">
+                                <th scope="row">합계</th>
+                                <td class="right"><span class="txtStrong">{$individual_total_price_front_head}<span id="{$individual_ship_fee_sum_id}">{$individual_total_price_front}</span>{$individual_total_price_front_tail} <span class="refer {$individual_total_ref_display|display}">({$individual_total_price_back_head}{$individual_total_price_back}{$individual_total_price_back_tail})</span></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 해외배송상품 주문내역 -->
+        <div class="orderArea {$oversea_display|display}">
+            <div module="Order_oversealist">
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 해외배송</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="displaynone">{$chk_order_cancel_list}</div>
+                        <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" alt="" width="90" height="90" /></a></div>
+                        <div class="description">
+                            <strong class="prdName" title="상품명">{$set_product_icon} {$product_name_link}</strong>
+                            <ul class="info">
+                                <li class="{$allotment_display|display}">무이자할부 상품</li>
+                                <li title="유효기간" class="{$expiration_date_display|display}">{$expiration_date} 내 사용</li>
+                                <li title="옵션">
+                                    <p class="option {$option_str_display|display}">{$option_str}</p>
+                                    <ul class="option" module="Order_optionSet">
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                        <li>{$product_name} - {$option_str} ({$qty}개)</li>
+                                    </ul>
+                                </li>
+                                <li>수량: {$product_quantity_text}개</li>
+                                <li>
+                                    <span id="{$product_purchase_price_div_id}">상품구매금액: {$product_purchase_price_front_head}{$product_purchase_price_front}{$product_purchase_price_front_tail} </span>
+                                    <span class="{$product_purchase_ref_display|display}">({$product_purchase_price_back_head}{$product_purchase_price_back}{$product_purchase_price_back_tail})</span>
+                                </li>
+                                <li id="{$product_discount_price_div_id}" class="{$product_discount_price_display|display}">
+                                    할인금액: <span class="txtWarn">-{$product_discount_price_front_head}<span id="{$product_discount_price_front_id}">{$product_discount_price_front}</span>{$product_sale_price_front_tail} </span>
+                                    <span class="txtWarn {$product_discount_price_ref_display|display}">({$product_discount_price_back_head}{$product_discount_price_back}{$product_discount_price_back_tail})</span></span>
+                                </li>
+                                <li title="배송">{$product_ship_fee} / 해외배송</li>
+                                <li class="{$subscription_show_display|display}" title="배송주기">배송주기 : <span class="txtEm">{$subscription_option_str}</span></li>
+                                <li id="{$product_mileage_id}" class="mileage displaynone" title="적립금">{$product_mileage}</li>
+                                <li class="{$product_weight_display|display}">상품중량 : {$product_weight}kg * {$product_quantity_text}개 = {$total_product_weight}kg</li>
+                            </ul>
+                        </div>
+                        <button type="button" class="btnRemove {$product_delete_display|display}" {$btn_product_one_delete}>삭제</button>
+                    </div>
+                </div><!-- //참고 -->
+            </div>
+            <div class="totalPrice ec-base-fold eToggle {$oversea_display|display}">
+                <div class="title">
+                    <h3>[해외배송]</h3>
+                </div>
+                <div class="contents">
+                    <div class="ec-base-table gCellNarrow">
+                        <table border="1">
+                            <caption>금액정보</caption>
+                            <colgroup>
+                                <col style="width:122px" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">상품구매금액</th>
+                                <td class="right"><span class="txtStrong">+{$oversea_total_product_price}<span class="{$oversea_total_option_price_display|display}"> ({$oversea_total_option_price})</span></span></td>
+                            </tr>
+                            <tr class="{$total_vat_price_display|display}">
+                                <th scope="row">부가세</th>
+                                <td class="right"><span class="txtStrong">+{$price_unit_head}<span id="{$f_list_vat_price_id}">{$oversea_total_vat_price}</span>{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr id="{$oversea_total_benefit_price_area_id}" class="{$oversea_total_benefit_price_display|display}">
+                                <th scope="row">할인금액</th>
+                                <td class="right"><span class="txtStrong">-{$price_unit_head}<span id="{$oversea_total_benefit_price_id}">{$oversea_total_benefit_price}</span>{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td class="right"><span class="txtStrong">+{$price_unit_head}<span id="{$f_list_total_delv_price_id}">{$oversea_total_delv_price}</span>{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr class="displaynone">
+                                <th scope="row">합계</th>
+                                <td class="right"><span class="txtStrong">{$oversea_total_price_front_head}{$oversea_total_price_front}{$oversea_total_price_front_tail} <span class="refer {$oversea_total_price_ref_display|display}">({$oversea_total_price_back_head}{$oversea_total_price_back}{$oversea_total_price_back_tail})</span></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="totalWeight {$total_weight_display|display}">전체 상품중량 : <span>{$total_weight}kg</span></div>
+
+        <!-- app tag -->
+        <div id="ec-orderform-orderProduct-tail"></div>
+    </div>
+    <div id="{$direct_buy_order_product_element}" class="displaynone"></div>
+</div>
+<!-- File end -->

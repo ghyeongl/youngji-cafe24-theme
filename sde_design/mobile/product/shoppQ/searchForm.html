@@ -1,0 +1,39 @@
+<div module="product_searchdata">
+    <!--@css(/css/module/product/searchdata.css)-->
+    <div id="titleArea">
+        <h2>검색결과(<span class="count">{$total_count}</span>)건</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}"><img
+                    src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+        </span>
+        <form class="searchField" id="{$searchkeyword_form}" action="/product/search.html" method="get">
+            <div class="searchbox"> {$searchdata_keywordform}<p class="button"><button class="btnStrong"
+                        id="{$search_submit_button}">검색</button></p>
+                <button type="button" class="btnDelete">삭제</button>
+                <div class="autoList" id="{$searchdata_auto_list_id}">
+                    <ul class="autoDrop" id="{$search_auto_id}"></ul>
+                    <div class="dimmed"></div>
+                </div>
+            </div>
+            <div module="product_RelateKeyword" class="keywordArea">
+                <strong class="heading">연관검색어</strong>
+                <ul class="list">
+                    <li><a href="{$relate_url}">{$relate_word}</a></li>
+                    <li><a href="{$relate_url}">{$relate_word}</a></li>
+                </ul>
+            </div>
+        </form>
+        <div module="product_searchConditionData">
+            <ul class="searchDataResult">
+                <li>{$search_condition_data}<button type="button" class="btnSearchDelete" {$search_attr}>삭제</button>
+                </li>
+                <li>{$search_condition_data}<button type="button" class="btnSearchDelete" {$search_attr}>삭제</button>
+                </li>
+            </ul>
+        </div>
+        <div class="inner"> {$searchOrderby} <button type="button" id="ec-product-searchdata-mobile-button"
+                class="btnSearchdata {$search_detail_search_display|display}">상세검색</button>
+        </div>
+        <p class="empty {$search_fail_display|display}">검색 결과가 없습니다.</p>
+    </div>
+</div>

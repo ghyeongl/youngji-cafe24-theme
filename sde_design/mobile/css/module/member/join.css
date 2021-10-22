@@ -1,0 +1,83 @@
+/* 공통 */
+.progress { overflow:hidden; height:37px; border-bottom:1px solid #ccc; text-align:center; }
+.progress li { position:relative; float:left; padding:0 0 0 17px; width:35%; height:100%; line-height:37px; background-color:#ebebeb; box-sizing:border-box; list-style-type:none; }
+.progress li:first-child { padding:0; width:30%; }
+.progress li:first-child:before { display:none; }
+.progress li:before { position:absolute; top:0; left:0; display:inline-block; content:""; width:17px; height:37px; background:url("//img.echosting.cafe24.com/skin/mobile/common/bg_process.png") no-repeat 0 0; background-size:67px auto; }
+.progress li.done { background-color:#fafafa; }
+.progress li.done + li:before { background-position:-25px 0; }
+.progress li.done + li.done:before { background-position:-50px 0; }
+
+.xans-member-join { margin:14px 7px 0; padding:0 0 29px; color:#63666e; font-size: 11px; }
+.xans-member-join .titleArea { width:100%; margin:0; border:none; }
+.xans-member-join .titleArea.accountArea { margin:-8px 0 0; }
+.xans-member-join .titleArea h3 { height:30px; padding:13px 0 0 14px; border:1px solid #d5d5d5; font-size:13px; font-weight:bold; color:#4a5164; font-family:"맑은 고딕",Malgun Gothic,"돋움",Dotum; background:#f1f1f1; }
+.xans-member-join .titleArea h3 span { float:right; padding:0 14px 0 0; color:#1b1b1b; font:11px normal; }
+.xans-member-join .titleArea h3 span img { margin:0 3px 0 0; padding:4px 0 0; vertical-align:top; }
+.xans-member-join p.required { margin:-25px 0 6px; color:#6292db; font-size:11px; text-align:right; }
+.xans-member-join p.required img { vertical-align:middle; }
+
+.xans-member-join ul.info li { margin:5px 0 0; }
+.xans-member-join ul.info .name { display:block; margin-bottom:5px; font-weight:normal; }
+
+
+/* 정보입력 */
+.xans-member-join .ec-base-table.typeWrite { margin:0 0 7px; }
+.xans-member-join .ec-base-table.typeWrite .emailCheck td,
+.xans-member-join .ec-base-table.typeWrite .idCheck td { font-size:11px; }
+.xans-member-join .ec-base-table.typeWrite [id*="Msg"].error { color:#f00; }
+.xans-member-join .ec-base-table.typeWrite td.thead .subject { display:block; padding:0 0 10px; font-weight:normal; color:#757575; }
+.xans-member-join .ec-base-table.typeWrite .interest label { min-width:90px; margin:0 7px 14px 0; }
+.xans-member-join .ec-base-table.typeWrite .interest { font-size:11px; line-height:1.2em; }
+.xans-member-join .ec-base-table.typeWrite .interest input { margin:0 3px 0 0; }
+.xans-member-join .ec-base-table.typeWrite .interest span { display:inline-block; }
+.xans-member-join .ec-base-table.typeWrite th > img { vertical-align:top; padding:4px 0 0; }
+.xans-member-join .ec-base-table.typeWrite select { margin-right:4px; }
+.xans-member-join .ec-base-table.typeWrite #authWrap #ipinWrap img,
+.xans-member-join .ec-base-table.typeWrite #authWrap #mobileWrap img,
+.xans-member-join .ec-base-table.typeWrite #authWrap img { width:106px !important; }
+
+/* 인증번호 */
+.xans-member-join .verify { position:relative; width:100%; height:29px; }
+.xans-member-join .verify #verify_sms_number { width:100%; padding:0 35px 0 4px; }
+.xans-member-join .verify .time { position:absolute; top:2px; right:6px; color:#ff5400; }
+
+/* INPUT SIZE */
+.xans-member-join input[type=text],
+.xans-member-join input[type=password],
+.xans-member-join input[type=number],
+.xans-member-join input[type=tel],
+.xans-member-join select { width:100%; }
+.xans-member-join input[type=tel] { padding:10px 4px; }
+.xans-member-join select { padding:0 20px 0 4px; }
+.xans-member-join #foreigner_ssn { width:auto; }
+.xans-member-join #user_passwd_confirm,
+.xans-member-join #hint,
+.xans-member-join #hint_answer { margin-bottom:7px; }
+.xans-member-join #member_id { width:113px; }
+.xans-member-join #cssn { width:155px; }
+.xans-member-join #phone1,
+.xans-member-join #mobile1 { width:33%; }
+.xans-member-join #phone2,
+.xans-member-join #phone3,
+.xans-member-join #mobile2,
+.xans-member-join #mobile3 { width:25%; margin:0 4px; }
+.xans-member-join #bssn1,
+.xans-member-join #bssn2 { width:70px; }
+.xans-member-join #email1 { max-width:40%; margin:0 4px 4px 0; }
+.xans-member-join #email2 { max-width:45%; margin:0 4px 4px 4px; }
+.xans-member-join #email3 { height:29px; margin:0 0 4px; }
+
+.xans-member-join #birth_year,
+.xans-member-join #marry_year,
+.xans-member-join #partner_year { width:54px; margin:0 4px 0 0; }
+.xans-member-join #birth_month,
+.xans-member-join #marry_month,
+.xans-member-join #partner_month { width:38px; margin:0 4px; }
+.xans-member-join #birth_day,
+.xans-member-join #marry_day,
+.xans-member-join #partner_day { width:38px; margin:0 4px; }
+
+/* tooltip */
+.xans-member-join .ec-base-tooltip-area { position:relative; width:100%; }
+.xans-member-join .ec-base-tooltip-area .ec-base-tooltip { width:235px; word-break:keep-all; }

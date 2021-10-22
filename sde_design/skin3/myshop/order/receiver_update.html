@@ -1,0 +1,176 @@
+<!--@layout(/layout/basic/popup.html)-->
+<!--@css(/css/module/myshop/receiverUpdate.css)-->
+
+<div class="ec-base-layer" module="myshop_OrderReceiverUpdate">
+    <!--
+        $isRuleBasedAddrForm = T
+    -->
+    <div class="header">
+        <h1>배송지 변경</h1>
+    </div>
+
+    <div class="content">
+        <div class="ec-base-table typeWrite">
+            <table summary="" border="1">
+                <caption>배송지 변경</caption>
+                <colgroup>
+                    <col style="width:150px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+
+                <!-- 국내 배송지 정보 -->
+                <tbody class="{$r_info_display|display}">
+                <tr>
+                    <th scope="row">수령자명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.r_name}
+                    </td>
+                </tr>
+                <tr id="ec-receiverUpdate-address">
+                    <th scope="row">주소 <img class="{$is_receiverUpdate_address_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>{$form.address}</td>
+                </tr>
+                <tr class="{$use_delivery_tel_display|display}">
+                    <th scope="row">일반전화 <img class="{$is_delivery_tel_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.r_phone}
+                        <p class="gBlank5">'-' 없이 숫자만 입력해 주세요.</p>
+                    </td>
+                </tr>
+                <tr class="{$use_delivery_cell_display|display}">
+                    <th scope="row">휴대전화 <img class="{$is_delivery_cell_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.r_mobile}
+                        <p class="gBlank5">'-' 없이 숫자만 입력해 주세요.</p>
+                    </td>
+                </tr>
+                <!-- 통관정보 -->
+                <tr class="{$domestic_use_receiver_id_card_key_display|display}">
+                    <th scope="row">통관정보 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.receiver_id_card_type}
+                        {$form.receiver_id_card_key}
+                    </td>
+                </tr>
+                <tr class="{$use_delivery_message_display|display}">
+                    <th scope="row">배송메시지 <img class="{$is_delivery_message_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>{$form.r_message}</td>
+                </tr>
+                </tbody>
+
+
+                <!-- 해외 배송지 정보 -->
+                <tbody class="{$f_info_display|display}">
+
+                <!-- 참조 : 이름 한번에 입력 -->
+                <tr class="{$use_connected_name_input_display|display}">
+                    <th scope="row">수령자명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_name}
+                    </td>
+                </tr>
+                <!-- 참고 : 이름 각각 입력 -->
+                <tr class="{$use_seperate_name_input_display|display}">
+                    <th scope="row">수령자명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_name_1}
+                        {$form.f_name_2}
+                    </td>
+                </tr>
+
+                <!-- 참고 : 영문이름 한번에 입력 -->
+                <tr class="{$use_orders_english_name_display|display} {$use_connected_name_input_display|display}">
+                    <th scope="row">수령자명 (영문) <img class="{$is_orders_english_name_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_name_en}
+                    </td>
+                </tr>
+                <!-- 참고 : 영문이름 각각 입력 -->
+                <tr class="{$use_orders_english_name_display|display} {$use_seperate_name_input_display|display}">
+                    <th scope="row">수령자명 (영문) <img class="{$is_orders_english_name_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_name_en_1}
+                        {$form.f_name_en_2}
+                    </td>
+                </tr>
+
+                <!-- 참고 : 이름발음 한번에 입력 -->
+                <tr class="{$use_orders_pronounce_name_display|display} {$use_connected_name_input_display|display}">
+                    <th scope="row">수령자명 (발음기호) <img class="{$is_orders_pronounce_name_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_name_phonetic}
+                    </td>
+                </tr>
+                <!-- 참고 : 이름발음 각각 입력 -->
+                <tr class="{$use_orders_pronounce_name_display|display} {$use_seperate_name_input_display|display}">
+                    <th scope="row">수령자명 (발음기호) <img class="{$is_orders_pronounce_name_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_name_phonetic_1}
+                        {$form.f_name_phonetic_2}
+                    </td>
+                </tr>
+                <tr id="ec-freceiverUpdate-address">
+                    <th scope="row">주소 <img class="{$is_freceiverUpdate_address_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.faddress}
+                    </td>
+                </tr>
+                <!-- 일반전화 -->
+                <tr class="{$use_delivery_tel_display|display}">
+                    <th scope="row">일반전화 <img class="{$is_delivery_tel_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_phone}
+                        <p class="gBlank5">'-' 없이 숫자만 입력해 주세요.</p>
+                    </td>
+                </tr>
+                <!-- 휴대전화 -->
+                <tr class="{$use_delivery_cell_display|display}">
+                    <th scope="row">휴대전화 <img class="{$is_delivery_cell_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_mobile}
+                        <p class="gBlank5">'-' 없이 숫자만 입력해 주세요.</p>
+                    </td>
+                </tr>
+                <!-- 통관정보 -->
+                <tr class="{$use_receiver_id_card_key_display|display}">
+                    <th scope="row">통관정보 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_receiver_id_card_type}
+                        {$form.f_receiver_id_card_key}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">배송메시지 <img class="{$is_delivery_message_required_display|display}" src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>
+                        {$form.f_message}
+                    </td>
+                </tr>
+                </tbody>
+                <tr class="{$hope_shipping_date_display|display}">
+                    <th scope="row">희망배송일</th>
+                    <td>
+                        <div class="quickdelivery">
+                            {$form.use_hope_shipping}
+                        </div>
+                        {$form.hope_shipping_date_y}년 {$form.hope_shipping_date_m}월 {$form.hope_shipping_date_d}일
+                    </td>
+                </tr>
+                <tr class="{$hope_shipping_time_display|display}">
+                    <th scope="row">희망배송시간</th>
+                    <td>
+                        <div class="quickdelivery">
+                            {$form.use_hope_shipping_time}
+                        </div>
+                        {$form.hope_shipping_time}
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <button id="{$receiver_update_submit_id}" type="button" class="btnSubmitFix sizeS">변경하기</button>
+        <a href="#none" id="{$receiver_update_popup_close_id}" class="btnNormalFix sizeS">닫기</a>
+    </div>
+</div>

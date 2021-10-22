@@ -1,0 +1,239 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/css/module/myshop/regularDeliveryDetail.css)-->
+<div module="myshop_OrderRegularManageDetailRegister">
+    <div class="path">
+        <span>현재 위치</span>
+        <ol><li><a href="/">홈</a></li>
+            <li><a href="/myshop/index.html">마이쇼핑</a></li>
+            <li title="현재 위치"><strong>{$invoice_type_text} 상세 조회</strong></li>
+        </ol></div>
+
+    <div class="titleArea">
+        <h2>{$invoice_type_text} 상세 조회</h2>
+    </div>
+
+    <h3 class="title">신청 정보</h3>
+    <div class="ec-base-table">
+        <table border="1" summary="">
+            <caption>신청 정보</caption>
+            <colgroup>
+                <col style="width:170px" />
+                <col style="width:auto" />
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="row">신청번호</th>
+                <td>{$invoice_no}</td>
+            </tr>
+            <tr>
+                <th scope="row">신청일자</th>
+                <td>{$ins_timestamp}</td>
+            </tr>
+            <tr>
+                <th scope="row">첫 배송시작일</th>
+                <td>{$delivery_timestamp}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div module="myshop_OrderRegularManageDetailList">
+    <h3 class="title">{$invoice_type_text} 정보</h3>
+    <div class="ec-base-table">
+        <table border="1" summary="">
+            <caption>{$list_title}</caption>
+            <colgroup>
+                <col style="width:120px;" />
+                <col style="width:auto;" />
+                <col style="width:120px" />
+                <col style="width:61px;" />
+                <col style="width:90px;" />
+                <col style="width:140px;" />
+                <col style="width:120px;" />
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">이미지</th>
+                <th scope="col">상품정보</th>
+                <th scope="col">{$sale_price_text}</th>
+                <th scope="col">수량</th>
+                <th scope="col">배송시작일 [회차]</th>
+                <th scope="col">배송주기</th>
+                <th scope="col">선택</th>
+            </tr>
+            </thead>
+            <tbody class="center {$list_display|display}">
+            <tr>
+                {$form.invoice_no}
+                {$form.has_temp_ord}
+                {$form.return_url}
+                <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                <td class="product left">
+                    <strong class="name">{$product_name_link}</strong>
+                    <ul class="option">
+                        <li>{$option_str}</li>
+                    </ul>
+                    <p class="gBlank5 {$card_installment_display|display}">무이자할부 상품</p>
+                </td>
+                <td>
+                    <p id="{$productpriceId}"><span class="txtDel">{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</span></p>
+                    <p class="{$product_sale_info_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong></p>
+                    <span class="badge {$product_sale_info_display|display}">{$product_sale_info}<i class="icoDown">할인</i></span>
+                </td>
+                <td>
+                    <span class="ec-base-qty">
+                        {$form.product_cnt}
+                        <a href="javascript:;" class="up" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" /></a>
+                        <a href="javascript:;"  class="down" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" /></a>
+                    </span>
+                </td>
+                <td>
+                    <div class="datepicker">
+                        {$form.expected_delivery_date}
+                        <p class="rotation">[{$expected_pay_seq}회차]<br><span class="txtLess">{$expected_pay_date_info}</span></p>
+                    </div>
+                </td>
+                <td>
+                    {$form.subscription_cycle}
+                </td>
+                <td>
+                    <a href="#none" class="btnNormal {$cancelScriptionItemClass}" data-cancel_action_json="{$cancel_action_json}" data-has_temporder="{$temp_order}">{$cancel_button_text}</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                <td class="product left">
+                    <strong class="name">{$product_name_link}</strong>
+                    <ul class="option">
+                        <li>{$option_str}</li>
+                    </ul>
+                    <p class="gBlank5 {$card_installment_display|display}">무이자할부 상품</p>
+                </td>
+                <td>
+                    <p id="{$productpriceId}"><span class="txtDel">{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</span></p>
+                    <p class="{$product_sale_info_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong></p>
+                    <span class="badge {$product_sale_info_display|display}">{$product_sale_info}<i class="icoDown">할인</i></span>
+                </td>
+                <td>
+                    <span class="ec-base-qty">
+                        {$form.product_cnt}
+                        <a href="javascript:;" class="up" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" /></a>
+                        <a href="javascript:;"  class="down" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" /></a>
+                    </span>
+                </td>
+                <td>
+                    <div class="datepicker">
+                        {$form.expected_delivery_date}
+                        <p class="rotation">[{$expected_pay_seq}회차]<br><span class="txtLess">{$expected_pay_date_info}</span></p>
+                    </div>
+                </td>
+                <td>
+                    {$form.subscription_cycle}
+                </td>
+                <td>
+                    <a href="#none" class="btnNormal {$cancelScriptionItemClass}" data-cancel_action_json="{$cancel_action_json}" data-has_temporder="{$temp_order}">{$cancel_button_text}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="message {$empty_display|display}">{$invoice_type_text} 정보가 없습니다.</p>
+
+        <ul class="info">
+            <li>결제 금액은 주기별 배송시작일 이틀 전 (결제 하루 전) 메일 또는 SMS를 통해 안내되며, <span class="txtEm">위 판매가에서 결제 안내 시점의 할인 혜택 및 배송비 기준이 자동 적용되어 확정됩니다.</span></li>
+            <li>배송주기가 다른 상품들을 일괄 정기배송 신청할 경우(동일 신청번호), 배송시작일이 같은 상품끼리 묶음 처리되어 주문/결제됩니다.</li>
+            <li><span class="txtWarn">배송주기 및 배송시작일 변경, 일부 상품 정기배송 해지 등으로 결제 예정된 주문의 구성이 달라질 경우 할인 혜택 및 배송비가 달라질 수 있습니다.</span></li>
+            <li>배송주기 변경 시, 변경된 주기는 해당 시점의 배송시작일 다음 배송부터 적용됩니다.</li>
+        </ul>
+    </div>
+
+
+    <div module="myshop_OrderRegularManageDetailReceiver">
+        <h3 class="title">수령자 정보</h3>
+        <div class="ec-base-button">
+        <span class="gRight">
+            <a id="{$receiverUpdateId}" href="#" class="btnNormal {$receiver_update_display|display}" title="새창 열림">수령자 정보 변경</a>
+        </span>
+        </div>
+        <div class="ec-base-table">
+            <table border="1" summary="">
+                <caption>수령자 정보</caption>
+                <colgroup>
+                    <col style="width:160px" />
+                    <col style="width:auto" />
+                </colgroup>
+                <tbody>
+                <tr class="{$display_store_pickup_info|display}">
+                    <th scope="row">수령지</th>
+                    <td>
+                        <h3>{$store_pickup.receive_place_name}</h3><br>
+                        - 주소 : {$store_pickup.receiver_address} <br>
+                        - 전화번호 : {$store_pickup.main_phone} <br>
+                        - 영업시간 : {$store_pickup.office_hour} <br>
+                        - 수령 가능일 : {$store_pickup.receive_period} <br>
+                        - 수령지 안내 : {$store_pickup.receive_info} <br>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">받으시는분</th>
+                    <td>{$receiver_name}</td>
+                </tr>
+                <tr class="{$oversea_delv_display|display}">
+                    <th scope="row">받으시는분(영문)</th>
+                    <td>{$receiver_name_en}</td>
+                </tr>
+                <tr class="{$oversea_delv_display|display}">
+                    <th scope="row">받으시는분(발음기호)</th>
+                    <td>{$receiver_name_phonetic}</td>
+                </tr>
+                <tr class="{$oversea_delv_display|display}">
+                    <th scope="row">국가</th>
+                    <td>{$country_name}</td>
+                </tr>
+                <tr class="{$display_addr|display}">
+                    <th scope="row">우편번호</th>
+                    <td>{$receiver_zipcode}</td>
+                </tr>
+                <tr class="{$display_addr|display}">
+                    <th scope="row">주소</th>
+                    <td>{$receiver_address}</td>
+                </tr>
+                <tr class="{$oversea_delv_display|display}">
+                    <th scope="row">도시</th>
+                    <td>{$receiver_city}</td>
+                </tr>
+                <tr class="{$oversea_delv_display|display}">
+                    <th scope="row">주/지방</th>
+                    <td>{$receiver_state}</td>
+                </tr>
+                <tr>
+                    <th scope="row">일반전화</th>
+                    <td>{$receiver_phone}</td>
+                </tr>
+                <tr>
+                    <th scope="row">휴대전화</th>
+                    <td>{$receiver_cell}</td>
+                </tr>
+                <tr>
+                    <th scope="row">배송메시지</th>
+                    <td>{$delivery_msg}</td>
+                </tr>
+                <tr class="{$display_addr|display}">
+                    <th scope="row">희망배송시간</th>
+                    <td>{$hope_shipping_time}</td>
+                </tr>
+                <tr>
+                    <th scope="row">희망배송업체/방식</th>
+                    <td>{$hope_shipping_company_name}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ec-base-button justify">
+        <a href="regular_delivery.html" class="btnNormalFix sizeM">목록</a>
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_check}">저장하기</a>
+    </div>
+</div>

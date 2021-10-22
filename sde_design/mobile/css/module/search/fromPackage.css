@@ -1,0 +1,7 @@
+.xans-search-frompackage .xans-search-boardform fieldset { min-width:130px; }
+.xans-search-frompackage .xans-search-boardform select#search_type { width:100px; }
+.xans-search-frompackage .xans-search-boardform input#keyword { width:100%; margin:0 0 0 4px; }
+
+.xans-search-frompackage .resultArea { overflow:hidden; min-width:306px; margin:7px 0 14px 0; font-size:12px !important; }
+.xans-search-frompackage .resultArea p { padding:7px 0 0; float:left; }
+.xans-search-frompackage .resultArea #limit { float:right; }

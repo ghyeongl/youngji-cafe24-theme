@@ -1,0 +1,7 @@
+.xans-mall-urgencycall .info { margin:20px 10px; color:#8f8f8f; }
+.xans-mall-urgencycall .required { margin:-35px 0 10px; text-align:right; }
+.xans-mall-urgencycall .required img { vertical-align:middle; }
+.xans-mall-urgencycall .ec-base-table input[type=text],
+.xans-mall-urgencycall .ec-base-table textarea { width:500px; }
+.xans-mall-urgencycall .ec-base-table textarea { height:100px; }
+.xans-mall-urgencycall .ec-base-table #captcha { width:160px; }

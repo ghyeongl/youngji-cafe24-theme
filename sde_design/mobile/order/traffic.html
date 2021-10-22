@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>접속 지연 안내</title>
+    <!--@css(/layout/basic/css/common.css)--><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
+</head>
+<body>
+<h1 class="blind">접속 지연 안내</h1>
+<div module="Order_ThrottleWaiting">
+    <!--@css(/css/module/order/throttleWaiting.css)-->
+    <div class="visual"><img src="//img.echosting.cafe24.com/suio/state/img_hourglass.gif" alt=""></div>
+
+    <h2><img src="//img.echosting.cafe24.com/suio/state/h2_warning_access_wait_m.png" width="270" alt="현재 접속자가 일시적으로 집중되어 접속 대기중입니다. 잠시만 기다리시면 서비스로 자동 접속 되니 양해하여 주시기 바랍니다."></h2>
+
+    <div class="queue">
+        먼저 접속한 대기자 수 : <p class="awaiter"><span class="count">{$queue_count}</span>명</p>
+    </div>
+
+    <p class="txtInfo">새로고침, 뒤로가기 혹은 재접속 하시면 순번이 뒤로 밀려나게 되어 대기시간이 길어질 수 있습니다.</p>
+</div>
+</body>
+</html>

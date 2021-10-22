@@ -1,0 +1,136 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>대량구매문의 관리</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>대량구매문의 관리</h2>
+    <p>고객님이 요청하신 상품 대량구매문의 내역 입니다.</p>
+</div>
+
+<div module="board_InquiryHead" class="ec-base-box typeProduct">
+    <p class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_img}" alt="" onerror="this.src='//img.echosting.cafe24.com/thumb/75x75.gif'" /></a></p>
+    <div class="information">
+       {$user_icon}{$new_icon}{$recommend_icon}{$soldout_icon}{$mileage_icon}
+        <h3><a href="/product/detail.html{$param_product}">{$product_name}</a></h3>
+        <p class="price">{$product_price} {$product_tax_type_text}</p>
+        <p class="button"><a href="/product/detail.html{$param_product}" class="btnEm" title="새창으로 이동">상품상세보기</a></p>
+    </div>
+</div>
+
+<div module="board_InquiryView">
+    <!--@css(/css/module/board/inquiryView.css)-->
+    <!--
+        $login_page = /member/login.html
+        $isRuleBasedAddrForm = T
+    -->
+    <div class="ec-base-table gLayoutFixed">
+        <table border="1" summary="">
+        <caption>대량구매문의 상세</caption>
+        <colgroup>
+            <col style="width:130px;" />
+            <col style="width:auto;" />
+            <col style="width:130px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">제목</th>
+                <td colspan="3">{$title}</td>
+            </tr>
+            <tr>
+                <th scope="row">작성자</th>
+                <td>{$name}</td>
+                <th scope="row">수량</th>
+                <td>{$product_cnt} 개</td>
+            </tr>
+            <tr>
+                <th scope="row">회사명</th>
+                <td>{$company_name}</td>
+                <th scope="row">연락처</th>
+                <td>{$phone}</td>
+            </tr>
+            <tr>
+                <th scope="row">이메일</th>
+                <td>{$email}</td>
+                <th scope="row">카탈로그 신청</th>
+                <td>{$is_catalog}</td>
+            </tr>
+            <tr>
+                <th scope="row">답변여부</th>
+                <td>{$is_answer}</td>
+                <th scope="row">문의일시</th>
+                <td>{$inquiry_date}</td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td colspan="3">
+                    <div>{$country_name} [{$postcode}]</div>
+                    <div>{$full_address}</div>
+                </td>
+            </tr>
+            <tr class="view">
+                <td colspan="4" class="detail">{$inquiry_content}{$content_image}</td>
+            </tr>
+            <tr module="board_inquiryViewFile_1" class="attach">
+                <th>첨부파일</th>
+                <td colspan="3">
+                    <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+                    <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+                </td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <div class="{$display_answer|display}">
+        <div class="ec-base-table">
+            <table border="1" summary="">
+            <caption>대량구매문의 답변</caption>
+            <colgroup>
+                <col style="width:130px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">답변자</th>
+                    <td>{$answer_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">답변일시</th>
+                    <td>{$answer_date}</td>
+                </tr>
+                <tr class="view">
+                    <td colspan="2" class="detail">{$answer_content}</td>
+                </tr>
+                <tr module="myshop_inquiryViewFile_2" class="attach">
+                    <th>첨부파일</th>
+                    <td>
+                        <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+                        <p><a href="{$inquery_file_path}">{$inquiry_file}</a></p>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="{$display_answer_none|display}">
+        <div class="ec-base-box typeThinBg gBlank30">
+            <p class="txt11">빠른시간내에 답변드리겠습니다. 잠시만 기다려 주세요!</p>
+        </div>
+    </div>
+
+    <div module="myshop_inquiryButton" class="ec-base-button">
+        <span class="gLeft"><a href="/board/inquiry/list.html{$list_param}" class="btnNormalFix sizeS">목록</a></span>
+        <span class="gRight">
+            <a href="#none" onclick="{$action_delete}" class="btnNormalFix sizeS">삭제</a>
+            <a href="/board/inquiry/modify.html{$modify_param}" class="btnEmFix sizeS">수정</a>
+        </span>
+    </div>
+</div>

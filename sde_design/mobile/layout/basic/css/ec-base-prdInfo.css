@@ -1,0 +1,63 @@
+.ec-base-prdInfo { position:relative; margin:0 0 7px; padding:14px 14px 6px; border:1px solid #d5d5d5; box-sizing:border-box; background:#fff; }
+.ec-base-prdInfo .prdCheck { display:inline-block; margin-bottom:7px; }
+.ec-base-prdInfo .prdBox { display:-webkit-flex; display:-ms-flex; display:flex; min-height:90px; margin-top:7px; }
+.ec-base-prdInfo .thumbnail { overflow:hidden; width:73px; height:73px; margin-right:15px; border:1px solid #d5d5d5; box-sizing:border-box; }
+.ec-base-prdInfo .thumbnail img { width:100%; }
+.ec-base-prdInfo .description { overflow:hidden; -webkit-flex:1; -ms-flex:1; flex:1; overflow:hidden; }
+.ec-base-prdInfo .description .prdName { display:block; margin:0 0 10px; font-size:13px; }
+.ec-base-prdInfo .description .prdName a { color:#4a5164; }
+.ec-base-prdInfo .description .prdName .ec-set-product-name { display:block; margin:0 0 3px; }
+.ec-base-prdInfo .description .info { margin:0 0 14px; }
+.ec-base-prdInfo .description .info li { margin:0 0 7px; font-size:12px; color:#757575; }
+.ec-base-prdInfo .description .info li .mileage { display:inline-block; }
+.ec-base-prdInfo .description .info .price,
+.ec-base-prdInfo .description .info .price li { font-size:13px; color:#000; }
+.ec-base-prdInfo .description .info .price .refer { font-weight:normal; font-size:11px; }
+.ec-base-prdInfo .description .info .price .discount { font-weight:normal; text-decoration:line-through; }
+.ec-base-prdInfo .description .info .price .strike { font-weight:normal; text-decoration:line-through; }
+.ec-base-prdInfo .description .info .price .strike strong { font-weight:normal; }
+.ec-base-prdInfo .description .price .quantity { position:relative; display:inline-block; margin:0 0 0 10px; padding:0 0 0 14px; font-size:13px; }
+.ec-base-prdInfo .description .price .quantity:before { display:block; content:""; position:absolute; top:1px; left:0; width:1px; height:13px; background:#989899; }
+.ec-base-prdInfo .description input[type="number"] { max-width:51px; }
+.ec-base-prdInfo .description .info .amount button { margin:0; padding:0; border:0; } /* gift > quantity */
+.ec-base-prdInfo .description .info .amount { width:50px; }
+.ec-base-prdInfo .description .info input.amount { text-align:right; }
+.ec-base-prdInfo .description  input[type="tel"] { text-align:right; }
+.ec-base-prdInfo .description .quantity input[type="tel"] { width:51px; }
+
+.ec-base-prdInfo .prdFoot { padding:6px 12px; font-weight:bold; line-height:26px; color:#508bed; text-align:center; background:#f1f1f1; }
+.ec-base-prdInfo .prdFoot:after { content:''; display:block; clear:both; }
+.ec-base-prdInfo .prdFoot .gLeft { float:left; text-align:left; }
+.ec-base-prdInfo .prdFoot .gRight { float:right; text-align:right; }
+.ec-base-prdInfo .prdFoot .store { color:#000; font-weight:normal; }
+.ec-base-prdInfo .prdFoot .btnBasic { font-weight:normal; background-color:#fff; }
+.ec-base-prdInfo .prdFoot span > span > span { font-size:11px; }
+.ec-base-prdInfo  prdFoot span span.discount { text-decoration:line-through; }
+.ec-base-prdInfo .prdFoot span span.discount strong {font-weight:normal; }
+
+
+.ec-base-prdInfo p.option { margin:0 14px; padding:14px 0; border-top:1px solid #ececec; font-size:13px; }
+.ec-base-prdInfo .option { padding:0; color:#353535; }
+.ec-base-prdInfo .option > li { border-top:1px solid #ececec; }
+.ec-base-prdInfo .option > li .name { display:-webkit-flex; display:-moz-flex; display:-ms-flex; display:flex; min-height:29px; margin:7px 0; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between; -webkit-align-items:center; -moz-align-items:center; -ms-align-items:center; align-items:center; }
+.ec-base-prdInfo .option > li .name > select { max-width:80%; }
+.ec-base-prdInfo .option > li .optionDesc { word-break:break-all; }
+.ec-base-prdInfo .option > li .change { margin:0 0 0 5px; white-space:nowrap; }
+.ec-base-prdInfo .option .file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#80aeef; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_attach.png") no-repeat 0 0; background-size:8px 13px; }
+.ec-base-prdInfo .layerOptionModify { display:none; width:auto; margin:7px 0 14px; padding:14px; border:1px solid #d5d5d5; background-color:#f1f1f1; }
+.ec-base-prdInfo .layerOptionModify .titleArea { margin-top:3px; display:none; }
+.ec-base-prdInfo .layerOptionModify ul { padding:0; font-size:12px; }
+.ec-base-prdInfo .layerOptionModify li { position:relative; margin:0 0 7px; padding:0 0 0 73px; }
+.ec-base-prdInfo .layerOptionModify li .optionItem { display:block; position:absolute; top:0; left:0; width:73px; height:29px; font-size:13px; color:#757575; line-height:29px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.ec-base-prdInfo .layerOptionModify select,
+.ec-base-prdInfo .layerOptionModify input[type="text"] { width:100%; }
+.ec-base-prdInfo .layerOptionModify .ec-base-button.gCenter { margin:0; }
+
+/* orderList > ec-base-prdInfo  */
+.orderList .ec-base-prdInfo { margin:-1px 0 0; border-width:1px 0 0 0; }
+.orderList .ec-base-prdInfo .option { margin:0; }
+.orderList .ec-base-prdInfo .prdFoot { margin:0 -14px -6px; }
+/* order_result.html > orderArea > ec-base-prdInfo */
+.orderArea .ec-base-fold .ec-base-prdInfo { border-bottom:1px solid #d5d5d5; }
+.orderConfirmLayer .orderArea .ec-base-prdInfo { border-bottom:0; }
+.orderArea .ec-base-prdInfo + .ec-base-prdInfo { border-top:1px solid #d5d5d5; }

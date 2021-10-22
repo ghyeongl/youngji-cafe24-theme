@@ -1,0 +1,1394 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title></title>
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-fold.css)-->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+
+<!--@css(/gridsystem/resource/css/vendor.css)-->
+    <!--@css(/gridsystem/resource/css/common.css)-->
+    <!--@css(/gridsystem/resource/css/layout.css)-->
+    <!--@css(/gridsystem/resource/css/font/font.css)-->
+
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/gridsystem/resource/js/jquery.plugin.js)-->
+    <!--@js(/gridsystem/resource/js/common.js)-->
+</head>
+<body id="main">
+<div id="wrap">
+
+
+    <div id="container" class="gridContainer">
+
+        <div class="gridItem" style="grid-area:1/1/7/5">
+
+            <!-- MOMA COMPONENT 1 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                    var LANGUAGE = {
+                        "ko_KR" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "ja_JP" : {
+                            "LANGCODE_1" : "カテゴリ",
+                            "LANGCODE_2" : "検索",
+                            "LANGCODE_3" : "削除",
+                            "LANGCODE_4" : "人気検索キーワード",
+                            "LANGCODE_5" : "カート",
+                            "LANGCODE_6" : "ログイン",
+                            "LANGCODE_7" : "マイページ",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "en_US" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "zh_CN" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "zh_TW" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "es_ES" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "pt_PT" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        },
+                        "vi_VN" : {
+                            "LANGCODE_1" : "카테고리",
+                            "LANGCODE_2" : "검색",
+                            "LANGCODE_3" : "삭제",
+                            "LANGCODE_4" : "인기검색어",
+                            "LANGCODE_5" : "장바구니",
+                            "LANGCODE_6" : "마이쇼핑",
+                            "LANGCODE_7" : "마이쇼핑",
+                            "LANGCODE_8" : "상품을 검색해주세요."
+                        }
+                    };
+                    window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_9742c60d3a2ee81fffada3eade8d931d');
+                });
+            </script>
+            <!-- // MOMA COMPONENT 1 : 언어팩코드 -->
+
+            <div class="dnd_module_9742c60d3a2ee81fffada3eade8d931d">
+
+                <!-- MOMA COMPONENT 1 : BS공통_GNB_v01 -->
+                <aside id="aside" module="layout_slidePackage" class="slidingMenu">
+                    <!--@import(/layout/sidebar.html)-->
+                    <button type="button" class="btnClose">닫기</button>
+                </aside>
+                <header id="header">
+                    <div class="header">
+                        <h1 module="Layout_LogoTop"><a href="/index.html" class="link">{$mall_name}</a></h1>
+
+                        <div class="headerMenu gLeft">
+                            <span module="layout_slide" class="hidden"></span>
+                            <button type="button" class="btnCate">#LANGCODE_1#</button>
+                            <button type="button" class="btnSearch">#LANGCODE_2#</button>
+                        </div>
+                        <div class="searchLayer">
+                            <div module="Layout_SearchHeader">
+                                <div class="topSearch">
+                                    {$form.keyword}
+                                    <button type="submit" class="btnSearch">#LANGCODE_2#</button>
+                                    <button type="button" class="btnDelete">#LANGCODE_3#</button>
+                                </div>
+                                <div class="hotKeyword" module="search_hotkeyword">
+                                    <strong class="title">#LANGCODE_4#</strong>
+                                    <div class="keyword">
+                                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="headerMenu gRight">
+                            <span module="Layout_orderBasketcount" class="btnBasket">
+                                <a href="/order/basket.html">#LANGCODE_5#<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+                            </span>
+                            <a href="/myshop/index.html" module="Layout_statelogoff" class="btnMy">#LANGCODE_6#</a>
+                            <a href="/myshop/index.html" module="Layout_statelogon" class="btnMy">#LANGCODE_7#</a>
+                        </div>
+                    </div>
+                </header>
+                <style type="text/css">
+                    #dnd-container #dnd-content .preview-area .preview-column .column-box .slidingMenu { display: none; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d .hidden { opacity: 0; position: absolute; width: 0; height: 0; overflow: hidden; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header { z-index:300; position:relative; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .header { z-index:300; position:relative; padding:18px 0; text-align:center; vertical-align:top; background:#fff; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header.open .header { z-index:301; }
+
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  h1 { margin:0 95px; font-size:18px; text-align:center; color:#000; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  h1 .link:hover { text-decoration:none; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  h1 img { max-width:100%; vertical-align:middle; font-size:12px; }
+
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu { position:absolute; top:50%; margin-top:-15px; width:80px; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gLeft { left:0; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gRight { right:0;  }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"],
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnBasket > a { position:relative; width:30px; height:30px; background-repeat:no-repeat; background-size:30px 30px; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnBasket .count { overflow:hidden; position:absolute; right:0; top:2px; min-width:10px; padding:0 2px; height:14px; border-radius:14px; font-weight:bold; font-size:9px; line-height:13px; color:#fff; text-align:center; background:#ff0000; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"],
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"] a { display:inline-block; overflow:hidden; font-size:1px; line-height:0; color:transparent; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu:after { content:''; clear:both; display:block; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"] { float:left; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gLeft [class*="btn"] { margin-left:10px; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gRight [class*="btn"] { margin-right:10px; }
+
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnCate { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_cate.png'); }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnSearch { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_search.png'); }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnBasket > a { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_basket.png'); }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnMy { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_my.png'); }
+
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  .searchLayer { display:none; position:fixed; right:0; top:0; z-index:401; max-width:900px; text-align:left; background:#fff; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header.open .searchLayer { display:block; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header.open #dimmedSlider { display:block !important; opacity:1; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch { position:relative; height:60px; padding:21px 85px 21px 40px; box-sizing:border-box; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch:before { content:''; position:absolute; left:20px; top:21px; width:10px; height:17px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat 0 0; background-size:150px auto; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword { width:100%; height:18px; padding:0; border:0; font-size:14px; line-height:18px; color:#000; border-radius:0; outline-style:none; -webkit-appearance:none; box-sizing:border-box; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword::-webkit-input-placeholder { font-size:14px; color:#999; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword:-ms-input-placeholder { font-size:14px; color:#999; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword::-moz-placeholder { font-size:14px; color:#999; opacity:1; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword:-moz-placeholder { font-size:14px; color:#999; opacity:1; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch [class*="btn"] { overflow:hidden; position:absolute; font-size:1px; line-height:0; color:transparent; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch [class*="btn"]:before { content:''; position:absolute; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnSearch { right:0; top:0; width:50px; height:60px; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnSearch:before { right:16px; top:21px; width:18px; height:18px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat -50px 0; background-size:150px auto; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnDelete { right:50px; top:0; width:35px; height:60px; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnDelete:before { right:10px; top:22px; width:15px; height:15px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat -100px 0; background-size:150px auto; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword { padding:15px 16px 28px; border-top:1px solid #ededed; background:#fbfbfd; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .title { font-weight:normal; font-size:12px; color:#abaeb5; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .keyword { margin:8px 0 0; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .keyword > a { display:inline-block; margin:7px 16px 0 0; font-size:14px; line-height:18px; color:#000; vertical-align:top; }
+                    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .keyword > a:hover { text-decoration:none; }
+
+                    @media all and (max-width:899px) {
+                        .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer { left:0; width:100%; }
+                    }
+
+                    @media all and (min-width:900px) {
+                        .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer { left:50%; margin-left:-450px; }
+                    }
+                </style>
+                <script type="text/javascript">
+
+                    document.addEventListener('DOMContentLoaded', function() {
+
+                        var $scope = $(".dnd_module_9742c60d3a2ee81fffada3eade8d931d");
+
+                        if( $scope.find("#searchBarForm [name=keyword]").length ) {
+                            $scope.find("#searchBarForm [name=keyword]").attr('placeHolder', '#LANGCODE_8#')
+                        }
+
+                        $scope.find('.headerMenu .btnSearch').unbind('click.btnSearch').bind('click.btnSearch', function () {
+                            var $header = $(this).closest('#header');
+                            $header.addClass('open');
+
+                            $header.find('#dimmedSlider').one("click", function () {
+                                $header.removeClass('open');
+                            });
+
+                        });
+
+                        $('.xans-layout-searchheader').find('button.btnDelete').unbind('click.btnDelete').bind('click.btnDelete', function () {
+                            $('.topSearch').find('input#keyword').attr('value', '').focus();
+                        });
+                    });
+
+                </script>
+                <!-- // MOMA COMPONENT 1 : BS공통_GNB_v01 -->
+
+            </div>
+
+        </div>
+
+        <div class="gridItem" style="grid-area:7/1/11/5">
+
+            <!-- MOMA COMPONENT 2 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                    var LANGUAGE = {
+                        "ko_KR" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "ja_JP" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "en_US" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "zh_CN" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "zh_TW" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "es_ES" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "pt_PT" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        },
+                        "vi_VN" : {
+                            "LANGCODE_1" : "카테고리 레이어보기"
+                        }
+                    }
+                    window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_c785e267507864e0f86dfc2033986f74');
+                });
+            </script>
+            <!-- // MOMA COMPONENT 2 : 언어팩코드 -->
+
+            <div class="dnd_module_c785e267507864e0f86dfc2033986f74">
+
+                <!-- MOMA COMPONENT 2 : BS_공통_메인표시상품분류_v01 -->
+                <nav id="navigation">
+                    <div class="inner" module="Layout_category">
+                        <div class="horizontal-scrollable">
+                            <ul class="category">
+                                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btnCateLayer eToggleCateLayer">#LANGCODE_1#</button>
+                    <div class="categoryLayer" module="Layout_category">
+                        <ul class="category">
+                            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="navDimmed"></div>
+                <style type="text/css">
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav { position:relative; z-index:299; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .btnCateLayer { overflow:hidden; position:absolute; right:0; top:0; z-index:301; width:50px; height:38px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/bg_category.png') no-repeat 0 0; background-size:50px auto; display:none; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .btnCateLayer:after { content:''; position:absolute; right:15px; top:10px; width:20px; height:20px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_cate_layer.png') no-repeat 0 0; background-size:20px auto; -webkit-transition:transform .3s ease-out; transition:transform .3s ease-out; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav.open .btnCateLayer:after { -webkit-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg); }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .navDimmed { display:none; position:fixed; left:0px; top:90px; right:0px; bottom:0px; z-index:150; background:rgba(0,0,0,.4); } /* 90px 임시적으로 넣은것 */
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .navDimmed.show { display:block; }
+                    /* category 공통 */
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category { z-index:300; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category li .link { display:block; word-break:break-all; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category li .link:hover { text-decoration:none; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category .sub-category { display:none; }
+
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner { position:relative; overflow:hidden; z-index:300; padding:0 16px; background:#fff; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .mCSB_horizontal.mCSB_inside > .mCSB_container { margin-bottom: 8px; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category { height:40px;  -webkit-overflow-scrolling:touch; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .mCSB_horizontal.mCSB_inside .category { white-space:nowrap; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category::-webkit-scrollbar { display:none; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category::-webkit-scrollbar-thumb { display:none; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li { display:inline-block; margin-left:24px; text-align:center; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li:first-child { margin:0; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li .link { padding:11px 0; font-size:14px; color:#000; }
+
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer { position:absolute; left:0; right:0; top:100%; z-index:300; width:100%; height:0; visibility:hidden; padding:16px; border-top:1px solid #ededed; opacity:0; box-sizing:border-box; background:#fbfbfd; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer .category { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; z-index:300; margin:0 -2px 0 0; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer li { float:left; width:33.33%; margin:-1px 0 0 -1px; border:1px solid #dedfe2; text-align:center; box-sizing:border-box; background:#fff; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer li .link { padding:9px 5px; font-size:12px; color:#999; }
+
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav.open .categoryLayer { height:auto; visibility:inherit; opacity:1; }
+                    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav.isShort .btnCateLayer { display:block; }
+
+                    @media all and (max-width:479px) {
+                        .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li:last-child { margin-right:50px; }
+                    }
+                </style>
+                <script type="text/javascript">
+                    (function() {
+
+                        function pageLoaded() {
+
+                            var methods = {
+                                aCategory    : [],
+                                aSubCategory : {},
+
+                                get: function()
+                                {
+                                    $.ajax({
+                                        url : '/exec/front/Product/SubCategory',
+                                        dataType: 'json',
+                                        success: function(aData) {
+
+                                            if (aData == null || aData == 'undefined') return;
+                                            for (var i=0; i<aData.length; i++)
+                                            {
+                                                var sParentCateNo = aData[i].parent_cate_no;
+
+                                                if (!methods.aSubCategory[sParentCateNo]) {
+                                                    methods.aSubCategory[sParentCateNo] = [];
+                                                }
+
+                                                methods.aSubCategory[sParentCateNo].push( aData[i] );
+                                            }
+                                        }
+                                    });
+                                },
+
+                                getParam: function(sUrl, sKey) {
+
+                                    var aUrl         = sUrl.split('?');
+                                    var sQueryString = aUrl[1];
+                                    var aParam       = {};
+
+                                    if (sQueryString) {
+                                        var aFields = sQueryString.split("&");
+                                        var aField  = [];
+                                        for (var i=0; i<aFields.length; i++) {
+                                            aField = aFields[i].split('=');
+                                            aParam[aField[0]] = aField[1];
+                                        }
+                                    }
+                                    return sKey ? aParam[sKey] : aParam;
+                                },
+
+                                getParamSeo: function(sUrl) {
+                                    var aUrl         = sUrl.split('/');
+                                    return aUrl[3] ? aUrl[3] : null;
+                                },
+
+                                show: function(overNode, iCateNo) {
+
+                                    if (methods.aSubCategory[iCateNo].length == 0) {
+                                        return;
+                                    }
+
+                                    var aHtml = [];
+                                    aHtml.push('<ul>');
+                                    $(methods.aSubCategory[iCateNo]).each(function() {
+                                        aHtml.push('<li><a href="'+this.link_product_list+'">'+this.name+'</a></li>');
+                                    });
+                                    aHtml.push('</ul>');
+
+
+                                    var offset = $(overNode).offset();
+                                    $('<div class="sub-category"></div>')
+                                        .appendTo(overNode)
+                                        .html(aHtml.join(''))
+                                        .find('li').mouseover(function(e) {
+                                        $(this).addClass('over');
+                                    }).mouseout(function(e) {
+                                        $(this).removeClass('over');
+                                    });
+                                },
+
+                                close: function() {
+                                    $('.sub-category').remove();
+                                }
+                            };
+                            methods.get();
+
+                            $('.xans-layout-category li').mouseenter(function(e) {
+                                var $this = $(this).addClass('on'),
+                                    iCateNo = Number(methods.getParam($this.find('a').attr('href'), 'cate_no'));
+
+                                if (!iCateNo) {
+                                    iCateNo = Number(methods.getParamSeo($this.find('a').attr('href')));
+                                }
+
+                                if (!iCateNo) {
+                                    return;
+                                }
+
+                                methods.show($this, iCateNo);
+                            }).mouseleave(function(e) {
+                                $(this).removeClass('on');
+                                methods.close();
+                            });
+
+                        }
+
+                        function dndComponent() {
+
+                            var $scope = $(".dnd_module_c785e267507864e0f86dfc2033986f74");
+                            var calculateNavigationCategoryTimer = null,
+                                $navigation = $scope.find("#navigation");
+
+                            function calculateNavigationCategory() {
+
+                                var $navigationCategory = $("#navigation > .inner .category"),
+                                    $categoryChild = $navigationCategory.children(),
+                                    calculate = 0;
+
+                                if(!$navigationCategory.length) return;
+
+                                $categoryChild.each( function( idx ) {
+                                    calculate = calculate + $(this).outerWidth(true) + parseInt( $( this ).css('marginLeft'),10 );
+                                } );
+
+                                if( $navigationCategory.width() < calculate + 50 ) {
+
+                                    $("#navigation").addClass('isShort');
+
+                                } else {
+
+                                    $("#navigation").removeClass('isShort');
+
+                                }
+
+                            }
+
+                            if( $navigation.length ) {
+
+                                $(window).bind('resize.calculateNavigationCategory', function() {
+
+                                    if(calculateNavigationCategoryTimer) clearTimeout( calculateNavigationCategoryTimer );
+                                    calculateNavigationCategoryTimer = setTimeout(calculateNavigationCategory, 100);
+
+                                }).trigger("resize.calculateNavigationCategory");
+
+                            }
+
+                            $scope.find('.eToggleCateLayer').click(function () {
+                                $scope.find('> nav').toggleClass('open');
+                                $('.navDimmed').toggleClass('show');
+                            });
+
+                        }
+
+                        if (document.readyState == 'complete') {
+                            dndComponent();
+                        } else {
+                            document.addEventListener('DOMContentLoaded', dndComponent);
+                            document.addEventListener('DOMContentLoaded', pageLoaded);
+                        }
+
+                    })();
+                </script>
+                <!-- // MOMA COMPONENT 2 : BS_공통_메인표시상품분류_v01 -->
+
+            </div>
+
+        </div>
+
+        <div class="gridItem"style="grid-area:11/1/39/5;">
+
+            <!-- MOMA COMPONENT 45 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                    var LANGUAGE = {
+                        "ko_KR" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})",
+                            "LANGCODE_9" : "마이쇼핑",
+                            "LANGCODE_10" : "뒤로가기"
+                        },
+                        "ja_JP" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        },
+                        "en_US" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        },
+                        "zh_CN" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        },
+                        "zh_TW" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        },
+                        "es_ES" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        },
+                        "pt_PT" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        },
+                        "vi_VN" : {
+                            "LANGCODE_1" : "회원정보 수정",
+                            "LANGCODE_2" : "님",
+                            "LANGCODE_3" : "쿠폰",
+                            "LANGCODE_4" : "개",
+                            "LANGCODE_5" : "{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}",
+                            "LANGCODE_6" : "{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}",
+                            "LANGCODE_7" : "({$dc_pay} {$mobile_dc_min_price} 모바일 구매시 {$mobile_dc_price}{$mobile_dc_price_type}을 {$mobile_use_dc} 받으실 수 있습니다. {$mobile_dc_max_percent})",
+                            "LANGCODE_8" : "({$dc_pay} {$mobile_dc_mileage_min_buy_amount} 모바일 구매시 {$mobile_dc_mileage_price_o_percent}{$mobile_dc_mileage_unit}을 {$mobile_use_dc_mileage} 받으실 수 있습니다. {$mobile_dc_mileage_max_percent_buy_amount})"
+                        }
+                    };
+                    window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_1c2c213715439227197068c568b1cf54');
+                });
+            </script>
+            <!-- // MOMA COMPONENT 45 : 언어팩코드 -->
+
+            <div class="dnd_module_1c2c213715439227197068c568b1cf54">
+
+                <!-- MOMA COMPONENT 45 : BS_마이쇼핑_회원혜택_v01 -->
+                <div id="titleArea" class="titleArea">
+                    <h2 class="title">#LANGCODE_9#</h2>
+                    <span module="Layout_MobileAction">
+                        <a href="#none" onclick="{$go_back}" class="btnBack">#LANGCODE_10#</a>
+                    </span>
+                </div>
+
+                <div module="myshop_asyncbenefit">
+                    <div module="layout_logincheck">
+                        <!--
+                            $url = /member/login.html
+                        -->
+                    </div>
+                    <div class="memberInfo {$display_benefit|display}">
+                        <a href="/member/modify.html" class="memberModify"><span>#LANGCODE_1#</span></a>
+                        <button type="button" class="button memeberModify"><span></span></button>
+                        <strong class="name">{$member_name}#LANGCODE_2#</strong><br>
+                        <span class="group">{$group_name}</span>
+                        <div module="myshop_asyncbankbook" class="benefit">
+                            <ul>
+                                <li><span class="label">{$mileage_name}</span><a href="/myshop/mileage/historyList.html" class="link">{$avail_mileage}</a></li>
+                                <li class="{$display_deposit|display}"><span class="label">{$deposit_name}</span><a href="/myshop/deposits/historyList.html" class="link">{$total_deposit}</a></li>
+                                <li class="{$display_coupon|display}"><span class="label">#LANGCODE_3#</span><a href="/myshop/coupon/coupon.html" class="link">{$coupon_cnt}#LANGCODE_4#</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="notice {$display_no_benefit|display}">
+                            <p class="{$display_no_benefit|display} {$display_no_benefit_class}">#LANGCODE_5#</p>
+                            <p class="{$display_mobile_use_dc|display} {$display_mobile_use_dc_class}">#LANGCODE_7#</p>
+                            <p class="{$display_with_all|display} {$display_with_all_class}">#LANGCODE_6#</p>
+                            <p class="{$display_mobile_use_mileage|display} {$display_mobile_use_mileage_class}">#LANGCODE_8#</p>
+                        </div>
+
+                    </div>
+                </div>
+                <style>
+                    .dnd_module_1c2c213715439227197068c568b1cf54  { }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .titleArea { overflow:hidden; position:relative; padding:18px 45px 19px 56px; border-top:1px solid #eee; background:#fff; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .titleArea h2.title { font-size:15px; text-align:center; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .titleArea .btnBack { overflow:hidden; position:absolute; left:17px; top:19px; width:20px; height:20px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/detail/btn_title_back.png') no-repeat 0 0; background-size:20px auto; }
+
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo { position:relative; padding:24px 16px 20px; box-sizing:border-box; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/myshop/bg_member_info.gif') no-repeat 0 0; background-size:cover; }
+
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .name { font-size:24px; color:#fff; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .group { font-size:12px; color:#fff; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .notice { position:relative; min-height:42px; margin: 10px -16px -20px; padding:12px 16px 11px 36px; box-sizing:border-box; background:rgba(0,0,0,.5); }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .notice:before { content:''; position:absolute; left:16px; top:14px; width:14px; height:14px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/myshop/ico_member_notice.png') no-repeat 0 0; background-size:14px auto; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .notice > p { font-size:12px; color:#fff; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo a.modify { position:absolute; top:30px; right:16px; height:28px; padding:0 10px; border:1px solid #fff; font-size:12px; color:#fff; line-height:28px; text-align:center; text-decoration:none; background:transparent; }
+
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .benefit { margin:34px 0 0; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .benefit:after { content:''; display:block; clear:both; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .benefit li { float:left; min-width:89px; padding:0 29px 0 0; color:#fff; box-sizing:border-box; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .benefit li .label { display:block; font-size:12px; line-height:15px; color:#949699; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .benefit li > .link { display:block; font-size:20px; color:#fff; text-decoration:none; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .memberModify { position: absolute; right: 16px; top: 30px; border: 1px solid #ffffff; padding: 0 10px; color:#fff; font-size: 12px; line-height: 26px; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .memberInfo .memberModify span { display: block; }
+
+                    /* 작업필요 */
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .invite { margin:7px 0; padding:14px; border:1px solid #d5d5d5; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .invite .title { display:block; margin:0 0 14px; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .invite .inputBox { position:relative; box-sizing:content-box; padding:0 77px 0 0; margin:0 0 14px; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .invite .inputBox input { width:100%; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .invite a { position:absolute; top:0; right:0; display:block; float:right; }
+                    .dnd_module_1c2c213715439227197068c568b1cf54 .invite .notice { font-size:11px; }
+                </style>
+                <!-- // MOMA COMPONENT 45 : BS_마이쇼핑_회원혜택_v01 -->
+
+            </div>
+        </div>
+
+<div class="gridItem" style="grid-area:39/1/61/5">
+
+    <!-- MOMA COMPONENT 46 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var LANGUAGE = {
+                "ko_KR" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "ja_JP" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "en_US" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "zh_CN" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "zh_TW" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "es_ES" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "pt_PT" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                },
+                "vi_VN" : {
+                    "LANGCODE_1" : "내 주문 현황 <span class=\"duration\">최근 3개월 기준</span>",
+                    "LANGCODE_2" : "입금전",
+                    "LANGCODE_3" : "배송준비중",
+                    "LANGCODE_4" : "배송중",
+                    "LANGCODE_5" : "배송완료",
+                    "LANGCODE_6" : "취소",
+                    "LANGCODE_7" : "교환",
+                    "LANGCODE_8" : "반품"
+                }
+            };
+            window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_507772837a23683c50a8344dc83bf446');
+        });
+    </script>
+    <!-- // MOMA COMPONENT 46 : 언어팩코드 -->
+
+    <div class="dnd_module_507772837a23683c50a8344dc83bf446">
+
+        <!-- MOMA COMPONENT 46 : BS_마이쇼핑_주문처리현황_v01 -->
+        <div module="myshop_orderstate">
+            <div module="layout_logincheck">
+                <!--
+                    $url = /member/login.html
+                -->
+            </div>
+            <div class="inner">
+                <strong class="title">#LANGCODE_1#</strong>
+                <div class="orderState">
+                    <ul class="order">
+                        <li>
+                            <a href="{$shppiedBeforeUrl}">
+                                {$shppiedBeforeCount}
+                                <strong class="label">#LANGCODE_2#</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{$shppiedStandbyUrl}">
+                                {$shppiedStandbyCount}
+                                <strong class="label">#LANGCODE_3#</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{$shppiedBeginUrl}">
+                                {$shppiedBeginCount}
+                                <strong class="label">#LANGCODE_4#</strong>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{$shppiedComplateUrl}">
+                                {$shppiedComplateCount}
+                                <strong class="label">#LANGCODE_5#</strong>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="cs">
+                        <li class="cancel">
+                            <a href="{$orderCancelUrl}">
+                                <strong class="label">#LANGCODE_6#</strong>{$orderCancelCount}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{$orderExchangeUrl}">
+                                <strong class="label">#LANGCODE_7#</strong>{$orderExchangeCount}
+                            </a>
+                        </li>
+                        <li class="return">
+                            <a href="{$orderReturnUrl}">
+                                <strong class="label">#LANGCODE_8#</strong>{$orderReturnCount}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <style>
+            .dnd_module_507772837a23683c50a8344dc83bf446 { background:#f6f8fa; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .inner { margin:0 0 10px; padding:26px 16px 20px; background:#fff; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .title { display:block; font-size:15px; color:#000; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .duration { margin:0 0 0 2px; font-weight:normal; font-size:12px; color:#999; }
+
+            .dnd_module_507772837a23683c50a8344dc83bf446 .orderState { }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .orderState .order { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; margin:26px 0 0; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .order li { -webkit-flex:1; -ms-flex:1; flex:1; text-align:center; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .order li a { display:block; font-size:26px; color:#000; text-decoration:none; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .order li .label { display:block; margin:2px 0 0; font-weight:normal; font-size:13px; }
+
+            .dnd_module_507772837a23683c50a8344dc83bf446 .orderState .cs { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; -webkit-justify-content:space-around; -ms-justify-content:space-around; justify-content:space-around; -webkit-align-items:center; -ms-align-items:center; align-items:center; height:40px; margin:20px 0 0; background:#f8f9fb; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .cs li { position:relative; width:32%; text-align:center; box-sizing:border-box; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .cs li a { display:block; font-size:12px; color:#5d5d5d; text-decoration:none; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .cs li .label { display:inline-block; font-weight:normal; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .cs li:before { position:absolute; top:50%; width:1px; height:12px; margin:-6px 0 0; background:#e7e7e7; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .cs li.cancel:before { content:''; right:0; }
+            .dnd_module_507772837a23683c50a8344dc83bf446 .cs li.return:before { content:''; left:0; }
+
+        </style>
+        <!-- // MOMA COMPONENT 46 : BS_마이쇼핑_주문처리현황_v01 -->
+
+    </div>
+
+
+</div>
+
+<div class="gridItem" style="grid-area:61/1/85/5">
+
+    <!-- MOMA COMPONENT 47 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var LANGUAGE = {
+                "ko_KR" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "ja_JP" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "en_US" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "zh_CN" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "zh_TW" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "es_ES" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "pt_PT" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                },
+                "vi_VN" : {
+                    "LANGCODE_1" : "주문",
+                    "LANGCODE_2" : "장바구니",
+                    "LANGCODE_3" : "관심상품",
+                    "LANGCODE_4" : "주문조회"
+                }
+            }
+            window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_5aebcd542ab18d9364e394c6614b408d');
+        });
+    </script>
+    <!-- // MOMA COMPONENT 47 : 언어팩코드 -->
+
+    <div class="dnd_module_5aebcd542ab18d9364e394c6614b408d">
+
+        <!-- MOMA COMPONENT 47 : BS_마이쇼핑_마이쇼핑목록_주문관련_v01 -->
+        <div module="myshop_main">
+            <div module="layout_logincheck">
+                <!--
+                    $url = /member/login.html
+                -->
+            </div>
+            <strong class="title">#LANGCODE_1#</strong>
+            <ul>
+                <li><a href="/order/basket.html">#LANGCODE_2# <span class="count {$basket_count_display|display}">{$basket_count}</span></a></li>
+                <li><a href="/myshop/wish_list.html">#LANGCODE_3# <span class="count {$wish_count_display|display}">{$wish_count}</span></a></li>
+                <li><a href="/myshop/order/list.html">#LANGCODE_4#</a></li>
+            </ul>
+        </div>
+        <style>
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d { position:relative; padding:26px 16px 27px; background:#fff; }
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d:after { content:''; position:absolute; left:0; bottom:0; width:100%; height:10px; background:#f6f8fa; }
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d .title { display:block; margin:0 0 21px; font-size:12px; color:#abaeb5; }
+
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d ul { overflow:hidden; }
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d li { margin-top:-1px; border-top:1px solid #e5e9f2; }
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d li a { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-align-items:center; -ms-align-items:center; align-items:center; position:relative; width:100%; height:50px; padding:0 19px 0 0; font-size:14px; color:#000; text-decoration:none; box-sizing:border-box; }
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d li a:after { content:""; position:absolute; top:50%; right:0; width:7px; height:12px; margin:-6px 0 0; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/myshop/ico_menu_arrow.png") no-repeat; background-size:7px auto; }
+            .dnd_module_5aebcd542ab18d9364e394c6614b408d li .count { margin-left:auto; padding:0 0 0 10px; font-weight:bold; font-size:14px; color:#757575; }
+        </style>
+        <!-- // MOMA COMPONENT 47 : BS_마이쇼핑_마이쇼핑목록_주문관련_v01 -->
+
+    </div>
+
+</div>
+
+<div class="gridItem" style="grid-area:85/1/129/5">
+
+    <!-- MOMA COMPONENT 48 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var LANGUAGE = {
+                "ko_KR" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "ja_JP" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "en_US" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "zh_CN" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "zh_TW" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "es_ES" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "pt_PT" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                },
+                "vi_VN" : {
+                    "LANGCODE_1" : "회원",
+                    "LANGCODE_2" : "출석체크",
+                    "LANGCODE_3" : "쿠폰",
+                    "LANGCODE_4" : "게시물 관리",
+                    "LANGCODE_5" : "상품리뷰 관리",
+                    "LANGCODE_6" : "배송주소록 관리"
+                }
+            };
+            window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_022adfc471eb9d2f655a9eb3799b0b43');
+        });
+    </script>
+    <!-- // MOMA COMPONENT 48 : 언어팩코드 -->
+
+    <div class="dnd_module_022adfc471eb9d2f655a9eb3799b0b43">
+
+        <!-- MOMA COMPONENT 48 : BS_마이쇼핑_마이쇼핑목록_회원관련_v01 -->
+        <div module="myshop_main">
+            <div module="layout_logincheck">
+                <!--
+                    $url = /member/login.html
+                -->
+            </div>
+            <strong class="title">#LANGCODE_1#</strong>
+            <ul>
+                <li module="Layout_attendBanner">
+                    <!--
+                        $stamp_type_url = /attend/stamp.html
+                        $comment_type_url = /attend/comment.html
+                    -->
+                    <a href="{$attend_url}">#LANGCODE_2#</a>
+                </li>
+                <li class="{$deposit_display|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name}</a></li>
+                <li class="{$coupon_display|display}"><a href="/myshop/coupon/coupon.html">#LANGCODE_3# <span class="count {$coupon_count_display|display}">({$coupon_count})</span></a></li>
+                <li><a href="/myshop/mileage/historyList.html">{$mileage_name}</a></li>
+                <li><a href="/myshop/board_list.html">#LANGCODE_4#</a></li>
+<!--                <li><a href="/board/gallery/list.html">#LANGCODE_5#</a></li>-->
+                <li><a href="/myshop/addr/list.html">#LANGCODE_6#</a></li>
+            </ul>
+        </div>
+        <style>
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 { position:relative; padding:26px 16px 27px; background:#fff; }
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43:after { content:''; position:absolute; left:0; bottom:0; width:100%; height:10px; background:#f6f8fa; }
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 .title { display:block; margin:0 0 21px; font-size:12px; color:#abaeb5; }
+
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 ul { overflow:hidden; }
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 li { margin-top:-1px; border-top:1px solid #e5e9f2; }
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 li a { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-align-items:center; -ms-align-items:center; align-items:center; position:relative; width:100%; height:50px; padding:0 19px 0 0; font-size:14px; color:#000; text-decoration:none; box-sizing:border-box; }
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 li a:after { content:""; position:absolute; top:50%; right:0; width:7px; height:12px; margin:-6px 0 0; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/myshop/ico_menu_arrow.png") no-repeat; background-size:7px auto; }
+            .dnd_module_022adfc471eb9d2f655a9eb3799b0b43 li .count { margin-left:auto; padding:0 0 0 10px; font-weight:bold; font-size:14px; color:#757575; }
+        </style>
+        <!-- // MOMA COMPONENT 48 : BS_마이쇼핑_마이쇼핑목록_회원관련_v01 -->
+
+    </div>
+
+
+</div>
+
+<div class="gridItem" style="grid-area:129/1/150/5">
+
+    <!-- MOMA COMPONENT 49 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var LANGUAGE = {
+                "ko_KR" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "ja_JP" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "en_US" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "zh_CN" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "zh_TW" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "es_ES" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "pt_PT" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                },
+                "vi_VN" : {
+                    "LANGCODE_1" : "1:1 맞춤상담",
+                    "LANGCODE_2" : "좋아요",
+                    "LANGCODE_3" : "기타"
+                }
+            };
+            window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_42b3a7588b8a72d91aba2ca08695b7dc');
+        });
+    </script>
+    <!-- // MOMA COMPONENT 49 : 언어팩코드 -->
+
+    <div class="dnd_module_42b3a7588b8a72d91aba2ca08695b7dc">
+
+        <!-- MOMA COMPONENT 49 : BS_마이쇼핑_마이쇼핑목록_기타_v01 -->
+        <div module="myshop_main">
+            <div module="layout_logincheck">
+                <!--
+                    $url = /member/login.html
+                -->
+            </div>
+            <strong class="title">#LANGCODE_3#</strong>
+            <ul>
+                <li class="{$consult_display|display}"><a href="/board/consult/list.html">#LANGCODE_1#</a></li>
+<!--                <li class="{$myLike_display|display}"><a href="{$myLike_href}">#LANGCODE_2#</a></li>-->
+            </ul>
+        </div>
+        <style>
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc { position:relative; padding:26px 16px 27px; background:#fff; }
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc:after { content:''; position:absolute; left:0; bottom:0; width:100%; height:10px; background:#f6f8fa; }
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc .title { display:block; margin:0 0 21px; font-size:12px; color:#abaeb5; }
+
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc ul { overflow:hidden; }
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc li { margin-top:-1px; border-top:1px solid #e5e9f2; }
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc li a { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-align-items:center; -ms-align-items:center; align-items:center; position:relative; width:100%; height:50px; padding:0 19px 0 0; font-size:14px; color:#000; text-decoration:none; box-sizing:border-box; }
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc li a:after { content:""; position:absolute; top:50%; right:0; width:7px; height:12px; margin:-6px 0 0; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/myshop/ico_menu_arrow.png") no-repeat; background-size:7px auto; }
+            .dnd_module_42b3a7588b8a72d91aba2ca08695b7dc li .count { margin-left:auto; padding:0 0 0 10px; font-weight:bold; font-size:14px; color:#757575; }
+        </style>
+        <!-- // MOMA COMPONENT 49 : BS_마이쇼핑_마이쇼핑목록_기타_v01 -->
+
+    </div>
+
+</div>
+
+
+    <div class="gridItem" style="grid-area:150/1/188/5">
+
+        <!-- MOMA COMPONENT 15 : 언어팩코드, 모마에는 JSON 만 등록합니다. -->
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                var LANGUAGE = {
+                    "ko_KR" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "ja_JP" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "en_US" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "zh_CN" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "zh_TW" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "es_ES" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "pt_PT" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    },
+                    "vi_VN" : {
+                        "LANGCODE_1" : "고객센터",
+                        "LANGCODE_2" : "1:1문의하기",
+                        "LANGCODE_3" : "Q&amp;A",
+                        "LANGCODE_4" : "회사소개",
+                        "LANGCODE_5" : "개인정보처리방침",
+                        "LANGCODE_6" : "이용약관",
+                        "LANGCODE_7" : "대표이사:",
+                        "LANGCODE_8" : "사업자등록번호:",
+                        "LANGCODE_9" : "통신판매업신고:",
+                        "LANGCODE_10" : "개인정보관리책임:",
+                        "LANGCODE_11" : "호스팅제공:",
+                        "LANGCODE_12" : "카페24(주)",
+                        "LANGCODE_13" : "Copyright&copy; 2014 CoverStory. All Rights Reserved."
+                    }
+                }
+                window['CAFE24-COUNTRY'].changeTextCode( LANGUAGE, 'dnd_module_3865037d1db28c40406f2a127c19756c');
+            });
+        </script>
+        <!-- // MOMA COMPONENT 15 : 언어팩코드 -->
+
+        <div class="dnd_module_3865037d1db28c40406f2a127c19756c">
+
+            <!-- MOMA COMPONENT 15 : BS_공통_푸터_v01 -->
+            <footer id="footer" module="layout_footerPackage">
+                <div module="layout_info" class="customer">
+                    <a href="tel:{$phone}" class="link tel">
+                        <span class="title">#LANGCODE_1#</span>
+                        <span class="sub">{$phone}</span>
+                    </a>
+                    <a href="/board/consult/list.html" class="link consult">
+                        <span class="title">#LANGCODE_2#</span>
+                        <span class="sub">#LANGCODE_3#</span>
+                    </a>
+                </div>
+                <div module="Layout_footer" class="company">
+                    <ul class="util">
+                        <li><a href="/shopinfo/company.html" class="link">#LANGCODE_4#</a></li>
+                                                    <li><a href="/member/privacy.html" class="link"><strong>#LANGCODE_5#</strong></a></li>
+
+                        <li><a href="/member/mall_agreement.html" class="link">#LANGCODE_6#</a></li>
+                    </ul>
+                    <div class="info">
+                        <strong class="name">{$company_name}</strong>
+                        <span class="address">{$mall_addr1} {$mall_addr2}</span>
+                        <dl>
+                            <dt>#LANGCODE_7#</dt>
+                            <dd><a href="mailto:{$email}">{$president_name}</a></dd>
+                            <dt>#LANGCODE_8#</dt>
+                            <dd>{$company_regno}</dd>
+                        </dl>
+                        <dl>
+                            <dt>#LANGCODE_9#</dt>
+                            <dd>{$network_regno}</dd>
+                        </dl>
+                        <dl>
+                            <dl class="{$cpo_email|display}">
+                                <dt>#LANGCODE_10#</dt>
+                                <dd><a href="mailto:{$cpo_email}">{$cpo_name}</a></dd>
+                                <dt>#LANGCODE_11#</dt>
+                                <dd>#LANGCODE_12#</dd>
+                            </dl>
+                        </dl>
+                    </div>
+                    <p class="copyright">#LANGCODE_13#</p>
+                </div>
+            </footer>
+            <style type="text/css">
+                .dnd_module_3865037d1db28c40406f2a127c19756c { padding:10px 0 0; background:#f6f8fa; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer { display:-webkit-flex; display:-ms-flex; display:flex; margin:0 8px 10px; border:1px solid #e5e9f2; background:#fff; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer:after { content:''; display:block; clear:both; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link { position:relative; float:left; -webkit-flex:1; -ms-flex:1; flex:1; padding:23px 10px 17px; text-align:center; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:hover { text-decoration:none; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:before { content:''; display:block; width:24px; height:24px; margin:0 auto; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link.tel:before { background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/img_customer_tel.png') no-repeat 0 0; background-size:24px auto;}
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link.consult:before { background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/img_customer_consult.png') no-repeat 0 0; background-size:24px auto; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:after { content:''; position:absolute; left:0; top:29px; bottom:29px; width:1px; background:#e5e9f2; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:first-child:after { display:none; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link .title { display:block; margin:7px 0 2px; font-size:14px; color:#000; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .customer .link .sub { font-size:13px; color:#abaeb5; }
+
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company { padding:16px 16px 63px; font-size:12px; line-height:18px; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .link:hover { text-decoration:none; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .util { margin:0 0 33px; color:#5d5d5d; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .util:after { content:''; display:block; clear:both; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .util li { float:left; margin:0 22px 0 0; }
+
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .info { color:#999; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .name { display:block; font-weight:normal; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .address { }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl {  }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dt { display:inline-block; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd { display:inline-block; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd a { color:#999; }
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd + dt:before { content:''; display:inline-block; width:1px; height:10px; margin:3px 6px 0 2px; vertical-align:top; background:#cacaca; }
+
+                .dnd_module_3865037d1db28c40406f2a127c19756c .company .copyright { margin:10px 0 0; color:#999; }
+            </style>
+            <!-- // MOMA COMPONENT 15 : BS_공통_푸터_v01 -->
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+<div module="Popup_MultiPopup">
+    <!--
+            $banner_popup_no =
+            ※ 노출시킬 팝업의 ID를 숫자로 넣어주세요.
+        -->
+    {$popup}
+</div>
+
+</body>
+</html>
+
+
+
+

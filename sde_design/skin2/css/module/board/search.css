@@ -1,0 +1,11 @@
+.xans-board-search { padding:20px 0 20px 10px; color:#2e2e2e; font-size:12px; }
+.xans-board-search .boardSearch { display:block; }
+.xans-board-search p { margin:0 0 10px; padding:0 0 0 7px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle3.gif") no-repeat 0 45%; }
+.xans-board-search p.category:before { content:"상품분류"; }
+.xans-board-search p:before { content:"검색어"; }
+.xans-board-search .category select { margin:0 4px 0 0; width:150px; }
+.xans-board-search .category select#product_category_depth1 { margin:0 5px 0 10px; }
+.xans-board-search select { margin:0 2px 0 0; width:72px; }
+.xans-board-search select#search_date { margin:0 2px 0 22px; }
+.xans-board-search input { width:162px; }
+.xans-board-search .boardSearch img { vertical-align:middle; }

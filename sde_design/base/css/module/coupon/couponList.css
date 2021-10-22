@@ -1,0 +1,16 @@
+#popup { width:800px; }
+.xans-coupon-couponlist .title { margin:0 0 10px; }
+.xans-coupon-couponlist .title h3 { color:#353535; font-size:12px; }
+
+.xans-coupon-couponlist .ec-base-table td.thumb img { max-width:80px; }
+.xans-coupon-couponlist .ec-base-table td div.option  { margin:9px 0 0; color:#707070; line-height:16px; }
+.xans-coupon-couponlist .ec-base-table td div.type { margin:9px 0 0; line-height:16px; }
+
+.xans-coupon-couponlist .ec-base-table.total table { border:1px solid #777; }
+.xans-coupon-couponlist .ec-base-table.total tfoot td { font-size:12px; }
+.xans-coupon-couponlist .ec-base-table.total tfoot td .total { margin:0 0 0 15px; }
+.xans-coupon-couponlist .ec-base-table.total tfoot td .total .price { font-size:17px; }
+.xans-coupon-couponlist .ec-base-table.total td { height:58px; line-height:58px; font-size:20px; }
+.xans-coupon-couponlist .ec-base-table.total td .box { word-wrap:break-word; word-break:break-all; }
+.xans-coupon-couponlist .ec-base-table.total .detail td { height:auto; line-height:inherit; font-size:12px; color:#707070; }
+.xans-coupon-couponlist .ec-base-table.total .detail li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }

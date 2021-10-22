@@ -1,0 +1,145 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <!-- 이값은 지우면 안되는 값입니다.
+        $easyform_agreement=T
+    -->
+    <div id="ec-jigsaw-area-agreement">
+        <div class="agreeArea" id="{$all_agreement_checkbox}">
+            <div class="allAgree"><input type="checkbox" id="allAgree" /><label for="allAgree"><strong>모든 약관 동의</strong></label></div>
+            <div class="agreement">
+                <!-- app tag -->
+                <ul id="ec-orderform-agreement-head"></ul>
+                <ul>
+                    <!-- 구매조건 확인 및 결제진행 동의 -->
+                    <li id="{$chk_purchase_agreement}">
+                        <div class="agree"><span class="check">{$form.chk_purchase_agreement}</span></div>
+                    </li>
+                    <!-- 결제대행서비스 약관 동의 -->
+                    <li id="ec-order-payment-directpay-card-agree" class="{$directpay_card_agree_display|display}">
+                        <div class="agree">
+                            <span class="check"><input type="checkbox" id="directpay_card_agree_financial" class="directpay_card_agree_checkbox" /><label for="directpay_card_agree_financial"><span class="txtEm">[필수]</span> 결제대행서비스 약관 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewPaymentAgree()">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 쇼핑몰 이용약관 동의 -->
+                    <li class="{$nm_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.mallAgree}<label for="mallAgree"><span class="txtEm">[필수]</span> 쇼핑몰 이용약관 동의</label></span>
+                            <span style="display:none;">{$form.mall_agreement_radio}</span>
+                            <button type="button" class="btnAgree" onclick="viewMallAgree();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 고유식별정보 수집 동의 -->
+                    <li id="{$privacy_agreement_for_identification}" class="{$receiver_id_card_key_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.privacy_agreement_for_identification_check_box}<label for="privacy_agreement_for_identification_check_box0"><span class="txtEm">[필수]</span> 고유식별정보 수집 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewIdentification();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 개인정보수집 이용동의 -->
+                    <li id="ec-orderform-PrivacyAgreementRow" class="{$privacy_agreement_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.privacy_agreement_check_box}<label for="privacy_agreement_check_box0"><span class="txtEm">[필수]</span> 개인정보 수집 및 이용 동의</label></span>
+                            <span style="display:none;">{$form.privacy_agreement}</span>
+                            <button type="button" class="btnAgree" onclick="viewMemberJoinAgree();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 비회원 개인정보 처리방침 -->
+                    <li id="ec-orderform-NoMemberAgreementRow" class="{$nm_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.personAgree}<label for="personAgree"><span class="txtEm">[필수]</span> 비회원 구매시 개인정보 처리방침 동의</label></span>
+                            <span style="display:none;">{$form.nm_agreement}</span>
+                            <button type="button" class="btnAgree" onclick="viewPersonAgree();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 배송정보 제공방침 -->
+                    <li class="{$delivery_info_offer_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.delivery_info_offer_check_box}<label for="delivery_info_offer_check_box0"><span class="txtEm">[필수]</span> 배송정보 제공방침 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewDelivery();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 정기결제 서비스 이용 동의 -->
+                    <li class="{$subscription_show_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.subscription_info_check_box}<label for="subscription_info_checkbox0"><span class="txtEm">[필수]</span> 정기결제 서비스 이용 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewRegularDelivery();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 예약결제 이용 동의 -->
+                    <li class="{$crowdfunding_show_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.crowdfunding_info_check_box}<label for="crowdfunding_info_check_box"><span class="txtEm">[필수]</span> 예약결제 이용 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewCrowdfunding();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 청약철회방침 -->
+                    <li class="{$subscription_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.subscription_agreement_chk}<label for="subscription_agreement_chk0"><span class="txtEm {$subscription_required_display|display}">[필수]</span><span class="{$subscription_not_required_display|display}">[선택]</span> 청약철회방침 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewSubscription();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 개인정보 제3자 제공 동의 -->
+                    <li id="ec-orderform-informationAgreementRow" class="{$information_agreement_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.information_agreement_check_box}<label for="information_agreement_check_box0">[선택] 개인정보 제3자 제공 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewInformationAgree();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 개인정보취급 위탁 동의 -->
+                    <li id="ec-orderform-ConsignmentAgreementRow" class="{$consignment_agreement_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.consignment_agreement_check_box}<label for="consignment_agreement_check_box0">[선택] 개인정보취급 위탁 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewConsignmentAgree();">내용보기</button>
+                        </div>
+                    </li>
+                    <!-- 전자보증보험 -->
+                    <li id="{$insurance_agreement_chk}" class="insurance {$eguarantee_display|display}">
+                        <div class="agree">
+                            <span class="check">{$form.insurance_agreement_chk}<label for="insurance_agreement_chk0">[선택] 전자보증보험 발급시 개인정보 이용 동의</label></span>
+                            <button type="button" class="btnAgree" onclick="viewInsurance();">자세히보기</button>
+                        </div>
+                        <div class="insuranceDetail">
+                            <div class="ec-base-table typeWrite gCellNarrow">
+                                <table border="1">
+                                    <caption>전자보증보험 발급 개인정보 입력</caption>
+                                    <colgroup>
+                                        <col style="width:96px" />
+                                        <col style="width:auto" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">생년월일</th>
+                                            <td>{$form.eguarantee_year}년 {$form.eguarantee_month}월 {$form.eguarantee_day}일</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">성별</th>
+                                            <td>{$form.eguarantee_user_gender}</td>
+                                        </tr>
+                                        <tr class="displaynone">
+                                            <th scope="row">개인정보 이용동의</th>
+                                            <td>{$form.eguarantee_personal_agreement}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ec-base-help ec-order-expandwrap">
+                                <strong class="insuranceTitle ec-order-expand">전자보증보험(100% 매매보호 안전결제)이란?</strong>
+                                <div class="insuranceText">물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험증권이 발급됩니다.<br />
+                                    증권이 발급되는 것의 의미는, 물품대금 결제시에 소비자에게 서울보증보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여, 피해발생시 쇼핑몰보증보험으로써 완벽하게 보호받을 수 있습니다. 또한, 입력하신 개인정보는 증권발급을 위해 필요한 정보이며 다른 용도로 사용되지 않습니다.
+                                    전자보증보험 발생시 별도의 수수료가 부과되지 않습니다.</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- app tag -->
+                <ul id="ec-orderform-agreement-tail"></ul>
+            </div>
+        </div>
+    </div>
+<!-- File end -->

@@ -1,0 +1,5 @@
+.popup form#frm_order_act { height:100%; }
+.xans-order-form .wrap { margin:7px 7px 0; border:none; }
+.xans-order-form.ec-base-layer .wrap { padding:7px; }
+.xans-order-form .wrap h2 { margin:5px 10px; font-size:13px; }
+.xans-order-form .wrap textarea { width:100%; height:100%; }

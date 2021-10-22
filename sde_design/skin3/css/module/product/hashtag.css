@@ -1,0 +1,6 @@
+.xans-product-hashtag { display:table; table-layout:fixed; width:346px; margin:30px auto 0; font-family:GulimChe,Gulim; }
+.xans-product-hashtag .heading { display:table-cell; width:41px; vertical-align:top; }
+.xans-product-hashtag .heading > strong { display:inline-block; padding:3px 5px; border:1px solid #cbcbcb; color:#525252; font-size:11px; font-weight:normal; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; }
+.xans-product-hashtag .list { display:table-cell; width:auto; vertical-align:top; font-size:0; line-height:0; }
+.xans-product-hashtag .list li { display:inline-block; margin:4px 10px 2px 0; }
+.xans-product-hashtag .list li a { display:inline-block; word-break:break-all; word-wrap:break-word; text-decoration:underline; color:#525252; font-size:11px; line-height:14px; }

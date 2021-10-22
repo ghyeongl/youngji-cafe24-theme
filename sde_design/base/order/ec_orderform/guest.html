@@ -1,0 +1,124 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <!-- 주문서 간편 회원가입 -->
+    <div class="joinArea" id="eSimpleJoinByOrderForm" module="member_simplejoin">
+        <div class="agreeJoin">
+            <input type="checkbox" id="simple_join_is_check"><label for="simple_join_is_check">배송지 정보로 간편 회원가입</label>
+        </div>
+        <div id="simpleJoinGuide" class="guide">
+            <ul class="ec-base-help">
+                <li>{$simple_join_by_order_desc}</li>
+                <li>회원가입 후 쿠폰, 이벤트 등 할인혜택을 받으실 수 있습니다.</li>
+            </ul>
+        </div>
+        <div id="simpleJoinDataForm" class="ec-base-table typeWrite">
+            <table border="1">
+                <caption>간편 회원가입 정보 입력</caption>
+                <colgroup>
+                    <col style="width:102px">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                    <tr class="emailCheck {$display_use_email|display}">
+                        <th scope="row">이메일 <span class="icoRequired">필수</span>
+</th>
+                        <td>
+                            {$etc_subparam_email} {$emailDuplCheck}{$login_id_type}
+                            <ul class="ec-base-help">
+                                <li>로그인ID로 사용할 이메일을 입력해 주세요.</li>
+                                <li id="{$emailMsg_id}">
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="idCheck {$display_use_id|display}">
+                        <th scope="row">아이디 <span class="icoRequired">필수</span>
+</th>
+                        <td>
+                            {$etc_subparam_member_id} {$idDuplCheck}
+                            <p id="{$idMsg_id}" class="ec-base-help"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비밀번호 <span class="icoRequired">필수</span>
+</th>
+                        <td>
+                            {$etc_subparam_passwd} {$etc_subparam_passwd_type}
+                            <p class="ec-base-help">{$passwd_type_desc}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비밀번호 <br>확인 <span class="icoRequired">필수</span>
+</th>
+                        <td>
+                            {$etc_subparam_user_passwd_confirm}
+                            <p id="{$pwConfirmMsg_id}" class="ec-base-help txtWarn"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="agreeLabel">
+                                <input type="checkbox" id="eSimpleJoinAgreeAll"><label for="eSimpleJoinAgreeAll"><strong>모든 정보에 동의하기</strong></label>
+                            </div>
+                            <div class="agreeLabel">
+                                <input type="checkbox" id="simple_join_agree_use_info"><label for="simple_join_agree_use_info">위 정보와 배송정보(이름, 주소, 이메일, 전화번호)를 회원정보 사용에 동의(필수)</label>
+                            </div>
+                            <div class="agreeLabel">
+                                <input type="checkbox" id="etc_subparam_is_sms"><label for="etc_subparam_is_sms">SMS로 쇼핑정보 수신 동의(선택)</label>
+                            </div>
+                            <div class="agreeLabel">
+                                <input type="checkbox" id="etc_subparam_is_news_mail"><label for="etc_subparam_is_news_mail">이메일로 쇼핑정보 수신 동의(선택)</label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- app tag -->
+    <div id="ec-orderform-guest-head"></div>
+
+    <!-- 비회원 주문조회 -->
+    <div class="pannelArea ec-orderform-NoMemberPasswdRow {$nm_display|display}">
+        <div class="title">
+            <h2>비회원 주문조회 비밀번호</h2>
+        </div>
+        <div class="contents">
+            <div class="ec-base-table typeWrite">
+                <table border="1">
+                    <caption>비회원 주문조회</caption>
+                    <colgroup>
+                        <col style="width:122px">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">비밀번호</th>
+                            <td>
+                                {$form.order_password}
+                                <span id="order_password_alert" class="ec-base-help txtWarn gBlank5"></span>
+                                <span id="order_password_msg" class="ec-base-help gBlank5"> (영문대소문자/숫자/특수문자 중 2가지 이상 조합, 6자~16자)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">비밀번호 확인</th>
+                            <td>
+                                {$form.order_password_confirm}
+                                <span id="{$order_form_nomember_password_confirm_alert_id}" class="ec-base-help txtWarn gBlank5"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- app tag -->
+    <div id="ec-orderform-guest-tail"></div>
+
+<!-- File end -->

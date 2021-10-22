@@ -1,0 +1,45 @@
+/*  tooltip */
+  .ec-base-tooltip-area { display:inline-block; vertical-align:top; }
+  .ec-base-tooltip-area.show { z-index:301; }
+  .ec-base-tooltip-area .btnTip { overflow:hidden; padding:0 0 0 5px; margin:0; border:0; white-space:nowrap; width:14px; height:14px; font-size:1px; line-height:0; vertical-align:middle; color:transparent; text-indent:-150%; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") right center no-repeat; background-size:14px 14px; }
+  /* ec-base-tooltip */
+    .ec-base-tooltip { display:none; z-index:2; position:absolute; top:inherit !important; left:0 !important; right:0 !important; width:88%; margin:3px auto 0; padding:0 14px 14px; text-align:left; border:1px solid #ccc; border-radius:2px; letter-spacing:normal; background-color:#fff; }
+    .ec-base-tooltip .title { display:block; padding:0 20px 0 0; font-size:15px; color:#000; line-height:43px; background:#fff; }
+    .ec-base-tooltip ul { color:#757575; }
+    .ec-base-tooltip ul li { font-size:13px; }
+    .ec-base-tooltip .content table + .title { margin-top:14px; }
+    .ec-base-tooltip p { float:none; font-size:12px; text-align:left; }
+    .ec-base-tooltip p strong { font-weight:normal; font-size:13px; }
+    .ec-base-tooltip .btnClose { overflow:hidden; position:absolute; right:10px; top:10px; width:25px; height:25px; margin:0 !important; font-size:1px; line-height:0; text-indent:150%; white-space:nowrap; border:0; background:url("//img.echosting.cafe24.com/skin/mobile/common/btn_close.png") no-repeat 50% 50%; background-size:13px 13px; }
+    /* typeUpper */
+      .ec-base-tooltip.typeUpper { position:absolute; left:-90px !important; bottom:33px !important; width:200px; margin:0; padding:14px 28px 14px 14px; border:1px solid #ccc; border-radius:2px;
+        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.15);
+      }
+      .ec-base-tooltip.typeUpper:before { content:""; position:absolute; left:40%; bottom:-5px; display:inline-block; width:0; height:0; margin:-3px 0 0; border-left:5px solid transparent; border-top:5px solid #ccc; border-right:5px solid transparent; }
+      .ec-base-tooltip.typeUpper:after { content:""; position:absolute; left:40%; bottom:-4px; display:inline-block; width:0; height:0; margin:-3px 0 0; border-left:5px solid transparent; border-top:5px solid #fff; border-right:5px solid transparent; }
+
+/* 배송비 레이어 */
+  .shippingFee { display:inline-block; position:static; vertical-align:middle; }
+  .shippingFee > a.btnNormal { margin:-3px 0 0 5px; }
+
+  .shippingFee .wrap { display:none; z-index:999; width:96%; padding:0; border-radius:5px; box-sizing:border-box;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+  }
+  .shippingFee .wrap h3 { padding:0 14px; font-size:13px; line-height:36px; background-color:#f0f0f0; border-bottom:1px solid #d5d5d5; border-radius:5px 5px 0 0; }
+  .shippingFee .wrap .content { padding:14px; }
+  .shippingFee .wrap h4 { position:relative; margin:0 7px 7px; }
+  .shippingFee .wrap h4:before { display:inline-block; content:""; margin:0 5px 0 0; width:3px; height:3px; background:#666; vertical-align:middle; }
+  .shippingFee .wrap table + h4 { margin-top:14px; }
+  .shippingFee .wrap p strong { font-weight:normal; font-size:13px; }
+  .shippingFee .wrap table { background:#fff; }
+  .shippingFee .wrap th,
+  .shippingFee .wrap td { padding:7px; border:1px solid #d5d5d5; }
+  .shippingFee .wrap th { width:80px; border-right-width:0; color:#353535; }
+  .shippingFee .wrap td { border-left-width:0; white-space:normal; }
+  .shippingFee .wrap .txtEm { color:#008bcc; }
+  .shippingFee .wrap .info { margin:0; color:#757575; font-size:11px; }
+  .shippingFee .wrap .btnClose { overflow:hidden; position:absolute; right:0; top:0; width:36px; height:36px; font-size:0; border:none; background:transparent url("//img.echosting.cafe24.com/skin/mobile/common/btn_close.png") center center no-repeat; background-size:14px 14px; }

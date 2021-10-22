@@ -1,0 +1,13 @@
+.xans-myshop-summary { margin:14px 7px; }
+.xans-myshop-summary h3 { padding:14px; font-size:13px; line-height:1.2em; color:#fff; background:#737781; }
+
+/* 관련 링크 */
+.xans-myshop-mileagepackage .navigation { padding:0 7px 14px; }
+.xans-myshop-mileagepackage .navigation ul { border:1px solid #d5d5d5; }
+.xans-myshop-mileagepackage .navigation li { background:#f9f9f9; border-top:1px solid #ddd; }
+.xans-myshop-mileagepackage .navigation li:first-child { border-top:0; }
+.xans-myshop-mileagepackage .navigation li a { display:block; position:relative; padding:14px; font-weight:bold; font-size:13px; line-height:1.2em; color:#4a5164; }
+.xans-myshop-mileagepackage .navigation li a:after { display:block; content:""; width:20px; height:20px; position:absolute; top:12px; right:12px;
+    background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png") right 50% no-repeat; background-size:20px 20px;
+    transform:rotate(-90deg); -ms-transform:rotate(-90deg); -webkit-transform:rotate(-90deg);
+ }

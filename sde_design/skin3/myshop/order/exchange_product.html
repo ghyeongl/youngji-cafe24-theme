@@ -1,0 +1,119 @@
+<div module="MyShop_OrderHistoryExchangeproduct" class="ec-base-table typeList">
+     <div class="title">
+        <h3>교환 상품</h3>
+    </div>
+    <table border="1" summary="">
+        <caption>상품정보</caption>
+        <colgroup>
+            <col style="width:auto;" />
+            <col style="width:120px;" />
+            <col style="width:80px;" />
+            <col style="width:120px;" />
+            <col style="width:110px;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">상품정보</th>
+                <th scope="col">판매가</th>
+                <th scope="col">수량</th>
+                <th scope="col">합계</th>
+                <th scope="col">삭제</th>
+            </tr>
+        </thead>
+        <tbody id="{$selected_product_div_id}" class="center {$display_selected_product|display}">
+            <tr module="Myshop_selectedProduct">
+                <td class="product left">
+                    <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                    <p><strong class="name">{$product_name_link}</strong></p>
+                    <ul class="option" module="Myshop_optionAll">
+                        <li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str}<span class="{$qty_display|display}">({$qty}개)</span><br />
+                            <a href="#none" onclick="{$action_option_change}" class="btnNormal gBlank5 {$option_change_display|display}">옵션변경</a>
+                            <a href="#none" onclick="{$action_option_change}" class="btnNormal gBlank5 {$popup_option_change_display|display}">옵션선택</a>
+                            <div class="optionModify ec-base-layer" id="{$option_modify_layer_id}">
+                                <div class="header">
+                                    <h3 class="{$popup_option_change_display|display}">옵션선택</h3>
+                                    <h3 class="{$option_change_display|display}">옵션변경</h3>
+                                </div>
+                                <div class="content">
+                                    <ul class="prdInfo">
+                                        <li>{$product_name}</li>
+                                        <li class="option">{$layer_option_str}</li>
+                                    </ul>
+                                    <div class="prdModify">
+                                        <h4>상품옵션</h4>
+                                        <ul module="MyShop_optionList">
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                        </ul>
+                                        <ul module="MyShop_optionAddList">
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ec-base-button">
+                                    <a href="#none" class="btnSubmitFix sizeS {$option_add_display|display}" onclick="{$action_option_add}">추가</a>
+                                    <a href="#none" class="btnNormalFix sizeS" onclick="{$action_option_modify}">변경</a>
+                                </div>
+                                <div class="close"><a href="#none" onclick="$('.optionModify').hide();"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a></div>
+                            </div>
+                        </li>
+                        <li><strong class="{$product_name_display|display}">{$product_name}</strong>{$option_str}<span class="{$qty_display|display}">({$qty}개)</span><br />
+                            <a href="#none" onclick="{$action_option_change}" class="btnNormal gBlank5 {$option_change_display|display}">옵션변경</a>
+                            <a href="#none" onclick="{$action_option_change}" class="btnNormal gBlank5 {$popup_option_change_display|display}">옵션선택</a>
+                            <div class="optionModify ec-base-layer" id="{$option_modify_layer_id}">
+                                <div class="header">
+                                    <h3 class="{$popup_option_change_display|display}">옵션선택</h3>
+                                    <h3 class="{$option_change_display|display}">옵션변경</h3>
+                                </div>
+                                <div class="content">
+                                    <ul class="prdInfo">
+                                        <li>{$product_name}</li>
+                                        <li class="option">{$layer_option_str}</li>
+                                    </ul>
+                                    <div class="prdModify">
+                                        <h4>상품옵션</h4>
+                                        <ul module="MyShop_optionList">
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                        </ul>
+                                        <ul module="MyShop_optionAddList">
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                            <li><span>{$option_name}</span> {$form.option_value}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ec-base-button">
+                                    <a href="#none" class="btnSubmitFix sizeS {$option_add_display|display}" onclick="{$action_option_add}">추가</a>
+                                    <a href="#none" class="btnNormalFix sizeS" onclick="{$action_option_modify}">변경</a>
+                                </div>
+                                <div class="close"><a href="#none" onclick="$('.optionModify').hide();"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>
+                <td>
+                   <strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><div class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div>
+                </td>
+                <td>
+                    <span class="ec-base-qty">{$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up" /></a><a href="javascript:;" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" class="down" /></a></span>
+                    <a href="javascript:;" class="btnNormal gBlank5" onclick="{$action_modify}">변경</a>
+                </td>
+                <td class="total"><strong>{$sum_price_front_head}{$sum_price_front}{$sum_price_front_tail}</strong><div class="{$sum_price_display|display}">{$sum_price_back_head}{$sum_price_back}{$sum_price_back_tail}</div></td>
+                <td>
+                    <a href="javascript:;" class="btnNormal" onclick="{$action_move_item}"><i class="icoDelete"></i> 삭제</a>
+                </td>
+            </tr>
+        </tbody>
+        <tbody class="message" id="{$empty_message}">
+            <tr>
+                <td colspan="5">선택된 교환상품이 없습니다.<br />교환상품 선택없이 교환신청은 가능합니다.</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="ec-base-button button {$delete_button_display|display}">
+        <span class="gRight">
+            <a href="#none" class="btnNormal" onclick="{$action_delete_item_all}">전체삭제</a>
+        </span>
+    </div>
+</div>

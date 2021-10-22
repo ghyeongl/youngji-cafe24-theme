@@ -1,0 +1,80 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Myshop_couponProductPackage" class="ec-base-layer">
+    <!--@css(/css/module/myshop/couponProductPackage.css)-->
+    <div class="header">
+        <h1>쿠폰적용 가능상품</h1>
+    </div>
+
+    <div class="content">
+        <div module="myshop_CouponProductSearch" class="ec-base-box typeThinBg">
+            <fieldset>
+                <legend>쿠폰선택 및 상품검색</legend>
+                <p>{$form.coupon_no} 의 적용가능 상품목록입니다.</p>
+                <p>{$form.search_key} {$form.search} <a href="#none" class="btnSubmitFix" onclick="{$action_form_submit}">검색하기</a></p>
+            </fieldset>
+        </div>
+
+        <div module="myshop_CouponProductList">
+            <div class="title">
+                <p class="result">총 <strong>{$totalPrd}</strong>개</p>
+                {$ec_list_size}
+            </div>
+            <div class="ec-base-table typeList">
+                <table border="1" summary="">
+                    <caption>{$cate_name}</caption>
+                    <colgroup>
+                        <col style="width:92px" />
+                        <col style="width:auto" />
+                        <col style="width:95px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">이미지</th>
+                            <th scope="col">상품명</th>
+                            <th scope="col">판매가</th>
+                        </tr>
+                    </thead>
+                    <tbody class="{$display_product_list|display} center">
+                        <tr>
+                            <td class="thumb"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" alt="" style="width:65px;"></td>
+                            <td class="left">
+                                <a href="/product/detail.html?product_no={$product_no}&main_cate_no={$main_cate_no}&display_group={$display_group}" target="_blank"><strong>{$product_name}</strong></a>
+                            </td>
+                            <td class="price">
+                                <strong>{$product_custom_price}</strong>
+                                {$product_price}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="thumb"><img src="{$image_tiny}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif'" alt="" style="width:65px;"></td>
+                            <td class="left">
+                                <a href="/product/detail.html?product_no={$product_no}&main_cate_no={$main_cate_no}&display_group={$display_group}" target="_blank"><strong>{$product_name}</strong></a>
+                            </td>
+                            <td class="price">
+                                <strong>{$product_custom_price}</strong>
+                                {$product_price}
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="{$display_no_product_list|display}">
+                        <tr>
+                            <td colspan="4" class="message">검색된 쿠폰적용 가능상품이 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div module="myshop_CouponProductPaging" class="ec-base-paginate typeSub">
+            <a href="{$first_url}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first2.gif" alt="첫 페이지" /></a>
+            <a href="{$prev_url}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
+            <ol>
+                <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+                <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            </ol>
+            <a href="{$next_url}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
+            <a href="{$last_url}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last2.gif" alt="마지막 페이지" /></a>
+        </div>
+    </div>
+</div>

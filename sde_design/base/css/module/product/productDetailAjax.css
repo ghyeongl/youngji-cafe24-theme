@@ -1,0 +1,11 @@
+/* 쿠폰 */
+.xans-coupon-productdetailajax.ec-base-fold { margin:0 7px 7px; }
+.xans-coupon-productdetailajax .contents { background:#fff; }
+.xans-coupon-productdetailajax .contents li { padding:14px; border-top:1px solid #ececec; }
+.xans-coupon-productdetailajax .contents li:first-child { border-top:0; }
+.xans-coupon-productdetailajax .coupon { width:216px; height:105px; margin:10px auto; font-size:12px; line-height:1.5; text-align:center; font-family:Dotum, sans-serif; background-repeat:no-repeat; }
+.xans-coupon-productdetailajax .coupon .title { display:block; padding:8px 0 0; font-size:10px; line-height:15px; text-align:center; font-weight:normal; font-family:Arial, sans-serif; }
+.xans-coupon-productdetailajax .coupon .discount { font-size:18px; line-height:28px; font-weight:bold; text-align:center; letter-spacing:-1px; font-family:Dotum, sans-serif; text-decoration:none; }
+.xans-coupon-productdetailajax .coupon .discount span { font-size:22px; font-family:Verdana, sans-serif; }
+.xans-coupon-productdetailajax .coupon .period { font-size:11px; line-height:13px; font-weight:bold; text-align:center; font-family:Dotum, sans-serif; letter-spacing:-1px; }
+.xans-coupon-productdetailajax .coupon .button { margin:5px 0 0; text-align:center; }

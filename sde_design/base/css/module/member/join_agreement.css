@@ -1,0 +1,43 @@
+.progress { overflow:hidden; padding:15px 16px; text-align:center; background:#f6f6f6; }
+.progress ol { display:-webkit-flex; display:-ms-flex; display:flex; position:relative; counter-reset:rank 0; }
+.progress ol:before { content:''; position:absolute; left:0; top:13px; width:100%; height:1px; background:#dedfe2; }
+.progress ol li { -webkit-flex:1; -ms-flex:1; flex:1; position:relative; padding:35px 0 0; font-size:12px; line-height:16px; color:#cacaca; text-align:center; }
+.progress ol li.selected,
+.progress ol li.done { color:#000; }
+.progress ol li:first-child:after,
+.progress ol li:last-child:after { content:''; position:absolute; top:13px; width:100%; height:1px; background:#f6f6f6; }
+.progress ol li:first-child:after { right:-moz-calc(50% + 13px); right:-webkit-calc(50% + 13px); right:calc(50% + 13px); }
+.progress ol li:last-child:after { left:-moz-calc(50% + 13px); left:-webkit-calc(50% + 13px); left:calc(50% + 13px); }
+.progress ol li.done:before,
+.progress ol li.selected:before { content:''; position:absolute; right:-moz-calc(50% + 13px); right:-webkit-calc(50% + 13px); right:calc(50% + 13px); top:13px; width:100%; height:1px; background:#000; }
+
+
+
+.progress ol li .label { position:absolute; left:50%; top:0; z-index:1; width:26px; height:26px; margin:0 0 0 -13px; color:#fff; line-height:24px; background:url('http://img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/member/sfix_process.png') no-repeat 0 0; background-size:150px auto; }
+.progress ol li.selected .label { background-position:-50px 0; }
+.progress ol li.done .label { background-position:-100px 0; }
+.progress ol li .label:before { counter-increment:rank 1; content:counter(rank); }
+.progress ol li.done .label:before { content:''; }
+
+
+
+
+
+
+.xans-member-join { margin:14px 7px 0px; padding:0 0 29px; color:#63666e; font-size: 11px; }
+.xans-member-join .agreeArea { margin:0 0 7px; border:1px solid #ccc; background:#fff; }
+.xans-member-join .title { position:relative; line-height:36px; color:#333; border-bottom:1px solid #ccc; }
+.xans-member-join .title h3 { padding:0 0 0 14px; font-size:13px; font-weight:normal; }
+.xans-member-join .title h3 label { display:none; }
+.xans-member-join .title h3 label.check { display:inline; }
+.xans-member-join .title a.btnMore { position:absolute; top:0px; right:14px; font-size:11px; text-decoration:underline; }
+.xans-member-join .contents { overflow:hidden; overflow-y:auto; height:90px; padding:14px; color:#757575; font-size:11px; }
+
+.xans-member-join .agreeAll { padding:0 0 20px 15px; }
+.xans-member-join .agreeAll p { font-size:13px; }
+.xans-member-join .agreeAll h3 { margin:0 0 14px; color:#1b1b1b; }
+.xans-member-join .agreeAll label { width:calc(100% - 46px); width:-webkit-calc(100% - 46px); color:#538aeb; vertical-align:top; }
+.xans-member-join .agreeArea .ec-base-chk { margin:0 4px 0 0; }
+
+.xans-member-join .additional { padding:0 14px; border-top:1px solid #ccc; background:#fafafa; }
+.xans-member-join .additional li label { height:35px; line-height:35px; vertical-align:top; background:#fafafa; }

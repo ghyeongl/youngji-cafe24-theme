@@ -1,0 +1,33 @@
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<!--@css(/css/module/order/gift_list.css)-->
+<div id="{$GiftlayerId}" module="Gift_layerOfferGift" class="ec-base-layer">
+    <div class="header">
+        <h3>사은품 제공 상품</h3>
+    </div>
+    <div class="content">
+        <div class="ec-base-table typeList">
+            <table summary="" border="1" module="Gift_Listdetail">
+                <caption>사은품 제공 상품</caption>
+                <colgroup>
+                    <col style="width:60px" />
+                    <col style="width:auto" />
+                    <col style="width:150px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2">상품명</th>
+                        <th scope="col">판매가</th>
+                    </tr>
+                </thead>
+                <tbody module="Gift_detail">
+                    <tr>
+                        <td class="thumb"><img src="{$gift_image}" alt="" /></td>
+                        <td>{$product_name} {$soldout_icon} {$recommend_icon} {$new_icon}</td>
+                        <td class="right"><span class="txtEm">{$price_unit_head}{$product_price}{$price_unit_tail}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="close"><a href="#none"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a></div>
+</div>

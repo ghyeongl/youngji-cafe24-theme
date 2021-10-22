@@ -1,0 +1,17 @@
+.xans-layout-searchside { margin:0 0 20px; padding:0 0 20px; border-bottom:1px solid #e8e8e8; }
+.xans-layout-searchside h2 { height:20px; color:#2e2e2e; font-size:12px; }
+.xans-layout-searchside fieldset { border:1px solid #d9d9d9; border-radius:2px; }
+.xans-layout-searchside #keyword { width:133px; height:32px; padding:0 0 0 9px; border:0; line-height:32px; font-size:12px; color:#2e2e2e; background:#fff; }
+
+.xans-layout-searchside .bestKeyword { margin:7px 0; font-size:11px; line-height:18px; }
+.xans-layout-searchside .bestKeyword a { color:#757575; text-decoration:none; }
+.xans-layout-searchside .bestKeyword a:hover { color:#008bcc; }
+.xans-layout-searchside .bestKeyword a:after { content:", "}
+
+.xans-layout-searchside p.button { margin:10px 0 0; }
+.xans-layout-searchside p.button a { margin:0 0 0 4px; }
+
+.xans-layout-searchside fieldset .autoDrop { display:none; border:1px solid #565960; width: 175px; position:absolute; text-align:left; background:#fff; overflow:hidden; overflow-y:auto; max-height:100px; }
+.xans-layout-searchside fieldset .autoDrop li a { display:block; padding:6px 10px; font-size:11px; color:#1c1c1c; font-family:GulimChe,Gulim; }
+.xans-layout-searchside fieldset .autoDrop li a:hover,
+.xans-layout-searchside fieldset .autoDrop li.selected a { text-decoration:none; color:#fff; background:#a1a4ae; }

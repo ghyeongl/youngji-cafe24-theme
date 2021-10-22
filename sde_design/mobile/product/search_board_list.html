@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Search_FromPackage" class="ec-base-layer">
+    <!--@css(/css/module/search/fromPackage.css)-->
+    <h1>상품정보선택</h1>
+    <div class="wrap">
+        <div module="Search_BoardForm">
+            <fieldset>
+                <legend>상품검색</legend>
+                <span class="ec-base-field">
+                    {$form.search_type}
+                    {$form.keyword}
+                    <button type="submit" class="btnStrong" value="">검색</button>
+                </span>
+            </fieldset>
+            <div class="resultArea">
+                <p>총 <strong class="txtEm">{$total_count}</strong>개 의 상품이 검색되었습니다.</p>
+                {$form.limit}
+            </div>
+        </div>
+        <div module="Search_BoardList" unroll="1">
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail"><img src="{$image_tiny}" alt="" width="71" height="71" /></div>
+                    <div class="description">
+                        <strong class="prdName" title="상품명">{$product_name}</strong>
+                        <ul class="info">
+                            <li class="price">{$price_unit_head}{$product_price}{$price_unit_tail} {$product_tax_type_text}</li>
+                        </ul>
+                    </div>
+                    <div class="ec-base-button gLeft">
+                        <a href="#none" onclick="{$action_product_select}" class="btnStrong">선택</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div module="search_paging" class="ec-base-paginate typeList">
+            <a href="{$param_before}" class="btnPrev">이전 페이지</a>
+            <ol>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            </ol>
+            <a href="{$param_next}" class="btnNext">다음 페이지</a>
+        </div>
+    </div>
+    <button type="button" class="btnClose" onclick="window.close()">닫기</button>
+</div>

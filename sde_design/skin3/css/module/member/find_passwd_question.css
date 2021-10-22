@@ -1,0 +1,7 @@
+.xans-member-findpasswdquestion.ec-base-box { padding:49px 0 39px; line-height:150%; }
+.xans-member-findpasswdquestion .findPw { width:375px; margin:0 auto; }
+.xans-member-findpasswdquestion .findPw input[type="text"] { width:236px; height:28px; line-height:28px; }
+.xans-member-findpasswdquestion .findPw .ec-base-desc dt { width:32%; margin:8px 0 0; }
+.xans-member-findpasswdquestion .findPw .ec-base-desc dd { margin:8px 0 0; padding-left:32%; }
+.xans-member-findpasswdquestion .findPw .ec-base-button { padding:40px 4px 10px 0; }
+.xans-member-findpasswdquestion .findPw fieldset { margin:0 2px; }

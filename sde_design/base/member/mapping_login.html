@@ -1,0 +1,38 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/css/module/member/mapping_login_kakao.css)-->
+
+<div module="member_loginMapping">
+    <div class="kakao_login">
+        <div class="inner">
+            <div class="item">
+                <div class="box">
+                    <p class="summary">{$provider_member_email} 로 가입된 아이디가 {$member_id_exists_desc}<br>{$mapping_login_kakao_desc}
+                    <div class="selectBox {$display_member_id|display}">
+                        <ul>
+                            <li><label class="label"><input type="radio" name="login_mapping_info" value="{$member_id}" class="radio"> {$masking_member_id} (가입일 {$regist_date})</label></li>
+                            <li><label class="label"><input type="radio" name="login_mapping_info" value="{$member_id}" class="radio"> {$masking_member_id} (가입일 {$regist_date})</label></li>
+                            <li><label class="label"><input type="radio" name="login_mapping_info" value="{$member_id}" class="radio"> {$masking_member_id} (가입일 {$regist_date})</label></li>
+                            <li><label class="label"><input type="radio" name="login_mapping_info" value="{$member_id}" class="radio"> {$masking_member_id} (가입일 {$regist_date})</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="#none" onclick="{$kakao_func_login_checked_mapping}" class="btnKakaoSubmit {$display_member_id|display}">선택한 아이디로 카카오 연동하기</a>
+                </div>
+            </div>
+            <div class="item">
+                <p class="summary">사용 중인 아이디가 리스트에 표시되지 않나요?<br />직접 로그인하고 카카오계정을 연동해보세요.</p>
+                <div class="button">
+                    <a href="#none" onclick="{$kakao_func_login_mapping}" class="btnKakaoSubmit">로그인하고 카카오 연동하기</a>
+                </div>
+            </div>
+            <div class="item">
+                <p class="summary">아직 회원이 아니라면 원클릭으로 가입하세요.</p>
+                <div class="button">
+                    <a href="#none" onclick="{$kakao_func_login}" class="btnKakaoJoin">카카오계정으로 신규 가입하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

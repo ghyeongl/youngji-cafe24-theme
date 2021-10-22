@@ -1,0 +1,36 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>비밀번호 찾기</h2>
+</div>
+
+<div module="member_findpasswdresult" class="ec-base-box typeThin">
+    <!--@css(/css/module/member/find_passwd_result.css)-->
+    <div class="findPw">
+        <h3 class="boxTitle">비밀번호 찾기</h3>
+        <div class="desc">
+            <p class="{$display_email_method|display}">임시 비밀번호가 고객님 메일로 전송되었습니다.</p>
+            <p class="{$display_mobile_method|display}">임시 비밀번호가<br /> 고객님 휴대폰 번호로 전송되었습니다.</p>
+        </div>
+        <div class="ec-base-box typeMember gMessage">
+            <strong class="message">저희 쇼핑몰을 이용해주셔서 감사합니다.</strong>
+            <div class="information">
+                <p class="thumbnail"><img src="//img.echosting.cafe24.com/skin/base/member/img_member_default.gif" alt="" /></p>
+                <p class="description">
+                    <span class="{$display_id_method|display}"><strong class="txtEm">{$id}</strong> 회원님, </span>임시 비밀번호를<br />
+                    <strong class="txtEm"><span class="{$display_email_method|display}">{$email}</span><span class="{$display_mobile_method|display}">{$mobile}</span></strong>으로 보내드렸습니다.
+                </p>
+            </div>
+        </div>
+        <div class="ec-base-button gBlank20">
+            <a href="/member/login.html" class="btnSubmitFix sizeM">로그인</a>
+        </div>
+    </div>
+</div>

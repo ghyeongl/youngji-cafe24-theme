@@ -1,0 +1,106 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2 class="title">최근본상품</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}" class="btnBack">뒤로가기</a>
+    </span>
+</div>
+
+<div module="product_recentlist">
+    <!--@css(/css/module/product/recentlist.css)-->
+    <!--
+        $count = 10
+    -->
+
+    <ul module="product_listitem">
+        <li>
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail">
+                        <a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="71" height="71" /></a>
+                        <span class="wishIcon">{$list_wish_icon}</span>
+                    </div>
+                    <div class="description">
+                        <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                        <ul module="product_setproduct" class="item">
+                            <li>{$product_name}</li>
+                            <li>{$product_name}</li>
+                        </ul>
+                        <ul class="info">
+                            <li class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></li>
+                            <li class="price {$discount}"><strong>{$price}</strong>{$product_tax_type_text}</li>
+                            <li class="{$product_sale_price_display|display}">{$product_sale_price}</li>
+                            <li class="mileage">{$mileage_list}</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="option" module="product_mainoption">
+                    <li><div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div></li>
+                    <li><div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div></li>
+                </ul>
+                <ul class="option" module="product_addoption">
+                    <li><div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div></li>
+                    <li><div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div></li>
+                </ul>
+                <div class="ec-base-button">
+                    <span class="gLeft">
+                        <button type="button" class="btnNormal {$class_del}" href="#none" rel="{$rel_del}">삭제</button>
+                        <button type="button" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">장바구니담기</button>
+                    </span>
+                    <button type="button" class="btnStrong {$disp_order|display}" onclick="{$act_order}">주문하기</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail">
+                        <a href="{$link_product_detail}"><img src="{$image_medium}" alt="" width="71" height="71" /></a>
+                        <span class="wishIcon">{$list_wish_icon}</span>
+                    </div>
+                    <div class="description">
+                        <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                        <ul module="product_setproduct" class="item">
+                            <li>{$product_name}</li>
+                            <li>{$product_name}</li>
+                        </ul>
+                        <ul class="info">
+                            <li class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></li>
+                            <li class="price {$discount}"><strong>{$price}</strong>{$product_tax_type_text}</li>
+                            <li class="{$product_sale_price_display|display}">{$product_sale_price}</li>
+                            <li class="mileage">{$mileage_list}</li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="option" module="product_mainoption">
+                    <li><div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div></li>
+                    <li><div class="name"><span class="optionDesc">{$option_name}</span> {$form.option}</div></li>
+                </ul>
+                <ul class="option" module="product_addoption">
+                    <li><div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div></li>
+                    <li><div class="name"><span class="optionDesc">{$add_option_name}</span> {$form.add_option}</div></li>
+                </ul>
+                <div class="ec-base-button">
+                    <span class="gLeft">
+                        <button type="button" class="btnNormal {$class_del}" href="#none" rel="{$rel_del}">삭제</button>
+                        <button type="button" class="btnNormal {$disp_basket|display}" onclick="{$act_basket}">장바구니담기</button>
+                    </span>
+                    <button type="button" class="btnStrong {$disp_order|display}" onclick="{$act_order}">주문하기</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p class="empty {$empty_display|display}">최근본 상품 내역이 없습니다.</p>
+</div>
+
+<div module="product_recentlistpaging" class="ec-base-paginate typeList">
+    <a href="{$param_before}" class="btnPrev">이전 페이지</a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}" class="btnNext">다음 페이지</a>
+</div>

@@ -1,0 +1,14 @@
+.xans-layout-footerpackage { font-size:11px; line-height:1.5em; color:#1b1b1b; border-top:1px solid #d5d5d5; }
+.xans-layout-footerpackage .footerMenu .policy { padding:7px 0; text-align: center; border-bottom:1px solid #d5d5d5; background-color:#f9f9f9; }
+.xans-layout-footerpackage .footerMenu .policy li { position:relative; display:inline-block; padding:0 6px 0 7px; line-height:13px; }
+.xans-layout-footerpackage .footerMenu .policy li:before { display:block; content:""; position:absolute; top:0; left:0; width:1px; height:13px; background:#757575; }
+.xans-layout-footerpackage .footerMenu .policy li:first-child:before { display:none; }
+.xans-layout-footerpackage .footerMenu .policy li:first-child { background:none; }
+
+.xans-layout-footerpackage address { padding:14px; border-bottom:1px solid #dddddd; background-color:#f9f9f9; }
+.xans-layout-footerpackage address .footerInfo { display:table; width:100%; }
+.xans-layout-footerpackage address dl { display:table-row; }
+.xans-layout-footerpackage address dl dt { display:table-cell; width:110px; line-height:1.6; color:#757575; vertical-align:top; }
+.xans-layout-footerpackage address dl dd { display:table-cell; width:auto; padding:0 0 0 7px; line-height:1.6; }
+.xans-layout-footerpackage address a { color:#1b1b1b; }
+.xans-layout-footerpackage .copyright { text-align:center; line-height:28px; color:#777777; font-size:9px; background-color:#eeeeee; }

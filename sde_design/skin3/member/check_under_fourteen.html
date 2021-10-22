@@ -1,0 +1,30 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="member_checkunderfourteen" class="ec-base-layer">
+    <!--@css(/css/module/member/checkunderfourteen.css)-->
+    <div class="header">
+        <h1>14세미만 구매 제한 확인 절차</h1>
+    </div>
+
+    <div class="content">
+        <p class="info">14세 미만 사용자는 <span>구매가 제한되어, 확인이 필요</span>합니다. <br />주민등록번호는 14세미만 여부 확인을 위한 용도로만 사용되고, 별도로 수집되지 않습니다.</p>
+
+        <p class="select" id="auth_type_layer">
+            {$radioAuthIpin} <label for="{$idAuthIpin}" {$typeIpinUse}>아이핀(i-Pin) 인증</label>
+            {$radioAuthMobile} <label for="{$idAuthMobile}" {$typeMobileAuthUse}>휴대폰인증</label>
+        </p>
+
+        <div class="ipin" id='ipin' {$typeIpinUse}>
+            <a href="#none" class="btnNormal" onclick="{$ipinpopup}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_ipin.gif" alt="" /> 아이핀인증</a>
+            <p>아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고 <br />본인임을 확인하는 인터넷상의 개인식별번호 서비스입니다. <br />아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.</p>
+        </div>
+
+        <div class="ipin" id='mobileauth' {$typeMobileAuthUse} {$typeMobileAuthUseDefault}>
+            <a href="#none" class="btnNormal" onclick="{$mobileauthpopup}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_mobile.gif" alt="" /> 휴대폰인증</a>
+            <p>본인 명의의 휴대폰으로 본인인증을 진행합니다. <br />휴대폰 명의자의 나이 정보로 14세 미만 여부를 확인합니다.</p>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" class="btnNormalFix sizeS" onclick="self.close();">취소하기</a>
+    </div>
+</div>

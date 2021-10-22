@@ -1,0 +1,128 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>출석체크</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기" /></a>
+    </span>
+</div>
+
+<div module="Attend_commentPackage">
+    <!--@css(/css/module/attend/commentPackage.css)-->
+    <div module="attend_calendarhead">
+        <!--
+            $login_page = /member/login.html
+        -->
+        <p class="prev"><a href="{$prev_month}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/attend/btn_calendar_prev.png" alt="이전 달" /></a></p>
+        <p class="date">
+            <span>{$year}</span>
+            <span class="month">.{$month}</span>
+        </p>
+        <p class="next"><a href="{$next_month}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/attend/btn_calendar_next.png" alt="다음 달" /></a></p>
+    </div>
+
+    <div module="attend_calendar">
+        <table border="1">
+            <!--
+                $login_page = /member/login.html
+            -->
+            <caption>출석체크 달력</caption>
+            <colgroup>
+                <col style="width:13.5%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.4%;">
+                <col style="width:13.5%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">SUN</th>
+                    <th scope="col">MON</th>
+                    <th scope="col">TUE</th>
+                    <th scope="col">WED</th>
+                    <th scope="col">THU</th>
+                    <th scope="col">FRI</th>
+                    <th scope="col">SAT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sun"><div>{$sun}</div></td>
+                    <td><div>{$mon}</div></td>
+                    <td><div>{$the}</div></td>
+                    <td><div>{$wed}</div></td>
+                    <td><div>{$thu}</div></td>
+                    <td><div>{$fri}</div></td>
+                    <td class="sat"><div>{$sat}</div></td>
+                </tr>
+                <tr>
+                    <td class="sun"><div>{$sun}</div></td>
+                    <td><div>{$mon}</div></td>
+                    <td><div>{$the}</div></td>
+                    <td><div>{$wed}</div></td>
+                    <td><div>{$thu}</div></td>
+                    <td><div>{$fri}</div></td>
+                    <td class="sat"><div>{$sat}</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div module="attend_CommentTitle">{$title}</div>
+
+    <div class="ec-base-box center gBlank20" module="attend_message">
+        <p>{$attend_message}</p>
+    </div>
+
+    <div module="attend_commentwrite">
+        <!--
+            $login_page = /member/login.html
+        -->
+        <fieldset>
+            <legend>댓글 작성</legend>
+            <div class="capcha {$secure_display|display}">
+                <img src="{$secure_img}" alt="보안문자" /> {$form.secure_text}
+                <p class="ec-base-help">보안문자를 공백없이 입력해주세요.(대소문자구분)</p>
+            </div>
+            <div class="form">
+                {$form.comment}
+                <span class="ec-base-button gFull">
+                    <button type="submit" onclick="{$action_attend}" class="btnStrong">등록</button>
+                </span>
+            </div>
+        </fieldset>
+    </div>
+
+
+    <ul module="attend_commentList">
+        <!--
+            $login_page = /member/login.html
+            $only_html = no
+            $count = 10
+        -->
+        <li>
+            <span class="name">[{$no}] {$member_name} ({$member_id})</span>
+            <span class="date">{$attend_date}</span>
+            <p class="memo">{$content}</p>
+        </li>
+        <li>
+            <span class="name">[{$no}] {$member_name} ({$member_id})</span>
+            <span class="date">{$attend_date}</span>
+            <p class="memo">{$content}</p>
+        </li>
+    </ul>
+
+    <div module="attend_commentpaging" class="ec-base-paginate typeList">
+        <!--
+            $login_page = /member/login.html
+        -->
+        <a href="{$prev_url}" class="btnPrev">이전 페이지</a>
+        <ol>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+            <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        </ol>
+        <a href="{$next_url}" class="btnNext">다음 페이지</a>
+    </div>
+</div>

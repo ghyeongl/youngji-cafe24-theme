@@ -1,0 +1,115 @@
+<!--@css(/layout/basic/css/slideMenu.css)-->
+<!--@js(/layout/basic/js/slide_menu.js)-->
+<aside id="aside" module="layout_slidePackage" class="slidingMenu"  style="display: grid;grid-template-columns: repeat(4,1fr);">
+
+    <div class="gridItem" style="grid-area:1/1/23/5">
+        <div class="slideTopArea">
+            <div module="Layout_stateLogon" class="member">
+                <p class="message">
+                    <a href="/myshop/index.html"><strong>{$name}님</strong></a>
+                    <span class="comment">즐거운 쇼핑 되세요.</span>
+                </p>
+                <div class="btnMember">
+                    <div class="member">
+                        <a href="{$action_logout}" class="button theme1">로그아웃</a>
+                        <a href="/myshop/index.html" class="button theme2">마이페이지</a>
+                    </div>
+                    <a href="/myshop/order/list.html" class="orderList">주문조회</a>
+                </div>
+            </div>
+            <div module="Layout_stateLogoff" class="member">
+                <p class="message">
+                    <strong>로그아웃 상태 입니다.</strong><br>
+                    회원가입 후 다양한 서비스를 이용하세요.
+                </p>
+                <div class="btnMember">
+                    <div class="member">
+                        <a href="/member/agreement.html" class="button theme1">회원가입</a>
+                        <a href="/member/login.html" class="button theme2">로그인</a>
+                    </div>
+                    <a href="/myshop/order/list.html" class="orderList">주문조회</a>
+                </div>
+            </div>
+            <div class="search" module="Layout_SearchHeader">
+                {$form.keyword}
+                <button type="submit" class="btnSearch">검색</button>
+                <button type="button" class="btnDelete">삭제</button>
+            </div>
+            <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function() {
+                    $('.xans-search-form').find('button.btnDelete').bind('click', function () {
+                        $('.search').find('input#keyword').attr('value', '').focus();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="gridItem" style="grid-area:23/1/55/5">
+        <div class="slideCategoryArea">
+            <h2>전체 카테고리</h2>
+            <ul module="layout_category" class="category">
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gridItem" style="grid-area:71/1/99/5">
+        <div class="slideBoardArea">
+            <div module="Layout_BoardInfo">
+                <h2>커뮤니티</h2>
+                <ul class="board">
+                    <li><a href="{$link_board_list}" class="link">{$board_name}</a> {$board_adult_icon}</li>
+                    <li><a href="{$link_board_list}" class="link">{$board_name}</a> {$board_adult_icon}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="gridItem" data-component-id="31" style="grid-area:99/1/123/5">
+        <div class="slideProductRecentArea">
+            <div module="Layout_productRecent">
+                <h2>최근 본 상품</h2>
+                <ul class="product">
+                    <li class="{$disp_recent|display}">
+                        <a href="/product/detail.html{$param}" class="link"><img src="{$recent_img}" alt="" class="image"></a>
+                    </li>
+                    <li class="{$disp_recent|display}">
+                        <a href="/product/detail.html{$param}" class="link"><img src="{$recent_img}" alt="" class="image"></a>
+                    </li>
+                </ul>
+            </div>
+            <script>
+                window.addEventListener('load', function() {
+                    var $scope = $(".slideProductRecentArea");
+                    $scope.find('.product .image').load(function() {
+                        var $this = $(this),
+                            w = $this.width(),
+                            h = $this.height();
+
+                        if(w >= h) {
+                            $this.closest('li').addClass('horizontal');
+                        } else {
+                            $this.closest('li').addClass('vertical');
+                        }
+                    }).each(function() {
+                        if(this.complete) $(this).load();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="gridItem" style="grid-area:151/1/159/5">
+        <div class="slideBottomArea">
+            <div module="Layout_Info">
+                <a href="tel:{$phone}" class="link customer">고객센터</a>
+                <a href="/board/consult/list.html" class="link inquire">1:1문의</a>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btnClose">닫기</button>
+</aside>

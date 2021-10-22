@@ -1,0 +1,27 @@
+.xans-layout-categorysupplylist { margin:0 0 30px; }
+.xans-layout-categorysupplylist .mainDirect a { display:block; padding:12px 10px; border:1px solid #d5d5d5; border-bottom:0; font-size:14px; font-weight:bold; color:#ffffff; word-spacing:-1px; text-decoration:none; background:#939393; }
+.xans-layout-categorysupplylist .position { border-bottom:1px solid #d5d5d5; }
+.xans-layout-categorysupplylist .position ul.xans-layout-third > li,
+.xans-layout-categorysupplylist .position a.second { border-left: 1px solid #d5d5d5; border-right:1px solid #d5d5d5; }
+.xans-layout-categorysupplylist .position a:hover { color:#008bcc; }
+.xans-layout-categorysupplylist .position ul li a { display:block; padding:12px 10px; border-top:1px solid #e8e8e8; color:#2e2e2e; word-spacing:-1px; text-decoration:none; }
+.xans-layout-categorysupplylist .position ul li.depth2 a { padding:12px 10px 12px 20px; }
+.xans-layout-categorysupplylist .position ul li.depth2 a:hover { background: #fff url("//img.echosting.cafe24.com/skin/base/layout/ico_category2.gif") no-repeat 161px 16px; }
+    /* 1depth */
+    .xans-layout-categorysupplylist .position > ul > li > ul > li { position:relative; z-index:10; }
+    .xans-layout-categorysupplylist .position > ul > li > a { border-top: 1px solid #d5d5d5; font-size:14px; font-weight:bold; background: #f8f8f8 url("//img.echosting.cafe24.com/skin/base/layout/ico_category1_selected.gif") no-repeat 160px 18px; }
+    .xans-layout-categorysupplylist .position > ul > li > a:hover,
+    .xans-layout-categorysupplylist .position > ul > li.on > a { padding-left:10px; background: #f8f8f8 url("//img.echosting.cafe24.com/skin/base/layout/ico_category2_selected.gif") no-repeat 160px 18px; }
+        /* 3depth ~ 4depth */
+        .xans-layout-categorysupplylist .sub-category { position:absolute; top:0; left:178px; width:170px; background:#fff; }
+        .xans-layout-categorysupplylist .sub-category > ul > li a { border-bottom:1px solid #fff; }
+        /* 3depth */
+        .xans-layout-categorysupplylist .sub-category > ul > li > a { border:0; border-top:1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; }
+        /* 4depth */
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fourth { border:1px solid #d5d5d5; border-top:0; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fourth:first-child { border:1px solid #d5d5d5; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fourth > a { margin:0 10px; padding:12px 3px; border:0; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth li { margin:0 10px; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth li:first_child { border-top:1px solid #d8d8d8; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth a { margin:0 0 0 10px; padding:12px 3px; border:0; }
+        .xans-layout-categorysupplylist .position ul.xans-layout-third .sub-category .xans-layout-fifth a:hover { background:none; }

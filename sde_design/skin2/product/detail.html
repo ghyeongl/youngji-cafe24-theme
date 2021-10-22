@@ -1,0 +1,863 @@
+<!--@layout(/layout/basic/layout.html)-->
+<!--
+    $category_page = /product/list.html
+    $project_page = /product/project.html
+    $jointbuy_page = /product/jointbuy.html
+-->
+<div class="path" module="product_headcategory">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li class="{$disp_cate_1|display}"><a href="{$link_product_list_1}">{$name_1}</a></li>
+        <li class="{$disp_cate_2|display}"><a href="{$link_product_list_2}">{$name_2}</a></li>
+        <li class="{$disp_cate_3|display}"><a href="{$link_product_list_3}">{$name_3}</a></li>
+        <li class="{$disp_cate_4|display}"><strong><a href="{$link_product_list_4}">{$name_4}</a></strong></li>
+    </ol>
+</div>
+
+<div module="product_detail">
+    <!--@css(/css/module/product/detail.css)-->
+    <!--
+		$coupon_download_page = /coupon/coupon_productdetail.html
+    -->
+    <div class="headingArea">
+        <h2>[{$product_code}] {$name}</h2>
+        <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
+        <span class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</span>
+        <!-- 공급사 바로가기버튼 영역 -->
+        <div class="supply {$supply_link_display|display}">
+            <span>{$supply_top_logo}</span>
+            <a href="#none" onclick="{$supply_go_action}"><img src="{$supply_go_img}" alt="공급사 바로가기" /></a>
+        </div>
+        <!-- //공급사 바로가기버튼 영역 -->
+    </div>
+
+    <div class="detailArea">
+        <div class="imgArea" module="product_image">
+            <!--@js(/js/module/product/product_image.js)-->
+            <div class="keyImg">
+                <div class="thumbnail">
+                    <a href="/product/image_zoom2.html{$zoom_param}" alt="{$product_code}" onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=450,height=693,left=0,top=0', this);return false;">
+                        <img src="{$big_img}" alt="{$seo_alt_tag}" class="{$big_img_class} {$img_display|display}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span>
+                    </a>
+                    <div id="zoom_wrap"></div>
+                </div>
+            </div>
+
+            <div class="listImg" module="product_addimage">
+                <ul>
+                    <li>{$add_img}</li>
+                    <li>{$add_img}</li>
+                </ul>
+            </div>
+            <div class="control">
+                <a href="/product/image_zoom2.html{$zoom_param}" class="btnZoom" onclick="window.open(this.href, 'image_zoom2', 'toolbar=no,scrollbars=auto,resizable=yes,width=560,height=710,left=0,top=0', this);return false;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_zoom.gif" alt="" /> 확대보기</a>
+            </div>
+
+
+            <div class="color {$colorchip_display|display}">
+                <div module="product_Colorchip">
+                    <span class="chips" style="background-color:{$color}"></span>
+                    <span class="chips" style="background-color:{$color}"></span>
+                </div>
+            </div>
+
+            <!--@import(/product/shoppQ/hashtag.html)-->
+
+            <div class="ec-base-button gColumn" module="product_action">
+                <a href="#none" class="btnNormal sizeM" onclick="{$action_recommend}">추천메일 보내기</a>
+                <a href="#none" class="btnNormal sizeM {$request_display|display}" onclick="{$action_request}">상품조르기</a>
+                <a href="/board/inquiry/write.html{$inquiry_param}" class="btnNormal sizeM {$inquiry_display|display}">대량구매문의</a>
+            </div>
+
+            <div class="likeButton {$disp_likeprd_class}">
+                <button type="button"><span class="title">좋아요</span>{$disp_likeprd_icon}<span class="count">{$disp_likeprd_count}</span></button>
+            </div>
+        </div>
+
+        <div class="infoArea">
+            <div module="product_detaildesign">
+                <!--
+                    출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
+                    count = 10
+                -->
+                <table border="1" summary="">
+                    <caption>{$name} 기본 정보</caption>
+                    <tbody>
+                        <tr class="{$item_display|display}">
+                            <th scope="row">{$item_title}</th>
+                            <td>{$item_content}</td>
+                        </tr>
+                        <tr class="{$item_display|display}">
+                            <th scope="row">{$item_title}</th>
+                            <td>{$item_content}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="regularDelivery {$regular_delivery_display|display}">
+                <table border="1" summary="정기결제">
+                    <caption>정기결제</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">구매방법</th>
+                            <td>
+                    <label class="gLabel">{$regular_deliveryF} 1회구매</label>
+                    <label class="gLabel">{$regular_deliveryT} 정기배송<span class="badge {$regular_delivery_discount_display|display}">{$max_discount_value} <i class="icoDown">할인</i></span></label>
+                            </td>
+                        </tr>
+                        <tr class="shippingCycle {$regular_cycle_period|display}" id="{$regular_cycle_period_id}">
+                            <th scope="row">배송주기</th>
+                            <td>
+                                {$regularPeriod}
+
+                                <div class="info {$regular_delivery_discount_display|display}" id="{$regular_delivery_discount_id}">
+                                    <p class="title"><strong>정기배송 할인</strong> <span class="icoSave">save</span></p>
+                                    <ul module="product_regularDiscount">
+                                        <li>{$discount_count} 결제 시 : {$discount_value} <span class="icoDown">할인</span></li>
+                                        <li>{$discount_count} 결제 시 : {$discount_value} <span class="icoDown">할인</span></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="{$naver_mileage_exception_display|display}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/txt_naver.gif" alt="개인결제창을 통한 결제 시 네이버 마일리지 적립 및 사용이 가능합니다." /></p>
+
+            <table border="1" summary="" module="product_option">
+                <!--
+                $use_per_add_option = yes
+                -->
+                <caption>>상품 옵션</caption>
+                <tbody module="product_option">
+                    <tr>
+                        <th scope="row">{$option_name}</th>
+                        <td>{$form.option}<p class="value">{$option_desc}</p></td>
+                    </tr>
+                    <tr module="product_quantity">
+                        <th scope="row">수량</th>
+                        <td>
+                           <div class="ec-base-qty">
+                                {$form.quantity}
+                                <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr module="product_addoption">
+                        <th scope="row">{$add_option_name}</th>
+                        <td>
+                            {$form.add_option}
+                            <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr class="{$option_push_button_display|display}" id="{$option_push_button_id}">
+                        <td colspan="2" class="selectButton"><a href="#none" class="btnSubmit sizeS" onclick="{$action_push_button}">옵션선택</a></td>
+                    </tr>
+                    <tr module="product_fileoption">
+                        <th scope="row">{$file_option_name}</th>
+                        <td class="fileInfo">
+                            {$form.file_option}
+                            <ul class="infoDesc">
+                                <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <dl module="product_quantity" class="ec-base-desc quantity">
+                <dt>수량</dt>
+                <dd>
+                    <div class="ec-base-qty">
+                        {$form.quantity}
+                        <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                        <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                    </div>
+                </dd>
+            </dl>
+
+            <div class="guideArea">
+
+                <p class="info {$limit_display|display}">(최소주문수량 {$minimum_limit}개 이상<span class="{$maximum_limit_display|display}"> / 최대주문수량 {$maximum_limit}개 이하</span>)</p>
+
+                <span class="sizeGuide {$size_guide_display|display}"><a href="#none" class="{$size_guide_class}" product_no="{$product_no}">사이즈 가이드</a></span>
+            </div>
+
+
+            <div class="productSet" module="product_setproduct">
+                <!--
+                $use_per_add_option = yes
+                -->
+                <div class="title">
+                    <h3>세트상품</h3>
+                </div>
+                <ul class="product">
+                    <li>
+                        <div class="information">
+                            <div class="thumbnail"><a href="/product/detail.html?product_no={$product_no}"><img src="{$product_image}" alt="" id="{$image_id}" /></a></div>
+                            <p class="name" title="상품명"><strong><a href="{$link_bind_product_detail}">{$product_name}</a></strong> <span class="{$set_quantity_display|display}">({$set_quantity}개씩 구매되는 상품)</span></p>
+                            <p class="price {$product_price_display|display}" title="판매가"><strong class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong></p>
+                            <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
+                            <div class="stock">
+                                <span class="gLabel {$stock_quantity_display|display}"><a href="#none" class="btnNormal" {$bind_stock_quantity}>재고수량보기</a></span>
+                                <span class="{$product_restock_button_display|display}"><a href="#none" class="btnNormal" {$product_restock_link}>재입고 알림 SMS</a></span>
+                            </div>
+                            <button type="button" class="btnInfo eProductDetailInfo" id="eProductDetailInfo_{$product_no}"><span>추가정보</span></button>
+                        </div>
+                        <ul class="option">
+                            <li module="product_option">
+                                <ul>
+                                    <li>
+                                        <strong class="name">{$option_name}</strong>
+                                        {$form.option}<p class="value">{$option_desc}</p>
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_noneoption">
+                                <ul>
+                                    <li>
+                                       <strong class="name">상품선택</strong>
+                                        {$form.noneoption}
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_addoption">
+                                <strong class="name">{$add_option_name}</strong>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                            </li>
+                            <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
+                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
+                            </li>
+                        </ul>
+                        <div class="guide">
+                            <p class="qty {$product_min_display|display}">(최소주문수량 {$product_min}개 이상 <span class="{$product_max_display|display}">/ 최대주문수량 {$product_max}개 이하</span>)</p>
+                            <div class="sizeGuide {$size_guide_display|display}">
+                                <a href="#none" class="{$size_guide_class}" product_no="{$product_no}">사이즈 가이드</a>
+                            </div>
+                        </div>
+                        <div class="description" id="product_description_{$product_no}"></div>
+                    </li>
+                    <li>
+                        <div class="information">
+                            <div class="thumbnail"><a href="/product/detail.html?product_no={$product_no}"><img src="{$product_image}" alt="" id="{$image_id}" /></a></div>
+                            <p class="name" title="상품명"><strong><a href="{$link_bind_product_detail}">{$product_name}</a></strong> <span class="{$set_quantity_display|display}">({$set_quantity}개씩 구매되는 상품)</span></p>
+                            <p class="price {$product_price_display|display}" title="판매가"><strong class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong></p>
+                            <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
+                            <div class="stock">
+                                <span class="gLabel {$stock_quantity_display|display}"><a href="#none" class="btnNormal" {$bind_stock_quantity}>재고수량보기</a></span>
+                                <span class="{$product_restock_button_display|display}"><a href="#none" class="btnNormal" {$product_restock_link}>재입고 알림 SMS</a></span>
+                            </div>
+                            <button type="button" class="btnInfo eProductDetailInfo" id="eProductDetailInfo_{$product_no}"><span>추가정보</span></button>
+                        </div>
+                        <ul class="option">
+                            <li module="product_option">
+                                <ul>
+                                    <li>
+                                        <strong class="name">{$option_name}</strong>
+                                        {$form.option}<p class="value">{$option_desc}</p>
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_noneoption">
+                                <ul>
+                                    <li>
+                                       <strong class="name">상품선택</strong>
+                                        {$form.noneoption}
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_addoption">
+                                <strong class="name">{$add_option_name}</strong>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                            </li>
+
+                            <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
+                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
+                            </li>
+                        </ul>
+                        <div class="guide">
+                            <p class="qty {$product_min_display|display}">(최소주문수량 {$product_min}개 이상 <span class="{$product_max_display|display}">/ 최대주문수량 {$product_max}개 이하</span>)</p>
+                            <div class="sizeGuide {$size_guide_display|display}">
+                                <a href="#none" class="{$size_guide_class}" product_no="{$product_no}">사이즈 가이드</a>
+                            </div>
+                        </div>
+                        <div class="description" id="product_description_{$product_no}"></div>
+                    </li>
+                </ul>
+                <dl module="product_quantity" class="ec-base-desc quantity">
+                    <dt>수량</dt>
+                    <dd>
+                        <div class="ec-base-qty">
+                            {$form.quantity}
+                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+
+
+            <div class="productSet additional" module="product_addproduct">
+                <!--
+                $use_per_add_option = yes
+                -->
+                <div class="title">
+                    <h3>추가구성상품 <span>추가로 구매를 원하시면 선택하세요.</span></h3>
+                    <a href="#self" class="toggle"><img src="//img.echosting.cafe24.com/skin/base/product/btn_additional_close.gif" alt="추가구성상품 닫기" /></a>
+                </div>
+                <ul class="product">
+                    <li>
+                        <div class="information">
+                            <div class="thumbnail"><a href="{$link_product_detail}"><img src="{$product_image}" alt="" id="{$image_id}" /></a></div>
+                            <p class="name" title="상품명"><strong>{$product_name}</strong></p>
+                            <p class="price {$product_price_display|display}" title="판매가"><strong class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong></p>
+                            <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
+                        </div>
+                        <ul class="option">
+                            <li module="product_option">
+                                <ul>
+                                    <li>
+                                        <strong class="name">{$option_name}</strong>
+                                        {$form.option}<p class="value">{$option_desc}</p>
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_noneoption">
+                                <ul>
+                                    <li>
+                                        <strong class="name">상품선택</strong>
+                                        {$form.noneoption}
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_addoption">
+                                <strong class="name">{$add_option_name}</strong>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                            </li>
+
+                            <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
+                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="information">
+                            <div class="thumbnail"><a href="{$link_product_detail}"><img src="{$product_image}" alt="" id="{$image_id}" /></a></div>
+                            <p class="name" title="상품명"><strong>{$product_name}</strong></p>
+                            <p class="price {$product_price_display|display}" title="판매가"><strong class="{$product_price_del}">{$product_price}{$product_tax_type_text}</strong></p>
+                            <p class="salePrice {$product_sale_price_display|display}" title="할인판매가">{$product_sale_price}</p>
+                        </div>
+                        <ul class="option">
+                            <li module="product_option">
+                                <ul>
+                                    <li>
+                                        <strong class="name">{$option_name}</strong>
+                                        {$form.option}<p class="value">{$option_desc}</p>
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_noneoption">
+                                <ul>
+                                    <li>
+                                        <strong class="name">상품선택</strong>
+                                        {$form.noneoption}
+                                    </li>
+                                    <li module="product_quantity">
+                                        <div class="ec-base-qty">
+                                            {$form.quantity}
+                                            <a href="javascript:;" class="qtyUp eClearUp"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" id="{$quantity_up_id}" alt="증가" class="up {$quantity_up_class}"></a>
+                                            <a href="javascript:;" class="qtyDown eClearDown"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" id="{$quantity_down_id}" alt="감소" class="down {$quantity_down_class}"></a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li module="product_addoption">
+                                <strong class="name">{$add_option_name}</strong>
+                                {$form.add_option}
+                                <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                            </li>
+                           
+                            <li class="{$add_option_push_button_display|display} selectButton" id="{$add_option_push_button_id}">
+                                <a href="#none" class="btnSubmit sizeS" onclick="{$add_action_push_button}">옵션선택</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div id="{$total.total_id}" class="{$total.total_display|display}">
+                <p class="ec-base-help txtWarn txt11 {$single_item_display|display}"> 수량을 선택해주세요.</p>
+                <p class="ec-base-help txtWarn txt11 {$several_item_display|display}"> 위 옵션선택 박스를 선택하시면 아래에 상품이 추가됩니다.</p>
+                <table border="1" summary="">
+                    <caption>상품 목록</caption>
+                    <colgroup>
+                        <col style="width:284px;" />
+                        <col style="width:80px;" />
+                        <col style="width:110px;" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">상품명</th>
+                            <th scope="col">상품수</th>
+                            <th scope="col">가격</th>
+                        </tr>
+                    </thead>
+                    <tbody class="{$quantity_display|display}">
+                        <tr>
+                            <td>{$name}</td>
+                            <td>
+                                <span class="quantity">
+                                    {$quantity}
+                                    <a href="javascript:;" class="up {$quantity_up_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" /></a>
+                                    <a href="javascript:;" class="down {$quantity_down_class}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" /></a>
+                                </span>
+                            </td>
+                            <td class="right"><span class="{$total.quantity_price}">{$product_price}</span> <span class="mileage {$mileage_display|display}">(<img src="{$mileage_mileage_icon}" /> <span class="{$total.mileage_price}">{$mileage_value}</span>)</span></td>
+                        </tr>
+                        <tr id="{$total.option_id}" class="option" module="product_option">
+                            <!--
+                            $use_per_add_option = yes
+                            $default_option = yes
+                            -->
+                            <td class="middle" colspan="3">
+                                <table border="1" summary="">
+                                    <caption>옵션 정보</caption>
+                                    <colgroup>
+                                        <col style="width:105px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+
+                                    <tr module="product_addoption">
+                                        <th scope="row">{$add_option_name}</th>
+                                        <td>
+                                            {$form.add_option}
+                                             <span class="txtByte" title="현재글자수/최대글자수">(<strong class="length">0</strong>/{$option_maxlength})</span>
+                                        </td>
+                                    </tr>
+                                    <tr module="product_fileoption">
+                                        <th scope="row">{$file_option_name}</th>
+                                        <td class="fileInfo">
+                                            {$form.file_option}
+                                            <ul class="infoDesc">
+                                                <li>- 파일은 최대 5개까지 {$file_option_limit}M 이하로 개별업로드 가능합니다.</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <!-- 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다. -->
+                    <tbody>
+                        <!-- tr>
+                            <td>
+                                <p class="product">
+                                    $상품명<br />
+                                    <span>$옵션</span>
+                                </p>
+                            </td>
+                            <td>
+                                <span class="quantity">
+                                    <input type="text" class="quantity_opt" />
+                                    <a href="javascript:;" class="up eProductQuantityUpClass"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_up.gif" alt="수량증가" /></a>
+                                    <a href="javascript:;" class="down eProductQuantityDownClass"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_count_down.gif" alt="수량감소" /></a>
+                                </span>
+                                <a href="#none"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_price_delete.gif" alt="삭제" class="option_box_del" /></a>
+                            </td>
+                            <td class="right">
+                                <span>$가격</span>
+                                <span class="mileage">(<img src="//img.echosting.cafe24.com/design/skin/admin/ko_KR/product/ico_pay_point.gif" /> <span class="mileage_price">$적립금</span>)</span>
+                            </td>
+                        </tr -->
+                    </tbody>
+
+                    <!-- // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다. -->
+                </table>
+            </div>
+
+
+            <div id="{$total.total_price_id}" class="totalPrice">
+                <strong>총 상품금액</strong>(수량) : <span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
+            </div>
+            <p class="ec-base-help txt11 {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
+
+
+            <div module="product_action">
+                <div class="ec-base-button gColumn">
+                    <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}">
+                        <span id="{$btn_buy_id}">바로 구매하기</span>
+                        <span id="{$btn_reserve_id}" class="{$btn_reserve_class|display}">예약주문</span>
+                        <span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청하기</span>
+                    </a>
+                    <a href="#none" class="btnNormal sizeL {$basket_display|display}" onclick="{$action_basket}">장바구니 담기</a>
+                    <span class="btnEm sizeL gFlex2 {$soldout_display|display}">SOLD OUT</span>
+                    <a href="#none" onclick="{$action_wishlist}" class="btnNormal sizeL {$wishlist_display|display}">관심상품등록</a>
+                </div>
+
+                <!-- 네이버 체크아웃 구매 버튼 -->
+                <div id="NaverChk_Button"></div><!-- //네이버 체크아웃 구매 버튼 -->
+
+                <!-- 상품상세페이지에 추가되는 앱 관련 결제버튼's div -->
+                <div id="{$app_payment_button_box_id}"></div>
+
+                <div module="myshop_asyncbenefit" class="ec-base-box typeMember gMessage">
+                    <p class="message {$display_benefit|display}">저희 쇼핑몰을 이용해 주셔서 감사합니다.</p>
+                    <div class="information {$display_benefit|display}">
+                        <strong class="thumbnail"><img src="{$group_image}" alt="" onerror="this.src='//img.echosting.cafe24.com/skin/base/member/img_member_default.gif';" class="{$group_image_tag_class}" /></strong>
+                        <div class="description">
+                            <p class="member"><strong>{$member_name} 님</strong>은 <em>[{$group_name}]</em> 회원이십니다.</p>
+                            <p class="{$display_no_benefit|display} {$display_no_benefit_class}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong>{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</p>
+                            <p class="{$display_with_all|display} {$display_with_all_class}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong>{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</p>
+                        </div>
+                    </div>
+                </div>
+                {$common_event_b}
+            </div>
+        </div>
+    </div>
+
+    <!-- 공급사:판매사정보 -->
+    <div class="supplyInfo {$supply_info_display|display}">
+        {$supply_info}
+    </div><!-- //공급사:판매사정보 -->
+
+    <div class="eventArea {$common_event_a|display}">
+        <h3><span>이벤트</span></h3>
+        <div class="event">{$common_event_a}</div>
+    </div>
+</div>
+
+<!--@import(/coupon/coupon_productdetail.html)-->
+
+<div module="product_additional">
+    <!--@css(/css/module/product/additional.css)-->
+    <div id="prdDetail" class="ec-base-tab gFlex">
+        <ul class="menu">
+            <li class="selected"><a href="#prdDetail">상품상세정보</a></li>
+            <li><a href="#prdInfo">상품구매안내</a></li>
+            <li class="{$review_display|display}"><a href="#prdReview">상품사용후기</a></li>
+            <li class="{$qna_display|display}"><a href="#prdQnA">상품Q&amp;A</a></li>
+            <li><a href="#prdRelated">관련상품</a></li>
+        </ul>
+        <div class="cont">
+            <h3>상품상세정보</h3>
+            {$product_detail}
+        </div>
+    </div>
+
+    <div id="prdInfo" class="ec-base-tab gFlex">
+        <ul class="menu">
+            <li><a href="#prdDetail">상품상세정보</a></li>
+            <li class="selected"><a href="#prdInfo">상품구매안내</a></li>
+            <li class="{$review_display|display}"><a href="#prdReview">상품사용후기</a></li>
+            <li class="{$qna_display|display}"><a href="#prdQnA">상품Q&amp;A</a></li>
+            <li><a href="#prdRelated">관련상품</a></li>
+        </ul>
+        <div class="cont">
+            <h3>상품결제정보</h3>
+            {$payment_info}
+        </div>
+        <div class="cont">
+            <h3>배송정보</h3>
+            <ul class="delivery">
+                <li>배송 방법 : {$shipping_method}</li>
+                <li>배송 지역 : {$shipping_area}</li>
+                <li>배송 비용 : {$shipping_fee}</li>
+                <li>배송 기간 : {$shipping_period}</li>
+                <li>배송 안내 : {$shipping_info}</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <h3>교환 및 반품정보</h3>
+            {$exchange_info}
+        </div>
+        <div class="cont">
+            <h3>서비스문의</h3>
+            {$service_info}
+        </div>
+    </div>
+
+
+    <div id="prdReview" class="ec-base-tab gFlex {$review_display|display}">
+        <ul class="menu">
+            <li><a href="#prdDetail">상품상세정보</a></li>
+            <li><a href="#prdInfo">상품구매안내</a></li>
+            <li class="selected"><a href="#prdReview">상품사용후기</a></li>
+            <li><a href="#prdQnA">상품Q&amp;A</a></li>
+            <li><a href="#prdRelated">관련상품</a></li>
+        </ul>
+        <div class="board">
+            <h3>상품사용후기</h3>
+            <p class="desc">상품의 사용후기를 적어주세요.</p>
+
+            <div module="product_review">
+                <!--@js(/js/module/product/review.js)-->
+                <a name="use_review"></a>
+
+                <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+
+                <div class="minor {$adult_display|display}">
+                    <p><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif" alt="" /> <strong>"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
+                    <p class="button"><a href="/intro/board.html{$returnParam}" class="btnEm sizeS">성인인증 하기</a></p>
+                </div>
+
+                <div class="ec-base-table typeList">
+                    <table border="1" summary="" class="{$list_display|display}">
+                        <caption>상품사용후기</caption>
+                        <colgroup>
+                            <col style="width:70px;" />
+                            <col style="width:auto" />
+                            <col style="width:100px;" />
+                            <col style="width:100px;" />
+                            <col style="width:80px;" />
+                            <col style="width:80px;" class="{$use_point_display|display}" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                                <th scope="col">조회</th>
+                                <th scope="col" class="{$use_point_display|display}">평점</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>{$no}</td>
+                                <td class="subject left txtBreak">{$icon_re}{$icon_lock} <a href="{$link_board_detail}{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}<span class="txtWarn">{$comment_count}</span></td>
+                                <td>{$member_icon} {$writer}</td>
+                                <td class="txtInfo txt11">{$write_date}</td>
+                                <td class="txtInfo txt11">{$hit_count}</td>
+                                <td class="{$use_point_display|display}"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+                            </tr>
+                            <tr>
+                                <td>{$no}</td>
+                                <td class="subject left txtBreak">{$icon_re}{$icon_lock} <a href="{$link_board_detail}{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}<span class="txtWarn">{$comment_count}</span></td>
+                                <td>{$member_icon} {$writer}</td>
+                                <td class="txtInfo txt11">{$write_date}</td>
+                                <td class="txtInfo txt11">{$hit_count}</td>
+                                <td class="{$use_point_display|display}"><img src="//img.echosting.cafe24.com/skin/base/board/ico_point{$point_count}.gif" alt="{$point_count}점"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="ec-base-button typeBorder">
+                <span class="gRight">
+                    <a href="{$review_write}" class="btnNormal">상품후기쓰기</a>
+                    <a href="{$review_list}" class="btnNormal">모두 보기</a>
+                </span>
+            </p>
+
+            <div module="product_reviewpaging" class="ec-base-paginate typeSub">
+                <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first2.gif" alt="첫 페이지" /></a>
+                <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
+                <ol>
+                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}"class="{$param_class}">{$no}</a></li>
+                </ol>
+                <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
+                <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last2.gif" alt="마지막 페이지" /></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="prdQnA" class="ec-base-tab gFlex {$qna_display|display}">
+        <ul class="menu">
+            <li><a href="#prdDetail">상품상세정보</a></li>
+            <li><a href="#prdInfo">상품구매안내</a></li>
+            <li><a href="#prdReview">상품사용후기</a></li>
+            <li class="selected"><a href="#prdQnA">상품Q&amp;A</a></li>
+            <li><a href="#prdRelated">관련상품</a></li>
+        </ul>
+
+        <div class="board">
+            <h3>상품 Q&amp;A</h3>
+            <p class="desc">상품에 대해 궁금한 점을 해결해 드립니다.</p>
+
+            <div module="product_qna">
+                <!--@js(/js/module/product/qna.js)-->
+                <a name="use_qna"></a>
+
+                <p class="noAccess {$deny_display|display}">글읽기 권한이 없습니다.</p>
+
+                <div class="minor {$adult_display|display}">
+                    <p><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/ico_under19.gif" alt="" /> <strong>"19세 미만의 미성년자"</strong>는 출입을 금합니다!</p>
+                    <p class="button"><a href="/intro/board.html{$returnParam}" class="btnEm sizeS">성인인증 하기</a></p>
+                </div>
+
+                <div class="ec-base-table typeList">
+                    <table border="1" summary="" class="{$list_display|display}">
+                        <caption>상품 Q&amp;A</caption>
+                        <colgroup>
+                            <col style="width:70px;" />
+                            <col style="width:134px;" />
+                            <col style="width:auto" />
+                            <col style="width:80px;" />
+                            <col style="width:100px;" />
+                            <col style="width:55px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">카테고리</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                                <th scope="col">조회</th>
+                            </tr>
+                        </thead>
+                        <tbody class="center">
+                            <tr>
+                                <td>{$no}</td>
+                                <td>{$category_name}</td>
+                                <td class="subject left txtBreak">{$icon_re}{$icon_lock} <a href="{$link_board_detail}{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}<span class="txtWarn">{$comment_count}</span></td>
+                                <td>{$member_icon} {$writer}</td>
+                                <td class="txtInfo txt11">{$write_date}</td>
+                                <td class="txtInfo txt11">{$hit_count}</td>
+                            </tr>
+                            <tr>
+                                <td>{$no}</td>
+                                <td>{$category_name}</td>
+                                <td class="subject left txtBreak">{$icon_re}{$icon_lock} <a href="{$link_board_detail}{$param_read}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}<span class="txtWarn">{$comment_count}</span></td>
+                                <td>{$member_icon} {$writer}</td>
+                                <td class="txtInfo txt11">{$write_date}</td>
+                                <td class="txtInfo txt11">{$hit_count}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="ec-base-button typeBorder">
+                <span class="gRight">
+                    <a href="{$qna_write}" class="btnNormal">상품문의하기</a>
+                    <a href="{$qna_list}" class="btnNormal">모두 보기</a>
+                </span>
+            </p>
+
+            <div module="product_qnapaging" class="ec-base-paginate typeSub">
+                <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first2.gif" alt="첫 페이지" /></a>
+                <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
+                <ol>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                    <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                </ol>
+                <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
+                <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last2.gif" alt="마지막 페이지" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div module="product_relation" id="prdRelated" class="ec-base-tab gFlex">
+    <!--@css(/css/module/product/relation.css)-->
+    <ul class="menu">
+        <li><a href="#prdDetail">상품상세정보</a></li>
+        <li><a href="#prdInfo">상품구매안내</a></li>
+        <li class="{$disp_rel_review|display}"><a href="#prdReview">상품사용후기</a></li>
+        <li class="{$disp_rel_qna|display}"><a href="#prdQnA">상품Q&amp;A</a></li>
+        <li class="selected"><a href="#prdRelated">관련상품</a></li>
+    </ul>
+
+    <div class="relation">
+        <h3>관련상품</h3>
+        <div module="product_relationlist">
+            <ul class="prdList">
+                <li class="item">
+                    <div class="box">
+                        <a href="{$link_product_detail}"><img src="{$img_small}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                        <p><a href="{$link_product_detail}">{$name}</a></p>
+                        <ul>
+                            <li><strong class="{$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</strong></li>
+                            <li class="salePrice {$sale_price_display|display}">{$disp_sale_price}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="box">
+                        <a href="{$link_product_detail}"><img src="{$img_small}" alt="{$seo_alt_tag}" class="thumb" /></a>
+                        <p><a href="{$link_product_detail}">{$name}</a></p>
+                        <ul>
+                            <li><strong class="{$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</strong></li>
+                            <li class="salePrice {$sale_price_display|display}">{$disp_sale_price}</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--@define(cmc_log)-->

@@ -1,0 +1,35 @@
+<div module="product_detail">
+    <h3>상품 추가정보</h3>
+    <div module="product_detaildesign" class="content">
+        <!--
+            출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
+            count = 10
+        -->
+        <div class="ec-base-table gClearBorder">
+        	<table border="1">
+                <caption>상품 추가정보</caption>
+                <colgroup>
+                    <col style="width:115px;">
+                    <col style="width:auto;">
+                </colgroup>
+                <tbody>
+                    <tr class="{$item_display|display}">
+                        <th scope="row">{$item_title}</th>
+                        <td>{$item_content}</td>
+                    </tr>
+                    <tr class="{$item_display|display}">
+                        <th scope="row">{$item_title}</th>
+                        <td>{$item_content}</td>
+                    </tr>
+                    <tr class="{$colorchip_display|display} color">
+                        <th scope="row">상품색상</th>
+                        <td module="product_Colorchip">
+                            <span class="chips" style="background-color:{$color}"></span>
+                            <span class="chips" style="background-color:{$color}"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- File start -->
+<header id="header">
+    <!-- app tag -->
+    <div id="ec-orderform-header-head"></div>
+
+    <div class="header">
+        <h1 module="Layout_LogoTop"><a href="/index.html">{$mall_name}</a></h1>
+        <div class="headerMenu gLeft">
+            <span class="btnBack" module="Layout_MobileAction">
+                <a href="#none" onclick="{$go_back}">뒤로가기</a>
+            </span>
+        </div>
+        <div class="headerMenu gRight">
+            <span module="Layout_orderBasketcount" class="btnBasket">
+                <a href="/order/basket.html">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+            </span>
+            <a href="{$return_url}" module="Layout_statelogoff" class="btnMy">로그인</a>
+            <a href="/myshop/index.html" module="Layout_statelogon" class="btnMy">마이쇼핑</a>
+        </div>
+    </div>
+    <div class="titleArea">
+        <h1>주문/결제</h1>
+    </div>
+
+    <!-- app tag -->
+    <div id="ec-orderform-header-tail"></div>
+</header>
+<!-- File end -->

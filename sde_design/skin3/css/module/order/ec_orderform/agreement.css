@@ -1,0 +1,11 @@
+/* File start */
+/* 청약철회방침 */
+.xans-order-agreementsubscription .agree { overflow:auto; display:block; width:400px; height:200px; margin:0 auto; padding:5px; line-height:1.5; border:1px solid #d9d9d9; }
+#payReqForm, #paySSLForm { height:0; }
+
+/* 주문서 약관 공통 */
+#popup { width:450px; }
+#popup .agree > textarea { overflow:auto; display:block; width:400px; height:200px; margin:0 auto; padding:5px; line-height:1.5; border:1px solid #d9d9d9; }
+#popup .ec-base-layer.agreementArea .agree { overflow:auto; display:block; width:400px; height:200px; margin:0 auto; padding:5px; line-height:1.5; border:1px solid #d9d9d9; }
+
+/* File end */

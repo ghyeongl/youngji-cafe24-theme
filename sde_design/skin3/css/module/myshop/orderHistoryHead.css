@@ -1,0 +1,11 @@
+.xans-myshop-orderhistoryhead fieldset img { vertical-align:middle; }
+.xans-myshop-orderhistoryhead fieldset .period { display:inline-block; margin:0 2px; font-size:0; vertical-align:middle; }
+.xans-myshop-orderhistoryhead fieldset .period a { padding:0; border:0; }
+.xans-myshop-orderhistoryhead fieldset .period img { margin:0 0 0 -1px; }
+.xans-myshop-orderhistoryhead fieldset .fText { width:72px; height:22px; margin:0 0 0 2px; padding:0 6px; border:1px solid #d5d5d5; line-height:22px; font-size:12px; }
+.xans-myshop-orderhistoryhead fieldset button { width:14px; height:14px; margin:0 5px 0 2px; background:none; }
+.xans-myshop-orderhistoryhead .stateSelect { display:inline-block; padding:0 12px 0 0; margin:0 5px 0 2px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 100% 6px; }
+.xans-myshop-orderhistoryhead .periodSelect { display:inline-block; margin:0 5px 0 2px; }
+.xans-myshop-orderhistoryhead .periodSelect:after { content:"년"; position:relative; top:1px; }
+.xans-myshop-orderhistoryhead ul { margin:10px 0 0; color:#939393; line-height:1.5; }
+.xans-myshop-orderhistoryhead ul li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_square2.gif") no-repeat 4px 7px; }

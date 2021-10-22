@@ -1,0 +1,13 @@
+.xans-myshop-orderregularmanagelist .title { margin:40px 0 10px 10px; }
+.xans-myshop-orderregularmanagelist .title h3 { color:#353535; font-size:12px; }
+.xans-myshop-orderregularmanagelist.ec-base-table td .line { text-decoration:underline; }
+.xans-myshop-orderregularmanagelist.ec-base-table td.number { letter-spacing:-1px; }
+.xans-myshop-orderregularmanagelist.ec-base-table td.thumb img { width:80px; }
+.xans-myshop-orderregularmanagelist.ec-base-table .name .ec-set-product-name { display:block; }
+.xans-myshop-orderregularmanagelist.ec-base-table td.product div.option,
+.xans-myshop-orderregularmanagelist.ec-base-table td.product ul.option > li { margin:9px 0 0; color:#757575; line-height:16px; }
+.xans-myshop-orderregularmanagelist.ec-base-table td.product ul.option > li > strong { display:block; color:#353535; }
+.xans-myshop-orderregularmanagelist.ec-base-table td.product div.option span.file a,
+.xans-myshop-orderregularmanagelist.ec-base-table td.product ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#757575; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 2px; }
+.xans-myshop-orderregularmanagelist.ec-base-table td.number [class^="btn"],
+.xans-myshop-orderregularmanagelist.ec-base-table td.state [class^="btn"] { margin:1px 0; }

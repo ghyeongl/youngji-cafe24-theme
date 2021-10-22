@@ -1,0 +1,115 @@
+<div module="gift_selectorderform">
+    <div class="title">
+        <h3>사은품</h3>
+    </div>
+    <ul class="ec-base-help controlInfo">
+        <li class="txtWarn txt11">사은품 포인트는 결제금액 또는 주문금액 기준으로 산정되므로 배송비, 할인금액, 부가결제금액이 변경될 경우 사은품 포인트도 함께 영향을 받아 선택 가능한 사은품이 변경될 수 있습니다.</li>
+    </ul>
+    <div class="orderListArea">
+        <div class="title {$display_orderform_choice|display}">
+            <p>아래 사은품 중 원하시는 사은품을 자유롭게 선택할 수 있습니다.</p>
+        </div>
+        <div class="ec-base-table typeList gBorder">
+            <table border="1" summary="">
+                <caption>사은품</caption>
+                <colgroup>
+                    <col style="width:35px" class="{$display_orderform_choice|display}" />
+                    <col style="width:92px" />
+                    <col style="width:auto" />
+                    <col style="width:98px" class="{$display_orderform_point|display}" />
+                    <col style="width:75px" class="{$display_orderform_quantity_th|display}" />
+                    <col style="width:98px" class="{$display_orderform_point|display}" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="{$display_orderform_choice|display}">{$display_choice_th}</th>
+                        <th scope="col">이미지</th>
+                        <th scope="col">상품정보</th>
+                        <th scope="col" class="{$display_orderform_point|display}">사은품 포인트</th>
+                        <th scope="col" class="{$display_orderform_quantity_th|display}">수량</th>
+                        <th scope="col" class="{$display_orderform_point|display}">합계</th>
+                    </tr>
+                </thead>
+                <tfoot class="right" module="gift_point">
+                    <tr>
+                        <td colspan="6"><span class="gLeft"><strong>사은품 {$select_gift_count}개 선택</strong>(<span class="{$select_gift_name_class}"></span>)</span> 보유 포인트 <strong>{$total_point}</strong>점 - 사용 포인트 <strong>{$use_point}</strong>점 = 잔여 포인트 <strong class="txtEm">{$able_point}점</strong></td>
+                    </tr>
+                </tfoot>
+                <tbody class="center">
+                    <tr>
+                        <td class="{$display_orderform_choice|display}">{$product_choice}</td>
+                        <td class="thumb gClearLine"><img src="{$gift_image}" class="image {$giftImage_class}" alt="" /></td>
+                        <td class="left gClearLine">
+                            <strong class="name {$giftName_class}">{$product_name}{$soldout_icon}</strong>
+                            <ul class="option">
+                                <li>{$option1}</li>
+                                <li>{$option2}</li>
+                                <li>{$option3}</li>
+                                <li>{$option4}</li>
+                                <li>{$option5}</li>
+                            </ul>
+                        </td>
+                        <td class="right {$display_orderform_point|display}">{$gift_price}점</td>
+                        <td class="{$display_orderform_quantity_td|display}">
+                            <span class="ec-base-qty">
+                                {$product_amount}
+                                <a href="#none" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up" /></a>
+                                <a href="#none" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" class="down" /></a>
+                            </span>
+                        </td>
+                        <td class="{$display_orderform_offer_auto_quantity_td|display}">{$offer_auto_quantity}</td>
+                        <td class="right {$display_orderform_point|display}"><strong class="total {$giftTotal_class}">{$gift_price}점</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="{$display_orderform_choice|display}">{$product_choice}</td>
+                        <td class="thumb gClearLine"><img src="{$gift_image}" class="image {$giftImage_class}" alt="" /></td>
+                        <td class="left gClearLine">
+                            <strong class="name {$giftName_class}">{$product_name}{$soldout_icon}</strong>
+                            <ul class="option">
+                                <li>{$option1}</li>
+                                <li>{$option2}</li>
+                                <li>{$option3}</li>
+                                <li>{$option4}</li>
+                                <li>{$option5}</li>
+                            </ul>
+                        </td>
+                        <td class="right {$display_orderform_point|display}">{$gift_price}점</td>
+                        <td class="{$display_orderform_quantity_td|display}">
+                            <span class="ec-base-qty">
+                                {$product_amount}
+                                <a href="#none" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up" /></a>
+                                <a href="#none" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" class="down" /></a>
+                            </span>
+                        </td>
+                        <td class="{$display_orderform_offer_auto_quantity_td|display}">{$offer_auto_quantity}</td>
+                        <td class="right {$display_orderform_point|display}"><strong class="total {$giftTotal_class}">{$gift_price}점</strong></td>
+                    </tr>
+                    <tr>
+                        <td class="{$display_orderform_choice|display}">{$product_choice}</td>
+                        <td class="thumb gClearLine"><img src="{$gift_image}" class="image {$giftImage_class}" alt="" /></td>
+                        <td class="left gClearLine">
+                            <strong class="name {$giftName_class}">{$product_name}{$soldout_icon}</strong>
+                            <ul class="option">
+                                <li>{$option1}</li>
+                                <li>{$option2}</li>
+                                <li>{$option3}</li>
+                                <li>{$option4}</li>
+                                <li>{$option5}</li>
+                            </ul>
+                        </td>
+                        <td class="right {$display_orderform_point|display}">{$gift_price}점</td>
+                        <td class="{$display_orderform_quantity_td|display}">
+                            <span class="ec-base-qty">
+                                {$product_amount}
+                                <a href="#none" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up" /></a>
+                                <a href="#none" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" class="down" /></a>
+                            </span>
+                        </td>
+                        <td class="{$display_orderform_offer_auto_quantity_td|display}">{$offer_auto_quantity}</td>
+                        <td class="right {$display_orderform_point|display}"><strong class="total {$giftTotal_class}">{$gift_price}점</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

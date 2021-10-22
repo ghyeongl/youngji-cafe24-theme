@@ -1,0 +1,13 @@
+.xans-member-findid { margin:14px 7px 0; padding:0 0 29px; color:#1b1b1b; font-size:13px; }
+.xans-member-findid .ec-base-table.typeWrite #mobile_auth_view img,
+.xans-member-findid .ec-base-table.typeWrite #ipin_view img { max-width:106px !important; }
+
+/* INPUT SIZE */
+.xans-member-findid #searchType,
+.xans-member-findid #name,
+.xans-member-findid #email { width:100%; }
+.xans-member-findid #mobile1 { max-width:35px; }
+.xans-member-findid #mobile2,
+.xans-member-findid #mobile3 { max-width:55px; }
+.xans-member-findid #ssn1,
+.xans-member-findid #ssn2 { width:40%; }

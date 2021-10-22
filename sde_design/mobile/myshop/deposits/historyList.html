@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea" module="Myshop_DepositHead">
+    <h2>{$deposit_name}</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="Myshop_depositHistoryPackage">
+    <div module="Myshop_DepositSummary">
+        <!--@css(/css/module/myshop/depositSummary.css)-->
+        <h3>{$deposit_name} 내역</h3>
+        <div class="ec-base-table gClearBorderTop">
+            <table border="1">
+                <colgroup>
+                    <col style="width:125px;">
+                    <col style="width:auto;">
+                </colgroup>
+                <tbody class="right">
+                    <tr>
+                        <th scope="row">누적 {$deposit_name}</th>
+                        <td><span class="txtEm">{$all_deposit}</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용된 {$deposit_name}</th>
+                        <td><span class="txtEm">{$used_deposit}</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">사용가능 {$deposit_name}</th>
+                        <td>{$total_deposit}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div module="Myshop_DepositHistoryList">
+        <!--
+            $login_page = /member/login.html
+         -->
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <li><a href="/myshop/deposits/depositsList.html">내역보기</a></li>
+        </ul>
+    </div>
+</div>

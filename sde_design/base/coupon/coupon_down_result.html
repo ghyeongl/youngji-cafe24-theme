@@ -1,0 +1,21 @@
+<div module="Coupon_Downlayer">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/css/module/coupon/couponDownResult.css)-->
+    <div class="couponDownResult ec-base-layer" id="couponDownLayer">
+        <div class="header">
+            <h3>쿠폰 다운로드 완료</h3>
+        </div>
+        <div class="content">
+            <p class="total"><strong>총 {$total}건</strong> [성공 <strong class="point">{$success_cnt}</strong>건 / 실패 <strong>{$fail_cnt}</strong>건]</p>
+            <p class="desc">상세내역을 확인해주세요.</p>
+            <div class="couponList">
+                {$content}
+            </div>
+        </div>
+        <div class="ec-base-button">
+            <a href="/myshop/coupon/coupon.html" class="btnNormalFix sizeS">마이쿠폰 확인</a>
+        </div>
+        <a href="#none" class="close" onclick="location.reload();"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
+    </div>
+</div>

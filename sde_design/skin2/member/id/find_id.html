@@ -1,0 +1,48 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>아이디 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>아이디 찾기</h2>
+    <ul>
+        <li>가입하신 방법에 따라 아이디 찾기가 가능합니다.</li>
+        <li>법인사업자 회원 또는 외국인 회원의 경우 법인명과 법인번호 또는 이름과 등록번호를 입력해 주세요.</li>
+    </ul>
+</div>
+
+<div module="member_findid" class="ec-base-box typeThin">
+    <!--@css(/css/module/member/find_id.css)-->
+    <!--
+        $returnURL = /member/id/find_id_result.html
+     -->
+    <div class="findId">
+        <h3 class="boxTitle">아이디 찾기</h3>
+        <fieldset>
+            <legend>아이디 찾기</legend>
+            <p class="member"><strong>회원유형</strong> {$form.searchType}</p>
+            <p class="check">{$form.check_method}</p>
+            <p id="name_view" class="name"><strong id="name_lable">이름</strong> {$form.name}</p>
+            <p id="ssn_view" class="ssn_no"><strong id="ssn_name">법인번호로 찾기</strong> {$form.ssn1} - {$form.ssn2}</p>
+            <p id="email_view" class="email" style="display:none;"><strong>이메일로 찾기</strong> {$form.email}</p>
+            <p id="mobile_view" class="mobile" style="display:none;"><strong>휴대폰 번호로 찾기</strong> {$form.mobile1} - {$form.mobile2} - {$form.mobile3}</p>
+            <p id="ipin_view" class="ipin" style="display:none;">
+                <strong>아이핀인증으로 찾기</strong>
+                <span>회원가입을 아이핀으로 가입하신 <br />회원님께서는 아이핀으로 인증하세요.</span>
+                <a href="#none" class="btnNormal" onclick="{$action_func_find_id}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_ipin.gif" alt="" /> 아이핀인증</a>
+            </p>
+            <p id="mobile_auth_view" class="mobileauth" style="display:none;">
+                <strong>휴대폰인증으로 찾기</strong>
+                <span>본인 명의의 휴대폰으로 아이디 찾기를<br /> 진행할 수 있습니다. 휴대폰 명의자의<br /> 정보로가입한 아이디 찾기가 가능합니다.</span>
+                <a href="#none" class="btnNormal" onclick="{$action_func_find_id}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_mobile.gif" alt="" /> 휴대폰 인증</a>
+            </p>
+            <div class="ec-base-button gColumn">
+                <a href="#none" class="btnSubmit sizeM" onclick="{$action_func_find_id}">확인</a>
+            </div>
+        </fieldset>
+    </div>
+</div>

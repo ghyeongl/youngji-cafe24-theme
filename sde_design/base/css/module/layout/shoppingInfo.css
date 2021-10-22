@@ -1,0 +1,4 @@
+.xans-layout-shoppinginfo { position:absolute; right:0; top:0; height:35px; line-height:35px; }
+.xans-layout-shoppinginfo:before { display:block; content:""; position:absolute; top:12px; left:10px; width:1px; height:11px; background:#fff; }
+.xans-layout-shoppinginfo li { float:left; margin:0 0 0 10px; padding:0 0 0 11px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 0 12px; }
+.xans-layout-shoppinginfo li a { color:#757575; }

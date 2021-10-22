@@ -1,0 +1,54 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Estimate_Userform" class="ec-base-layer">
+    <!--@css(/css/module/estimate/userform.css)-->
+    <!--
+        $action_url = /estimate/print.html
+    -->
+    <div class="header">
+        <h1>견적서 신청자 정보 입력</h1>
+    </div>
+
+    <div class="content">
+        <h2>신청자 정보</h2>
+        <div class="ec-base-table">
+            {$form.begin}
+            <table border="1" summary="">
+                <caption>신청자 정보</caption>
+                <colgroup>
+                    <col style="width:150px" />
+                    <col style="width:auto" />
+                </colgroup>
+                <tr>
+                    <th scope="row">신청자명</th>
+                    <td>{$form.user_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">휴대전화</th>
+                    <td>{$form.mobile}</td>
+                </tr>
+                <tr>
+                    <th scope="row">이메일</th>
+                    <td>
+                        {$form.email}
+                        <p class="gBlank5">- 견적서를 전송받을 이메일 주소를 입력합니다.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">개인정보 처리방침</th>
+                    <td>
+                        <div class="agree">{$privacy_agreement}</div>
+                        <p class="gBlank5">
+                            <span class="gSpace20">개인정보처리방침에 동의하십니까?</span>
+                            {$form.agree_T}<label for="agreement_check_T">동의함</label> {$form.agree_F}<label for="agreement_check_F">동의안함</label>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            {$form.end}
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" onclick="{$action_confirm}" class="btnSubmitFix sizeS">확인하기</a>
+    </div>
+</div>

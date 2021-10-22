@@ -1,0 +1,154 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Board_ListPackage_8">
+    <!--@css(/css/module/board/listPackage_gallary.css)-->
+    <div module="board_title_8">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>{$board_title} {$board_adult_icon}</h2>
+            <p>{$board_info}</p>
+        </div>
+        <p class="imgArea">{$board_top_image}</p>
+    </div>
+
+    <div class="boardSort">
+        <span module="board_category_8">{$form.board_category}</span>
+    </div>
+
+    <ul module="board_listheader_8">
+        <li><a class="btnNormal {$list_type_display|display}" href="/board/gallery/list.html{$param_list}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_type_image.gif" alt="" /> 이미지형</a></li>
+        <li><a class="btnNormal {$list_type_display|display}" href="/board/gallery/list2.html{$param_list}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_type_list.gif" alt="" /> 리스트형</a></li>
+    </ul>
+
+    <div class="notice">
+        <div module="board_notice_8">
+            <!--
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <ul>
+                <li>
+                    <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                    <div class="description">
+                        <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
+                        <strong>작성자 : {$member_icon}{$writer}</strong>
+                        <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                    </div>
+                </li>
+                <li>
+                    <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                    <div class="description">
+                        <p class="subject">{$checkbox} {$notice_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
+                        <strong>작성자 : {$member_icon}{$writer}</strong>
+                        <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div module="board_fixed_8">
+            <!--
+                $login_page_url = /member/login.html
+                $deny_access_url = /index.html
+            -->
+            <ul>
+                <li>
+                    <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                    <div class="description">
+                        <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
+                        <strong>작성자 : {$member_icon}{$writer}</strong>
+                        <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                    </div>
+                </li>
+                <li>
+                    <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                    <div class="description">
+                        <p class="subject">{$checkbox} {$fixed_icon} {$category_name} <a href="{$link_board_detail}"> {$subject} {$icon_new} {$comment_count}</a></p>
+                        <strong>작성자 : {$member_icon}{$writer}</strong>
+                        <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div module="board_list_8">
+        <!--
+            $count = 12
+            $login_page_url = /member/login.html
+            $deny_access_url = /index.html
+        -->
+        <ul>
+            <li>
+                <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                {$checkbox}
+                <a href="{$link_board_detail}" class="imgLink">[{$no}] {$subject} {$comment_count}</a>
+                <span>
+                    <strong>작성자 : {$member_icon}{$writer} </strong>
+                    <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                </span>
+            </li>
+            <li>
+                <a href="{$link_board_detail}" class="imgLink"><img src="{$img_src}" onerror="this.src='//img.echosting.cafe24.com/thumb/198x198.gif'" alt="" /></a>
+                {$checkbox}
+                <a href="{$link_board_detail}" class="imgLink">[{$no}] {$subject} {$comment_count}</a>
+                <span>
+                    <strong>작성자 : {$member_icon}{$writer} </strong>
+                    <em class="{$date_display|display}">작성일 : {$write_date}</em>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div class="boardListEmpty {$empty_display|display}" module="board_empty_8">
+        <p>{$empty_message}</p>
+    </div>
+
+    <div module="board_ButtonList_8" class="{$write_display|display} ec-base-button typeBG">
+        <span class="gRight">
+            <a href="/board/gallery/write.html{$param_write}" class="btnSubmitFix sizeS {$write_display|display}">글쓰기</a>
+        </span>
+    </div>
+</div>
+
+<div module="board_paging_8" class="ec-base-paginate">
+    <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+</div>
+
+<div module="board_search_8">
+    <!--@css(/css/module/board/search.css)-->
+    <fieldset class="boardSearch">
+        <legend>게시물 검색</legend>
+        <p>{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnEmFix" onclick="{$action_search}">찾기</a></p>
+    </fieldset>
+</div>
+
+<!-- 관리자 전용 메뉴 -->
+<div module="board_catemove_8">
+    <!--@css(/css/module/board/catemove.css)-->
+    <p>
+        {$board_catemove_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_category_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$category_move}</a>
+    </p>
+</div>
+
+<div module="board_function_8">
+    <!--@css(/css/module/board/function.css)-->
+    <p>
+        {$board_function_selectbox}
+        <a href="#none" class="btnNormal" onclick="{$action_article_move}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_move.gif" alt="" /> {$article_move}</a>
+        <a href="#none" class="btnNormal" onclick="{$action_article_copy}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_copy.gif" alt="" /> {$article_copy}</a>
+        {$board_function_help}
+    </p>
+</div>
+<!-- // 관리자 전용 메뉴 -->

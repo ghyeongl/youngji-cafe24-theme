@@ -1,0 +1,91 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Coupon_CouponList" class="ec-base-layer">
+    <!--@css(/css/module/coupon/couponList.css)-->
+    <div class="header">
+        <h1>쿠폰 사용내역</h1>
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <h3>상품별 쿠폰</h3>
+        </div>
+
+        <div class="ec-base-table typeList">
+            <table border="1" summary="">
+                <caption>상품별 쿠폰</caption>
+                <colgroup>
+                    <col style="width:85px" />
+                    <col style="width:90px" />
+                    <col style="width:auto" />
+                    <col style="width:100px" />
+                    <col style="width:120px" />
+                    <col style="width:120px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">배송구분</th>
+                        <th scope="col">이미지</th>
+                        <th scope="col">상품정보</th>
+                        <th scope="col">판매가</th>
+                        <th scope="col">적용된 쿠폰</th>
+                        <th scope="col">상품별 쿠폰 할인액</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <tr module="Coupon_aPrd">
+                        <td><span class="txtInfo">{$sShipType}</span></td>
+                        <td class="thumb"><img src="{$product_image}" alt="" /></td>
+                        <td class="left txtBreak">
+                            <strong>{$product_name}</strong>
+                            <div class="option">{$sOptStr}</div>
+                        </td>
+                        <td class="price right"><strong>{$sOrdPrice}</strong></td>
+                        <td><span class="txtInfo">{$sCoupon}</span></td>
+                        <td class="right"><strong>{$sCouponPrice}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ec-base-table typeList total gBlank20">
+            <table border="1" summary="">
+            <caption>총 쿠폰 할인금액</caption>
+            <colgroup>
+                <col style="width:33.33%" />
+                <col style="width:33.33%" />
+                <col style="width:33.33%" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col"><strong>총 상품별 쿠폰 할인금액</strong></th>
+                    <th scope="col"><strong>총 주문별 쿠폰 할인금액</strong></th>
+                    <th scope="col"><strong>총 배송비 쿠폰 할인금액</strong></th>
+                </tr>
+            </thead>
+            <tfoot class="right">
+                <tr>
+                    <td colspan="3"><strong>= 총 쿠폰 할인금액</strong>({$mileage_name}) : <span class="total txtEm">{$price_unit_head}<strong class="txt18">{$total_coupon_discount}</strong><strong>{$price_unit_tail}</strong> (<img src="{$mileage_mileage_icon}" alt="" /> {$total_mileage})</span></td>
+                </tr>
+            </tfoot>
+            <tbody class="center">
+                <tr>
+                    <td><div class="box">{$price_unit_head}<strong>{$product_coupon_discount}</strong><strong class="txt14">{$price_unit_tail}</strong> <span class="txt12 txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> {$product_mileage})</span></div></td>
+                    <td><div class="box"><strong>-</strong>{$price_unit_head}<strong>{$order_coupon_discount}</strong><strong class="txt14">{$price_unit_tail}</strong> <span class="txt12 txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> {$order_mileage})</span></div></td>
+                    <td><div class="box"><strong>-</strong>{$price_unit_head}<strong>{$delivery_coupon_discount}</strong><strong class="txt14">{$price_unit_tail}</strong></div></td>
+                </tr>
+            </tbody>
+            <tbody class="detail center">
+                <tr>
+                    <td class="left">{$sProductCouponName}</td>
+                    <td class="left">{$sOrderCouponName}</td>
+                    <td class="left">{$sDeliveryCouponName}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" class="btnNormalFix sizeS" onclick="window.close();">닫기</a>
+    </div>
+</div>

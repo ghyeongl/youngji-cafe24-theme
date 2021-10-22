@@ -1,0 +1,334 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!--@css(/css/module/myshop/regularDeliveryDetail.css)-->
+<div module="myshop_OrderRegularManageDetailRegister">
+    <div class="path">
+        <span>현재 위치</span>
+        <ol><li><a href="/">홈</a></li>
+            <li><a href="/myshop/index.html">마이쇼핑</a></li>
+            <li title="현재 위치"><strong>{$invoice_type_text} 상세 조회</strong></li>
+        </ol></div>
+
+    <div class="titleArea">
+        <h2>{$invoice_type_text} 상세 조회</h2>
+    </div>
+
+    <h3 class="title">신청 정보</h3>
+    <div class="ec-base-table">
+        <table border="1" summary="">
+            <caption>신청 정보</caption>
+            <colgroup>
+                <col style="width:170px" />
+                <col style="width:auto" />
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="row">신청번호</th>
+                <td>{$invoice_no}</td>
+            </tr>
+            <tr>
+                <th scope="row">신청일자</th>
+                <td>{$ins_timestamp}</td>
+            </tr>
+            <tr>
+                <th scope="row">첫 배송시작일</th>
+                <td>{$delivery_timestamp}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div module="myshop_OrderRegularManageDetailList">
+    <h3 class="title">{$invoice_type_text} 정보</h3>
+    <div class="ec-base-table">
+        <table border="1" summary="">
+            <caption>{$list_title}</caption>
+            <colgroup>
+                <col style="width:120px;" />
+                <col style="width:auto;" />
+                <col style="width:120px" />
+                <col style="width:61px;" />
+                <col style="width:90px;" />
+                <col style="width:140px;" />
+                <col style="width:120px;" />
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">이미지</th>
+                <th scope="col">상품정보</th>
+                <th scope="col">{$sale_price_text}</th>
+                <th scope="col">수량</th>
+                <th scope="col">배송시작일 [회차]</th>
+                <th scope="col">배송주기</th>
+                <th scope="col">선택</th>
+            </tr>
+            </thead>
+            <tbody class="center {$list_display|display}">
+            <tr>
+                {$form.invoice_no}
+                {$form.has_temp_ord}
+                {$form.return_url}
+                <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                <td class="product left">
+                    <strong class="name">{$product_name_link}</strong>
+                    <ul class="option">
+                        <li>{$option_str}</li>
+                    </ul>
+                    <p class="gBlank5 {$card_installment_display|display}">무이자할부 상품</p>
+                </td>
+                <td>
+                    <p id="{$productpriceId}"><span class="txtDel">{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</span></p>
+                    <p class="{$product_sale_info_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong></p>
+                    <span class="badge {$product_sale_info_display|display}">{$product_sale_info}<i class="icoDown">할인</i></span>
+                </td>
+                <td>
+                    <span class="ec-base-qty">
+                        {$form.product_cnt}
+                        <a href="javascript:;" class="up" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" /></a>
+                        <a href="javascript:;"  class="down" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" /></a>
+                    </span>
+                </td>
+                <td>
+                    <div class="datepicker">
+                        {$form.expected_delivery_date}
+                        <p class="rotation">[{$expected_pay_seq}회차]<br><span class="txtLess">{$expected_pay_date_info}</span></p>
+                    </div>
+                </td>
+                <td>
+                    {$form.subscription_cycle}
+                </td>
+                <td>
+                    <a href="#none" class="btnNormal {$cancelScriptionItemClass}" data-cancel_action_json="{$cancel_action_json}" data-has_temporder="{$temp_order}">{$cancel_button_text}</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                <td class="product left">
+                    <strong class="name">{$product_name_link}</strong>
+                    <ul class="option">
+                        <li>{$option_str}</li>
+                    </ul>
+                    <p class="gBlank5 {$card_installment_display|display}">무이자할부 상품</p>
+                </td>
+                <td>
+                    <p id="{$productpriceId}"><span class="txtDel">{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</span></p>
+                    <p class="{$product_sale_info_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong></p>
+                    <span class="badge {$product_sale_info_display|display}">{$product_sale_info}<i class="icoDown">할인</i></span>
+                </td>
+                <td>
+                    <span class="ec-base-qty">
+                        {$form.product_cnt}
+                        <a href="javascript:;" class="up" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" /></a>
+                        <a href="javascript:;"  class="down" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" /></a>
+                    </span>
+                </td>
+                <td>
+                    <div class="datepicker">
+                        {$form.expected_delivery_date}
+                        <p class="rotation">[{$expected_pay_seq}회차]<br><span class="txtLess">{$expected_pay_date_info}</span></p>
+                    </div>
+                </td>
+                <td>
+                    {$form.subscription_cycle}
+                </td>
+                <td>
+                    <a href="#none" class="btnNormal {$cancelScriptionItemClass}" data-cancel_action_json="{$cancel_action_json}" data-has_temporder="{$temp_order}">{$cancel_button_text}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="message {$empty_display|display}">{$invoice_type_text} 정보가 없습니다.</p>
+
+        <ul class="info">
+            <li>결제 금액은 주기별 배송시작일 이틀 전 (결제 하루 전) 메일 또는 SMS를 통해 안내되며, <span class="txtEm">위 판매가에서 결제 안내 시점의 할인 혜택 및 배송비 기준이 자동 적용되어 확정됩니다.</span></li>
+            <li>배송주기가 다른 상품들을 일괄 정기배송 신청할 경우(동일 신청번호), 배송시작일이 같은 상품끼리 묶음 처리되어 주문/결제됩니다.</li>
+            <li><span class="txtWarn">배송주기 및 배송시작일 변경, 일부 상품 정기배송 해지 등으로 결제 예정된 주문의 구성이 달라질 경우 할인 혜택 및 배송비가 달라질 수 있습니다.</span></li>
+            <li>배송주기 변경 시, 변경된 주기는 해당 시점의 배송시작일 다음 배송부터 적용됩니다.</li>
+        </ul>
+    </div>
+
+
+    <div module="myshop_OrderRegularManageDetailReceiver">
+        <h3 class="title">수령자 정보</h3>
+        <div class="ec-base-button">
+        <span class="gRight">
+            <a id="ec-shop-receiver_update_id_all" href="#" class="btnNormal {$receiver_update_all_display|display}" title="새창 열림">전체 변경</a>
+        </span>
+        </div>
+
+        <!-- 기본정보 -->
+        <div class="ec-base-table typeList ">
+            <br>
+            <caption> &#183; 기본정보</caption>
+            <table border="1" summary="">
+
+                <colgroup>
+                    <col style="width: 714px" />
+                    <col style="width: 180px" />
+                    <col style="width: auto" />
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col" class="">수령자정보</th>
+                    <th scope="col" class="">적용회차</th>
+                    <th scope="col" class="">변경</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <p>{$receiver_name}</p>
+                        <p class="{$oversea_delv_display|display}">받으시는분(영문): {$receiver_name_en}</p>
+                        <p class="{$oversea_delv_display|display}">받으시는분(발음기호): {$receiver_name_phonetic}</p>
+                        <p class="{$oversea_delv_display|display}">국가: {$country_name}</p>
+                        <p class="{$display_addr|display}">우편번호: {$receiver_zipcode}</p>
+                        <p class="{$display_addr|display}">{$receiver_address}</p>
+                        <p>{$receiver_phone}/{$receiver_cell}</p>
+                        <p class="{$display_store_pickup_info|display}"><strong>{$store_pickup.receive_place_name}</strong></p>
+                        <p class="{$display_store_pickup_info|display}">- 주소 : {$store_pickup.receiver_address}</p>
+                        <p class="{$display_store_pickup_info|display}">- 전화번호 : {$store_pickup.main_phone}</p>
+                        <p class="{$display_store_pickup_info|display}">- 영업시간 : {$store_pickup.office_hour}</p>
+                        <p class="{$display_store_pickup_info|display}">- 수령 가능일 : {$store_pickup.receive_period}</p>
+                        <p class="{$display_store_pickup_info|display}">- 수령지 안내 : {$store_pickup.receive_info}</p>
+                        <p class="{$oversea_delv_display|display}">도시: {$receiver_city}</p>
+                        <p class="{$oversea_delv_display|display}">주/지방: {$receiver_state}</p>
+                        <br>
+                        <p>배송메시지: {$delivery_msg}</p>
+                        <p class="{$hope_shipping_time_display|display}">희망배송시간: {$hope_shipping_time}</p>
+                        <p class="{$hope_shipping_company_name_display|display}">희망배송업체/방식: {$hope_shipping_company_name}</p>
+                    </td>
+                    <td class="ec-base-table message">
+                        <p class="rotation"><span class="txtLess">{$expected_delivery_datetime} 배송시작부터</span></p>
+                    </td>
+                    <td>
+                        <div class="ec-base-button">
+                            <span class="gCenter">
+                                <span class="gCenter {$receiver_update_button_display|display}">
+                                    <a id="{$receiverUpdateId}" href="#" class="btnNormal" title="새창 열림"><span>변경</span></a> <!-- 기본정보 변경 -->
+                                </span>
+                                <span class="gCenter {$not_receiver_update_button_display|display}">
+                                     <a href="#" class="btnNormal" title="새창 열림" onclick="{$action_receiver_update_button}"><span class="txtWarn">변경불가</span></a>
+                                </span>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- 배송 예정 정보 (배송전 주문 있음)-->
+        <div class="ec-base-table gBorder">
+            <br>
+            <caption> &#183; 배송 예정 정보</caption>
+            <table border="1" summary="">
+
+                <colgroup>
+                    <col style="width: 214px" />
+                    <col style="width: 500px" />
+                    <col style="width: 180px" />
+                    <col style="width: auto" />
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col" class="">상품명</th>
+                    <th scope="col" class="">수령자정보</th>
+                    <th scope="col" class="">적용회차(배송시작일)</th>
+                    <th scope="col" class="">변경</th>
+                </tr>
+                </thead>
+                <tbody module="myshop_SubscriptionShippingList">
+                <tr>
+                    <td>{$product_name}</td>
+                    <td>
+                        <p>{$receiver_name}</p>
+                        <p class="{$oversea_delv_display|display}">받으시는분(영문): {$receiver_name_en}</p>
+                        <p class="{$oversea_delv_display|display}">받으시는분(발음기호): {$receiver_name_phonetic}</p>
+                        <p class="{$oversea_delv_display|display}">국가: {$country_name}</p>
+                        <p class="{$display_addr|display}">우편번호: {$receiver_zipcode}</p>
+                        <p class="{$display_addr|display}">{$receiver_full}</p>
+                        <p>{$receiver_phone}/{$receiver_cell}</p>
+                        <p class="{$display_store_pickup_info|display}"><strong>{$store_pickup.receive_place_name}</strong></p>
+                        <p class="{$display_store_pickup_info|display}">- 주소 : {$store_pickup.receiver_address}</p>
+                        <p class="{$display_store_pickup_info|display}">- 전화번호 : {$store_pickup.main_phone}</p>
+                        <p class="{$display_store_pickup_info|display}">- 영업시간 : {$store_pickup.office_hour}</p>
+                        <p class="{$display_store_pickup_info|display}">- 수령 가능일 : {$store_pickup.receive_period}</p>
+                        <p class="{$display_store_pickup_info|display}">- 수령지 안내 : {$store_pickup.receive_info}</p>
+                        <p class="{$oversea_delv_display|display}">도시: {$receiver_city}</p>
+                        <p class="{$oversea_delv_display|display}">주/지방: {$receiver_state}</p>
+                        <br>
+                        <p>배송메시지: {$delivery_msg}</p>
+                        <p class="{$hope_shipping_time_display|display}">희망배송시간: {$hope_shipping_time}</p>
+                        <p class="{$hope_shipping_company_name_display|display}">희망배송업체/방식: {$hope_shipping_company_name}</p>
+                    </td>
+                    <td class="ec-base-table message">
+                        <p class="rotation">[{$subscription_pay_seq}회차]<br><span class="txtLess"> {$expected_delivery_datetime} 배송시작</span></p>
+                    </td>
+                    <td>
+                        <div class="ec-base-button ">
+                            <span class="gCenter {$receiver_update_button_display|display}">
+                                 <a href="#" class="btnNormal" title="새창 열림" onclick="{$action_receiver_update_button}"><span>변경</span></a>
+                            </span>
+                            <span class="gCenter {$not_receiver_update_button_display|display}">
+                                 <a href="#" class="btnNormal" title="새창 열림" onclick="{$action_receiver_update_button}"><span class="txtWarn">변경불가</span></a>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>{$product_name}</td>
+                    <td>
+                        <p>{$receiver_name}</p>
+                        <p class="{$oversea_delv_display|display}">받으시는분(영문): {$receiver_name_en}</p>
+                        <p class="{$oversea_delv_display|display}">받으시는분(발음기호): {$receiver_name_phonetic}</p>
+                        <p class="{$oversea_delv_display|display}">국가: {$country_name}</p>
+                        <p class="{$display_addr|display}">우편번호: {$receiver_zipcode}</p>
+                        <p class="{$display_addr|display}">{$receiver_full}</p>
+                        <p>{$receiver_phone}/{$receiver_cell}</p>
+                        <p class="{$display_store_pickup_info|display}"><strong>{$store_pickup.receive_place_name}</strong></p>
+                        <p class="{$display_store_pickup_info|display}">- 주소 : {$store_pickup.receiver_address}</p>
+                        <p class="{$display_store_pickup_info|display}">- 전화번호 : {$store_pickup.main_phone}</p>
+                        <p class="{$display_store_pickup_info|display}">- 영업시간 : {$store_pickup.office_hour}</p>
+                        <p class="{$display_store_pickup_info|display}">- 수령 가능일 : {$store_pickup.receive_period}</p>
+                        <p class="{$display_store_pickup_info|display}">- 수령지 안내 : {$store_pickup.receive_info}</p>
+                        <p class="{$oversea_delv_display|display}">도시: {$receiver_city}</p>
+                        <p class="{$oversea_delv_display|display}">주/지방: {$receiver_state}</p>
+                        <br>
+                        <p>배송메시지: {$delivery_msg}</p>
+                        <p class="{$hope_shipping_time_display|display}">희망배송시간: {$hope_shipping_time}</p>
+                        <p class="{$hope_shipping_company_name_display|display}">희망배송업체/방식: {$hope_shipping_company_name}</p>
+                    </td>
+                    <td class="ec-base-table message">
+                        <p class="rotation">[{$subscription_pay_seq}회차]<br><span class="txtLess"> {$expected_delivery_datetime} 배송시작</span></p>
+                    </td>
+                    <td>
+                        <div class="ec-base-button ">
+                            <span class="gCenter {$receiver_update_button_display|display}">
+                                 <a href="#" class="btnNormal" title="새창 열림" onclick="{$action_receiver_update_button}"><span>변경</span></a>
+                            </span>
+                            <span class="gCenter {$not_receiver_update_button_display|display}">
+                                 <a href="#" class="btnNormal " title="새창 열림" onclick="{$action_receiver_update_button}"><span class="txtWarn">변경불가</span></a>
+                            </span>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+                <tbody class="{$subscription_shipping_list_empty_display|display}">
+                <tr>
+                    <td colspan="4">
+                        배송 예정 정보는 배송시작일 이틀 전부터 확인할 수 있습니다.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="ec-base-button justify">
+        <a href="regular_delivery.html" class="btnNormalFix sizeM">목록</a>
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_check}">저장하기</a>
+    </div>
+</div>

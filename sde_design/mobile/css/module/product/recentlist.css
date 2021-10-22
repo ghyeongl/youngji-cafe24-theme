@@ -1,0 +1,7 @@
+.xans-product-recentlist { padding:14px 7px; }
+.xans-product-recentlist > ul > li { margin:0 0 7px; }
+.xans-product-recentlist .item { margin:0 0 5px; }
+.xans-product-recentlist .item li { margin:2px 0 0; font-size:11px; color:#8f8f91; line-height:14px; }
+.xans-product-recentlist .ec-base-button { border-top:1px solid #ececec; margin:0 0 0 -4px; padding:7px 0 6px; }
+.xans-product-recentlist .empty li { padding:10px 0 20px; border:0; text-align:center; background:none; }
+

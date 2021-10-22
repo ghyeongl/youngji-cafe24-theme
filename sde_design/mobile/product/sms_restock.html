@@ -1,0 +1,45 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Product_RestockSms" class="ec-base-layer">
+    <!--@css(/css/module/product/restockSms.css)-->
+    <h1>재입고 알림 SMS</h1>
+    <div class="wrap">
+        <div class="prdArea">
+            <p class="thumbnail"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" width="73" height="73" alt="" /></p>
+            <div class="information">
+                <strong class="prdName">{$product_name}</strong>
+                <p>{$simple_desc}</p>
+                <p>{$opt_str}</p>
+                <p>{$option_add}</p>
+
+                <div class="optionWrap">
+                    <ul module="Product_optionstock">
+                        <li>
+                            <span class="name">{$option_name}</span>
+                            <div class="option">{$form.option}<p class="value">{$option_desc}</p></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="smsArea">
+            <p class="message"><strong class="txtEm">품절된 상품의 재입고시 문자메세지로 알려드립니다.</strong></p>
+            <div class="contact">
+                <p><strong>{$member_name}</strong>님의 휴대폰번호</p>
+                <p>{$form.hp1} - {$form.hp2} - {$form.hp3}</p>
+                <p>{$form.member_update}</p>
+            </div>
+        </div>
+
+        <ul class="ec-base-help typeDash">
+            <li>알림 요청이 완료된 상품은 관심상품 목록에 등록됩니다.</li>
+            <li>알림 요청 상품의 가격, 옵션 구성 등의 상품 정보가 변동될 수 있으므로 재입고시 상품 정보를 확인하신 후에 구매하시기 바랍니다.</li>
+            <li>재입고 SMS알림은 요청일로 부터 <strong class="txtEm">{$restock_month}개월</strong>간 유효합니다.</li>
+        </ul>
+    </div>
+
+    <div class="ec-base-button gColumn">
+        <button type="button" onclick="{$action_write}" class="btnSubmit">확인</button>
+        <button type="button" onclick="self.close();" class="btnEm">취소</button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+/* 세금계산서 신청양식 */
+.popup { min-width:320px; }
+.popup div.wrap { background:#f1f1f1; }
+.xans-myshop-orderissuetax .info { overflow:hidden; margin-bottom:10px; padding:20px 10px; border:1px solid #ccc; color:#353535; background:#fff; }
+.xans-myshop-orderissuetax h3 { margin:14px 0 7px; }
+.xans-myshop-orderissuetax #regno { width:100%; }
+/* INPUT SIZE */
+.xans-myshop-orderissuetax input[type=text],
+.xans-myshop-orderissuetax input[type=password],
+.xans-myshop-orderissuetax input[type=number],
+.xans-myshop-orderissuetax input[type=tel],
+.xans-myshop-orderissuetax select { width:100%; }
+.xans-myshop-orderissuetax #phone1 { margin:0 3px 0 0; width:30%; }
+.xans-myshop-orderissuetax #phone2,
+.xans-myshop-orderissuetax #phone3 { margin:0 3px; width:28%; }
+.xans-myshop-orderissuetax #email1 { margin:0 4px 4px 0; width:40%; }
+.xans-myshop-orderissuetax #email2 { margin:0 4px 4px 4px; width:45%; }
+.xans-myshop-orderissuetax #email3 { width:100%; }
+#mall_addr_addr1,
+#mall_addr_addr2 { width:100% }
+#orderResultTax_zipcode_wrap { border: 0; }

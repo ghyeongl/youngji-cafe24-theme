@@ -1,0 +1,149 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol><li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>정기배송 관리</strong></li>
+    </ol></div>
+
+<div class="titleArea">
+    <h2>정기배송 관리</h2>
+</div>
+
+<div class="regularDeliveryPayInfo" module="MyShop_OrderRegularPg">
+    <!--@css(/css/module/myshop/regularDeliveryPayInfo.css)-->
+    <!--@js(/js/module/myshop/regularDeliveryPayInfo.js)-->
+    <h3 class="title">결제카드 정보</h3>
+        <div class="ec-base-box">
+            <div class="information">
+                <h3 class="title">정기배송 결제카드</h3>
+                <div class="content">
+                    <!-- 참고 : 결제카드 등록 전 -->
+                    <p class="status {$unregistCard_display|display}">카드를 등록해주세요.
+                        <span class="button">
+                			<a href="#"  id="{$registModifyCardId}" class="btnEm cardSearch">결제카드 등록하기</a>
+            			</span>
+                    </p>
+                    <!-- 참고 : 결제카드 등록 후 -->
+                    <p class="status {$registCard_display|display}">
+                        <span id="{$registedCardNumberId}"></span> <span class="cardName" id="{$registedCardNameId}"></span>
+                        <span class="button">
+                			<a href="#" id="{$registModifyCardId}" class="btnEm">결제카드 변경하기</a>
+                			<a href="#" id="{$deleteCardId}" class="btnNormal">결제카드 삭제하기</a>
+                        </span>
+                    </p>
+                    <p class="info {$unregistCard_display|display}">결제카드가 등록되어 있을 경우 빠른 정기배송 신청이 가능합니다.</p>
+                </div>
+            </div>
+        </div>
+    <ul><li>결제예정일 (주기별 배송시작일 하루 전)에 위의 카드 정보로 정기배송 상품이 결제됩니다.</li>
+    </ul>
+</div>
+<div class="ec-base-tab" module="Myshop_OrderRegularManageHead">
+    <ul class="menu">
+        <li class="{$issueListTabSelected}"><a href="#" id="{$issueListTabId}" >신청내역 ({$issueInvoiceCount})</a></li>
+        <li class="{$cancelListTabSelected}"><a href="#" id="{$cancelListTabId}" >해지내역 ({$cancelItemCount})</a></li>
+    </ul>
+</div>
+
+<div class="ec-base-table typeList" module="myshop_OrderRegularManageList">
+    <!--@css(/css/module/myshop/regularDeliveryListItem.css)-->
+    <table border="1" summary="주문 상품 정보">
+        <colgroup>
+            <col style="width:160px;"/>
+            <col style="width:111px;"/>
+            <col style="width:111px;"/>
+            <col style="width:93px;"/>
+            <col style="width:auto;"/>
+            <col style="width:61px;"/>
+            <col style="width:111px;"/>
+            <col style="width:111px;"/>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">신청일자<br/>[신청번호]</th>
+            <th scope="col">배송주기</th>
+            <th scope="col" class="{$issueList_display|display}">배송시작일<br/>[회차]</th>
+            <th scope="col" class="{$cancelList_display|display}">해지일자</th>
+            <th scope="col">이미지</th>
+            <th scope="col">상품정보</th>
+            <th scope="col">수량</th>
+            <th scope="col" class="{$issueList_display|display}">상품구매금액</th>
+            <th scope="col" class="{$issueList_display|display}">선택</th>
+            <th scope="col" class="{$cancelList_display|display}">해지사유</th>
+        </tr>
+        </thead>
+        <tbody class="center {$list_display|display}">
+        <tr>
+            <td class="number {$display_column|display}" rowspan="{$row_span}">
+                {$ins_timestamp}<br/>
+                <a href="regular_delivery_detail.html{$param_detail}" class="line" title="페이지 이동"><span class="{$cancelList_class}">[{$invoice_no}]</span></a>
+            </td>
+            <td>{$subscription_cycle_info}</td>
+            <td class="{$issueList_display|display}">
+                {$expected_delivery_date}
+                <p>[{$expected_pay_seq}회차]</p>
+            </td>
+            <td class="{$cancelList_display|display}">{$cancel_timestamp}</td>
+            <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt=""/></a></td>
+            <td class="product left top">
+                <strong class="name">{$product_name_link}</strong>
+                <div class="option {$option_display|display}">{$option_str}</div>
+            </td>
+            <td>{$item_qty}</td>
+            <td class="right {$issueList_display|display}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
+                <div class="{$product_price_ref_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div>
+            </td>
+            <td class="{$issueList_display|display}">
+                <p><a href="regular_delivery_detail.html{$param_detail}" class="btnNormal" title="페이지 이동">상세 조회</a></p>
+            </td>
+            <td class="{$cancelList_display|display}">
+                <p class="{$customerCancel_display|display}">구매자 해지</p>
+                <p class="{$systemCancel_display|display}">시스템 자동 해지</p>
+                <p class="{$adminCancel_display|display}">관리자 해지</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="number {$display_column|display}" rowspan="{$row_span}">
+                {$ins_timestamp}<br/>
+                <a href="regular_delivery_detail.html{$param_detail}" class="line" title="페이지 이동"><span class="{$cancelList_class}">[{$invoice_no}]</span></a>
+            </td>
+            <td>{$subscription_cycle_info}</td>
+            <td class="{$issueList_display|display}">
+                {$expected_delivery_date}
+                <p>[{$expected_pay_seq}회차]</p>
+            </td>
+            <td class="{$cancelList_display|display}">{$cancel_timestamp}</td>
+            <td class="thumb"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt=""/></a></td>
+            <td class="product left top">
+                <strong class="name">{$product_name_link}</strong>
+                <div class="option {$option_display|display}">{$option_str}</div>
+            </td>
+            <td>{$item_qty}</td>
+            <td class="right {$issueList_display|display}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong>
+                <div class="{$product_price_ref_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</div>
+            </td>
+            <td class="{$issueList_display|display}">
+                <p><a href="regular_delivery_detail.html{$param_detail}" class="btnNormal" title="페이지 이동">상세 조회</a></p>
+            </td>
+            <td class="{$cancelList_display|display}">
+                <p class="{$customerCancel_display|display}">구매자 해지</p>
+                <p class="{$systemCancel_display|display}">시스템 자동 해지</p>
+                <p class="{$adminCancel_display|display}">관리자 해지</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="message {$empty_display|display}">신청 내역이 없습니다.</p>
+</div>
+
+<div module="Myshop_OrderRegularManagePage" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지"></a>
+    <a href="{$param_prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지"></a>
+    <ol>
+        <li><a href="{$param_page}">{$page_no}</a></li>
+        <li><a href="{$param_page}">{$page_no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지"></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지"></a>
+</div>

@@ -1,0 +1,29 @@
+/* 달력 패키지 */
+.xans-attend-calendarhead { text-align:center; }
+.xans-attend-calendarhead .date { display:inline; color:#d9bca0; font-size:30px; letter-spacing:-1px; }
+.xans-attend-calendarhead .date img { vertical-align:middle; }
+
+.xans-attend-calendar { margin:20px 0 0; }
+.xans-attend-calendar th { padding:8px 0; color:#d9bca0; border-top:1px solid #d9bca0; }
+.xans-attend-calendar th.sun { color:#e5541e; }
+.xans-attend-calendar th.sat { color:#7cbed7; }
+.xans-attend-calendar td { border:1px solid #e2ddd0; background:#f7f4ec; height:90px; }
+.xans-attend-calendar td p { position:relative; padding:8px 6px; color:#8f8f8f; }
+.xans-attend-calendar td p > img { margin:10px; }
+
+.xans-attend-calendar #attStart,
+.xans-attend-calendar #attEnd { position:absolute; left:-13px; top:-40px; }
+
+/* 스탬프형 > 보안문자 레이어 */
+.xans-attend-button .attendSecurityLayer { display:none; position:absolute; z-index:100; width:320px; color:#757575; }
+.xans-attend-button .attendSecurityLayer h3 { height:35px; padding:0 35px 0 19px; color:#fff; font-size:14px; line-height:35px; background-color:#495164; }
+.xans-attend-button .attendSecurityLayer .content { padding:20px; border-left:1px solid #757575; border-right:1px solid #757575; background-color:#fff; }
+.xans-attend-button .attendSecurityLayer .close { position:absolute; right:14px; top:12px; }
+.xans-attend-button .attendSecurityLayer .close img { cursor:pointer; }
+.xans-attend-button .attendSecurityLayer .btnArea { padding:10px 0; border:1px solid #757575; border-top:1px solid #d7d5d5; text-align:center; background-color:#fbfafa; }
+.xans-attend-button .attendSecurityLayer .form { padding:5px 10px; background-color:#f5f5f5; border-top:1px solid #d8d8d8; }
+.xans-attend-button .attendSecurityLayer .form img { width:80px; }
+.xans-attend-button .attendSecurityLayer .form img,
+.xans-attend-button .attendSecurityLayer .form .keyword { vertical-align:middle; }
+.xans-attend-button .attendSecurityLayer .form .keyword { width:130px; height:20px; margin:0 2px; line-height:20px; border-style:solid; border-width:1px; border-color:#c5c5c5 #e9e9e9 #e9e9e9 #c5c5c5; color:#202020; }
+.xans-attend-button .attendSecurityLayer #secure_text { width:160px; }

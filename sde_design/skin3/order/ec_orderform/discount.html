@@ -1,0 +1,184 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <div class="ec-jigsawWrapper">
+        <!-- app tag -->
+        <div id="ec-orderform-discount-head"></div>
+
+        <div id="ec-jigsaw-area-discount" class="ec-base-fold eToggle selected {$ec_jigsaw_area_discount_display|display}">
+            <div id="ec-jigsaw-title-discount" class="title">
+                <h2>할인/부가결제</h2>
+                <span id="ec-jigsaw-heading-discount" class="txtStrong gRight">
+                    -{$total_sale_price_front_head}<span id="{$discount_total_sale_price_id}">{$total_sale_price_front}</span>{$total_sale_price_front_tail}
+                    <span class="{$total_sale_ref_display|display}">{$total_sale_price_back_head}<span id="{$discount_total_sale_price_ref_id}" >{$total_sale_price_back}</span>{$total_sale_price_back_tail}</span>
+                </span>
+            </div>
+            <div class="contents">
+                <div class="discountDetail {$total_benefit_display|display}" id="{$total_benefit_view_id}">
+                    <strong class="heading">자동 할인</strong>
+                    <span class="summary"><span id="{$total_only_mobile_sale_price_display_id}" class="{$total_only_mobile_sale_display|display}">(모바일 혜택 <span id="{$total_only_mobile_sale_price_id}" class="txtEm">{$price_unit_head}{$total_only_mobile_sale_price}{$price_unit_tail}</span>)</span><span id="mTotalOnlyMobileSaleTmp" class="displaynone">(모바일 혜택 <span class="txtEm">[TOTAL_ONLY_MOBILE_SALE]</span>)</span></span>
+                    <div class="control">
+                        <span class="txtEm">{$price_unit_head}<span id="{$total_benefit_price_id}">{$total_benefit_price}</span>{$price_unit_tail}</span><a href="#auto_discount_layer" class="btnNormal ec-jigsaw-eLayer">할인 내역</a>
+                    </div>
+                </div>
+                <div class="discountDetail {$discountcode_display|display} {$discountcode_select_class}">
+                    <strong class="heading">할인코드 적용</strong>
+                    <div class="control">
+                        <input type="text" name="ec_discountcode" class="inputTypeText"/>
+                        <a href="#none" id="ec_discountcode" class="btnNormal">적용</a>
+                    </div>
+                </div>
+                <div class="discountDetail {$discountcode_modify_class}">
+                    <strong class="heading">할인코드 적용</strong>
+                    <div class="control">
+                        <span id="ec_discountcode_price"></span>
+                        <a href="#none" class="btnNormal" id="ec_discountcode_clear">초기화</a>
+                        <ul id="ec_discountcode_info" class="ec-base-help ec-order-expandwrap">
+                        </ul>
+                    </div>
+                </div>
+                <div class="discountDetail {$coupon_display|display} {$coupon_select_class}">
+                    <strong class="heading">쿠폰 할인</strong>
+                    <span class="summary">(보유쿠폰 <span class="txtEm">{$coupon_cnt}개</span>)</span>
+                    <div class="control">
+                        <span class="txtEm">{$price_unit_head}<span id="{$total_coupon_discount_id}">0</span>{$price_unit_tail}</span><a href="#none" id="{$btn_coupon_select}" class="btnNormal">쿠폰 적용</a>
+                    </div>
+                </div>
+                <div class="discountDetail {$coupon_modify_class}">
+                    <strong class="heading">쿠폰 할인</strong>
+                    <span class="summary">(보유쿠폰 <span class="txtEm">{$coupon_cnt}개</span>)</span>
+                    <div class="control">
+                        <span class="txtEm"><span class="{$coupon_total_discount_price_class}">{$price_unit_head}0{$price_unit_tail}</span></span><a href="#none" id="{$coupon_modify_btn_id}" class="btnNormal">쿠폰 적용</a>
+                    </div>
+                    <ul class="displaynone">
+                        <li id="{$coupon_template_view_id}" class="coupon ec-order-expand">
+                            <span id="{$coupon_template_contents_id}"></span>
+                            <span id="{$coupon_template_price_id}"></span>
+                            <span id="{$coupon_template_attr_D_id}"></span>
+                            <span id="{$coupon_template_attr_M_id}"></span>
+                            <span id="{$coupon_template_attr_C_id}"></span>
+                            <span class="displaynone" id="{$coupon_product_discount_id}">{$price_unit_head}0{$price_unit_tail}</span>
+                            <span class="displaynone" id="{$coupon_order_discount2_id}">{$price_unit_head}0{$price_unit_tail}</span>
+                            <span class="displaynone" id="{$coupon_delivery_discount_id}">{$price_unit_head}0{$price_unit_tail}</span>
+                        </li>
+                    </ul>
+                    <ul id="{$coupon_use_list_id}" style="display:none;" class="ec-base-help ec-order-expandwrap"></ul>
+                </div>
+                <div id="{$mileage_use_area_id}" class="discountDetail {$mileage_display|display}">
+                    <strong class="heading">{$mileage_name}</strong>
+                    <span class="summary">(사용 가능 <span class="txtEm">{$mileage_unit_head}{$total_avail_mileage}{$mileage_unit_tail}</span>)</span>
+                    <div class="control">
+                        <input type="hidden" name="ori_total_avail_mileage" id="ori_total_avail_mileage" value="{$ori_total_avail_mileage}" />
+                        {$form.input_mile}<button type="button" class="btnNormal" id="all_use_mileage">전액 사용</button>
+                    </div>
+                    <ul class="ec-base-help ec-order-expandwrap">
+                        <li class="ec-order-expand">최소 {$mileage_name} {$mileage_unit_head}{$mileage_min}{$mileage_unit_tail} 이상일 때 사용 가능합니다.</li>
+                        <li id="{$mileage_max_unlimit_id}" class="{$mileage_max_unlimit_display|display}">최대 사용금액은 제한이 없습니다.</li>
+                        <li id="{$mileage_max_limit_id}" class="{$mileage_max_limit_display|display}">1회 구매시 {$mileage_name} 최대 사용금액은 {$mileage_unit_head}{$mileage_max}{$mileage_unit_tail}입니다.</li>
+                        <li>{$mileage_name}으로만 결제할 경우, 결제금액이 0으로 보여지는 것은 정상이며 [결제하기] 버튼을 누르면 주문이 완료됩니다.</li>
+                        <li id="{$mileage_shipfee_id}" class="{$mileage_shipfee_display|display}">{$mileage_name} 사용 시 배송비는 {$mileage_name}으로 사용 할 수 없습니다.</li>
+                        <li id="{$mileage_exception_id}" class="{$mileage_exception_display|display}">{$mileage_name} 사용 시 해당 상품에 대한 {$mileage_name}은 적립되지 않습니다.</li>
+                    </ul>
+                </div>
+                <div class="discountDetail {$deposit_display|display}">
+                    <strong class="heading">{$deposit_name}</strong>
+                    <span class="summary">(사용 가능 <span class="txtEm">{$total_deposit}{$deposit_unit}</span>)</span>
+                    <div class="control">
+                        <input type="hidden" name="ori_total_deposit" id="ori_total_deposit" value="{$ori_total_deposit}" />
+                        {$form.input_deposit}<button type="button" class="btnNormal" id="all_use_deposit">전액 사용</button>
+                    </div>
+                    <ul class="ec-base-help ec-order-expandwrap">
+                        <li class="ec-order-expand">{$deposit_name}은 사용제한 없이 언제든 결제가 가능합니다.</li>
+                        <li>{$deposit_name}으로만 결제할 경우, 결제금액이 0으로 보여지는 것은 정상이며 [결제하기] 버튼을 누르면 주문이 완료됩니다.</li>
+                    </ul>
+                </div>
+                <div class="totalPay">
+                    <h3 class="heading">적용금액</h3>
+                    <strong class="txtEm">
+                        -{$total_sale_price_front_head}<span id="{$total_sale_price_front_id}">{$total_sale_price_front}</span>{$total_sale_price_front_tail}
+                        <span class="refer {$total_sale_ref_display|display}">({$total_sale_price_back_head}<span id="{$total_sale_price_back_id}" >{$total_sale_price_back}</span>{$total_sale_price_back_tail})</span>
+                    </strong>
+                    <span class="displaynone" id="{$total_addpay_price_id}">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 자동 할인내역 레이어 -->
+        <div id="auto_discount_layer" class="autoDiscountLayer">
+            <h1>자동 할인</h1>
+        <div class="wrap">
+            <div class="pannelArea">
+                <div class="title">
+                    <h2>할인내역</h2>
+                </div>
+                <div class="contents">
+                    <div class="segment">
+                        <div class="ec-base-table gCellNarrow">
+                            <table border="1">
+                                <caption>자동 할인내역 상세</caption>
+                                <colgroup>
+                                    <col style="width:auto" />
+                                    <col style="width:175px" />
+                                </colgroup>
+                                <tbody id="{$total_benefit_list_id}">
+                                    <tr class="{$total_subscriptionpayseqsale_price|display} {$total_subscriptionpayseqsale_price_wrap}">
+                                        <th scope="row">정기배송할인</th>
+                                        <td class="right">-<span id="{$total_subscriptionpayseq_price_id}">{$price_unit_head}{$total_subscriptionpayseqsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_periodsale_price_display|display} {$total_periodsale_price_wrap}">
+                                        <th scope="row">기간할인</th>
+                                        <td class="right">-<span id="{$total_periodsale_price_id}">{$price_unit_head}{$total_periodsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_membersale_price_display|display} {$total_membersale_price_wrap}">
+                                        <th scope="row">회원할인</th>
+                                        <td class="right">-<span id="{$total_membersale_price_id}">{$price_unit_head}{$total_membersale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_rebuysale_price_display|display} {$total_rebuysale_price_wrap}">
+                                        <th scope="row">{$rebuysale_head}재구매할인</th>
+                                        <td class="right">-<span id="{$total_rebuysale_price_id}">{$price_unit_head}{$total_rebuysale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_bulksale_price_display|display} {$total_bulksale_price_wrap}">
+                                        <th scope="row">대량구매할인</th>
+                                        <td class="right">-<span id="{$total_bulksale_price_id}">{$price_unit_head}{$total_bulksale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_livelinkonsale_price_display|display}">
+                                        <th scope="row">바로가기(링콘)할인</th>
+                                        <td class="right">-<span id="{$total_livelinkonsale_price_id}">{$price_unit_head}{$total_livelinkonsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_newproductsale_price|display} {$total_newproductsale_price_wrap}">
+                                        <th scope="row">신규상품할인</th>
+                                        <td class="right">-<span id="{$total_newproductsale_price_id}">{$price_unit_head}{$total_newproductsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_setproductsale_price|display} {$total_setproductsale_price_wrap}">
+                                        <th scope="row">세트할인</th>
+                                        <td class="right">-<span id="{$total_setproductsale_price_id}">{$price_unit_head}{$total_setproductsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_shipfeesale_price_display|display} {$total_shipfeesale_price_wrap}">
+                                        <th scope="row">배송비할인</th>
+                                        <td class="right">-<span id="{$total_shipfeesale_price_id}">{$price_unit_head}{$total_shipfeesale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                    <tr class="{$total_membergroupsale_price_display|display} {$total_membergroupsale_price_wrap}">
+                                        <th scope="row">회원등급할인</th>
+                                        <td class="right">-<span id="{$total_membergroupsale_price_id}">{$price_unit_head}{$total_membergroupsale_price}{$price_unit_tail}</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="totalPay gBlank10">
+                            <h3 class="heading">자동 할인</h3>
+                            <strong class="txtStrong">-{$price_unit_head}<span id="{$total_benefit_price_id}">{$total_addsale_price}</span>{$price_unit_tail}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <button type="button" class="ec-button-offLayer btnClose">닫기</button>
+        </div>
+
+        <!-- app tag -->
+        <div id="ec-orderform-discount-tail"></div>
+    </div>
+<!-- File end -->

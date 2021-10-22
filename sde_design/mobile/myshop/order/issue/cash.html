@@ -1,0 +1,40 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderIssueCash" class="ec-base-layer">
+    <!--@css(/css/module/myshop/orderIssueCash.css)-->
+   <h1>현금영수증 신청양식 작성</h1>
+    {$form.order_id}
+    <div class="wrap">
+        <div class="ec-base-table typeWrite">
+            <table border="1">
+                <caption>현금영수증 신청양식</caption>
+                <colgroup>
+                    <col style="width:110px;">
+                    <col style="width:auto;">
+                </colgroup>
+                <tbody>
+                    <tr class="first">
+                        <th scope="row">구분</th>
+                        <td>{$form.user_type}</td>
+                    </tr>
+                </tbody>
+                <tbody id="{$personal_info_id}">
+                    <tr>
+                        <th scope="row">{$form.mobile_identity} {$form_label.mobile}</th>
+                        <td>{$form.mobile}</td>
+                    </tr>
+                </tbody>
+                <tbody id="{$company_info_id}" class="{$company_info_display|display}">
+                    <tr>
+                        <th scope="row">{$form.regno_identity} {$form_label.regno}</th>
+                        <td>{$form.regno}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="ec-base-button gFull">
+        <button type="submit" class="btnNormal">현금영수증 신청</button>
+    </div>
+    <button type="button" class="btnClose" onclick="window.close()">닫기</button>
+</div>

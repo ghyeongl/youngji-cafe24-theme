@@ -1,0 +1,95 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="MyShop_OrderIssueTax" class="ec-base-layer">
+    <!--@css(/css/module/myshop/orderIssueTax.css)-->
+    <!-- 이값은 지우면 안되는 값입니다.
+        $isRuleBasedAddrForm = T
+    -->
+    <div class="header">
+        <h1>세금계산서 신청양식 작성</h1>
+    </div>
+
+    <div class="content">
+        {$form.order_id}
+
+        <div class="ec-base-help">
+            <h2>도움말</h2>
+            <div class="inner">
+                <ul>
+                    <li>세금 계산서 발행 신청을 위해 아래 모든 입력사항을 빠짐없이 입력하십시오.</li>
+                    <li>[확인] 버튼을 눌러주십시오. 비영리 법인인 경우는 종목과 업태를 입력하지 않아도 됩니다.</li>
+                    <li>신청양식 작성 후 사업자 등록증 사본을 팩스({$fax_number})로 보내주십시오.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>신청자 정보</h3>
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>신청자 정보</caption>
+                <colgroup>
+                    <col style="width:120px" />
+                    <col style="width:auto" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">{$form_label.name}</th>
+                        <td>{$form.name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.phone}</th>
+                        <td>{$form.phone}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.email}</th>
+                        <td>{$form.email}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>사업자 정보</h3>
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>사업자 정보</caption>
+                <colgroup>
+                    <col style="width:120px" />
+                    <col style="width:auto" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">{$form_label.company_type}</th>
+                        <td>{$form.company_type}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.company_regno}</th>
+                        <td>{$form.company_regno}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.company_name}</th>
+                        <td>{$form.company_name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.president_name}</th>
+                        <td>{$form.president_name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.mall_addr}</th>
+                        <td>{$form.mall_addr}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.company_condition}</th>
+                        <td>{$form.company_condition}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$form_label.company_line}</th>
+                        <td>{$form.company_line}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <button type="submit" class="btnSubmitFix sizeS">확인</button>
+    </div>
+</div>

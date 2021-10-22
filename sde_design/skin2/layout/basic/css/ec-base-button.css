@@ -1,0 +1,76 @@
+/* button */
+  [class^='btnNormal'], a[class^='btnNormal'] { display:inline-block; box-sizing:border-box; padding:2px 8px; border:1px solid #d1d1d1; border-radius:2px; font-family:"굴림",Gulim; font-size:12px; line-height:18px; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#222; background-color:#fff; }
+  [class^='btnSubmit'], a[class^='btnSubmit'] { display:inline-block; box-sizing:border-box; padding:2px 8px; border:1px solid transparent; border-radius:2px; font-family:"굴림",Gulim; font-size:12px; line-height:18px; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#fff; background-color:#4a5164; }
+  [class^='btnEm'], a[class^='btnEm'] { display:inline-block; box-sizing:border-box; padding:2px 8px; border:1px solid transparent; border-radius:2px; font-family:"굴림",Gulim; font-size:12px; line-height:18px; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#fff; background-color:#84868b; }
+  [class^='btnBasic'], a[class^='btnBasic'] { display:inline-block; box-sizing:border-box; padding:2px 8px; border:1px solid #d1d1d1; border-radius:2px; font-family:"굴림",Gulim; font-size:12px; line-height:18px; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#222; background-color:#f0f0f0; }
+    [class^='btnNormal']:not(.disabled):hover { background-color:#f3f3f3; }
+    [class^='btnSubmit']:not(.disabled):hover { background-color:#43495a; }
+    [class^='btnEm']:not(.disabled):hover { background-color:#77797d; }
+    [class^='btnBasic']:not(.disabled):hover { background-color:#e5e5e5; }
+    [class^='btnNormal'].disabled { border-color:#e3e3e3; color:#999; }
+    [class^='btnSubmit'].disabled { background-color:#9297a2; color:#f0f0f0; }
+    [class^='btnEm'].disabled { background-color:#b5b6b9; color:#f0f0f0; }
+    [class^='btnBasic'].disabled { color:#999; }
+  /* size */
+    [class^='btn'].sizeS { padding:6px 8px; }
+    [class^='btn'].sizeM { padding:10px 16px; }
+    [class^='btn'].sizeL { padding:14px 16px; min-width:80px; font-weight:bold; }
+  /* width Fix */
+    [class^='btn'][class*='Fix'] { width:72px; word-break:keep-all; word-wrap:break-word; }
+    [class^='btn'][class*='Fix'].sizeS { width:96px; }
+    [class^='btn'][class*='Fix'].sizeM { width:120px; padding-left:8px; padding-right:8px; }
+    [class^='btn'][class*='Fix'].sizeL { width:160px; padding-left:8px; padding-right:8px; }
+ 
+/* icon button */
+  a.btnLink { color:#222; }
+  a.btnLink:hover { text-decoration:none; -webkit-box-shadow:0 1px 0 0 #222; -moz-box-shadow:0 1px 0 0 #222; box-shadow:0 1px 0 0 #222; }
+  a.btnLink:after { content:""; display:inline-block; margin:-2px -2px 0 3px; vertical-align:middle; border:0 0 0 10px; border-style:solid;  border-color:transparent transparent transparent #77797d; }
+  [class^='btn'] i { display:none \0/IE8; }
+  [class^='btn'] .icoArrow { display:inline-block; width:3px; height:3px; margin:-2px 1px 0 1px; border:2px solid #77797d; border-width:0 2px 2px 0; vertical-align:middle;
+    transform:rotate(-45deg); -webkit-transform: rotate(-45deg); -moz-transform:rotate(-45deg); -ms-transform:rotate(-45deg); -o-transform:rotate(-45deg);
+  }
+    [class^='btnSubmit'] .icoArrow,
+    [class^='btnEm'] .icoArrow { border-color:#f0f0f0; }
+  [class^='btn'] .icoDelete { position:relative; overflow:hidden; display:inline-block; width:10px; height:10px; margin:-2px 2px 0 0; vertical-align:middle; -webkit-transform:rotate(45deg); transform:rotate(45deg); }
+  [class^='btn'] .icoDelete:before { content:""; position:absolute; top:0; right:4px; width:2px; height:10px; background:#77797d; }
+  [class^='btn'] .icoDelete:after { content:""; position:absolute; top:4px; right:0; width:10px; height:2px; background:#77797d; }
+    [class^='btnSubmit'] .icoDelete:before, [class^='btnSubmit'] .icoDelete:after,
+    [class^='btnEm'] .icoDelete:before, [class^='btnEm'] .icoDelete:after { background:#f0f0f0; }
+  [class^='btn'] .icoAdd, [class^='btn'] .icoRemove { position:relative; overflow:hidden; display:inline-block; width:8px; height:8px; margin:-2px 2px 0 0; vertical-align:middle; }
+  [class^='btn'] .icoAdd:before, [class^='btn'] .icoAdd:after, [class^='btn'] .icoRemove:before { content:""; position:absolute; top:50%; left:50%; width:8px; height:8px; border-radius:2px; background:#77797d; }
+  [class^='btn'] .icoAdd:before, [class^='btn'] .icoRemove:before { height:2px; margin:-1px 0 0 -4px; }
+  [class^='btn'] .icoAdd:after { width:2px; margin:-4px 0 0 -1px; }
+  [class^='btn'] img { margin:-2px 1px 0; vertical-align:middle; }
+ 
+  /* unique */
+    .btnLogin, a.btnLogin { display:inline-block; box-sizing:border-box; width:100px; height:70px; line-height:70px; border-radius:2px; text-align:center; font-family:"굴림",Gulim; font-size:12px; font-weight:bold; text-decoration:none; color:#fff; background-color:#4a5164; }
+    .btnLogin:hover { background-color:#43495a; }
+    .btnAgree, a.btnAgree { display:inline-block; box-sizing:border-box; width:80px; height:70px; line-height:70px; border:1px solid #d1d1d1; border-radius:2px; text-align:center; font-family:"굴림",Gulim; font-size:12px; font-weight:bold; color:#222; text-decoration:none; background-color:#fff; }
+    .btnAgree:hover { background-color:#f3f3f3; }
+    .btnToggle { display:inline-block; font-size:0; line-height:0; }
+    .btnToggle button { display:inline-block; box-sizing:border-box; border:1px solid #d1d1d1; margin:0 -1px 0 0; padding:0 7px; height:24px; line-height:24px; text-align:center; font-family:"굴림",Gulim; font-size:12px; outline:0; text-decoration:none; color:#222; background:#fff; }
+    .btnToggle button:first-child { border-radius:2px 0 0 2px; }
+    .btnToggle button:last-child { border-radius:0 2px 2px 0; }
+    .btnToggle button.selected { position:relative; border:1px solid #84868b; color:#fff; background:#84868b; }
+ 
+/* ec-base-button */
+.ec-base-button { padding:10px 0; text-align:center; }
+.ec-base-button.justify { position:relative; }
+.ec-base-button:after { display:block; content:""; clear:both; }
+.ec-base-button .gLeft { float:left; text-align:left; }
+.ec-base-button .gRight { float:right; text-align:right; }
+.ec-base-button.justify .gLeft { position:absolute; left:0; }
+.ec-base-button.justify .gRight { position:absolute; right:0; }
+.ec-base-button .text { margin:0 6px 0 10px; color:#353535; line-height:24px; }
+  /* type */
+    .ec-base-button.typeBorder { margin-top:-1px; padding:10px 20px; border:1px solid #d7d5d5; }
+    .ec-base-button.typeBG { padding:10px 20px; border:1px solid #d7d5d5; background:#fbfafa; }
+  /* gColumn */
+    .ec-base-button[class*="gColumn"] { margin:0 auto; display:-webkit-flex; display:-moz-flex; display:-ms-flex; display:flex; -webkit-justify-content:center; -moz-justify-content:center; -ms-justify-content:center; justify-content:center; }
+    .ec-base-button[class*="gColumn"]:after { display:none; }
+    .ec-base-button[class*="gColumn"] [class^='btn'] { margin:0 2px; padding-left:8px; padding-right:8px; word-break:keep-all; word-wrap:break-word; white-space:normal; -webkit-flex:1; -moz-flex:1; -ms-flex:1; flex:1; display:-webkit-flex; display:-moz-flex; display:-ms-flex; display:flex; -webkit-align-items:center; -moz-align-items:center; -ms-align-items:center; align-items:center; -webkit-justify-content:center; -moz-justify-content:center; -ms-justify-content:center; justify-content:center; }
+    .ec-base-button[class*="gColumn"] [class^='btn'][class*='Fix'] { -webkit-flex:none; -moz-flex:none; -ms-flex:none; flex:none; }
+    /* gFlex */
+      .ec-base-button[class*="gColumn"] .gFlex2 { -webkit-flex:2; -moz-flex:2; -ms-flex:2; flex:2; }
+      .ec-base-button[class*="gColumn"] .gFlex3 { -webkit-flex:3; -moz-flex:3; -ms-flex:3; flex:3; }
+      .ec-base-button[class*="gColumn"] .gFlex4 { -webkit-flex:4; -moz-flex:4; -ms-flex:4; flex:4; }

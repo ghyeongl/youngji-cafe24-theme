@@ -1,0 +1,340 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이쇼핑</a></li>
+        <li title="현재 위치"><strong>반품신청</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>반품신청</h2>
+</div>
+
+<div module="Myshop_OrderHistoryApplyReturn">
+    <!--@css(/css/module/myshop/orderHistoryApplyReturn.css)-->
+    <!--
+        $isRuleBasedAddrForm = T
+    -->
+    <div class="ec-base-table typeList">
+        <div class="title">
+            <h3>주문 상품 정보</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>상품정보</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col class="width:27px;" />
+                <col style="width:auto;" />
+                <col style="width:80px;" />
+                <col style="width:80px;" />
+                <col style="width:110px;" />
+                <col style="width:110px;" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">주문일자<br />[주문번호]</th>
+                    <th scope="col" colspan="2">상품정보</th>
+                    <th scope="col">수량</th>
+                    <th scope="col">신청수량</th>
+                    <th scope="col">상품구매금액</th>
+                    <th scope="col">주문처리상태</th>
+                </tr>
+            </thead>
+            <tbody module="Myshop_products" class="center">
+                <tr>
+                    <td {$rowspan} class="{$display_column|display}">
+                        {$order_date_ymd}
+                        <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
+                    </td>
+                    <td class="{$display_product_column|display}">{$form.checkbox}</td>
+                    <td class="{$display_product_column|display} product left">
+                        <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                        <p><strong class="name">{$product_name_link}</strong></p>
+                        <div class="option {$option_display|display}">{$option_str}</div>
+                        <ul class="option" module="Myshop_optionSet">
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                        </ul>
+                        <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+                    </td>
+                    <td class="{$display_product_column|display}">{$quantity}</td>
+                    <td class="{$display_product_column|display}">
+                        <span class="ec-base-qty">{$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up" /></a><a href="javascript:;" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" class="down" /></a></span>
+                        <a href="javascript:;" class="btnNormal gBlank5" onclick="{$action_modify}">변경</a>
+                    </td>
+                    <td class="{$display_product_column|display}">
+                        <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
+                        <p class="{$item_price_ref_display|display}">{$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</p>
+                    </td>
+                    <td class="{$display_product_column|display} txtEm">{$cur_state}</td>
+                    <td colspan="6" class="{$display_receiver_column|display} left multiDelivery {$lastMultiDelivery}">
+                        <div class="inner">
+                                <span class="address">
+                                    <strong>{$r_name}</strong>
+                                    <ul class="{$r_addr_display|display}">
+                                        <li><span class="{$r_zipcode_display|display}">[{$r_zipcode}]</span><span>{$r_addr}</span></li>
+                                        <li>{$r_phone1}/{$r_phone2}</li>
+                                    </ul>
+                                    <ul class="{$pickup_info_display|display}">
+                                        <li>스토어픽업({$store_name})</li>
+                                    </ul>
+                                </span>
+                            <span class="waybill">(배송번호 : {$delivery_code})</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td {$rowspan} class="{$display_column|display}">
+                        {$order_date_ymd}
+                        <p><a href="detail.html{$param_detail}" class="line">[{$order_id}]</a></p>
+                    </td>
+                    <td class="{$display_product_column|display}">{$form.checkbox}</td>
+                    <td class="{$display_product_column|display} product left">
+                        <span class="thumbnail"><a href="/product/detail.html{$param_product}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></span>
+                        <p><strong class="name">{$product_name_link}</strong></p>
+                        <div class="option {$option_display|display}">{$option_str}</div>
+                        <ul class="option" module="Myshop_optionSet">
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                            <li><strong>{$product_name}</strong>{$option_str} ({$qty}개)</li>
+                        </ul>
+                        <p class="free {$card_installment_display|display}">무이자할부 상품</p>
+                    </td>
+                    <td class="{$display_product_column|display}">{$quantity}</td>
+                    <td class="{$display_product_column|display}">
+                        <span class="ec-base-qty">{$form.quantity}<a href="javascript:;" onclick="{$add_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_up.gif" alt="수량증가" class="up" /></a><a href="javascript:;" onclick="{$out_shortcut}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_quantity_down.gif" alt="수량감소" class="down" /></a></span>
+                        <a href="javascript:;" class="btnNormal gBlank5" onclick="{$action_modify}">변경</a>
+                    </td>
+                    <td class="{$display_product_column|display}">
+                        <strong>{$item_price_raw_front_head}{$item_price_raw_front}{$item_price_raw_front_tail}</strong>
+                        <p class="{$item_price_ref_display|display}">{$item_price_raw_back_head}{$item_price_raw_back}{$item_price_raw_back_tail}</p>
+                    </td>
+                    <td class="{$display_product_column|display} txtEm">{$cur_state}</td>
+                    <td colspan="6" class="{$display_receiver_column|display} left multiDelivery {$lastMultiDelivery}">
+                        <div class="inner">
+                                <span class="address">
+                                    <strong>{$r_name}</strong>
+                                    <ul class="{$r_addr_display|display}">
+                                        <li><span class="{$r_zipcode_display|display}">[{$r_zipcode}]</span><span>{$r_addr}</span></li>
+                                        <li>{$r_phone1}/{$r_phone2}</li>
+                                    </ul>
+                                    <ul class="{$pickup_info_display|display}">
+                                        <li>스토어픽업({$store_name})</li>
+                                    </ul>
+                                </span>
+                            <span class="waybill">(배송번호 : {$delivery_code})</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul class="ec-base-help controlInfo typeBtm">
+            <li class="txtWarn txt11">주문상품 전체 반품인 경우, 사은품은 자동적으로 반품 신청됩니다. </li>
+        </ul>
+    </div>
+
+    <div class="ec-base-table typeWrite">
+        <div class="title">
+            <h3>반품사유</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>반품사유</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">사유선택</th>
+                    <td>
+                        {$form.reason_select}
+                        <span id="{$cs_shipfee_paid_by_id}" class="{$cs_shipfee_paid_by_display|display}">[반품배송비 <span id="{$cs_shipfee_paid_by_who_id}" class="txtEm"></span> 부담]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">상세사유</th>
+                    <td>{$form.reason_detail}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="{$cs_add_item_display|display}">
+        <div class="title">
+            <h3>추가 정보</h3>
+        </div>
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>추가 정보</caption>
+                <colgroup>
+                    <col style="width:150px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody module="Myshop_Csadd">
+                    <tr>
+                        <th scope="row">{$item_title}</th>
+                        <td>
+                            {$item_value}
+                            <p class="gBlank5">{$guide_content}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">{$item_title}</th>
+                        <td>
+                            {$item_value}
+                            <p class="gBlank5">{$guide_content}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="pickupList ec-base-table typeWrite {$pickuplist_display|display}">
+        <div class="title">
+            <h3>수거신청</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>수거신청</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">수거신청 여부</th>
+                    <td>
+                        {$form.ispickup}
+                        <div id="{$pickup_direct_id}" class="gBlank5 {$display_direct_pickup|display}">
+                            {$form.pickup_csname}
+                            {$form.pickup_invoiceno}
+                            {$form.pickup_check}
+                        </div>
+                        <p class="gBlank5">- 반품 상품에 대해 "수거 신청"하시면 택배사에 직접 연락하지 않아도 되며, 수거 전 택배기사님이 연락 후 방문합니다.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="{$pickup_detail_id}" class="ec-base-table typeWrite {$pickup_detail_display|display}">
+        <div class="title">
+            <h3>수거지 정보</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>수거지 정보</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">수거지 선택</th>
+                    <td>{$form.sameaddr}</td>
+                </tr>
+                <tr id="{$pickup_sameaddr_id}" class="{$pickup_order_address_display|display}">
+                    <th scope="row">수거지 주소 </th>
+                    <td>
+                        {$r_name}<br>
+                        ({$r_zipcode}) {$r_addr1} {$r_addr2}<br>
+                        {$r_phone1} | {$r_phone2}<br>
+                    </td>
+                </tr>
+                <tr id="{$pickup_name_id}" class="{$pickup_name_display|display}">
+                    <th scope="row">이름 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>{$form.pickup_name}</td>
+                </tr>
+                <tr id="{$pickup_address_id}" class="{$pickup_address_display|display}">
+                    <th scope="row">수거지 주소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></th>
+                    <td>{$form.address}</td>
+                </tr>
+                <tr id="{$pickup_phone1_id}" class="{$pickup_phone1_display|display}">
+                    <th scope="row">일반전화 <span class="{$is_pickup_phone1_required_display|display}"><img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></span></th>
+                    <td>{$form.pickup_phone1_}</td>
+                </tr>
+                <tr id="{$pickup_phone2_id}" class="{$pickup_phone2_display|display}">
+                    <th scope="row">휴대전화 <span class="{$is_pickup_phone2_required_display|display}"><img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" alt="필수" /></span></th>
+                    <td>{$form.pickup_phone2_}</td>
+                </tr>
+                <tr id="{$pickup_delivery_info_id}" class="{$delivery_info_offer_display|display}">
+                    <th scope="row">배송정보제공방침</th>
+                    <td>
+                        {$form.delivery_info_offer_content}
+                        <p class="grid"><span class="question">배송정보제공방침에 대하여 동의하십니까?</span>{$form.delivery_info_offer_check}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="{$cs_shipfee_payment_id}" class="ec-base-table typeWrite {$cs_shipfee_payment_display|display}">
+        <div class="title">
+            <h3>반품배송비 결제</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>반품배송비 결제 정보</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="row">반품배송비</th>
+                <td>
+                <span id="{$cs_shipfee_paid_by_select_id}">반품 사유를 선택하세요.</span>
+                <span id="{$cs_shipfee_paid_by_customer_id}" class="displaynone"><span class="txtEm">구매자 책임사유</span>에 의한 반품이므로 반품배송비 <span class="txtEm">{$price_front_head}<span id="{$cs_shipfee_price_slot_id}">{$shipfee_return}</span>{$price_front_tail}</span>을 구매자가 부담합니다.</span>
+                <span id="{$cs_shipfee_paid_by_store_id}" class="displaynone"><span class="txtEm">판매자 책임사유</span>에 의한 반품이므로 반품배송비는 판매자가 부담합니다.</span>
+                </td>
+            </tr>
+            <tr id="{$cs_shipfee_paymethod_id}" class="displaynone">
+                <th scope="row">반품배송비 결제방법</th>
+                <td>
+                    <div class="ec-base-radio typeDelivery">
+                    {$form.shipfee_paymethod}
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    {$form.is_new_cs_form}
+    <div class="ec-base-table typeWrite {$refund_info_display|display}">
+        <div class="title">
+            <h3>환불 정보</h3>
+        </div>
+        <table border="1" summary="">
+            <caption>환불 계좌 정보</caption>
+            <colgroup>
+                <col style="width:150px;" />
+                <col style="width:auto;" />
+            </colgroup>
+            <tbody class="{$refund_notice_display|display}">
+                <tr>
+                    <th scope="row">환불예정금액</th>
+                    <td>환불예정금액은 판매자가 접수처리 완료 후 '주문상세조회'에서 확인할 수 있습니다.</td>
+                </tr>
+                <tr>
+                    <th scope="row">배송비 안내</th>
+                    <td>{$cs_info_desc}</td>
+                </tr>
+            </tbody>
+            <tbody class="{$refund_account_display|display}">
+                <tr>
+                    <th scope="row">환불계좌</th>
+                    <td>
+                        <span id="{$id_acc_full_str}" class="{$acc_full_str_display|display}">{$acc_full_str}</span>
+                        <span id="{$id_acc_reg_disp}" class="{$acc_reg_display|display}"><a href="#none" class="btnNormal" onclick="OrderApply.popupAccount('./account.html');">환불계좌등록</a></span>
+                        <span id="{$id_acc_mod_disp}" class="{$acc_mod_display|display}"><a href="#none" class="btnNormal" onclick="OrderApply.popupAccount('./account.html');">환불계좌변경</a></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ec-base-help txtWarn {$refund_account_display|display}">현금환불 발생시 등록된 환불계좌로 환불 처리 됩니다.</p>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none" class="btnSubmitFix sizeM" onclick="OrderApply.apply(); return false;">반품신청</a>
+        <a href="/myshop/order/list.html{$back_page_param}" class="btnNormalFix sizeM">이전페이지</a>
+    </div>
+</div>

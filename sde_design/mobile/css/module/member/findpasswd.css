@@ -1,0 +1,14 @@
+.xans-member-findpasswd { margin:14px 7px 0; padding:0 0 29px; color:#1b1b1b; font-size:13px; }
+.xans-member-findpasswd .ec-base-table.typeWrite #mobile_auth_view img,
+.xans-member-findpasswd .ec-base-table.typeWrite #ipin_view img { max-width:106px !important; }
+
+/* INPUT SIZE */
+.xans-member-findpasswd #searchType,
+.xans-member-findpasswd #name,
+.xans-member-findpasswd #email,
+.xans-member-findpasswd #ssn { width:100%; }
+.xans-member-findpasswd #mobile1 { max-width:35px; }
+.xans-member-findpasswd #mobile2,
+.xans-member-findpasswd #mobile3 { max-width:55px; }
+.xans-member-findpasswd #ssn1,
+.xans-member-findpasswd #ssn2 { width:40%; }

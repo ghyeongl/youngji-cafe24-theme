@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6275a132-ed1d-454e-8a14-cbe7a701a6f9" name="cafe24_ghlabnote" url="http://ghlabnote.cafe24.com">
+        <fileTransfer host="ghlabnote.ftp.cafe24.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="cafe24_sample" pattern="file[cafe24_sample]:*" />
+</component>

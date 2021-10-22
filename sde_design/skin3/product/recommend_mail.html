@@ -1,0 +1,56 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Product_RecommMail" class="ec-base-layer">
+    <!--@css(/css/module/product/recommend_mail.css)-->
+    <div class="header">
+        <h1>추천메일 보내기</h1>
+    </div>
+
+    <div class="content">
+        <div class="ec-base-box typeProduct">
+            <div class="thumbnail"><img src="{$product_image}" alt="" class="img" /></div>
+            <div class="infomation">
+                <div class="icon">{$img_soldout} {$img_recomm} {$img_new} {$pickup_icon} {$img_user}</div>
+                <h2>{$product_name}</h2>
+                <span class="price">{$product_price}</span> {$product_tax_type_text}
+            </div>
+        </div>
+
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>메일 보내기 폼</caption>
+                <colgroup>
+                    <col style="width:20%" />
+                    <col style="width:30%" />
+                    <col style="width:20%" />
+                    <col style="width:30%" />
+                </colgroup>
+                <tr>
+                    <th scope="row">보내는사람</th>
+                    <td><span class="fWidthFull">{$from_name}</span></td>
+                    <th scope="row">이메일</th>
+                    <td><span class="fWidthFull">{$from_email}</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">받는사람</th>
+                    <td><span class="fWidthFull">{$form.to_name}</span></td>
+                    <th scope="row">이메일</th>
+                    <td><span class="fWidthFull">{$form.to_email}</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">내용</th>
+                    <td colspan="3"><span class="fWidthFull">{$form.content}</span> <p class="gBlank5">{$form.is_html}</p></td>
+                </tr>
+                <tr>
+                    <th scope="row">자동발송금지<br />보안문자</th>
+                    <td colspan="3">
+                        {$captcha_image} {$captcha_refresh}
+                        <p class="captcha">{$form.tmp_image_name_str} <span class="ec-base-help txtInfo">영문, 숫자 조합을 입력하세요. (대소문자구분)</span></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none" onClick="{$action_check}" class="btnSubmitFix sizeS">보내기</a>
+    </div>
+</div>

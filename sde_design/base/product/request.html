@@ -1,0 +1,104 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="product_request" class="ec-base-layer">
+<!--@css(/css/module/product/product_request.css)-->
+    <div class="header">
+        <h1>상품 조르기</h1>
+    </div>
+
+    <div class="topImage {$top_image_display|display}">
+        <img src="{$top_image}" alt="" />
+    </div>
+
+    <div class="content">
+        <div class="titleArea">
+            <h2>조르기 상품</h2>
+            <span class="count">(남은 회수 : {$limit_txt})</span>
+        </div>
+        <div class="ec-base-table typeList">
+            <table border="1" summary="">
+                <caption>조르기 상품 목록</caption>
+                <colgroup>
+                    <col style="width:100px" />
+                    <col style="width:auto" />
+                    <col style="width:150px" />
+                </colgroup>
+                <tbody class="head">
+                    <tr>
+                        <td>이미지</td>
+                        <td>상품정보</td>
+                        <td>판매가격</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="scroll">
+                <table border="1" summary="">
+                    <caption>조르기 상품 목록</caption>
+                    <colgroup>
+                        <col style="width:100px" />
+                        <col style="width:auto" />
+                        <col style="width:133px" />
+                    </colgroup>
+                    <tbody class="center">
+                        <tr>
+                            <td class="image"><a href="/product/detail.html?product_no={$product_no}" target="opener"><img src="{$product_image}" alt="" /></a></td>
+                            <td class="product left">
+                                <strong><a href="/product/detail.html?product_no={$product_no}" target="opener">{$product_name}</a></strong>
+                            </td>
+                            <td class="price right"><strong>{$product_price}</strong><br/>{$product_tax_type_text}</td>
+                        </tr>
+                        <tr>
+                            <td class="image"><a href="/product/detail.html?product_no={$product_no}" target="opener"><img src="{$product_image}" alt="" /></a></td>
+                            <td class="product left">
+                                <strong><a href="/product/detail.html?product_no={$product_no}" target="opener">{$product_name}</a></strong>
+                            </td>
+                            <td class="price right"><strong>{$product_price}</strong><br/>{$product_tax_type_text}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="titleArea">
+            <h2>메일 보내기</h2>
+        </div>
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>메일 보내기 입력</caption>
+                <colgroup>
+                    <col style="width:150px;" />
+                    <col style="width:auto;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">보내는 사람</th>
+                        <td>{$form.sender}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">받는 사람</th>
+                        <td>{$form.recipient}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">전달내용</th>
+                        <td>{$mail_contents}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ec-base-help">
+            <h2>메일발송 금지사항</h2>
+            <div class="inner">
+                <ul>
+                    <li>스팸목적의 메일 발송을 엄격히 금지합니다.</li>
+                    <li>상업적 홍보 URL 또는 청소년 유해정보 전송을 금지 합니다.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <button type="submit" class="btnSubmitFix sizeS">발송</button>
+        <a href="#none" onclick="self.close();" class="btnNormalFix sizeS">취소</a>
+    </div>
+</div>

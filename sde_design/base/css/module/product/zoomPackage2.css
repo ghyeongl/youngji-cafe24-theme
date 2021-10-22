@@ -1,0 +1,23 @@
+.xans-product-zoompackage { overflow:auto; height:693px; }
+.xans-product-zoompackage.ec-base-layer .content { padding-bottom:64px; }
+.xans-product-zoompackage.ec-base-layer .ec-base-button { position:fixed; bottom:0; left:0; width:100%; }
+.xans-product-zoom .imgArea { width:346px; margin:0 auto; }
+.xans-product-zoom .imgArea .keyImg { position:relative; width:346px; min-height:43px; cursor:pointer; text-align:center; }
+.xans-product-zoom .imgArea .keyImg img { max-width:344px; border:1px solid #ececec; }
+.xans-product-zoom .imgArea .keyImg > .prev { position:absolute; left:0; top:50%; margin:-22px 0 0; }
+.xans-product-zoom .imgArea .keyImg > .next { position:absolute; right:0; top:50%; margin:-22px 0 0; }
+.xans-product-zoom .imgArea .keyImg > .prev img,
+.xans-product-zoom .imgArea .keyImg > .next img { border:0; }
+.xans-product-zoom .imgArea .keyImg .thumbnail { display:inline-block; position:relative; max-width:100%; }
+.xans-product-zoom .imgArea .keyImg .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; }
+
+.xans-product-zoom .imgArea .topLogo { overflow: hidden; padding: 0 0 15px; *zoom:1; }
+.xans-product-zoom .imgArea .topLogo span { font-weight: bold; font-size: 24px; line-height: 24px; }
+
+.xans-product-zoom .imgArea .listImg { width:346px; margin:10px 0 0; font-size:0; overflow:hidden; padding:0 0 1px; }
+.xans-product-zoom .imgArea .listImg ul { overflow:hidden; height:77px; font-size:0; line-height:0; }
+.xans-product-zoom .imgArea .listImg li { display:inline-block; margin:0 1px; font-size:12px; line-height:14px; *display:inline; *zoom:1; }
+.xans-product-zoom .imgArea .listImg li img { width:65px; height:75px; border:1px solid #ececec; cursor:pointer; }
+.xans-product-zoom .imgArea .listImg button { position:absolute; top:0; width:21px; height:77px; font-size:0; line-height:0; color:transparent; background:url("//img.echosting.cafe24.com/skin/base/product/btn_product_detail_ctrl.png") no-repeat; }
+.xans-product-zoom .imgArea .listImg .prev { left:0; background-position:0 0; }
+.xans-product-zoom .imgArea .listImg .next { right:0; background-position:-31px 0; }

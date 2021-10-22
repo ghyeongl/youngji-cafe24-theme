@@ -1,0 +1,114 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>주문조회</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="Myshop_OrderHistoryTab" class="ec-base-tab gBlank7">
+    <ul>
+        <li class="{$tab_class}"><a href="/myshop/order/list.html{$param}"><span>주문내역 조회<span class="number">({$total_orders}건)</span></span></a></li>
+        <li class="{$tab_class_cs}"><a href="/myshop/order/list.html{$param_cs}"><span>취소/교환/반품 내역<span class="number">({$total_orders_cs}건)</span></span></a></li>
+    </ul>
+</div>
+
+<div module="Myshop_OrderHistoryHead">
+    <!--@css(/css/module/myshop/orderHistoryHead.css)-->
+    <!--@js(/js/module/myshop/orderHistoryHead.js)-->
+    <fieldset>
+        <legend>검색기간설정</legend>
+        <div class="stateSelect">
+            <span class="state">기간</span>
+            {$order_search_year}
+        </div>
+    </fieldset>
+    <p class="ec-base-help">주문처리완료 후 36개월 이내의 최근 주문건은 주문내역조회 탭에서 확인할 수 있습니다.</p>
+</div>
+
+<div module="Myshop_OrderHistoryListPast">
+    <!--@css(/css/module/myshop/orderHistoryListPast.css)-->
+    <!--
+        $login_url = /member/login.html
+    -->
+    <div class="orderList {$list_display|display}">
+
+        <div class="order">
+            <h3 class="{$display_column|display}">
+                <span class="date" title="주문일자">{$order_date}</span>
+                <span class="number" title="주문번호">({$order_id})</span>
+            </h3>
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" width="71" height="71" alt="" /></a></div>
+                    <div class="description">
+                        <strong class="prdName" title="상품명">{$product_name_link}</strong>
+                        <ul class="info">
+                            <li>
+                                <span class="price" title="판매가">{$product_price_front_head}<strong>{$product_price_front}</strong>{$product_price_front_tail}<span class="refer {$product_price_ref_display|display}"> {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</span></span>
+                                <span class="ec-base-qty" title="수량"><strong>{$quantity}</strong>개</span>
+                            </li>
+                            <li class="{$card_installment_display|display}">무이자할부 상품</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="option {$option_str_display|display}">{$option_str}</p>
+                <ul class="option" module="Myshop_optionSet">
+                    <li><div class="name"><strong>{$product_name}</strong>{$option_str} ({$qty}개)</div></li>
+                    <li><div class="name"><strong>{$product_name}</strong>{$option_str} ({$qty}개)</div></li>
+                </ul>
+                <div class="prdFoot" title="주문처리상태">
+                    <div class="gLeft">
+                        {$status}
+                        <span class="store">{$mobile_store_info}</span>
+                        <span class="addition {$detail_info_display|display}"><strong class="cancel"><a href="order_detail_cs.html{$params}" target="_blank">[상세정보]</a></strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="order">
+            <h3 class="{$display_column|display}">
+                <span class="date" title="주문일자">{$order_date}</span>
+                <span class="number" title="주문번호">({$order_id})</span>
+            </h3>
+            <div class="ec-base-prdInfo">
+                <div class="prdBox">
+                    <div class="thumbnail"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" width="71" height="71" alt="" /></a></div>
+                    <div class="description">
+                        <strong class="prdName" title="상품명">{$product_name_link}</strong>
+                        <ul class="info">
+                            <li>
+                                <span class="price" title="판매가">{$product_price_front_head}<strong>{$product_price_front}</strong>{$product_price_front_tail}<span class="refer {$product_price_ref_display|display}"> {$product_price_back_head}{$product_price_back}{$product_price_back_tail}</span></span>
+                                <span class="ec-base-qty" title="수량"><strong>{$quantity}</strong>개</span>
+                            </li>
+                            <li class="{$card_installment_display|display}">무이자할부 상품</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="option {$option_str_display|display}">{$option_str}</p>
+                <ul class="option" module="Myshop_optionSet">
+                    <li><div class="name"><strong>{$product_name}</strong>{$option_str} ({$qty}개)</div></li>
+                    <li><div class="name"><strong>{$product_name}</strong>{$option_str} ({$qty}개)</div></li>
+                </ul>
+                <div class="prdFoot" title="주문처리상태">
+                    <div class="gLeft">
+                        {$status}
+                        <span class="store">{$mobile_store_info}</span>
+                        <span class="addition {$detail_info_display|display}"><strong class="cancel"><a href="order_detail_cs.html{$params}" target="_blank">[상세정보]</a></strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="empty {$empty_display|display}">주문 내역이 없습니다.</p>
+</div>
+
+<div class="{$empty_display|display} ec-base-paginate typeList" module="Myshop_OrderHistoryPaging">
+    <a href="{$param_prev}" class="btnPrev">이전 페이지</a>
+    <ol>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+        <li><a href="{$param_page}" class="{$param_class}">{$num}</a></li>
+    </ol>
+    <a href="{$param_next}" class="btnNext">다음 페이지</a>
+</div>

@@ -1,0 +1,13 @@
+.xans-member-lifetimeevent {
+    z-index:100; position:fixed; top:70px; left:50%; width:292px; margin:0 0 0 -146px; border-radius:5px; letter-spacing:-1px; background:#3dbcd7;
+    -webkit-box-shadow:0 0 7px 1px rgba(0,0,0,0.6); -moz-box-shadow:0 0 7px 1px rgba(0,0,0,0.6); box-shadow:0 0 7px 1px rgba(0,0,0,0.6);
+}
+.xans-member-lifetimeevent h2 { overflow:hidden; text-indent:120%; white-space:nowrap; font-size:0; line-height:0; }
+.xans-member-lifetimeevent .content { position:relative; padding:25px 14px 30px; line-height:18px; color:#fff; }
+.xans-member-lifetimeevent .content:before { position:absolute; top:10px; right:7px; display:block; content:""; width:90px; height:74px; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/member/bg_lifetime_event.png") no-repeat 0 0; background-size:90px auto; }
+.xans-member-lifetimeevent .content > h3 { margin:0 70px 0 0; padding:0; font-size:20px; line-height:26px; word-spacing:-1px; }
+.xans-member-lifetimeevent .content > p { margin:0; padding:12px 0 0; font-size:13px; }
+.xans-member-lifetimeevent .content .grade { color:#fff25c; }
+.xans-member-lifetimeevent .footer { position:relative; padding:4px 7px; min-height:29px; border-radius:0 0 5px 5px; font-size:13px; box-sizing:border-box; background:#f9f9f9; }
+.xans-member-lifetimeevent .footer input[type="checkbox"] { margin:-2px 5px 0 0; vertical-align:middle; }
+.xans-member-lifetimeevent .footer .btnClose { position:absolute; top:7px; right:7px; padding:0 19px 0 0; font-size:11px; color:#1b1b1b; text-decoration:none; background:url("//img.echosting.cafe24.com/skin/mobile/common/btn_close.png") no-repeat 100% 2px; background-size:13px 13px; }

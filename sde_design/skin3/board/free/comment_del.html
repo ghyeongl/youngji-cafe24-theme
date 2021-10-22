@@ -1,0 +1,34 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_CommentDeletePackage_1002">
+    <!--@css(/css/module/board/commentDeletePackage.css)-->
+    <div module="board_title_1002">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="/board/index.html">게시판</a></li>
+                <li title="현재 위치"><strong>{$board_name}</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2>{$board_name}</h2>
+            <p>{$board_info}</p>
+        </div>
+    </div>
+
+    <div module="Board_CommentDel_1002" class="ec-base-box typeThin">
+        <div class="commentDel">
+            <h3 class="boxTitle">댓글삭제</h3>
+            <fieldset>
+                <legend>댓글삭제</legend>
+                <p class="info">댓글 등록 시 입력한 <strong class="txtEm">비밀번호를 입력하여 주십시요.</strong></p>
+                <p class="password"><label for="comment_password">비밀번호</label> {$form.comment_password}</p>
+                <div class="ec-base-button gColumn">
+                    <a href="{$link_board_list}" class="btnNormal sizeM">목록</a>
+                    <button type="submit" class="btnEm sizeM">확인</button>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>

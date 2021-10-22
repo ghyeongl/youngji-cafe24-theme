@@ -1,0 +1,10 @@
+#prdInfo { display:none; }
+.xans-product-detaildesign { padding:14px 7px 7px; background:#f1f1f1; }
+.xans-product-detaildesign > .ec-base-table input#quantity,
+.xans-product-detaildesign > .ec-base-table img.QuantityUp,
+.xans-product-detaildesign > .ec-base-table img.QuantityDown { display:none; }
+.xans-product-detaildesign > .ec-base-table img#qrcode { width:70px; margin-right:-20px; margin-top:15px; }
+.xans-product-detaildesign > .ec-base-table .discount { display:block; font-size:11px; color:#1c1c1c; }
+.xans-product-detaildesign > .ec-base-table .period { display:block; }
+.xans-product-detaildesign > .ec-base-table #delivery_cost_prepaid { display:block; }
+.xans-product-detaildesign > .ec-base-table #btn_email_restock img { width:auto; height:26px; }

@@ -1,0 +1,84 @@
+.xans-member-join > h3 { padding:50px 0 10px; font-size:16px; color:#2e2e2e; }
+.xans-member-join ul.grid li { margin:5px 0 0; }
+.xans-member-join p.txtDesc,
+.xans-member-join ul.txtDesc li { position:relative; padding:0 0 0 9px; margin:3px 0 0; line-height:1.4; }
+.xans-member-join p.txtDesc:before,
+.xans-member-join ul.txtDesc li:before { position:absolute; top:7px; left:0; display:block; content:""; width:4px; height:1px; background:currentColor; }
+.xans-member-join .required { margin:-25px 0 10px; color:#353535; text-align:right; }
+.xans-member-join .required img { vertical-align:middle; }
+.xans-member-join .displaynone + .required { margin-top:0; }
+
+.xans-member-join .ec-base-table .interest { line-height:25px; }
+.xans-member-join .ec-base-table .interest label { padding:0 15px 0 2px; }
+
+.xans-member-join .ec-base-table .error { color:#f00; }
+
+/* 인증번호 */
+.xans-member-join .verify { position:relative; display:inline-block; width:146px; height:24px; vertical-align:top; }
+.xans-member-join .verify .time { position:absolute; top:2px; right:6px; color:#f76560; }
+.xans-member-join .verify #verify_sms_number { width:100%; height:100%; padding:2px 38px 2px 4px; box-sizing:border-box; }
+.xans-member-join .verify #verify_sms_number:disabled { padding-right:4px; }
+
+.xans-member-join .ec-base-box.gStrong { position:relative; z-index:2; }
+.xans-member-join .ec-base-box.gStrong p { font-size:14px; color:#353535; line-height:22px; }
+.xans-member-join .ec-base-box + .ec-base-box { margin-top:-1px; }
+.xans-member-join .ec-base-box .ec-base-chk input { width:100%; height:100%; }
+
+.xans-member-join .agreeArea { color:#747474; line-height:20px; }
+.xans-member-join .agreeArea h3 { margin:0 0 10px; font-size:12px; color:#353535; }
+.xans-member-join .agreeArea .content { overflow:auto; height:110px; padding:20px; border:1px solid #d5d5d5; background:#fff; }
+.xans-member-join .agreeArea .content p { padding:0 0 17px; }
+.xans-member-join .agreeArea .check { padding:7px 0 0 0; color:#202020; font-size:12px; }
+.xans-member-join .agreeArea ul.check li { display: table-row; }
+.xans-member-join .agreeArea ul.check li span { display: table-cell; }
+.xans-member-join .agreeArea ul.check li input { margin-left: 4px; }
+.xans-member-join .agreeArea ul.check li label { display: table-cell; padding-left: 2px; }
+.xans-member-join .agreeArea input.ec-base-chk { vertical-align: middle; margin: 0 2px 0 0; }
+
+/* INPUT SIZE */
+.xans-member-join #hint_answer { width:500px; }
+.xans-member-join #phone1,
+.xans-member-join #mobile1 { width:60px; margin:0 4px 0 0; }
+.xans-member-join #phone2,
+.xans-member-join #phone3,
+.xans-member-join #mobile2,
+.xans-member-join #mobile3 { width:50px; margin:0 4px; }
+.xans-member-join #email1 { margin-right:4px; }
+.xans-member-join #email2 { margin:0 4px; }
+.xans-member-join #birth_year,
+.xans-member-join #marry_year,
+.xans-member-join #partner_year { width:60px; margin:0 4px 0 0; }
+.xans-member-join #birth_month,
+.xans-member-join #marry_month,
+.xans-member-join #partner_month,
+.xans-member-join #birth_day,
+.xans-member-join #marry_day,
+.xans-member-join #partner_day { width:30px; margin:0 4px 0 0; }
+.xans-member-join #bank_code { width:240px; }
+.xans-member-join #c_bank_account_no { width:230px; }
+
+.xans-member-join #job,
+.xans-member-join #job_class,
+.xans-member-join #school,
+.xans-member-join #region,
+.xans-member-join #internet,
+.xans-member-join #child,
+.xans-member-join #car,
+.xans-member-join #earning { width:200px; }
+
+.xans-member-join #add1,
+.xans-member-join #add2,
+.xans-member-join #add3,
+.xans-member-join #add4,
+.xans-member-join #add5,
+.xans-member-join #add6,
+.xans-member-join #add7,
+.xans-member-join #add8,
+.xans-member-join #add9 { width:500px; }
+
+#realNameAuth p span { display:inline-block; width:80px; }
+
+/* 툴팁 */
+.xans-member-join .eTooltip { position:relative; display:inline-block; }
+.xans-member-join .ec-base-tooltip.typeUpper { left:25px; bottom:28px; width:390px; }
+.xans-member-join .ec-base-tooltip.typeUpper .edge { left:20%; }

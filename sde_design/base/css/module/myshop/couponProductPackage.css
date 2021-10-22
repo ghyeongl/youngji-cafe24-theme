@@ -1,0 +1,15 @@
+/* 상품 검색 */
+.xans-myshop-couponproductsearch { position:relative; display:block; min-width:130px; padding:0 14px 7px 14px; border:1px solid #d5d5d5; background:#fff; }
+.xans-myshop-couponproductsearch p { margin:7px 0 0; }
+.xans-myshop-couponproductsearch #search { width:50%; margin:0 0 0 4px; }
+
+/* 리스트 */
+.xans-myshop-couponproductlist { margin:7px 0 0; }
+.xans-myshop-couponproductlist .ec-base-prdInfo { margin:0; border:1px solid #d5d5d5; border-top:0; }
+.xans-myshop-couponproductlist .ec-base-prdInfo:first-child { border-top:1px solid #d5d5d5; }
+.xans-myshop-couponproductlist .empty { padding:30px; color:#757575; font-size:12px; text-align:center; }
+
+.xans-myshop-couponproductpaging.ec-base-paginate.typeList { margin:14px 0 0; }
+.xans-myshop-couponproductpackage .title { overflow:hidden; margin:5px 0; }
+.xans-myshop-couponproductpackage .title .result { float:left; padding:5px 0 0 6px; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_dot.png") no-repeat 1px 12px; background-size:2px auto; }
+.xans-myshop-couponproductpackage .title select { float:right; }

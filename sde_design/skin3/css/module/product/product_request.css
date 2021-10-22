@@ -1,0 +1,23 @@
+#popup { width:600px; }
+.xans-product-request .titleArea { margin:0 0 8px; *zoom:1; }
+.xans-product-request .titleArea:after { content:""; display:block; clear:both; }
+.xans-product-request .titleArea h2 { float:left; margin:0 4px 0 0; font-size:12px; color:#2e2e2e; }
+.xans-product-request .titleArea .count { color:#757575; }
+.xans-product-request .content { padding:18px 20px 20px; border-top:1px solid #e8e8e8; }
+.xans-product-request .txtEm { color:#353535; }
+
+.xans-product-request td.image img { max-width:78px; border:1px solid #d6d6d6; }
+.xans-product-request.ec-base-layer .ec-base-help { margin:20px 0 0; }
+
+/* Input Size */
+.xans-product-request #sender,
+.xans-product-request #recipient,
+.xans-product-request #subject { width:196px; }
+
+.xans-product-request #sender_phone1,
+.xans-product-request #recipient_phone1 { width:68px; }
+
+.xans-product-request #sender_phone2,
+.xans-product-request #sender_phone3,
+.xans-product-request #recipient_phone2,
+.xans-product-request #recipient_phone3 { width:57px; }

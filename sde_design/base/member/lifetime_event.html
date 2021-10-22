@@ -1,0 +1,15 @@
+<div module="member_lifetimeevent">
+    <!--@css(/css/module/member/lifetime_event.css)-->
+    <h2>평생회원 전환 이벤트</h2>
+    <div class="content">
+        <h3><span class="grade">평생회원</span> 전환 이벤트<br>진행중입니다.</h3>
+        <p><span class="grade">평생회원</span>으로 전환하시면 회원 탈퇴시까지는<br>휴면회원으로 전환되지 않으며, <br>고객님의 개인정보가 탈퇴시까지 안전하게 <br>보관됩니다. 아래 평생회원 전환하기 버튼 클릭시 <br>평생회원으로 바로 전환하실 수 있습니다.</p>
+         <div class="ec-base-button gFull">
+            <a href="#none" class="btnStrong" onclick="{$action_lifetime}">평생회원 전환하기</a>
+        </div>
+    </div>
+    <div class="footer">
+        <input type="checkbox" id="{$checkbox_never_open}"><label for="{$checkbox_never_open}">다시 보지 않기</label>
+        <a href="#none" class="btnClose" onclick="$('.xans-member-lifetimeevent').hide();">닫기</a>
+    </div>
+</div>

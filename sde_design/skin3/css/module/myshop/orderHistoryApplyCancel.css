@@ -1,0 +1,31 @@
+/* Title */
+.xans-myshop-orderhistoryapplycancel .title { margin:40px 0 10px 10px; }
+.xans-myshop-orderhistoryapplycancel .title h3 { color:#353535; font-size:12px; }
+.xans-myshop-orderhistoryapplycancel > .title:first-child { margin-top:0; }
+
+/* List */
+.xans-myshop-orderhistoryapplycancel .ec-base-table td a { color:#353535; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td .line { text-decoration:underline; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.number { letter-spacing:-1px; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product p { padding:0 0 0 90px; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product .thumbnail { float:left; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product .thumbnail img { width:80px; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product .name .ec-set-product-name { display:block; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product div.option,
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product ul.option > li { margin:9px 0 0 90px; color:#707070; line-height:16px; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product ul.option > li > strong { display:block; color:#505050; }
+.xans-myshop-orderhistoryapplycancel .ec-base-table td.product .free { margin:5px 0 0; }
+
+.xans-myshop-orderhistoryapplycancel .controlInfo { padding:10px 0 8px 10px; border-top:1px solid #e8e5e4; color:#f76560; font-size:11px; line-height:1.5; background:#fff8f5; }
+.xans-myshop-orderhistoryapplycancel .controlInfo.typeBtm { margin:-1px 0 0; border-top:0; border-bottom:1px solid #e8e5e4; }
+
+.xans-myshop-orderhistoryapplycancel .ec-base-table.typeList .xans-myshop-products .multiDelivery{background-color:#fbfafa;vertical-align:middle;padding:10px 20px 10px 40px;}
+.xans-myshop-orderhistoryapplycancel .ec-base-table.typeList .xans-myshop-products .multiDelivery .inner{display: flex;align-items:center;}
+.xans-myshop-orderhistoryapplycancel .ec-base-table.typeList .xans-myshop-products .multiDelivery .address{flex:1;display: block;padding-right:20px;}
+.xans-myshop-orderhistoryapplycancel .ec-base-table.typeList .xans-myshop-products .multiDelivery .waybill{flex:none;display: inline-block;}
+
+/* Write */
+.xans-myshop-orderhistoryapplycancel #reason_detail { width:540px; }
+.itemAddInfo input { height:24px; line-height:24px; }
+.itemAddInfo input,
+.itemAddInfo textArea { width:554px; box-sizing:border-box; }

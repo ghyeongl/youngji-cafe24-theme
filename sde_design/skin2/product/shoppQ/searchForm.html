@@ -1,0 +1,81 @@
+<div module="product_searchdata">
+    <!--@css(/css/module/product/searchdata.css)-->
+    <form class="searchField" id="{$searchkeyword_form}" action="/product/search.html" method="get">
+        <fieldset>
+            <legend>상품검색</legend>
+            <div class="searchInput">
+                {$searchdata_keywordform}<input type="image" id="{$search_submit_button}" src="//img.echosting.cafe24.com/skin/base/product/btn_search.gif" alt="검색" class="btnSearch" /><ul class="autoDrop" id="{$search_auto_id}"></ul>
+            </div>
+            <button type="button" class="btnSearchOption">검색옵션</button>
+            <!-- 검색옵션 레이어 -->
+            <div id="ec-product-searchoption" class="searchOption ec-base-layer">
+                <!--@css(/layout/basic/css/ec-base-layer.css)-->
+                <div class="header">
+                    <h3>검색옵션</h3>
+                </div>
+                <div class="content">
+                    <div class="boardWrite">
+                        <table border="1" summary="">
+                            <caption>검색옵션</caption>
+                            <colgroup>
+                                <col style="width:80px;" />
+                                <col style="width:auto;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">검색어</th>
+                                    <td>
+                                        {$searchdata_detail_keywordform}
+                                        <p class="desc">{$searchdata_detail_type_form}<label for="{$search_detail_type_id}"> 단어를 하나 이상 포함하고 있는 모든 상품 검색</label></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">제외검색어</th>
+                                    <td>
+                                        {$searchdata_except_keywordform}
+                                        <p class="desc">검색결과에서 제외하는 단어 조건을 입력할 수 있습니다.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="ec-base-button">
+                    <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_search.gif" alt="검색" id="{$searchdata_layer_submit}" /></a>
+                    <a href="#none"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_reset.gif" alt="초기화" id="{$searchdata_layer_reset}" /></a>
+                </div>
+                <a href="#none" class="close"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
+            </div><!-- //참고: 검색옵션 레이어 -->
+        </fieldset>
+        <div module="product_RelateKeyword" class="keywordArea">
+            <strong class="heading">연관검색어</strong>
+            <ul class="list">
+                <li><a href="{$relate_url}">{$relate_word}</a></li>
+                <li><a href="{$relate_url}">{$relate_word}</a></li>
+            </ul>
+        </div>
+        <div module="product_HotKeyword" class="keywordArea">
+            <strong class="heading">인기검색어</strong>
+            <ul class="list">
+                <li><a href="{$hot_keyword_search_url}">{$hot_keyword_name}</a></li>
+                <li><a href="{$hot_keyword_search_url}">{$hot_keyword_name}</a></li>
+            </ul>
+        </div>
+    </form>
+
+    <div module="product_searchConditionData">
+        <button type="button" class="btnRefresh ec-product-searchdata-reset">전체해제</button>
+         <ul class="list">
+           <li>{$search_condition_data}<button type="button" class="btnSearchDelete" {$search_attr}>삭제</button></li>
+        <li>{$search_condition_data}<button type="button" class="btnSearchDelete" {$search_attr}>삭제</button></li>
+          </ul>
+    </div>
+    <div class="searchResult">
+        <p class="record">총 <strong>{$total_count}</strong> 개 의 상품이 검색되었습니다.</p>
+        <ul module="product_searchOrderby">
+            <li><a href="{$param}" {$style}>{$sort_name}</a></li>
+            <li><a href="{$param}" {$style}>{$sort_name}</a></li>
+        </ul>
+    </div>
+    <p class="noData {$search_fail_display|display}">검색 결과가 없습니다.</p>
+</div>

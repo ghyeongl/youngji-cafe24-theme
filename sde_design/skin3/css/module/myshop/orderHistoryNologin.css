@@ -1,0 +1,10 @@
+.xans-myshop-orderhistorynologin.ec-base-box.typeThin { padding:49px 0; }
+.xans-myshop-orderhistorynologin { position:relative; border:1px solid #d7d5d5; padding:49px 0 39px; color:#2e2e2e; }
+.xans-myshop-orderhistorynologin p { width:370px; margin:0 auto 15px; color:#757575; }
+.xans-myshop-orderhistorynologin .ec-base-desc { width:370px; margin:0 auto; }
+.xans-myshop-orderhistorynologin input[type=text],
+.xans-myshop-orderhistorynologin input[type=password] { width:179px; height:26px; }
+.xans-myshop-orderhistorynologin .button { width:330px; margin:10px auto 0; text-align:center; }
+.xans-myshop-orderhistorynologin .ec-base-button[class*="gColumn"] [class^='btn'] { margin:0; }
+.xans-myshop-orderhistorynologin .ec-base-desc dt { width:40%; line-height:33px; }
+.xans-myshop-orderhistorynologin .ec-base-desc dd { padding: 0 0 3px 180px; }

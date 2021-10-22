@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.blind { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:150%; font-size:0; line-height:0; }
+.xans-order-throttlewaiting { padding:80px 0 0; text-align:center; }
+.xans-order-throttlewaiting .visual img { width:128px; }
+.xans-order-throttlewaiting h2 { margin:18px 0 0; }
+.xans-order-throttlewaiting h2 img { width:197px; }
+.xans-order-throttlewaiting .detail { position:relative; display:inline-block; margin:30px 25px 0; padding:16px 17px 10px 37px; box-sizing:border-box; border:1px solid #eaeaea; }
+.xans-order-throttlewaiting .detail:before { content:""; position:absolute; top:17px; left:17px; display:inline-block; width:12px; height:12px; border-radius:50%; background:#9da6b4 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/ico_traffic_warning.png") no-repeat center; background-size:2px auto; }
+.xans-order-throttlewaiting .detail ul li { margin:0 0 4px; font-size:12px; line-height:16px; text-align:left; }
+.xans-order-throttlewaiting .detail .txtEm { color:#1b87d4; }

@@ -1,0 +1,16 @@
+#popup { width:650px; }
+.ec-base-layer .inputTypeText { width:200px; }
+.ec-base-layer select { min-width:85px; }
+.ec-base-layer textarea { min-width:277px; min-height:90px; }
+
+/* Domestic delivery */
+.ec-base-layer #r_phone1 { width:auto; }
+.ec-base-layer #r_phone2, .ec-base-layer #r_phone3 { width:143px; }
+.ec-base-layer #r_mobile1 { width:auto; }
+.ec-base-layer #r_mobile2, .ec-base-layer #r_mobile3 { width:143px; }
+
+/* Overseas shipping */
+.ec-base-layer #f_phone1 { width:auto; }
+.ec-base-layer #f_phone2 { width:286px; }
+.ec-base-layer #f_mobile1 { width:auto; }
+.ec-base-layer #f_mobile2 { width:286px; }

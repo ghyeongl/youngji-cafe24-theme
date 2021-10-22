@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* layout */
+#header .header { z-index:300; position:relative; vertical-align:top; background:#fff; }
+#header .header.open .searchBox { display:block; }
+#header .header.open + #dimmedSlider { display:block !important; z-index:299; opacity:1; }
+#header .searchWrap { padding:18px 0; position:relative; }
+#header h1 { margin:0 95px; text-align:center; font-size:18px; line-height:normal; }
+#header h1 img { max-width:100%; vertical-align:middle; font-size:12px; }
+
+#header .searchWrap .left { position:absolute; left:0; top:50%; margin:-15px 0 0; }
+#header .searchWrap .right { position:absolute; right:0; top:50%; margin:-15px 0 0; }
+#header .searchWrap .left p { margin-left:10px; }
+#header .searchWrap .right p { margin-right:10px; }
+#header .category { display:inline-block; vertical-align:top; }
+#header .category a { display:inline-block; overflow:hidden; width:30px; height:30px; text-indent:100%; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_cate.png") no-repeat 0 0; background-size:30px 30px; }
+
+#header .searchBtn { display:inline-block; vertical-align:top; }
+#header .searchBtn .btnSearch {  overflow:hidden; width:30px; height:30px; padding:0; text-indent:100%; text-align:left; white-space:nowrap; cursor:pointer; border:0; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_search.png") no-repeat 0 0; background-size:30px 30px; }
+#header .xans-layout-orderbasketcount { display:inline-block; vertical-align:top; }
+#header .xans-layout-orderbasketcount .btnBasket { display:inline-block; position:relative; overflow:hidden; width:30px; height:30px; padding:0; text-indent:100%; text-align:left; white-space:nowrap; cursor:pointer; border:0; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_basket.png") no-repeat 0 0; background-size:30px 30px; }
+#header .xans-layout-orderbasketcount .btnBasket .count { overflow: hidden;position: absolute;right: 0;top: 2px; min-width:10px; padding:0 2px; height: 14px;border-radius: 14px;font-weight: bold;font-size: 9px;line-height: 13px;color: #fff; text-align: center; text-indent:0; background: #ff0000; }
+
+#contents { position:relative; background-color:#fff; }
+
+.btnTop { display:none; position:fixed; top:0; left:50%; z-index:100; margin:0 0 0 -36px; border:1px solid #d6d6d7; border-top:0; border-radius:0 0 3px 3px; opacity:0.9; background:#616161 url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_btntop.png") no-repeat 90% 7px; background-size:12px 12px; }
+.btnTop a { display:inline-block; height:29px; padding:0 26px 0 10px; line-height:29px; color:#fff; }
+
+#mobileQuickLink { z-index:301 !important; }
+{ z-index:100 !important; }
+
+.dimmed { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:150; background:rgba(0,0,0,0.7); }
+#dimmedSlider { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:400; background:rgba(0,0,0,0.4); }
+
+/* 메인 검색 */
+#main .searchWrap { position:relative; height:38px; padding:5px 41px 0 47px; }
+#main .searchWrap .searchForm { position:relative; padding:0 28px 0 33px; border:1px solid #ccc; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/bg_search.png") no-repeat 5px 5px; background-size:20px 20px; }
+#main .searchWrap .btnDelete { position:absolute; right:3px; top:5px; width:20px; height:20px; border:0; cursor:pointer; overflow:hidden; text-indent:100%; font-size:0; white-space:nowrap; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_delete.png") no-repeat 0 0; background-size:20px 20px; }
+#main .searchWrap #keyword { width:100%; padding:0; border:0; }
+
+/* 메인 카테고리*/
+#main #header #topArea .xans-layout-mobilemaincategory { position:relative; height:43px; border-bottom:1px solid #e3e3e3; background-color:#fff; }
+#main #header #topArea .xans-layout-mobilemaincategory ul { display:inline-block; width:100%; padding:0; text-align:left; font-size:0; line-height:0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+#main #header #topArea .xans-layout-mobilemaincategory ul li { display:inline-block; width:33.3%; font-size:13px; text-align:center; }
+
+/* 메인 스와이프 */
+#main #header #topArea .xans-layout-mobilemaincategory .afterNone { display:none; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul { display:table; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li { width:100%; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul { padding:0 40px; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li { border-bottom:3px solid #fff; width:33%; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li.selected { border-bottom-color:#217bdb; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li a { display:inline-block; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:22px 0 18px; font-weight:bold; color:#9a9a9a; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li.selected a { color:#217bdb; }
+#main #header #topArea .xans-layout-mobilemaincategory > ul > li > ul li a img { max-height:40px; }
+#main #header #topArea .xans-layout-mobilemaincategory p { position:absolute; top:0; background-color:#fff; }
+#main #header #topArea .xans-layout-mobilemaincategory p.btnPrev { left:0; display:none; }
+#main #header #topArea .xans-layout-mobilemaincategory p.btnNext { right:0; display:none; }
+#main #header #topArea .xans-layout-mobilemaincategory p a { display:inline-block; padding:13px 14px; }
+
+/* 메인 배너 */
+#main .mainBanner { position:relative; }
+#main .mainBanner a img { max-height:290px; }
+#main .mainBanner .ec-base-paginate { position:absolute; bottom:8px; z-index:10; width:100%; }
+#main .mainBanner .afterNone { display:none; }
+
+/* 타이틀 */
+#titleArea { overflow:hidden; position:relative; padding:18px 45px 19px 56px; border-top:1px solid #eee; border-bottom:1px solid #e5e9f2; background:#fff; }
+#titleArea h2 { font-size:15px; text-align:center; }
+#titleArea span > a { overflow:hidden; position:absolute; left:17px; top:19px; width:20px; height:20px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/detail/btn_title_back.png') no-repeat 0 0; background-size:20px auto; }
+
+/*
+ DND 의 반응형 레이아웃
+*/
+html { width: 100%; min-height: 100%; }
+body { height: auto !important; min-height: 100%; background: #f6f8fa; }
+body > #wrap { max-width: 900px; margin: 0 auto; }
+#aside.xans-layout-slidepackage { width: auto; right: 13%; }
+/*
+html.expand body > #wrap { max-width: none; margin: 0; }
+*/
+#container { margin-left: 0 !important; }
+
+@media all and (min-width: 900px) {
+    body > #wrap  { border:1px solid #e5e9f2; border-width: 0 1px; box-sizing: border-box; }
+}

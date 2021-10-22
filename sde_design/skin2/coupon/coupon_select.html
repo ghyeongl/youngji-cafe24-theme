@@ -1,0 +1,118 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Coupon_SelectNew" class="ec-base-layer">
+    <!--@css(/css/module/coupon/selectNew.css)-->
+    <div class="header">
+        <h1>쿠폰 조회/적용</h1>
+    </div>
+
+    <div class="content">
+        <div class="ec-base-help">
+            <h2>쿠폰 사용에 따른 유의사항</h2>
+            <div class="inner">
+                <ul>
+                    <li>사용 가능한 쿠폰만 보여지게 됩니다.</li>
+                    <li>쿠폰은 회원등급 할인 이후에 적용되므로, 현재 페이지에서 보여지는 판매가와 실제 적용되는 금액과 다를 수 있습니다.</li>
+                    <li>추가쿠폰은 최대사용개수와 상관없이 상품 쿠폰과 주문서 쿠폰을 각각 1개씩 추가로 사용할 수 있는 쿠폰입니다.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="{$bPrdCoupon|display}">
+            <div class="title">
+                <h3>상품별 쿠폰 적용</h3>
+            </div>
+            <div class="ec-base-table gLayoutFixed typeList">
+                <table border="1" summary="">
+                    <caption>상품별 쿠폰 적용</caption>
+                    <colgroup>
+                        <col style="width:85px" />
+                        <col style="width:90px" />
+                        <col style="width:auto" />
+                        <col style="width:100px" />
+                        <col style="width:120px" />
+                        <col style="width:100px" />
+                        <col style="width:80px" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">배송구분</th>
+                            <th scope="col">이미지</th>
+                            <th scope="col">상품정보</th>
+                            <th scope="col">판매가</th>
+                            <th scope="col">할인혜택</th>
+                            <th scope="col">상품별 쿠폰선택</th>
+                            <th scope="col">상품별<br /> 쿠폰 할인액</th>
+                        </tr>
+                    </thead>
+                    <tbody class="center">
+                        <tr module="Coupon_aPrd">
+                            <td><span class="txtInfo">{$sShipType}</span></td>
+                            <td class="thumb"><img src="{$product_image}" alt="" /></td>
+                            <td class="left txtBreak">
+                                <strong>{$product_name}</strong>
+                                <div class="option">{$sOptStr}</div>
+                                <div id="{$coupon_prd_hidden}" class="type">{$sHidden}</div>
+                            </td>
+                            <td class="price right"><strong>{$sOrdPrice}</strong></td>
+                            <td id="{$coupon_prd_total_sale_price}" class="right">{$sTotalMemberSalePrice}</td>
+                            <td class="select"><span id="{$coupon_prd_select}" class="txtInfo">{$sCoupon}</span></td>
+                            <td class="right"><strong>{$sCouponSaleSpan}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="ec-base-table typeList total gBlank20">
+            <table border="1" summary="">
+                <caption>총 쿠폰 할인금액</caption>
+                <colgroup>
+                    <col style="width:33.33%" />
+                    <col style="width:33.33%" />
+                    <col style="width:33.33%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col"><strong>총 상품별 쿠폰 할인금액</strong></th>
+                        <th scope="col"><strong>총 주문별 쿠폰 할인금액</strong></th>
+                        <th scope="col"><strong>총 배송비 쿠폰 할인금액</strong></th>
+                    </tr>
+                </thead>
+                <tfoot class="right">
+                    <tr>
+                        <td colspan="3"><strong>= 총 쿠폰 할인금액</strong>({$mileage_name}) : <span class="txtEm gIndent10">{$price_unit_head}<strong id="{$total_coupon_discount_id}" class="txt23">0</strong><strong>{$price_unit_tail}</strong> (<img src="{$mileage_mileage_icon}" alt="" /> <span id="{$total_coupon_mileage_id}">0</span>)</span></td>
+                    </tr>
+                </tfoot>
+                <tbody class="center">
+                    <tr>
+                        <td><div class="box txt16">{$price_unit_head}<strong id="{$product_coupon_discount_id}" class="txt23">0</strong><strong>{$price_unit_tail}</strong> <span class="txt12 txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> <span id="{$product_coupon_mileage_id}">0</span>)</span></div></td>
+                        <td><div class="box txt16"><strong>- {$price_unit_head}<strong id="{$order_coupon_discount_id}" class="txt23">0</strong>{$price_unit_tail}</strong> <span class="txt12 txtInfo">(<img src="{$mileage_mileage_icon}" alt="" /> <span id="{$order_coupon_mileage_id}">0</span>)</span></div></td>
+                        <td><div class="box txt16"><strong>- {$price_unit_head}<strong id="{$ship_coupon_discount_id}" class="txt23">0</strong>{$price_unit_tail}</strong></div></td>
+                    </tr>
+                </tbody>
+                <tbody class="detail center">
+                    <tr>
+                        <td class="left">
+                            <ul id="{$selected_product_coupon_id}">
+                            </ul>
+                        </td>
+                        <td class="left">
+                            <ul id="{$selected_order_coupon_id}" class="select">
+                                <li>{$sOrdCoupon}</li>
+                            </ul>
+                        </td>
+                        <td class="left">
+                            <ul id="{$selected_ship_coupon_id}">
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" class="btnSubmitFix sizeS" onclick="{$action_result}">쿠폰 적용하기</a>
+        <a href="#none" class="btnNormalFix sizeS" onclick="{$action_init}">초기화</a>
+    </div>
+</div>

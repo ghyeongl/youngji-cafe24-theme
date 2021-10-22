@@ -1,0 +1,6 @@
+.xans-myshop-asyncbankbook ul:after { content:""; display:block; clear:both; }
+.xans-myshop-asyncbankbook ul li { float:left; margin:5px 0; padding:0 45px; width:50%; height:20px; font-size:12px; line-height:1.6; vertical-align:top; box-sizing:border-box; }
+.xans-myshop-asyncbankbook .title { float:left; width:40%; font-weight:normal; box-sizing:border-box; }
+.xans-myshop-asyncbankbook .data { float:left; width:47%; padding:0 10px;  text-align:right; box-sizing:border-box; }
+.xans-myshop-asyncbankbook .use { color:#008bcc; }
+.xans-myshop-asyncbankbook a.btnNormal { float:right; margin:-2px 0 0; }

@@ -1,0 +1,8 @@
+/* File start */
+.xans-order-form .content { padding:7px; margin:7px 7px 0; border:1px solid #ccc; }
+.xans-order-form .content h3 { margin:5px 10px; font-size:13px; }
+.xans-order-form .content > p,
+.xans-order-form .content > ul { margin:10px; line-height:18px; }
+.xans-order-form .content > ul > li { margin:3px 0 0; }
+
+/* File end */

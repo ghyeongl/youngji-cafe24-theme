@@ -1,0 +1,6 @@
+.xans-layout-conversionpc { background:#fff; padding:45px; text-align:center; }
+.xans-layout-conversionpc a {
+    margin:20px; padding:20px 40px 20px 110px;
+    font-size:68px; color:#63666e; text-decoration:none; text-align:center;
+    border:4px solid #9d9db0; border-radius:10px; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_mobile.png") no-repeat 40px 50%;
+}

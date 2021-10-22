@@ -1,0 +1,16 @@
+.ec-base-layer .inputTypeText,
+.ec-base-layer textarea,
+.ec-base-layer select { width:100%; }
+.ec-base-layer .noPost { display:inline-block; }
+
+/* Domestic delivery */
+.ec-base-layer #r_phone1 { width:33%; }
+.ec-base-layer #r_phone2, .ec-base-layer #r_phone3 { width:25%; }
+.ec-base-layer #r_mobile1 { width:33%; }
+.ec-base-layer #r_mobile2, .ec-base-layer #r_mobile3 { width:25%; }
+
+/* Overseas shipping */
+.ec-base-layer #f_phone1 { width:33%; }
+.ec-base-layer #f_phone2 { width:50%; }
+.ec-base-layer #f_mobile1 { width:33%; }
+.ec-base-layer #f_mobile2 { width:50%; }

@@ -1,0 +1,8 @@
+.xans-layout-info { margin:0 0 20px; padding:0 0 17px; border-bottom:1px solid #e8e8e8; }
+.xans-layout-info h2 { height:24px; color:#2e2e2e; font-size:12px; }
+.xans-layout-info ul { padding:0 9px; }
+.xans-layout-info li { margin:4px 0 0; color:#494949; }
+.xans-layout-info li strong { display:inline-block; width:20%; vertical-align:top; color:#949494; font-weight:normal; }
+.xans-layout-info li.tel { margin:0 0 10px; padding:0; color:#495164; font-size:25px; background:none; font-family:Tahoma; }
+.xans-layout-info li.tel strong { visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0; }
+.xans-layout-info li span { display:inline-block; width:80%; word-break: break-all; }

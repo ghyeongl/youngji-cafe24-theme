@@ -1,0 +1,21 @@
+/* 사은품 리스트 */
+.xans-gift-list .title { margin:15px 0 10px; }
+.xans-gift-list .giftInfo { padding:10px; font-weight:bold; }
+.xans-gift-list .giftInfo:before { display:inline-block; content:""; margin:-1px 5px 0 0; width:3px; height:3px; vertical-align:middle; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/common/ico_info3.gif") no-repeat 0 0; }
+.xans-gift-list .xans-gift-second { margin-top:40px; padding-top:40px; border-top:1px solid #868686; }
+.xans-gift-list .xans-gift-second:first-child { border-top:0; padding-top:0; margin:0; }
+.xans-gift-list .xans-gift-third { width:100%; overflow:hidden; }
+.xans-gift-list .xans-gift-third ul { letter-spacing:-4px; font-size:0; line-height:0; vertical-align:top; }
+.xans-gift-list .xans-gift-third ul:after { content:""; display:block; clear:both; }
+.xans-gift-list .xans-gift-third li { display:inline-block; width:131px; margin:20px 25px 0 0; letter-spacing:normal; }
+.xans-gift-list .xans-gift-third img { max-width:100%; }
+.xans-gift-list .xans-gift-third span,
+.xans-gift-list .xans-gift-third .point { display:block; font-size:12px; line-height:1.3; }
+.xans-gift-list .xans-gift-third span { margin:5px 0 0; color:#2e2e2e; }
+.xans-gift-list .xans-gift-third .point { color:#000; }
+.xans-gift-listempty { margin-top:20px; border:1px solid #d7d5d5; background-color:#F5F5F5; }
+.xans-gift-listempty p { padding:95px 0; text-align:center; }
+
+/* 사은품 제공 상품 레이어 */
+.xans-gift-layeroffergift { position:fixed; z-index:1000; left:50%; top:200px; width:600px; margin-left:-300px; }
+.xans-gift-layeroffergift .thumb img { max-width:54px; }

@@ -1,0 +1,23 @@
+.xans-myshop-orderregularmanagedetailregister,
+.xans-myshop-orderregularmanagedetaillist { padding:7px; }
+.xans-myshop-orderregularmanagedetaillist:first-of-type { padding-top:14px; }
+.xans-myshop-orderregularmanagedetaillist .ec-base-table table th,
+.xans-myshop-orderregularmanagedetaillist .ec-base-table table td { vertical-align:top; }
+.xans-myshop-orderregularmanagedetaillist .ec-base-table.typeWrite th,
+.xans-myshop-orderregularmanagedetaillist .ec-base-table.typeWrite td { line-height:20px; }
+.xans-myshop-orderregularmanagedetaillist .ec-base-table table  td.hasBtn { line-height: 25px; }
+.xans-myshop-orderregularmanagedetaillist .fSelect { width:100%; }
+.xans-myshop-orderregularmanagedetaillist .txtLess { color:#757575; }
+.xans-myshop-orderregularmanagedetaillist .txtDel { text-decoration:line-through; color:#b8b8b8; }
+.xans-myshop-orderregularmanagedetaillist .badge { display:inline-block; position:relative; top:-1px; height:18px; margin:0 0 0 2px; padding:0 6px; border-radius:10px; line-height:18px; font-size:11px; color:#fff; background-color:#009ffa; }
+.xans-myshop-orderregularmanagedetaillist .badge .icoDown { display:inline-block; position:relative; top:1px; overflow:hidden; width:8px; height:12px; margin:0 0 0 3px; border-radius:50%; line-height:10px; text-indent:-9999px; }
+.xans-myshop-orderregularmanagedetaillist .badge .icoDown:before { content:""; display:inline-block; position:absolute; top:3px; left:2px; width:4px; height:4px; background-color:#fff; }
+.xans-myshop-orderregularmanagedetaillist .badge .icoDown:after { content:""; display:inline-block; position:absolute; bottom:1px; left:0; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:4px solid #fff; }
+.xans-myshop-orderregularmanagedetaillist .datepicker { position:relative; overflow:hidden; font-size: 13px;  font-weight: inherit;  color: #353535;  border: 1px solid #d7d5d5;  border-radius: 2px;  outline-style: none;  -moz-box-sizing: border-box;  -webkit-box-sizing: border-box;  box-sizing: border-box; }
+.xans-myshop-orderregularmanagedetaillist .datepicker button.ui-datepicker-trigger { position:absolute; top:3px; right:10px; width:20px; border:none; cursor:pointer; background:none; }
+.xans-myshop-orderregularmanagedetaillist .datepicker input.hasDatepicker { cursor:pointer; width:100%; padding:10px 20px 10px 10px; border:0; }
+.xans-myshop-orderregularmanagedetaillist .datepicker .inputDelivery { width:100%; border:none; }
+.xans-myshop-orderregularmanagedetaillist .datepicker + p { margin:8px 0 8px; }
+.xans-myshop-orderregularmanagedetaillist .ec-base-prdInfo .prdBox + .ec-base-table { border-top:1px solid #ececec; }
+.xans-myshop-orderregularmanagedetaillist .userInfo .gRight { float:right; text-align:right; }
+.xans-myshop-orderregularmanagedetaillist .userInfo .gRight:after { content:""; display:block; clear:both; }

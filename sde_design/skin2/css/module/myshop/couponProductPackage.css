@@ -1,0 +1,8 @@
+#popup { width:600px; }
+.xans-myshop-couponproductsearch { color:#757575; }
+.xans-myshop-couponproductsearch p { padding:0 0 10px; }
+.xans-myshop-couponproductlist .title { overflow:hidden; margin:18px 0 8px; }
+.xans-myshop-couponproductlist .title .result { float:left; padding:2px 0 0 16px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle2.gif") no-repeat 9px 50%; }
+.xans-myshop-couponproductlist .title select { float:right; }
+.xans-myshop-couponproductlist table td.thumb img { width:80px; }
+.xans-myshop-couponproductlist table td.price strong { display:block; }

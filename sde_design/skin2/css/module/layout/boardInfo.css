@@ -1,0 +1,6 @@
+.xans-layout-boardinfo { margin:0 0 20px; padding:0 0 20px; border-bottom:1px solid #e8e8e8; }
+.xans-layout-boardinfo h2 { height:20px; color:#2e2e2e; font-size:12px; }
+.xans-layout-boardinfo li { padding:9px; }
+.xans-layout-boardinfo li img { vertical-align:middle; }
+.xans-layout-boardinfo a { color:#2e2e2e; text-decoration:none; }
+.xans-layout-boardinfo a:hover { color:#008bcc; }

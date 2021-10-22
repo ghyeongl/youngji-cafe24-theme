@@ -1,0 +1,64 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <div id="ec-jigsaw-area-payment" class="ec-base-fold eToggle selected">
+        <div id="ec-jigsaw-title-payment" class="title">
+            <h2>결제정보</h2>
+        </div>
+        <div class="contents">
+            <!-- app tag -->
+            <div id="ec-orderform-payment-head"></div>
+
+            <div class="segment">
+                <div class="ec-base-table gCellNarrow">
+                    <table border="1">
+                        <caption>결제정보 상세</caption>
+                        <colgroup>
+                            <col style="width:122px" />
+                            <col style="width:auto" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">주문상품</th>
+                                <td class="right"><span id="{$total_product_base_price_id}">{$price_unit_head}{$total_product_base_price}{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr class="{$total_vat_price_display|display}">
+                                <th scope="row">부가세</th>
+                                <td class="right"><span id="{$total_vat_price_id}">+{$price_unit_head}{$total_vat_price}{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">할인/부가결제</th>
+                                <td class="right">-{$price_unit_head}<span id="{$payment_total_sale_price_id}">{$total_sale_price_front}</span>{$price_unit_tail}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배송비</th>
+                                <td class="right">+<span id="{$total_ship_price_id}">{$price_unit_head}{$total_ship_price}{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr id="{$total_local_ship_price_area}">
+                                <th scope="row">지역별 배송비</th>
+                                <td class="right">+<span id="{$total_local_ship_price_id}">{$price_unit_head}0{$price_unit_tail}</span></td>
+                            </tr>
+                            <tr class="{$total_cash_on_delv_msg_deisplay|display }">
+                                <td colspan="2"><p class="info"><strong>착불 상품이 포함되어 있습니다.</strong></p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="totalPay gBlank10">
+                    <h3 class="heading">결제금액</h3>
+                    <strong class="txtStrong">
+                        {$total_order_price_front_head}<span id="{$payment_total_order_price_id}">{$total_order_price_front}</span>{$total_order_price_front_tail}
+                        <span class="refer {$total_order_price_ref_display|display}">({$total_order_price_back_head}<span id="{$payment_total_order_price_ref_id}">{$total_order_price_back}</span>{$total_order_price_back_tail})</span>
+                    </strong>
+                    <span class="displaynone">{$form.total_price}</span>
+                </div>
+            </div>
+
+            <!-- app tag -->
+            <div id="ec-orderform-payment-tail"></div>
+        </div>
+    </div>
+<!-- File end -->

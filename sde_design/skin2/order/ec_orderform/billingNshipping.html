@@ -1,0 +1,440 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <!-- 이값은 지우면 안되는 값입니다.
+        $delivery_list_type=embeded
+        $isRuleBasedAddrForm = T
+    -->
+    <div class="billingNshipping">
+        <!-- 주문자정보 -->
+        <div id = "ec-jigsaw-area-billingInfo" class="ec-base-fold eToggle selected {$use_order_form_display|display}">
+            <div id="ec-jigsaw-title-billingInfo" class="title">
+                <h2>주문자</h2>
+                <span id="ec-jigsaw-heading-billingInfo" class="txtEm gRight"></span>
+            </div>
+            <div class="contents {$order_form_orderer_class}">
+                <div class="ec-base-table typeWrite">
+                    <table border="1">
+                        <caption>주문자 정보 입력</caption>
+                        <colgroup>
+                            <col style="width:102px" />
+                            <col style="width:auto" />
+                        </colgroup>
+                        <!-- 국내/해외 주문자 정보 -->
+                        <tbody class="{$address_form} {$address_korean_display|display}">
+                            <tr>
+                                <th scope="row">주문자 <span class="icoRequired">필수</span></th>
+                                <td>{$form.oname}</td>
+                            </tr>
+                            <tr class="ec-orderform-emailRow">
+                                <th scope="row">이메일 <span class="icoRequired">필수</span></th>
+                                <td>
+                                    <div class="ec-base-mail">{$form.oemail}</div>
+                                    <p class="ec-base-help">이메일로 주문 처리 과정을 보내드립니다.<br />수신 가능한 이메일 주소를 입력해 주세요.</p>
+                                </td>
+                            </tr>
+                            <tr class="{$use_order_tel_display|display}">
+                                <th scope="row">일반전화 <span class="{$is_order_tel_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                <td>{$form.ophone1_}</td>
+                            </tr>
+                            <tr class="{$use_order_cell_display|display}">
+                                <th scope="row">휴대전화 <span class="{$is_order_cell_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                <td>{$form.ophone2_}</td>
+                            </tr>
+                            <tr id="ec-orderer-address">
+                                <th scope="row">주소 <span class="{$is_orderer_address_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                <td>
+                                    {$form.orderer_address}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 배송정보  -->
+        <div id="{$lShippingCompanyLists}" class="ec-area-shipping-companies ec-base-fold eToggle selected {$shipcompany_display|display}">
+            <div class="title">
+                <h2>상품 수령</h2>
+            </div>
+            <div class="contents">
+                <div class="segment">
+                    <!-- 배송업체(방식) 선택 -->
+                    {$form.shiping_company_type}
+                    <p class="ec-base-help {$form.store_pickup_not_used_display|display}">스토어픽업을 사용할 수 없는 상품이 포함되어 있어 일반 배송사만 선택 가능합니다.</p>
+                    {$form.delivcompany} {$form.delivery_app_list} {$form.delivcompany_radio_add} {$form.delivstore}
+                    <ul class="ec-base-help {$deliv_info_view_display|display}" {$form.deliv_info_view}>
+                        <li class="txtEm {$r_info_display|display}">배송비 : {$form.deliv_company_price_custom_type}</li>
+                        <li class="{$f_r_info_display|display}">
+                            <div class="{$shipping_additional_fee_show} {$shipping_additional_fee_show_display|display}">
+                                <span class="txtEm">배송비 : {$price_unit_head}<span id="{$f_addr_total_ship_fee_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</span>
+                                = 해외배송비 {$price_unit_head}<span id="{$f_addr_delv_price_id}">{$form.f_ship_fee}</span>{$price_unit_tail}
+                                + 보험료 {$price_unit_head}<span id="{$f_addr_insurance_price_id}">{$form.f_insurance}</span>{$price_unit_tail}
+                                <span class="{$shipping_additional_fee_name_show}">+ <span id="{$f_addr_shipping_additional_fee_name_id}">{$shipping_additional_fee_name}</span> {$price_unit_head}<span id="{$f_addr_shipping_additional_fee_id}">{$form.f_shipping_additional_fee}</span>{$price_unit_tail}</span>
+                                <p class="ec-base-help typeDash gIndent10">보험료는 배송과정에서 발생하는 분실, 도난, 파손 등으로 인한 손해에 대하여 규정에 따라 배상해 드리는 서비스입니다.</p>
+                            </div>
+                            <div class="{$shipping_additional_fee_hide} {$shipping_additional_fee_hide_display|display}">
+                                <span class="txtEm">배송비 : {$price_unit_head}<span id="{$f_addr_total_ship_fee_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</span>
+                                = 해외배송비 {$price_unit_head}<span id="{$f_addr_delv_price_id}">{$form.f_ship_fee}</span>{$price_unit_tail}
+                                + 보험료 {$price_unit_head}<span id="{$f_addr_insurance_price_id}">{$form.f_insurance}</span>{$price_unit_tail}
+                                <ul class="ec-base-help typeDash gIndent10">
+                                    <li>배송비에는 관세 및 세금 등의 각종 비용은 포함되어 있지 않습니다. 상품수령 시 고객님이 추가로 지불하셔야 합니다.</li>
+                                    <li>보험료는 배송과정에서 발생하는 분실, 도난, 파손 등으로 인한 손해에 대하여 규정에 따라 배상해 드리는 서비스입니다.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="{$deliv_company_shipping_info_class}">배송안내 : {$form.deliv_company_shipping_info}</li>
+                        <li>배송소요기간 : {$form.deliv_company_period_custom_type}</li>
+                        <li class="{$ordertime_display|display}" {$form.ordertime}>주문가능 시간 : {$form.deliv_company_ordertime_custom_type}</li>
+                        <li class="{$areaname_display|display}" {$form.areaname}><div {$form.deliv_company_areaname_text_id}>배송가능 지역 : {$form.deliv_company_areaname_custom_type}</div><div class="ec-base-button" {$form.deliv_company_areaname_btn_id}><button type="button" id="{$open_avail_delivery_id}" class="btnNormal mini">배송가능지역</button></div></li>
+                        <li>{$form.deliv_company_etc}</li>
+                    </ul>
+                    <ul class="ec-base-help {$store_info_view_display|display}" {$form.store_info_view}>
+                        <li class="txtEm">{$form.store_receive_period}</li>
+                        <li>{$form.store_receive_addr}</li>
+                        <li>영업시간 : {$form.store_office_hour}</li>
+                        <li>{$form.store_receive_map} </li>
+                        <li><div class="ec-base-button"><button type="button" id="{$open_store_list_id}" class="btnNormal mini">수령지 안내</button></div></li>
+                    </ul>
+                    <ul class="ec-base-help" id="{$delivery_app_info_id}">
+                        <li class="txtEm" id="{$delivery_app_shipfee_div_id}">배송비 : {$form.delivery_app_shipfee}</li>
+                        <li id="{$delivery_app_description_div_id}">배송안내 : {$form.delivery_app_description}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 수령자 정보   -->
+        <div id = "ec-jigsaw-area-shippingInfo" class="ec-base-fold eToggle selected">
+            <div id="ec-jigsaw-title-shippingInfo" class="title">
+                <h2>배송지</h2>
+            </div>
+            <div class="contents">
+                <!-- app tag -->
+                <div id="ec-orderform-billingNshipping-head"></div>
+                <!-- 국내배송 정보 -->
+                <div class="{$r_info_display|display}">
+                    <div id="ec-jigsaw-tab-shippingInfo" class="ec-base-tab {$shipping_info_tab_display|display}">
+                        <ul>
+                            <li id="ec-jigsaw-tab-shippingInfo-recentAddress" class="selected"><a href="#none">최근 배송지</a></li>
+                            <li id="ec-jigsaw-tab-shippingInfo-newAddress"><a href="#none">직접입력</a></li>
+                        </ul>
+                    </div>
+                    <!-- 최근배송지 -->
+                    <div id="ec-shippingInfo-recentAddress" class="tabCont recentShipArea {$ec_shippingInfo_recentAddress_display}">
+                        <div id="ec-shippingInfo-recentAddressText" class="segment">
+                            <div class="{$delivery_info_text_class} recent">
+                                <strong class="name"><span class="txtEm" id="{$delivery_info_main_label_id}"></span><span id="{$delivery_info_name_id}"></span></strong>
+                                <p class="address gBlank10">[<span id="{$delivery_info_zipcode_id}"></span>] <span id="{$delivery_info_address_id}"></span></p>
+                                <dl class="contact">
+                                    <dt class="{$use_delivery_cell_display|display}">휴대전화</dt>
+                                    <dd class="{$use_delivery_cell_display|display}" id="{$delivery_info_cell_id}"></dd>
+                                    <dt class="{$use_delivery_tel_display|display}">일반전화</dt>
+                                    <dd class="{$use_delivery_tel_display|display}" id="{$delivery_info_tel_id}"></dd>
+                                </dl>
+                            </div>
+                            <span class="sideRight"><button type="button" id="ec-shippingInfo-showRecentAddressList" class="btnNormal mini">배송지 목록</button></span>
+                        </div>
+
+                        <div id="ec-shippingInfo-recentAddressList" class="segment" style="display:none;">
+                            <h3 class="heading">배송지를 선택해 주세요.</h3>
+                            <ul class="shippingList">
+                                <li module="Order_DeliveryList">
+                                    <strong class="name"><span id="ec-shippingInfo-recentAddressList-mainLabel-{$ma_idx}" class="txtEm">{$ma_main_label}</span> {$ma_rcv_name}</strong>
+                                    <div class="description">
+                                        <span class="choice"><input type="radio" id="ec-shippingInfo-recentAddressList-choice-select-{$ma_idx}" name="ec-shippingInfo-recentAddressList-choice" value="{$ma_idx}" class="fRadio" {$ma_rcv_checked} /></span>
+                                        <p class="address gBlank10">[<span class="ec-shippingInfo-recentAddressList-zipcode-{$ma_idx}">{$ma_rcv_zipcode}</span>] <span class="ec-shippingInfo-recentAddressList-addr1-{$ma_idx}">{$ma_rcv_addr1}</span><br />
+                                        <span class="ec-shippingInfo-recentAddressList-addr2-{$ma_idx}">{$ma_rcv_addr2}</span>
+                                        </p>
+                                        <dl class="contact">
+                                            <dt>휴대전화</dt>
+                                            <dd>{$ma_rcv_mobile_no}</dd>
+                                            <dt>일반전화</dt>
+                                            <dd>{$ma_rcv_phone}</dd>
+                                        </dl>
+                                    </div>
+                                    <span class="button">
+                                        <button type="button" id="ec-shippingInfo-recentAddressList-choice-modify-{$ma_idx}" class="btnText">수정</button>
+                                    </span>
+                                </li>
+                            </ul>
+                            <span class="sideRight"><button type="button" id="ec-shippingInfo-closeRecentAddressList" class="btnBase mini">닫기</button></span>
+                        </div>
+                    </div>
+
+                    <!-- 새 배송지 -->
+                    <div id="ec-shippingInfo-newAddress" class="tabCont newShipArea {$ec_shippingInfo_newAddress_display|display}">
+                        <div class="segment ec-shippingInfo-sameaddr {$sameaddr_display|display}">
+                            {$form.sameaddr}
+                        </div>
+                        <div class="ec-base-table typeWrite">
+                            <table border="1">
+                                <caption>배송 정보 입력</caption>
+                                <colgroup>
+                                    <col style="width:102px" />
+                                    <col style="width:auto" />
+                                </colgroup>
+                                <tbody>
+                                    <tr class="ec-shippingInfo-newAddress-name">
+                                        <th scope="row">받는사람 <span class="icoRequired">필수</span></th>
+                                        <td>{$form.rname}</td>
+                                    </tr>
+                                    <tr id="ec-receiver-address">
+                                        <th scope="row">주소 <span class="{$is_receiver_address_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                        <td>
+                                            {$form.receiver_address}
+                                        </td>
+                                    </tr>
+                                    <tr class="ec-shippingInfo-receiverPhone {$use_delivery_tel_display|display}">
+                                        <th scope="row">일반전화 <span class="{$is_delivery_tel_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                        <td>{$form.rphone1_}</td>
+                                    </tr>
+                                    <tr class="ec-shippingInfo-receiverCell {$use_delivery_cell_display|display}">
+                                        <th scope="row">휴대전화 <span class="{$is_delivery_cell_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                        <td>{$form.rphone2_}</td>
+                                    </tr>
+                                    <tr class="ec-orderform-emailRow {$order_form_delivery_simple_class}">
+                                        <th scope="row">이메일 <span class="icoRequired">필수</span></th>
+                                        <td>
+                                            <div class="ec-base-mail">{$form.oemail}</div>
+                                            <p class="ec-base-help">이메일로 주문 처리 과정을 보내드립니다.<br />수신 가능한 이메일 주소를 입력해 주세요.</p>
+                                        </td>
+                                    </tr>
+                                 </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 안심번호 서비스 사용 -->
+                    <div class="ec-shippingInfo-safePhone segment unique {$use_safe_phone_display|display}">
+                        <div class="safePhone">
+                            <span class="useCheck">{$form.use_safe_phone}</span>
+                            <a href="/order/ec_orderform/popup/safePhone.html" target="_blank" class="txtLink">안내</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 해외배송 정보 -->
+                <div id="ec-shippingInfo-overseaAddress" class="{$f_r_info_display|display}">
+                    <div class="ec-base-table typeWrite">
+                        <table border="1">
+                            <caption>배송 정보 입력</caption>
+                            <colgroup>
+                                <col style="width:102px" />
+                                <col style="width:auto" />
+                            </colgroup>
+                            <tbody>
+                                <tr class="ec-shippingInfo-newAddress-name">
+                                    <th scope="row">받는사람 <span class="icoRequired">필수</span></th>
+                                    <td>
+                                        {$form.fname}
+                                        <p class="ec-base-help">영문으로 작성해 주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr id="ec-freceiver-address">
+                                    <th scope="row">주소 <span class="{$is_freceiver_address_required_display|display}"><span class="icoRequired">필수</span></span></th>
+                                    <td>
+                                        {$form.freceiver_address}
+                                    </td>
+                                </tr>
+                                <tr class="ec-shippingInfo-receiverPhone {$use_delivery_tel_display|display}">
+                                    <th scope="row">일반전화 <span class="icoRequired">필수</span></th>
+                                    <td>{$form.fphone1_ex}</td>
+                                </tr>
+                                <tr class="ec-shippingInfo-receiverCell {$use_delivery_cell_display|display}">
+                                    <th scope="row">휴대전화 <span class="icoRequired">필수</span></th>
+                                    <td>{$form.fphone2_ex}</td>
+                                </tr>
+                                <tr class="ec-orderform-emailRow {$order_form_delivery_simple_class} {$delivery_info_form_class}">
+                                    <th scope="row">이메일 <span class="icoRequired">필수</span></th>
+                                    <td>
+                                        <div class="ec-base-mail">{$form.oemail}</div>
+                                        <p class="ec-base-help">이메일로 주문 처리 과정을 보내드립니다.<br />수신 가능한 이메일 주소를 입력해 주세요.</p>
+                                    </td>
+                                </tr>
+                                <tr id="{$receiver_id_card_key}" class="{$receiver_id_card_key_display|display}">
+                                    <th scope="row">통관정보 <span class="icoRequired">필수</span></th>
+                                    <td>
+                                        {$form.receiver_id_card_type}
+                                        <span class="gBlank10">{$form.receiver_id_card_key}</span>
+                                        <p id="{$receiver_id_card_type_msg}" class="ec-base-help"></p>
+                                    </td>
+                                </tr>
+                                <tr class="ec-shop-overseaShippingFee shippingPrice {$international_shipping_display|display}">
+                                    <th scope="row">배송비</th>
+                                    <td>
+                                        <div class="{$shipping_additional_fee_show} {$shipping_additional_fee_show_display|display}">
+                                            <p class="gBlank5 gBreak5"><span class="txtEm">{$price_unit_head}<span id="{$f_addr_total_ship_fee_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</span></p>
+                                            <div class="ec-base-table gCellNarrow">
+                                                <table border="1">
+                                                    <caption>배송비 상세</caption>
+                                                    <colgroup>
+                                                        <col style="width:113px" />
+                                                        <col style="width:auto" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">해외배송비</th>
+                                                            <td class="right">{$price_unit_head}<span id="{$f_addr_delv_price_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</td>
+                                                        </tr>
+                                                        <tr class="{$f_addr_insurance_price_display|display}">
+                                                            <th scope="row">보험료</th>
+                                                            <td class="right">+{$price_unit_head}<span id="{$f_addr_insurance_price_id}">{$form.f_insurance}</span>{$price_unit_tail}</td>
+                                                        </tr>
+                                                        <tr class="{$shipping_additional_fee_name_show}">
+                                                            <th scope="row"><span id="{$f_addr_shipping_additional_fee_name_id}">{$shipping_additional_fee_name}</span></th>
+                                                            <td class="right">+{$price_unit_head}<span id="{$f_addr_shipping_additional_fee_id}">{$form.f_shipping_additional_fee}</span>{$price_unit_tail}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <p class="ec-base-help typeDash {$f_addr_insurance_price_display|display}">보험료는 배송과정에서 발생하는 분실, 도난, 파손 등으로 인한 손해에 대하여 규정에 따라 배상해 드리는 서비스입니다.</p>
+                                        </div>
+                                        <div class="{$shipping_additional_fee_hide} {$shipping_additional_fee_hide_display|display}">
+                                            <p class="gBlank5 gBreak5"><span class="txtEm">{$price_unit_head}<span id="{$f_addr_total_ship_fee_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</span></p>
+                                            <div class="ec-base-table gCellNarrow">
+                                                <table border="1">
+                                                    <caption>배송비 상세</caption>
+                                                    <colgroup>
+                                                        <col style="width:113px" />
+                                                        <col style="width:auto" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">해외배송비</th>
+                                                            <td class="right">{$price_unit_head}<span id="{$f_addr_delv_price_id}">{$form.f_ship_fee}</span>{$price_unit_tail}</td>
+                                                        </tr>
+                                                        <tr class="{$f_addr_insurance_price_display|display}">
+                                                            <th scope="row">보험료</th>
+                                                            <td class="right">+{$price_unit_head}<span id="{$f_addr_insurance_price_id}">{$form.f_insurance}</span>{$price_unit_tail}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul class="ec-base-help typeDash">
+                                                <li>배송비에는 관세 및 세금 등의 각종 비용은 포함되어 있지 않습니다. 상품수령 시 고객님이 추가로 지불하셔야 합니다.</li>
+                                                <li class="{$f_addr_insurance_price_display|display}">보험료는 배송과정에서 발생하는 분실, 도난, 파손 등으로 인한 손해에 대하여 규정에 따라 배상해 드리는 서비스입니다.</li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- app 배송지정보 -->
+                <div id="ec-appshippingInfo">
+                </div>
+
+                <!-- 국내배송 메시지 -->
+                <div class="ec-shippingInfo-shippingMessage segment unique {$r_info_display|display} {$use_delivery_message_display|display}">
+                    {$form.omessage_select}
+                    <div class="ec-shippingInfo-omessageInput gBlank10" style="display:none;">
+                        {$form.omessage}
+                        <div class="gBlank10 {$omessage_autosave_display|display}">
+                            <label>{$form.omessage_autosave}[{$omessage_autosave_board}]에 자동 저장</label>
+                            <ul class="ec-base-help">
+                                <li>게시글은 비밀글로 저장되며 비밀번호는 주문번호 뒷자리로 자동 지정됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 해외배송 메시지 -->
+                <div class="ec-shippingInfo-shippingMessage segment unique {$f_r_info_display|display} {$use_delivery_message_display|display}">
+                    {$form.fmessage_select}
+                    <div class="ec-shippingInfo-omessageInput gBlank10" style="display:none;">
+                        {$form.fmessage}
+                        <div class="gBlank10 {$fmessage_autosave_display|display}">
+                            <label>{$form.fmessage_autosave}[{$fmessage_autosave_board}]에 자동 저장</label>
+                            <ul class="ec-base-help">
+                                <li>게시글은 비밀글로 저장되며 비밀번호는 주문번호 뒷자리로 자동 지정됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 국내배송 기본 배송지 사용 -->
+                <div class="ec-shippingInfo-newAddress-setMain segment {$set_main_address_display|display}">
+                    {$form.set_main_address}
+                </div>
+
+                <!-- app tag -->
+                <div id="ec-orderform-billingNshipping-tail"></div>
+
+                <!-- [비회원주문] 간편 회원가입, 비회원 비밀번호 입력 -->
+                <!--@import(/order/ec_orderform/guest.html)-->
+            </div>
+        </div>
+
+        <!-- 정기배송 -->
+        <div id="ec-jigsaw-area-subscriptionStartDate" class="ec-base-fold eToggle {$subscription_show_display|display}">
+            <div id="ec-jigsaw-title-subscriptionStartDate" class="title">
+                <h2>정기배송시작일</h2>
+                <span id="ec-jigsaw-heading-subscriptionStartDate" class="txtStrong gRight">
+                    <span id="ec-subscriptionStartDate-date">
+                        <span id="ec-subscriptionStartDate"></span> <span id="{$subscription_day}"></span>요일
+                    </span>
+                </span>
+            </div>
+            <div class="contents">
+                <div class="deliveryDate">
+                    <strong class="heading">배송시작일 <span class="txtEm">*</span></strong>
+                    {$form.subscription_start_date}
+                    <p class="ec-base-help txtEm">(결제일 : 주기별 배송시작일의 1일 전)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 희망배송일   -->
+        <div id="ec-jigsaw-area-hopeShippingDate" class="ec-base-fold eToggle {$hope_shipping_display|display}">
+            <div id="ec-jigsaw-title-hopeShippingDate" class="title">
+                <h2>희망배송일</h2>
+                <span id="ec-jigsaw-heading-hopeShippingDate" class="txtStrong gRight">
+                    <span id="ec-hopeShippingDate-date">
+                        <span id="ec-hopeShippingDate-Y"></span>.<span id="ec-hopeShippingDate-M"></span>.<span id="ec-hopeShippingDate-D"></span> <span id="{$fhdateW_str}">{$hope_date_str}</span>요일
+                    </span>
+                    <span id="ec-hopeShippingDate-fast"></span>
+                </span>
+            </div>
+            <div class="contents">
+                <!-- 국내배송 희망배송일 -->
+                <div class="segment {$r_info_display|display}">
+                    {$form.hope_shipping_fast}
+                    <span class="gBlank10">{$form.hdateY}년 {$form.hdateM}월 {$form.hdateD}일</span>
+                    <p class="ec-base-help"><span class="txtEm">{$hope_start_day} 이후로 선택 가능합니다.</span></p>
+                </div>
+                <!-- 해외배송 희망배송일 -->
+                <div class="segment {$f_r_info_display|display}">
+                    {$form.fhope_shipping_fast}
+                    <span class="gBlank10">{$form.fhdateY}년 {$form.fhdateM}월 {$form.fhdateD}일 {$form.sagawa_hope_ship_time}</span>
+                    <p class="ec-base-help"><span class="txtEm">{$hope_start_day} 이후로 선택 가능합니다.</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 희망배송시간  -->
+        <div id="ec-jigsaw-area-hopeShippingTime" class="ec-base-fold eToggle {$hope_shipping_time_display|display}">
+            <div id="ec-jigsaw-title-hopeShippingTime" class="title">
+                <h2>희망배송시간</h2>
+                <span id="ec-jigsaw-heading-hopeShippingTime" class="txtStrong gRight"></span>
+            </div>
+            <div class="contents">
+                <!-- 국내배송 희망배송시간 -->
+                <div class="segment {$r_info_display|display}">
+                    {$form.hope_shipping_time_fast}
+                    <span class="gBlank10">{$form.ship_hope_time}</span>
+                </div>
+                <!-- 해외배송 희망배송시간 -->
+                <div class="segment {$f_r_info_display|display}">
+                    {$form.fhope_shipping_time_fast}
+                    <span class="gBlank10">{$form.fship_hope_time}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- File end -->

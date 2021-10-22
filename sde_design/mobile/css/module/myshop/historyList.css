@@ -1,0 +1,5 @@
+.xans-myshop-historylist { margin:14px 7px; }
+.xans-myshop-historylist .item { margin:7px 0 0; font-size:12px; color:#4a5164; }
+.xans-myshop-historylist .item:first-child { margin-top:0; }
+.xans-myshop-historylist .item h3 { padding:14px; font-size:13px; line-height:1.2em; background:#f1f1f1; border:1px solid #d5d5d5; overflow:hidden; }
+.xans-myshop-historylist .empty { padding:40px 0; font-size:12px; text-align:center; }

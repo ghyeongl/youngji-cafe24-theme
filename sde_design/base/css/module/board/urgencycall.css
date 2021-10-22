@@ -1,0 +1,8 @@
+.xans-mall-urgencycall { overflow:hidden; }
+.xans-mall-urgencycall .required { margin:19px 7px 7px; font-size:11px; text-align:right; }
+.xans-mall-urgencycall .ec-base-table.typeWrite { margin:0 7px; }
+.xans-mall-urgencycall .searchTxt { letter-spacing:-1px; }
+.xans-mall-urgencycall select,
+.xans-mall-urgencycall input[type="text"],
+.xans-mall-urgencycall textarea { width:100%; }
+.xans-mall-urgencycall .ec-base-button { padding:0 7px; }

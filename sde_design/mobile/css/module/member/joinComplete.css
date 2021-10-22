@@ -1,0 +1,16 @@
+.progress { overflow:hidden; height:37px; border-bottom:1px solid #ccc; text-align:center; }
+.progress li { position:relative; float:left; padding:0 0 0 17px; width:35%; height:100%; line-height:37px; background-color:#ebebeb; box-sizing:border-box; list-style-type:none; }
+.progress li:first-child { padding:0; width:30%; }
+.progress li:first-child:before { display:none; }
+.progress li:before { position:absolute; top:0; left:0; display:inline-block; content:""; width:17px; height:37px; background:url("//img.echosting.cafe24.com/skin/mobile/common/bg_process.png") no-repeat 0 0; background-size:67px auto; }
+.progress li.done { background-color:#fafafa; }
+.progress li.done + li:before { background-position:-25px 0; }
+.progress li.done + li.done:before { background-position:-50px 0; }
+
+.xans-member-joincomplete { margin:14px 7px 0; padding:0 0 29px; font-size:13px; }
+.xans-member-joincomplete > p { margin:10px 12px 0; }
+.xans-member-joincomplete .welcome { padding:14px 14px 6px; border:1px solid #d5d5d5; font-size:13px; text-align:center; background:#fff; }
+.xans-member-joincomplete .welcome p:last-child { margin:10px 0 0; }
+.xans-member-joincomplete .welcome .complete { margin:0 0 5px; color:#508bed; font-size:15px; font-weight:bold; }
+.xans-member-joincomplete .ec-base-table { margin:7px 0 0; }
+.xans-member-joincomplete .memberEmail { font-weight:bold; }

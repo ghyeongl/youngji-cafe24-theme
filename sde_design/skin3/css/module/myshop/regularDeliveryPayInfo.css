@@ -1,0 +1,15 @@
+.regularDeliveryPayInfo { position:relative; margin:0 0 30px; }
+.regularDeliveryPayInfo > .title { margin:0 0 20px; font-size:12px; color:#353535; }
+.regularDeliveryPayInfo .ec-base-box .information { float:left; }
+.regularDeliveryPayInfo .ec-base-box .information .title { display:table-cell; height:24px; padding:0 15px 0 0; line-height:24px; font-size:12px; background:url(//img.echosting.cafe24.com/skin/base/common/ico_bar.gif) no-repeat 100% 6px; }
+.regularDeliveryPayInfo .ec-base-box .information .content { display:table-cell; }
+.regularDeliveryPayInfo .ec-base-box .information .status { position:relative; padding:0 15px; font-weight:bold; color:#2f8cce; }
+.regularDeliveryPayInfo .ec-base-box .information .info { padding:13px 15px 0; color:#939393; line-height:1.5; }
+.regularDeliveryPayInfo .ec-base-box .button { padding:0 0 0 10px; }
+.regularDeliveryPayInfo .ec-base-box .button > .btnEm { padding:6px 10px; background:#4a5164; }
+.regularDeliveryPayInfo .ec-base-box .button > .btnNormal { padding:6px 10px; border:1px solid #b4b4b4; }
+.regularDeliveryPayInfo .ec-base-box:after { content:''; display:block; clear:both; }
+.regularDeliveryPayInfo ul { margin:10px 0 0; color:#939393; line-height:1.5; }
+.regularDeliveryPayInfo ul li { padding:0 0 0 9px; background: url(//img.echosting.cafe24.com/skin/base/common/ico_square2.gif) no-repeat 4px 7px; }
+.regularDeliveryPayInfo .ec-base-tooltip { top:90px; right:25px; }
+.regularDeliveryPayInfo .ec-base-tooltip p + p { margin:10px 0 0; }

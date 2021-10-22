@@ -1,0 +1,12 @@
+/* 게시판 전체 공통 */
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* reply */
+.xans-board-reply .ec-base-table tr.agree td textarea { width:560px; height:140px; margin:0 0 10px; }
+.xans-board-reply .ec-base-table #subject { width:390px; }
+.xans-board-reply .ec-base-table #captcha { width:160px; }
+.xans-board-reply .ec-base-table #ucc_width, .xans-board-reply .ec-base-table #ucc_height { width:40px; margin-left:4px; }
+.xans-board-reply .ec-base-table #email1 { margin:0 4px 0 0; }
+.xans-board-reply .ec-base-table #email2 { margin:0 4px; }
+
+.xans-board-reply .ec-base-button { margin:10px 0 40px; }

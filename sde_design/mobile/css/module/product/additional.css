@@ -1,0 +1,17 @@
+.xans-product-additional, .faq { margin:0; padding:0 0 7px; background-color:#f0f0f0; }
+.xans-product-additional .faq .toggle { margin:0 7px 7px; border:1px solid #d5d5d5; background-color:#fff; }
+.xans-product-additional .faq .toggle > .title { position:relative; padding:14px; color:#508bed; -webkit-tap-highlight-color: rgba(255,255,255,0); cursor:pointer; background-color:#f0f0f0; }
+.xans-product-additional .faq .toggle > .title:after { display:block; position:absolute; top:0; right:0; content:""; width:40px; height:100%; background-repeat:no-repeat; background-size:13px 8px; background-position:center; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_toggle_arow_down.png"); }
+.xans-product-additional .faq .toggle.selected > .title:after { background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_toggle_arow_up.png"); }
+.xans-product-additional .faq .toggle.disable > .title:after { background-image:none !important; }
+.xans-product-additional .faq .toggle .contents { display:none; border-top:1px solid #ddd; padding:14px; color:#777; }
+.xans-product-additional .faq .toggle.selected > .contents,
+.xans-product-additional .faq .toggle.disable > .contents { display:block; }
+
+.xans-product-additional { margin:0; padding:0; background:#fff; }
+.xans-product-additional #prdDetail .button { text-align:center; padding:12px 0; }
+.xans-product-additional #prdDetail .ico { position:relative; top:2px; display:inline-block; width:13px; height:13px; background-image:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/ico_expand.png"); background-size:13px 13px; }
+.xans-product-additional #prdDetail img { width:100%; margin:0; }
+.xans-product-additional .btnMore { position:relative; margin:0 auto; width:100%; }
+.xans-product-additional .btnMore a { display:block; padding:12px 0; border-top:1px solid #f1f1f1; border-bottom:1px solid #d5d5d5; color:#757575; text-align:center; font-weight:bold; background:#f5f5f5; }
+.xans-product-additional .btnMore span.icoMore { display:inline-block; margin:0 0 0 8px; width:12px; height:7px; font-size:0; line-height:0; vertical-align:middle; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_more.gif") no-repeat 50% 50%; background-size:12px 7px; }

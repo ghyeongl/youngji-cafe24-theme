@@ -1,0 +1,87 @@
+.xans-member-edit h3 { margin:50px 0 10px; font-size:16px; color:#2e2e2e; }
+.xans-member-edit div.grid,
+.xans-member-edit p.grid { margin:7px 0 0; }
+.xans-member-edit ul.grid li { margin:5px 0 0; }
+.xans-member-edit .info { margin:7px 0 0; color:#757575; font-size:11px; }
+.xans-member-edit p.txtDesc,
+.xans-member-edit ul.txtDesc li { position:relative; padding:0 0 0 9px; margin:3px 0 0; line-height:1.4; }
+.xans-member-edit p.txtDesc:before,
+.xans-member-edit ul.txtDesc li:before { position:absolute; top:7px; left:0; display:block; content:""; width:4px; height:1px; background:currentColor; }
+.xans-member-edit .required { margin:-25px 0 10px; color:#353535; text-align:right; }
+.xans-member-edit .required img { vertical-align:middle; }
+.xans-member-edit .displaynone + .required { margin-top:0; }
+
+.xans-member-edit .ec-base-table .interest { line-height:25px; }
+.xans-member-edit .ec-base-table .interest label { padding:0 10px 0 0; }
+.xans-member-edit .ec-base-table [id*="Msg"].error { color:#f00; }
+
+/* 회원인증 */
+.xans-member-edit .ec-base-table ul.certifInfo li,
+.xans-member-edit .ec-base-table p.certifInfo { color:#757575; padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/common/bg_list.gif") no-repeat 0 10px; }
+.xans-member-edit .ec-base-table .certifForm { margin:20px 0 0; }
+.xans-member-edit .ec-base-table .certifForm img { margin:0 0 5px; }
+
+/* 인증번호 */
+.xans-member-edit .verify { position:relative; display:inline-block; width:146px; height:24px; vertical-align:top; }
+.xans-member-edit .verify .time { position:absolute; top:2px; right:6px; color:#f76560; }
+.xans-member-edit .verify #verify_sms_number { width:100%; height:100%; padding:2px 38px 2px 4px; box-sizing:border-box; }
+.xans-member-edit .verify #verify_sms_number:disabled { padding-right:4px; }
+
+/* INPUT SIZE */
+.xans-member-edit #hint_answer { width:500px; }
+.xans-member-edit #phone1,
+.xans-member-edit #mobile1 { width:60px; margin:0 4px 0 0; }
+.xans-member-edit #phone2,
+.xans-member-edit #phone3,
+.xans-member-edit #mobile2,
+.xans-member-edit #mobile3 { width:50px; margin:0 4px; }
+.xans-member-edit #email1 { margin-right:4px; }
+.xans-member-edit #email2 { margin:0 4px; }
+.xans-member-edit #birth_year,
+.xans-member-edit #marry_year,
+.xans-member-edit #partner_year { width:60px; margin:0 4px 0 0; }
+.xans-member-edit #birth_month,
+.xans-member-edit #marry_month,
+.xans-member-edit #partner_month,
+.xans-member-edit #birth_day,
+.xans-member-edit #marry_day,
+.xans-member-edit #partner_day { width:30px; margin:0 4px 0 0; }
+.xans-member-edit #bank_code { width:240px; }
+.xans-member-edit #c_bank_account_no { width:230px; }
+
+.xans-member-edit #job,
+.xans-member-edit #job_class,
+.xans-member-edit #school,
+.xans-member-edit #region,
+.xans-member-edit #internet,
+.xans-member-edit #child,
+.xans-member-edit #car,
+.xans-member-edit #earning { width:200px; }
+
+.xans-member-edit #add1,
+.xans-member-edit #add2,
+.xans-member-edit #add3,
+.xans-member-edit #add4,
+.xans-member-edit #add5,
+.xans-member-edit #add6,
+.xans-member-edit #add7,
+.xans-member-edit #add8,
+.xans-member-edit #add9  { width:500px; }
+
+/*탈퇴사유관리*/
+.xans-member-edit .layerLeave { position:fixed; top:50%; left:50%; z-index:1000; width:600px; margin:-205px 0 0 -300px; display:none; }
+.xans-member-edit .layerLeave h3 { margin:0; color:#fff; }
+.xans-member-edit .layerLeave h4 { margin:20px 0 10px; padding:20px 0 0; border-top:1px solid #e8e8e8; }
+.xans-member-edit .layerLeave select,
+.xans-member-edit .layerLeave textarea { width:100%; box-sizing:border-box; }
+
+/* 약관 */
+.xans-member-edit .agreeArea { color:#747474;  line-height:20px; }
+.xans-member-edit .agreeArea .content { overflow:auto; height:110px; padding:20px; border:1px solid #e6e6e6; background:#fff; }
+.xans-member-edit .agreeArea .content p { padding:0 0 17px; }
+.xans-member-edit .agreeArea .check { padding:7px 0 0 0; color:#202020; font-size:12px; }
+
+/* 툴팁 */
+.xans-member-edit .eTooltip { position:relative; display:inline-block; }
+.xans-member-edit .ec-base-tooltip.typeUpper { left:25px; bottom:28px; width:390px; }
+.xans-member-edit .ec-base-tooltip.typeUpper .edge { left:20%; }

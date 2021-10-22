@@ -1,0 +1,17 @@
+.xans-calendar-headfield { position:relative; text-align:center; }
+.xans-calendar-headfield .date { display:inline; color:#d9bca0; font-size:30px; letter-spacing:-1px; }
+.xans-calendar-headfield .date img { vertical-align:middle; }
+.xans-calendar-headfield .button { position:absolute; right:0; top:0px; }
+
+.xans-calendar-listfield { margin:20px 0 0; }
+.xans-calendar-listfield th { padding:8px 0; color:#d9bca0; border-top:1px solid #d9bca0; }
+
+.xans-calendar-listfield td { padding:5px; border:1px solid #e2ddd0; background:#f7f4ec; text-align:center; }
+.xans-calendar-listfield td .inner { position:relative; }
+.xans-calendar-listfield td strong { color:#8f8f91; }
+.xans-calendar-listfield td a, .xans-calendar-listfield td a:hover { color:#8f8f8f; }
+
+.xans-calendar-listfield .viewContentLayer { position:absolute; left:50%; top:20px; z-index:50; width:300px; padding:8px; margin-left:-159px; background:#fff; border:2px solid #d9bca0; color:#8f8f8f; }
+.xans-calendar-listfield .viewContentLayer p { padding:10px 0; }
+.xans-calendar-listfield .viewContentLayer .date { display:block; color:#d9bca0; }
+.xans-calendar-listfield .closeContentLayer { float:right; margin:-2px -2px 0 0; width:20px; color:#d9bca0; font-size:12px; line-height:20px; background:#fff; font-weight:bold; }

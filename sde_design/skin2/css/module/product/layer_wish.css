@@ -1,0 +1,4 @@
+.xans-myshop-layerwish { position:fixed; top:50%; left:50%; z-index:1000; width:300px; margin:-72px 0 0 -150px; }
+.xans-myshop-layerwish .content { text-align:center; }
+.xans-myshop-layerwish .content p { color:#353535; }
+.xans-myshop-layerwish .content p strong { color:#008bcc; }

@@ -1,0 +1,125 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>최근 본 상품</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>최근 본 상품</h2>
+</div>
+
+<div module="product_recentlist" class="ec-base-table typeList">
+    <!--@css(/css/module/product/recentlist.css)-->
+    <!--
+        $count = 10
+    -->
+    <table border="1" summary="" class="{$list_display|display}">
+        <caption>최근 본 상품 목록</caption>
+        <colgroup>
+            <col style="width:100px" />
+            <col style="width:auto" />
+            <col style="width:15%" />
+            <col style="width:15%" />
+            <col style="width:15%" />
+            <col style="width:70px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">이미지</th>
+                <th scope="col">상품명</th>
+                <th scope="col">옵션정보</th>
+                <th scope="col">판매가</th>
+                <th scope="col">{$mileage_name}</th>
+                <th scope="col">주문</th>
+            </tr>
+        </thead>
+        <tbody module="product_listitem">
+            <tr>
+                <td class="image"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" /></a></td>
+                <td class="product">
+                    <a href="{$link_product_detail}">{$product_name}</a>
+                    {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$zoom_icon}
+
+
+                    <ul module="product_setproduct">
+                        <li>{$product_name}</li>
+                        <li>{$product_name}</li>
+                    </ul>
+                </td>
+                <td class="option">
+                    <ul module="product_mainoption">
+                        <li>{$option_name}: <br />{$form.option}</li>
+                        <li>{$option_name}: <br />{$form.option}</li>
+                    </ul>
+                    <ul module="product_addoption">
+                        <li>{$add_option_name}: <span class="fWidthFull">{$form.add_option}</span></li>
+                        <li>{$add_option_name}: <span class="fWidthFull">{$form.add_option}</span></li>
+                    </ul>
+                </td>
+                <td class="price right">
+                    <p class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></p>
+                    <p class="{$discount}"><strong class="txtEm">{$price}</strong>{$product_tax_type_text}</p>
+                    <p class="{$product_sale_price_display|display} txtEm"><strong>{$product_sale_price}</strong></p>
+                </td>
+                <td class="center">{$mileage_list}</td>
+                <td class="button center">
+                    <a href="#none" onclick="{$act_basket}" class="btnNormal {$disp_basket|display}">담기</a>
+                    <a href="#none" onclick="{$act_order}" class="btnNormal {$disp_order|display}">주문</a>
+                    <a href="#none" class="btnNormal {$class_del}" rel="{$rel_del}">삭제</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="image"><a href="{$link_product_detail}"><img src="{$image_medium}" alt="" /></a></td>
+                <td class="product">
+                    <a href="{$link_product_detail}">{$product_name}</a>
+                    {$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon} {$zoom_icon}
+
+
+                    <ul module="product_setproduct">
+                        <li>{$product_name}</li>
+                        <li>{$product_name}</li>
+                    </ul>
+                </td>
+                <td class="option">
+                    <ul module="product_mainoption">
+                        <li>{$option_name}: <br />{$form.option}</li>
+                        <li>{$option_name}: <br />{$form.option}</li>
+                    </ul>
+                    <ul module="product_addoption">
+                        <li>{$add_option_name}: <span class="fWidthFull">{$form.add_option}</span></li>
+                        <li>{$add_option_name}: <span class="fWidthFull">{$form.add_option}</span></li>
+                    </ul>
+                </td>
+                <td class="price right">
+                    <p class="{$strike_custom_price} {$custom_price_display|display}"><strong>{$product_custom}</strong></p>
+                    <p class="{$discount}"><strong class="txtEm">{$price}</strong>{$product_tax_type_text}</p>
+                    <p class="{$product_sale_price_display|display} txtEm"><strong>{$product_sale_price}</strong></p>
+                </td>
+                <td class="center">{$mileage_list}</td>
+                <td class="button center">
+                    <a href="#none" onclick="{$act_basket}" class="btnNormal {$disp_basket|display}">담기</a>
+                    <a href="#none" onclick="{$act_order}" class="btnNormal {$disp_order|display}">주문</a>
+                    <a href="#none" class="btnNormal {$class_del}" rel="{$rel_del}">삭제</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="message {$empty_display|display}">최근본 상품 내역이 없습니다.</p>
+</div>
+
+<div module="product_recentlistpaging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>

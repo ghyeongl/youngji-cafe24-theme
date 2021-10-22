@@ -1,0 +1,18 @@
+/* 타이틀 */
+.xans-myshop-orderregularmanagelist .title h3 { line-height:43px; margin:7px 0 0; padding:0 0 0 14px; font-size:13px; color:#fff; background-color:#4a5164; }
+.xans-myshop-orderregularmanagelist .order h3 { overflow:hidden; margin:7px 0 0; padding:0 0 0 14px; line-height:43px; color:#fff; font-size:13px; font-weight:normal; background-color:#737781; }
+.xans-myshop-orderregularmanagelist .order h3:after { content:""; display:block; clear:both; }
+.xans-myshop-orderregularmanagelist .order h3 a { color:#fff; }
+
+/* 상품 리스트 */
+.xans-myshop-orderregularmanagelist { margin:0 7px 0; }
+.xans-myshop-orderregularmanagelist .orderList .ec-base-prdInfo .option { padding:0; border-top:0; color:#666; }
+.xans-myshop-orderregularmanagelist .order { position:relative; border-left:1px solid #d5d5d5; border-right:1px solid #d5d5d5; background-color:#fff; }
+.xans-myshop-orderregularmanagelist .order .date { font-weight:bold; }
+.xans-myshop-orderregularmanagelist a.btnDetail { position:absolute; top:14px; right:14px; padding:0 14px 0 0; font-size:11px; color:#fff; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/order/btn_arrow_right.jpg") right center no-repeat; background-size:8px 13px; }
+.xans-myshop-orderregularmanagelist .empty { text-align:center; padding:30px 0 30px; }
+.xans-myshop-orderregularmanagelist .request { position:relative; overflow:hidden; margin:0 -14px -6px; padding:0 14px; border-bottom:1px solid #d5d5d5; font-weight:bold; color:#508bed; background-color:#f1f1f1; text-align:center; }
+.xans-myshop-orderregularmanagelist .prdFoot { border-bottom:1px solid #d5d5d5; }
+.xans-myshop-orderregularmanagelist .prdFoot + .request { margin-top:6px; }
+.xans-myshop-orderregularmanagelist .prdFoot + .request:before { content:''; position:absolute; left:0; right:0; top:0; height:1px; background:#d5d5d5; }
+.xans-myshop-orderregularmanagelist .request [class*='btn'] { margin:6px 0; }

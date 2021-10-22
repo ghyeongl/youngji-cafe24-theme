@@ -1,0 +1,26 @@
+#popup .xans-product-sizeguide { height:667px; margin-top:-700px; border:1px solid #000; }
+#popup .xans-product-sizeguide .content { max-height:580px; }
+.xans-product-sizeguide { position:fixed; top:50%; left:50%; width:820px; margin:-375px 0 0 -410px; max-height:720px; }
+.xans-product-sizeguide .content { overflow:auto; position:relative; max-height:685px; max-height:735px\9; zoom:1; }
+
+.xans-product-sizeguide h2 { margin:0 0 10px; padding:0 0 0 10px; font-size:12px; color:#444; background: url("//img.echosting.cafe24.com/skin/base/common/ico_arrow.gif") no-repeat 1px 4px; }
+.xans-product-sizeguide .guideBoard { margin:0 0 20px; }
+.xans-product-sizeguide .guideBoard table { table-layout:fixed;  border-spacing:0; border-collapse:collapse; line-height:1.5; background-color:#fff; }
+.xans-product-sizeguide .guideBoard th,
+.xans-product-sizeguide .guideBoard td { padding:7px 9px 5px; text-align:center; vertical-align:middle; }
+.xans-product-sizeguide .guideBoard th { font-weight:normal; background-color:#f0f2f2; }
+.xans-product-sizeguide .guideBoard tbody th { border:1px solid #cbcdce; }
+.xans-product-sizeguide .guideBoard thead th { border:1px solid #cbcdce; color:#757575; }
+.xans-product-sizeguide .guideBoard tbody td { border:1px solid #d7d5d5; }
+.xans-product-sizeguide .guideBoard tbody td { border:1px solid #d7d5d5; }
+.xans-product-sizeguide .guideBoard thead th .nation { color:#1b1b1b; }
+.xans-product-sizeguide .guideBoard.pants { margin-top:10px; }
+.xans-product-sizeguide .guideBoard.pants thead { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:150%; font-size:0; line-height:0; border:0; }
+.xans-product-sizeguide .guideBoard.pants tbody td { border-top-width:1px; }
+
+.xans-product-sizeguide .userGuide img { max-width:100%; height:auto !important; }
+.xans-product-sizeguide .userGuide table th,
+.xans-product-sizeguide .userGuide table td { word-break:break-all; }
+
+.xans-product-sizeguide .info { margin:10px 0 0; line-height:20px; }
+.xans-product-sizeguide .info span { display:block; padding:0 0 0 15px; }

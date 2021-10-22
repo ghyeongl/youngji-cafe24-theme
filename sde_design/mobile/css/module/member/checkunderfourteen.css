@@ -1,0 +1,8 @@
+#popup form { height:100%; }
+.xans-member-checkunderfourteen .under14 { padding:10px; margin:0 0 7px; border:1px solid #d5d5d5; color:#353535; text-align:center; background:#f1f1f1; }
+.xans-member-checkunderfourteen .under14 strong { color:#508bed; }
+.xans-member-checkunderfourteen .select li { line-height:43px; padding:0 0 0 14px; border:1px solid #d5d5d5; }
+.xans-member-checkunderfourteen .select li:first-child { border-bottom:0; }
+.xans-member-checkunderfourteen input { margin:0 7px 0 0; }
+.xans-member-checkunderfourteen label { display:inline-block; width:120px; }
+.xans-member-checkunderfourteen .ipin img { width:106px; vertical-align:middle; }

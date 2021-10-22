@@ -1,0 +1,8 @@
+.xans-order-dcinfo { margin:20px 0; color:#353535; line-height:1.5; }
+.xans-order-dcinfo h3 { font-size:12px; }
+.xans-order-dcinfo .description .mileage { margin:6px 0 0; padding:10px 0 0; border-top:1px solid #e8e8e8; *zoom:1; }
+.xans-order-dcinfo .description .mileage:after { content:""; display:block; clear:both; }
+.xans-order-dcinfo .description .displaynone + .mileage { margin:0; padding:0; border:0; }
+.xans-order-dcinfo .description .mileage li { float:left; margin:0 40px 0 0; }
+.xans-order-dcinfo .description .mileage li a { text-decoration:none; }
+.xans-order-dcinfo .description .mileage li strong { color:#008bcc; }

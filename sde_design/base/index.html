@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+<!--@css(/layout/basic/css/ec-base-product.css)-->
+<!--@css(/layout/basic/css/ec-base-paginate.css)-->
+<!--@css(/layout/basic/css/ec-base-ui.css)-->
+<!--@css(/layout/basic/css/ec-base-help.css)-->
+<!--@css(/layout/basic/css/ec-base-button.css)-->
+<!--@css(/layout/basic/css/ec-base-box.css)-->
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<!--@css(/layout/basic/css/ec-base-table.css)-->
+<!--@css(/layout/basic/css/ec-base-fold.css)-->
+<!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+<!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+
+<!--@css(/gridsystem/resource/css/vendor.css)-->
+<!--@css(/gridsystem/resource/css/common.css)-->
+<!--@css(/gridsystem/resource/css/layout.css)-->
+<!--@css(/gridsystem/resource/css/font/font.css)-->
+
+<!-- The code in includes "JQuery 1.4.4". Be careful to add another version of jQuery. -->
+<!--@js(/gridsystem/resource/js/jquery.plugin.js)-->
+<!--@js(/gridsystem/resource/js/common.js)-->
+<!--@css(/index.css)-->
+</head>
+<body id="main" class="dnd">
+    <div id="wrap">
+        <div id="container" class="gridContainer" style="display: grid;grid-template-columns: repeat(4,1fr);min-height: 0;min-width: 0;">
+<div class="gridItem" data-component-id="1037" id="grid_id_1574217080897_10" style="grid-area: 1 / 1 / 2 / 5;min-width: 0;">
+    <div class="dnd_module_89f46e58567aadf01e9234e3d8fed2a3">
+<!-- MOMA COMPONENT ID 1037 -->
+<div module="editor_dndImage">
+    <a href="#none" class="Link">
+        <img src="https://moma-img.cafe24img.com/img/1/89f4/공통_서브배너_에디봇배너_가로띠형배너_v02.png" data-template_id="46b8c39f-1544-4a87-b369-505b93754372"></a>
+</div>
+<!-- //MOMA COMPONENT ID 1037 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="1" id="grid_id_1569847534122_0" style="grid-area: 2 / 1 / 4 / 5;min-width: 0;">
+    <div class="dnd_module_9742c60d3a2ee81fffada3eade8d931d">
+<!-- MOMA COMPONENT ID 1 -->
+<aside id="aside" module="layout_slide" class="slidingMenu">
+    <!--@import(/layout/sidebar.html)-->
+    <button type="button" class="btnClose">닫기</button>
+</aside>
+<header id="header">
+    <div class="header">
+        <h1 module="Layout_LogoTop"><a href="/index.html" class="link">{$mall_name}</a></h1>
+        <div class="headerMenu gLeft">
+            <span module="layout_slide" class="hidden"></span>
+            <button type="button" class="btnCate">카테고리</button>
+            <button type="button" class="btnSearch">검색</button>
+        </div>
+        <div class="searchLayer">
+            <div module="Layout_SearchHeader">
+                <div class="topSearch">
+                    {$form.keyword}
+                    <button type="button" class="btnSearch" onclick="{$action_search_submit}">검색</button>
+                    <button type="button" class="btnDelete">삭제</button>
+                </div>
+                <div class="hotKeyword" module="search_hotkeyword">
+                    <strong class="title">인기검색어</strong>
+                    <div class="keyword">
+                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerMenu gRight">
+            <span module="Layout_orderBasketcount" class="btnBasket">
+                <a href="/order/basket.html">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+            </span>
+            <a href="/myshop/index.html" module="Layout_statelogoff" class="btnMy">로그인</a>
+            <a href="/myshop/index.html" module="Layout_statelogon" class="btnMy">마이쇼핑</a>
+        </div>
+    </div>
+</header>
+<!-- //MOMA COMPONENT ID 1 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="2" id="grid_id_1569847534123_1" style="grid-area: 4 / 1 / 5 / 5;min-width: 0;">
+    <div class="dnd_module_c785e267507864e0f86dfc2033986f74">
+<!-- MOMA COMPONENT ID 2 -->
+<nav id="navigation">
+    <div class="inner" module="Layout_category">
+        <div class="horizontal-scrollable">
+            <ul class="category">
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="btnCateLayer eToggleCateLayer">카테고리 레이어보기</button>
+    <div class="categoryLayer" module="Layout_category">
+        <ul class="category">
+            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="navDimmed"></div>
+<!-- //MOMA COMPONENT ID 2 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="3" id="grid_id_1569847534124_2" style="grid-area: 5 / 1 / 15 / 5;min-width: 0;">
+    <div class="dnd_module_e7c82ad2c61c5ad44af516d1124b3ae6">
+<!-- MOMA COMPONENT ID 3 -->
+<span module="editor_dndImage">
+    <a href="#none" class="link">
+        <img src="https://moma-img.cafe24img.com/img/1/e7c8/BS_공통_메인배너_v01_GB.png" class="image" alt=""></a>
+</span>
+<!-- //MOMA COMPONENT ID 3 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="4" id="grid_id_1569847534125_3" style="grid-area: 15 / 1 / 19 / 3;min-width: 0;">
+    <div class="dnd_module_57ba198f82786ab72720a6b386e88f37">
+<!-- MOMA COMPONENT ID 4 -->
+<span module="editor_dndImage">
+    <a href="#none" class="link">
+        <img src="https://moma-img.cafe24img.com/img/1/57ba/BS_공통_서브배너_v01.png" alt="" class="image"></a>
+</span>
+<!-- //MOMA COMPONENT ID 4 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="5" id="grid_id_1569847534125_4" style="grid-area: 15 / 3 / 19 / 5;min-width: 0;">
+    <div class="dnd_module_5590889300ccdfefb49c905fa5c3a02c">
+<!-- MOMA COMPONENT ID 5 -->
+<span module="editor_dndImage">
+    <a href="#none" class="link">
+        <img src="https://moma-img.cafe24img.com/img/1/5590/BS_공통_서브배너_v02.png" alt="" class="image"></a>
+</span>
+<!-- //MOMA COMPONENT ID 5 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="6" id="grid_id_1569847534125_5" style="grid-area: 19 / 1 / 38 / 5;min-width: 0;">
+    <div class="dnd_module_40a12e4ae54b985aea15cce8a7197c63">
+<!-- MOMA COMPONENT ID 6 -->
+<div module="product_listmain_1" class="productList typeThumb">
+    <!--
+        $count = 12
+            ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+            ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+        $moreview = yes
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+    <div class="title">
+        <h2>
+            <span style="display: {$category_title_text_display};">{$category_title_text}</span>
+            <span style="display: {$category_title_img_display};"><img src="{$category_title_img}" alt="{$category_title_text}" /></span>
+        </h2>
+    </div>
+    <div class="btnSorting eProductSort">
+        <button type="button" class="bigView">확대보기</button>
+        <button type="button" class="smallView selected">축소보기</button>
+    </div>
+    <ul class="prdList small">
+        <li id="anchorBoxId_{$product_no}">
+            <div class="inner">
+                <div class="thumbnail">
+                    <div class="prdImg">
+                        <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}">{$product_name}</a></strong>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                    <span class="icon">{$soldout_icon}{$stock_icon}{$recommend_icon}{$new_icon}{$today_arrival_icon}{$pickup_icon}{$product_icons}{$benefit_icons}</span>
+                </div>
+            </div>
+        </li>
+        <li id="anchorBoxId_{$product_no}">
+            <div class="inner">
+                <div class="thumbnail">
+                    <div class="prdImg">
+                        <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                    </div>
+                </div>
+                <div class="description">
+                    <strong class="name"><a href="{$link_product_detail}" class="{$product_name_display|display}">{$product_name}</a></strong>
+                    <ul module="product_ListItem" class="spec">
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                    </ul>
+                    <span class="icon">{$soldout_icon}{$stock_icon}{$recommend_icon}{$new_icon}{$today_arrival_icon}{$pickup_icon}{$product_icons}{$benefit_icons}</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div module="product_listmore_1" class="productPaginate typeMoreview">
+    <a href="#none" onclick="{$more_action}" class="btnMore">더보기</a>
+</div>
+<!-- //MOMA COMPONENT ID 6 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="1146" id="grid_id_1576475604293_8" style="grid-area: 38 / 1 / 43 / 5;min-width: 0;">
+    <div class="dnd_module_04b5ab3f197e1439427ad566204983a2">
+<!-- MOMA COMPONENT ID 1146 -->
+<div module="editor_dndMedia" class="iframe">
+    <!-- 
+   	 	$url=https://www.youtube.com/watch?v=nGpL7-GI8lM
+        $type=YOUTUBE
+	-->
+    <iframe src="https://www.youtube.com/embed/nGpL7-GI8lM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    <div class="ec-dnd-iframe-cover"></div> 
+</div>
+<!-- // MOMA COMPONENT ID 1146 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="15" id="grid_id_1575016791057_8" style="grid-area: 43 / 1 / 53 / 5;min-width: 0;">
+    <div class="dnd_module_3865037d1db28c40406f2a127c19756c">
+<!-- MOMA COMPONENT 15 -->
+<footer id="footer">
+    <div module="Layout_Info" class="customer">
+        <a href="tel:{$phone}" class="link tel">
+            <span class="title">고객센터</span>
+            <span class="sub">{$phone}</span>
+        </a>
+        <a href="/board/consult/list.html" class="link consult">
+            <span class="title">1:1문의하기</span>
+            <span class="sub">Q&amp;A</span>
+        </a>
+    </div>
+    <div module="Layout_footer" class="company">
+        <ul class="util">
+            <li><a href="/shopinfo/guide.html" class="link">이용안내</a></li>
+            <li><a href="/shopinfo/company.html" class="link">회사소개</a></li>
+            <li class="commercial-law"><a href='/shopinfo/commercial_law.html'>특정 상거래 법에 근거한 표시</a></li>
+            <li><a href="/member/privacy.html" class="link"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="/member/mall_agreement.html" class="link">이용약관</a></li>
+        </ul>
+        <div class="info">
+            <strong class="name">{$company_name}</strong>
+            <span class="address">{$mall_addr1} {$mall_addr2}</span>
+            <dl>
+                <dt>대표이사:</dt>
+                <dd>{$president_name}</dd>
+                <dt>사업자등록번호:</dt>
+                <dd>{$company_regno}</dd>
+            </dl>
+            <dl>
+                <dt>통신판매업신고:</dt>
+                <dd>{$network_regno}</dd>
+                <dd class="business_info">{$biz_no_link}</dd>
+            </dl>
+            <dl class="{$cpo_email|display}">
+                <dt>개인정보관리책임:</dt>
+                <dd><a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></dd>
+                <dt>호스팅제공:</dt>
+                <dd>카페24(주)</dd>
+            </dl>
+            <dl>
+                <dt>E-mail:</dt>
+                <dd><a href="mailto:{$email}">{$email}</a></dd>
+            </dl>                    
+        </div>
+        <p class="copyright">Copyright&copy; {$mall_name}. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- // MOMA COMPONENT 15 -->
+</div>
+</div>
+        </div>
+    </div>
+<!--@js(/index.js)-->
+<!-- body -->
+<div module="Popup_MultiPopup">
+    <!--
+            $banner_popup_no =
+            ※ Enter ID (number) of Pop-up.
+        -->
+    {$popup}
+</div>
+</body>
+</html>

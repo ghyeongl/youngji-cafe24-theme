@@ -1,0 +1,16 @@
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<style type="text/css">
+    .xans-product-basketadd.ec-base-layer.typeModal { width:306px; }
+    .xans-product-basketadd.ec-base-layer.typeModal .wrap { padding:79px 14px 14px; text-align:center; line-height:1.5em; background:#fff url("//img.echosting.cafe24.com/skin/mobile_ko_KR/product/bg_addcart.png") center 28px no-repeat; background-size:37px 37px; }
+</style>
+<div module="Product_BasketAdd" class="ec-base-layer typeModal">
+    <h1>장바구니 담기</h1>
+    <div class="wrap">
+        <p>장바구니에 상품이<br>정상적으로 담겼습니다.</p>
+    </div>
+    <div class="ec-base-button gColumn">
+        <a href="#none" class="btnSubmit" onclick="{$move_basket_page}">장바구니 이동</a>
+        <a href="#none" class="btnEm" onclick="$('#confirmLayer').hide();">쇼핑 계속하기</a>
+    </div>
+    <a href="#none" class="btnClose" onclick="$('#confirmLayer').hide();">닫기</a>
+</div>

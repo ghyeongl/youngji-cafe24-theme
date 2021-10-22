@@ -1,0 +1,8 @@
+.xans-layout-searchheader { float:right; margin:-50px 0 0; }
+.xans-layout-searchheader fieldset { border:1px solid #d9d9d9; border-radius:2px; }
+.xans-layout-searchheader #keyword  { width:143px; height:32px; padding:0 0 0 9px; border:0; line-height:32px; font-size:12px; color:#7c8389; background:#fff; }
+
+.xans-layout-searchheader fieldset .autoDrop { display:none; border:1px solid #565960; position:absolute; width: 187px; text-align:left; background:#fff; z-index:20; overflow:hidden; overflow-y:auto; max-height:100px;}
+.xans-layout-searchheader fieldset .autoDrop li a { display:block; padding:6px 10px; font-size:11px; color:#1c1c1c; font-family:GulimChe,Gulim; }
+.xans-layout-searchheader fieldset .autoDrop li a:hover,
+.xans-layout-searchheader fieldset .autoDrop li.selected a { text-decoration:none; color:#fff; background:#a1a4ae; }

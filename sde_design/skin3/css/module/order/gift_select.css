@@ -1,0 +1,7 @@
+/* 사은품 선택 레이어 팝업 */
+.xans-gift-select .content { overflow:auto; overflow-x:hidden; max-height:500px; height:500px; padding:28px 30px; color:#747474; }
+.xans-gift-select .info { padding:0 0 0 6px; line-height:20px; color:#777; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle2.gif") no-repeat 0 7px; }
+.xans-gift-select .help { margin:5px 0 0; padding:0 0 20px 5px; line-height:15px; color:#777; font-size:11px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle2.gif") no-repeat 0 5px; }
+
+.xans-gift-select .ec-base-table td.thumb img { max-width:72px; }
+.xans-gift-select .ec-base-table td ul li { margin:5px 0 0; }

@@ -1,0 +1,25 @@
+/* 게시판 전체 공통 */
+.xans-board-title .title { min-height:30px; margin:10px 0 20px; border-bottom:1px solid #e8e8e8; }
+.xans-board-title .title h2 { display:inline-block; padding:0 0 0 12px; color:#2e2e2e; font-size:16px; *display:inline; *zoom:1; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_heading.gif") 0 50% no-repeat; }
+.xans-board-title .title p { display:inline-block; margin:0 0 0 6px; padding:0 0 0 10px; color:#939393; vertical-align:bottom; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 0 0; *display:inline; *zoom:1; }
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* read */
+.xans-board-read .ec-base-table .etcArea li { display:inline-block; margin:0 0 9px; padding:8px 20px 10px; vertical-align:top; line-height:22px; color:#666; }
+.xans-board-read .ec-base-table .etcArea li a { text-decoration:none; }
+.xans-board-read .ec-base-table .detail { padding:30px 20px; border-top:1px solid #eaeaea; margin:-9px 0 0; word-break:break-all; line-height:normal; }
+.xans-board-read .ec-base-table .detail ol,
+.xans-board-read .ec-base-table .detail ul { margin:15px 0; padding:0 0 0 40px; }
+.xans-board-read .ec-base-table .detail ol li { list-style:decimal; }
+.xans-board-read .ec-base-table .detail ul li { list-style:disc; }
+.xans-board-read .ec-base-table tr.attach a { padding:0 0 0 12px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 0; color:#8f8f8f; }
+.xans-board-read .ec-base-table tr.attach a:hover { text-decoration:underline; }
+
+.xans-board-read .ec-base-button { margin:10px 0 40px; }
+
+/* read - 상품 */
+.xans-board-product.ec-base-box.typeProduct { margin:0 0 20px; }
+.xans-board-product .information .icon_img { margin:0 1px 0 0; }
+.xans-board-product .information h3 { margin:17px 0 5px; font-size:14px; color:#2e2e2e; }
+.xans-board-product .information .price { font-size:14px; font-weight:bold; color:#008bcc; }
+.xans-board-product .information .button { margin:19px 0 0 0; padding:13px 0 0 0; border-top:1px solid #e8e8e8; }

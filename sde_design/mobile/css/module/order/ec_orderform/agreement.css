@@ -1,0 +1,9 @@
+/* File start */
+/* 청약철회방침 */
+.xans-order-agreementsubscription .wrap { padding:7px; margin:7px 7px 0; border:1px solid #ccc; }
+#payReqForm, #paySSLForm { height:0; }
+
+/* 주문서 약관 공통 */
+.wrap > textarea { width:100%; height:100%; }
+
+/* File end */

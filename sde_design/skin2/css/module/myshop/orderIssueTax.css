@@ -1,0 +1,9 @@
+#popup { width:700px; }
+.xans-myshop-orderissuetax h3 { margin:20px 0 10px 10px; font-size:12px; color:#353535; }
+.xans-myshop-orderissuetax #name, .xans-myshop-orderissuetax #company_regno,
+.xans-myshop-orderissuetax #company_name, .xans-myshop-orderissuetax #president_name { width:180px; }
+.xans-myshop-orderissuetax #company_condition, .xans-myshop-orderissuetax #company_line  { width:235px; }
+.xans-myshop-orderissuetax #phone1 { width:60px; }
+.xans-myshop-orderissuetax #phone2, .xans-myshop-orderissuetax #phone3 { width:60px; margin:0 4px; }
+.xans-myshop-orderissuetax #email1 { width:120px; margin:0 4px 0 0; }
+.xans-myshop-orderissuetax #email2 { width:120px; margin:0 4px; }

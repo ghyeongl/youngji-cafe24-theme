@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Noto Sans Regular';
+  src: url(//t1.daumcdn.net/brunch9/static/fonts/noto/notokr-regular.woff) format('woff');
+  font-style: normal;
+  font-weight: 400
+}

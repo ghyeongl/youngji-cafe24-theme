@@ -1,0 +1,32 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+<div class="titleArea">
+    <h2>비밀번호 찾기</h2>
+</div>
+<div module="member_findpasswdmethod" class="ec-base-box typeThin">
+    <!--@css(/css/module/member/find_passwd_method.css)-->
+    <!--
+        $nextURL = /member/passwd/find_passwd_result.html
+     -->
+    <div class="inner">
+        <h3 class="boxTitle">임시 비밀번호 전송</h3>
+        <fieldset>
+            <legend>임시 비밀번호 전송</legend>
+            <ul class="ec-base-desc">
+                <li><strong class="term">임시 비밀번호</strong><span class="desc">{$form.passwd_method_type}</span></li>
+                <li id="{$passwd_method_email_info}"><strong class="term">이메일</strong><span class="desc"><strong class="txtEm">{$passwd_method_email}</strong></span></li>
+                <li id="{$passwd_method_mobile_info}"><strong class="term">휴대폰 번호</strong><span class="desc"><strong class="txtEm number">{$passwd_method_mobile}</strong></span></li>
+            </ul>
+            <div class="ec-base-button gColumn">
+                <a href="#none" class="btnSubmit sizeM" onclick="{$action_func_find_passwd_send}">임시 비밀번호 전송</a>
+                <a href="#none" class="btnNormal sizeM" onclick="{$action_func_find_passwd_cancel}">취소</a>
+            </div>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.xans-mall-urgencycallsearchoutline { overflow:hidden; top:50%; left:50%; z-index:1000; width:600px; margin:-300px 0 0 -300px; color:#757575; }
+.xans-mall-urgencycallsearchoutline .content { min-height:470px; }
+
+.xans-mall-urgencycallsearchoutline .result { margin:18px 0 8px; padding:0 0 0 16px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle2.gif") no-repeat 9px 4px; }
+.xans-mall-urgencycallsearchoutline .result strong { color:#000; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .inputOrdNum { width:145px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .ec-base-table input { width:340px; font-weight:bold; }
+
+.xans-mall-urgencycallsearchoutline .ec-base-table .scroll { max-height:278px; }
+.xans-mall-urgencycallsearchoutline .ec-base-table .scroll.xans-mall-urgencycallordresult { max-height:365px; }
+.xans-mall-urgencycallsearchoutline .ec-base-table td.product { overflow:hidden; }
+.xans-mall-urgencycallsearchoutline .ec-base-table td.product p { padding:0 0 0 55px; }
+.xans-mall-urgencycallsearchoutline .ec-base-table td.product .thumb { float:left; }
+.xans-mall-urgencycallsearchoutline .ec-base-table td.product .thumb img { width:46px; }

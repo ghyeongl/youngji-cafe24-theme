@@ -1,0 +1,78 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치">좋아요</li>
+    </ol>
+</div>
+<div module="myshop_likeitCatePackage">
+    <div class="titleArea">
+        <h2>좋아요</h2>
+    </div>
+
+    <div module="myshop_LikeTab" class="ec-base-tab">
+        <ul class="menu">
+            <li class="{$mylikeprd_tab_class}"><a href="/myshop/likeit/product.html">My 상품 ({$mylikeprd_total_cnt})</a></li>
+            <li class="{$mylikecate_tab_class}"><a href="/myshop/likeit/category.html">My 상품분류 ({$mylikecate_total_cnt})</a></li>
+        </ul>
+    </div>
+
+    <div module="myshop_LikeCategoryList">
+        <!--
+            $count = 10
+        -->
+        <div class="ec-base-table typeList">
+            <table border="1" summary="">
+                <caption>My 상품분류 목록</caption>
+                <colgroup>
+                    <col style="width:5%" />
+                    <col style="width:auto" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col"><input type="checkbox" onclick="{$check_mylikecate}" /></th>
+                        <th scope="col">상품분류</th>
+                    </tr>
+                </thead>
+                <tbody class="{$list_display|display} center">
+                    <tr>
+                        <td>{$checkbox}</td>
+                        <td class="left"><a href="/product/list.html{$param}">{$disp_cate_path}{$disp_cate_name}</a></td>
+                    </tr>
+                    <tr>
+                        <td>{$checkbox}</td>
+                        <td class="left"><a href="/product/list.html{$param}">{$disp_cate_path}{$disp_cate_name}</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="message {$empty_display|display}">좋아요 상품 내역이 없습니다.</p>
+        </div>
+    </div>
+
+    <div module="myshop_LikeCategoryControl" class="ec-base-button">
+        <span class="gLeft">
+            <strong class="text">선택상품을</strong>
+            <a href="#none" class="btnEm" onclick="{$delete_mylikecate}"><i class="icoDelete"></i> 삭제하기</a>
+        </span>
+    </div>
+
+    <div class="ec-base-paginate" module="myshop_LikeCategoryPaging">
+        <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+        <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+        <ol>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        </ol>
+        <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+        <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+    </div>
+</div>

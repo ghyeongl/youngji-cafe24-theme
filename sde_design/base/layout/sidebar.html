@@ -1,0 +1,105 @@
+<!--@css(/layout/sidebar.css)-->
+        <div class="gridContainer" style="display: grid;grid-template-columns: repeat(4,1fr);">
+<div class="gridItem" data-component-id="17" id="grid_id_1565774970824_0" style="grid-area: 1 / 1 / 6 / 5;min-width: 0;">
+    <div class="dnd_module_8b2faf08d27d4939d1579e54c4058b93">
+<!-- MOMA COMPONENT 17 -->
+<div module="Layout_stateLogon" class="member">
+    <p class="message">
+        <a href="/myshop/index.html"><strong>{$name}님</strong></a>
+        <span class="comment">즐거운 쇼핑 되세요.</span>
+    </p>
+    <div class="btnMember">
+        <div class="member">
+            <a href="{$action_logout}" class="button theme1">로그아웃</a>
+            <a href="/myshop/index.html" class="button theme2">마이페이지</a>
+        </div>
+        <a href="/myshop/order/list.html" class="orderList">주문조회</a>
+    </div>
+</div>
+<div module="Layout_stateLogoff" class="member">
+    <p class="message">
+        <strong>로그아웃 상태 입니다.</strong><br>
+        회원가입 후 다양한 서비스를 이용하세요.
+    </p>
+    <div class="btnMember">
+        <div class="member">
+            <a href="/member/agreement.html" class="button theme1">회원가입</a>
+            <a href="/member/login.html" class="button theme2">로그인</a>
+        </div>
+        <a href="/myshop/order/list.html" class="orderList">주문조회</a>
+    </div>
+</div>
+  
+<div class="search" module="Layout_SearchHeader">
+    {$form.keyword}
+    <button type="button" class="btnSearch" onclick="{$action_search_submit}">검색</button>
+</div>
+<!-- //MOMA COMPONENT 17 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="25" id="grid_id_1565774970824_1" style="grid-area: 6 / 1 / 13 / 5;min-width: 0;">
+    <div class="dnd_module_683894327793039c00ad4c0440d0d8df">
+<!-- MOMA COMPONENT 25 -->
+<h2>전체 카테고리</h2>
+<ul module="layout_category" class="category">
+    <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+    <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+</ul>
+<!-- // MOMA COMPONENT 25 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="28" id="grid_id_1565774970824_2" style="grid-area: 13 / 1 / 17 / 3;min-width: 0;">
+    <div class="dnd_module_8b71cdd5fdf6c6798316ae12967bd43a">
+<!-- MOMA COMPONENT ID 28 -->
+<span module="editor_dndImage">
+    <a href="#none" class="link">
+        <img src="https://moma-img.cafe24img.com/img/1/8b71/@img_half_banner3_3.jpg" alt="" class="image"></a>
+</span>
+<!-- MOMA COMPONENT ID 28 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="29" id="grid_id_1565774970824_3" style="grid-area: 13 / 3 / 17 / 5;min-width: 0;">
+    <div class="dnd_module_9f9c25628731aa225372896edfbe24ec">
+<!-- MOMA COMPONENT ID 29 -->
+<span module="editor_dndImage">
+    <a href="#none" class="link">
+        <img src="https://moma-img.cafe24img.com/img/1/9f9c/@img_half_banner4_2.jpg" alt="" class="image"></a>
+</span>
+<!-- MOMA COMPONENT ID 29 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="30" id="grid_id_1565774970824_4" style="grid-area: 17 / 1 / 25 / 5;min-width: 0;">
+    <div class="dnd_module_608cf25be3fe4e5bd1f55b2485321931">
+<!-- MOMA COMPONENT 30 -->
+<div module="Layout_BoardInfo">
+    <h2>커뮤니티</h2>
+    <ul class="board">
+        <li><a href="{$link_board_list}" class="link">{$board_name}</a> {$board_adult_icon}</li>
+        <li><a href="{$link_board_list}" class="link">{$board_name}</a> {$board_adult_icon}</li>
+    </ul>
+</div>
+<!-- // MOMA COMPONENT 30 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="32" id="grid_id_1565774970824_6" style="grid-area: 25 / 1 / 29 / 5;min-width: 0;">
+    <div class="dnd_module_5db06c03ea0da5a37c946c37ba207438">
+<!-- MOMA COMPONENT ID 32 -->
+<span module="editor_dndImage">
+    <a href="#none" class="link">
+        <img src="https://moma-img.cafe24img.com/img/1/5db0/BS_공통_서브배너_v06.png" alt="" class="image"></a>
+</span>
+<!-- MOMA COMPONENT ID 32 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="34" id="grid_id_1598256325192_6" style="grid-area: 29 / 1 / 31 / 5;min-width: 0;">
+    <div class="dnd_module_9b58460ba77054c65b28587ebdbc274d">
+<!-- MOMA COMPONENT 34 -->
+<div module="Layout_Info">
+    <a href="tel:{$phone}" class="link customer">고객센터</a>
+    <a href="/board/consult/list.html" class="link inquire">1:1문의</a>
+</div>
+<!-- //MOMA COMPONENT 34 -->
+</div>
+</div>
+        </div>
+<!--@js(/layout/sidebar.js)-->

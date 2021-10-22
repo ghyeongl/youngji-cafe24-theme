@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+/* Hidden Text */
+.blind { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:150%; font-size:0; line-height:0; }
+
+/* text */
+.txtEm, .txtEm a { color:#1b87d4; font-style:normal; }
+.txtWarn, .txtWarn a { color:#ef5012; font-style:normal; }
+a:hover .txtEm, a:hover .txtWarn { text-decoration:underline; }
+
+/* mInfo */
+.xans-order-throttlewaiting { padding:80px 0 0; }
+.xans-order-throttlewaiting .visual { width:128px; margin:0 auto; }
+.xans-order-throttlewaiting .visual img { max-width:100%; }
+.xans-order-throttlewaiting h2 { margin:18px 0 35px; font-size:36px; text-align:center; }
+.xans-order-throttlewaiting span { font-size:20px; color:#888; }
+.xans-order-throttlewaiting .queue { width:80%; margin:0 auto; padding:20px 0; background:#f7f7f7; font-size:14px; font-weight:500; text-align:center; }
+.xans-order-throttlewaiting .queue .awaiter { display:inline-block; font-size:14px; font-weight:500; color:#3a8ee2; }
+.xans-order-throttlewaiting .queue .awaiter span { font-size:inherit; font-weight:inherit; color:inherit; }
+.xans-order-throttlewaiting .queue .awaiter .count { position:relative; }
+.xans-order-throttlewaiting .queue .awaiter .count:after { content:''; display:block; position:absolute; left:0; bottom:-2px; width:calc(100% + 12px); height:1px; background:#3a8ee2; }
+.xans-order-throttlewaiting .txtInfo { position:relative; width:60%; max-width:515px; margin:20px auto 0; padding:0 0 0 22px; box-sizing:border-box; font-size:11px; color:#444; text-align:center; line-height:18px; }
+.xans-order-throttlewaiting .txtInfo:after { content:''; display:block; overflow:hidden; position:absolute; left:0; top:0; width:17px; height:17px; border-radius:100%; background:#9da6b4 url('//img.echosting.cafe24.com/suio/ico_info_state_m.png') no-repeat center center; background-size:3px auto; }

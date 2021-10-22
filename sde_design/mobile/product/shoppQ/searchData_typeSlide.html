@@ -1,0 +1,36 @@
+<div module="product_searchdata" class="typeSlide {$filter_class}">
+    <!--@css(/css/module/product/searchdata.css)-->
+    <form class="searchCondition" id="{$searchdata_form}" name="" method="get">
+        <div class="searchInner">
+            <input type="hidden" name="keyword" id="{$searchdata_keyword_hidden}"><input type="hidden"
+                name="rel_keyword" id="{$searchdata_rel_keyword}" value="{$searchdata_rel_keyword_param}"><div class="header"><h2 class="title">상세검색</h2></div>
+            <div class="wrap">
+                <div class="toggleArea eToggle selected" module="product_SearchFilterList">
+                    <div class="title {$filter_key}">
+                        <h3>{$filter_name}</h3>
+                    </div>
+                    <div class="contents {$filter_type}">
+                        <ul module="product_filterform">
+                            <li class="{$filter_class}">{$filter_value}</li>
+                            <li class="{$filter_class}">{$filter_value}</li>
+                        </ul>
+                        <div class="withinInput {$within_input_display|display}">
+                            <div class="search">{$within_input}<button type="button" class="btnDelete">삭제</button></div>
+                            {$within_suggest}
+                        </div>
+                        <div class="priceInput {$price_input_display|display}">{$price_input}</div>
+                        <div class="slider {$price_slider_display|display}">{$price_slider}</div>
+                        <p class="value {$price_slider_display|display}">{$price_txt}</p>
+                    </div>
+                    <button type="button" class="btnClear ec-product-searchdata-form-clear"
+                        {$filter_key_value}>선택해제</button>
+                </div>
+            </div>
+            <div class="ec-base-button gColumn">
+                <button type="button" class="btnEm ec-product-searchdata-reset">초기화</button>
+                <button type="button" class="btnSubmit" id="{$searchdata_submit}">검색하기</button>
+            </div>
+            <button type="button" class="btnClose">닫기</button>
+        </div>
+    </form>
+</div>

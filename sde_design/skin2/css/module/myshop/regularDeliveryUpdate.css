@@ -1,0 +1,5 @@
+.xans-myshop-orderregularmanagedetailreceiveredit #tel1, #phone1 { width:60px; }
+.xans-myshop-orderregularmanagedetailreceiveredit #tel2, #tel3, #phone2, #phone3 { width:100px; }
+.xans-myshop-orderregularmanagedetailreceiveredit textarea { width:277px; min-width:277px; min-height:90px; }
+.xans-myshop-orderregularmanagedetailreceiveredit .quickdelivery { margin:0 0 5px 0; }
+.xans-myshop-orderregularmanagedetailreceiveredit .quickdelivery + select { width:136px; }

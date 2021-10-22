@@ -1,0 +1,39 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 변경</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>비밀번호 변경</h2>
+</div>
+
+<div module="member_changepasswd" class="ec-base-box typeThin">
+    <!--@css(/css/module/member/change_passwd.css)-->
+    {$form.enc_password}
+    {$form.returnUrl}
+    <div class="change_pw">
+        <h3 class="boxTitle">비밀번호 변경</h3>
+        <p class="info {$display_change_password|display}">
+            회원님의 개인정보를 안전하게 보호하고,<br /> 개인정보 도용으로 인한 피해를 예방하기 위해 {$check_period}일 이상 비밀번호를 <br />
+            변경하지 않은 경우 비밀번호 변경을 권장하고 있습니다.
+        </p>
+        <p class="event {$display_update_event|display}">이벤트 안내 - 비밀번호 변경 시 {$update_event_reward} 지급됩니다.</p>
+        <fieldset>
+            <legend>비밀번호 변경</legend>
+            <dl class="ec-base-desc gSmall">
+                <dt>아이디</dt><dd><strong class="txtEm">{$member_id}</strong></dd>
+                <dt>현재 비밀번호</dt><dd>{$form.passwd}</dd>
+                <dt>새 비밀번호</dt><dd>{$form.new_passwd}<span class="txtInfo gBlank5">{$passwd_type_desc}</span></dd>
+                <dt>새 비밀번호 확인</dt><dd>{$form.new_passwd_confirm}</dd>
+            </dl>
+            <div class="ec-base-button gColumn">
+                <a href="#none" class="btnSubmit sizeM" onclick="{$change_password_action}">비밀번호 변경하기</a>
+                <a href="#none" class="btnNormal sizeM {$display_change_password|display}" onclick="{$after_action}">다음에 변경하기</a>
+            </div>
+        </fieldset>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+/* 탭 */
+.xans-mall-urgencycallsearchoutline .ec-base-tab { margin:0 0 7px; }
+
+/* 주문번호 */
+.xans-mall-urgencycallsearchoutline .urgencyOrder .inputOrdNum { width:24%; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .ec-base-table.typeWrite { margin:0 0 7px; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .ordPagenum { margin:0 0 7px; text-align:right; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder select#ordPagenum { width:auto; }
+.xans-mall-urgencycallsearchoutline .urgencyOrder .empty { padding:14px 0; text-align:center; font-size:12px; }
+
+/* 상품 */
+.xans-mall-urgencycallsearchoutline .urgencyProduct { margin:0 0 7px; padding:0; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .result { margin:7px 0; padding:7px 0; font-size:11px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .result strong { color:#508bed; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct #prdSearchResult { position:relative; padding:0 13px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct #prdPagenum { position:absolute; top:0; right:13px; }
+.xans-mall-urgencycallsearchoutline .urgencyProduct .empty { padding:14px 0; text-align:center; font-size:12px; }

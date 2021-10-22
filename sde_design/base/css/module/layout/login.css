@@ -1,0 +1,14 @@
+.xans-layout-login { margin:0 0 20px; padding:0 0 15px; border-bottom:1px solid #e8e8e8; }
+.xans-layout-login h2 { height:20px; color:#2e2e2e; font-size:12px; }
+.xans-layout-login .check span { overflow:hidden; display:block; margin:0 0 5px; border:1px solid #d9d9d9; color:#8f8f91; border-radius:2px; *zoom:1; }
+.xans-layout-login .check label { height:32px; padding:0 0 0 8px; color:#c9c9c9; line-height:32px; }
+.xans-layout-login .check span label span { border:0; }
+.xans-layout-login .check input { width:95%; height:32px; padding:0; border:0; color:#8f8f91; line-height:32px; }
+.xans-layout-login .security { margin:10px 0 0 10px; font-size:11px; color:#8f8f91; }
+.xans-layout-login .security img { vertical-align:middle; }
+.xans-layout-login .button { margin:7px 0 0; text-align:right; }
+.xans-layout-login .button input { margin:0 -8px 0 0; }
+
+.xans-layout-login .find li {  position:relative; display:inline-block; padding:0 0 0 18px; line-height:20px; }
+.xans-layout-login .find li:last-child:before { content:""; display:inline-block; position:absolute; top:5px; left:6px; width:1px; height:10px; border-left:1px solid #d9d9d9; }
+.xans-layout-login .find li a { color:#525252; font-size:11px; }

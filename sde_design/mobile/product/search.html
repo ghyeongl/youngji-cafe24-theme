@@ -1,0 +1,161 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<!-- 쇼핑 큐레이션 (상단형) -->
+<div id="shopQ">
+    <div module="product_searchdata" class="typeTop {$shopQ_active_class}">
+        <div id="titleArea">
+            <h2>검색결과(<span class="count">{$total_count}</span>)건</h2>
+            <span module="Layout_MobileAction">
+                <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+            </span>
+        </div>
+        <form class="searchField" id="ec-product-fixed-form" action="/product/search.html" method="get">
+            <div class="searchbox">
+                {$searchdata_keywordform}<p class="button"><button class="btnStrong" id="{$search_submit_button}">검색</button></p>
+                <button type="button" class="btnDelete">삭제</button>
+                <div class="autoList" id="{$searchdata_auto_list_id}">
+                    <ul class="autoDrop" id="{$search_auto_id}"></ul>
+                    <div class="dimmed"></div>
+                </div>
+            </div>
+            <div module="product_RelateKeyword" class="keywordArea">
+                <strong class="heading">연관검색어</strong>
+                <ul class="list">
+                    <li><a href="{$relate_url}">{$relate_word}</a></li>
+                    <li><a href="{$relate_url}">{$relate_word}</a></li>
+                </ul>
+            </div>
+            <div module="product_HotKeyword" class="keywordArea">
+                <strong class="heading">인기검색어</strong>
+                <ul class="list">
+                    <li><a href="{$hot_keyword_search_url}">{$hot_keyword_name}</a></li>
+                    <li><a href="{$hot_keyword_search_url}">{$hot_keyword_name}</a></li>
+                </ul>
+            </div>
+            <div class="searchCondition shopQShow">
+                <div class="toggleArea selected" module="product_FixedSearchFilterList">
+                    <div class="title {$filter_key}">
+                        <h3>{$filter_name}</h3>
+                    </div>
+                    <div class="contents {$filter_type}">
+                        <ul module="product_filterform">
+                            <li class="{$filter_class}">{$filter_value}</li>
+                            <li class="{$filter_class}">{$filter_value}</li>
+                        </ul>
+                        <div class="withinInput {$within_input_display|display}">
+                            <div class="search">{$within_input}<button type="button" class="btnDelete">삭제</button><button type="button" class="btnResearch btnStrong">검색</button></div>
+                            {$within_suggest}
+                        </div>
+                        <div class="priceInput {$price_input_display|display}">{$price_input}</div>
+                        <div class="slider {$price_slider_display|display}">{$price_slider}</div>
+                        <p class="value {$price_slider_display|display}">{$price_txt}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <p class="moreTags"><button type="button" id="ec-product-searchdata-mobile-button" class="btnSearchdata {$search_detail_search_display|display}">필터 더보기</button></p>
+        <div module="product_searchConditionData">
+            <ul class="searchDataResult">
+                <li>&nbsp;{$search_condition_data}<button type="button" class="btnSearchDelete" {$search_attr}>삭제</button>
+                </li>
+                <li>&nbsp;{$search_condition_data}<button type="button" class="btnSearchDelete" {$search_attr}>삭제</button>
+                </li>
+            </ul>
+            <button type="button" class="btnRefresh ec-product-searchdata-reset">초기화</button>
+        </div>
+        <p class="empty {$search_fail_display|display}">검색 결과가 없습니다.</p>
+    </div>
+</div>
+<!-- // 쇼핑큐레이션 (상단형) -->
+
+<div module="Search_Result" class="ec-base-product typeDesc">
+    <div module="product_searchdata">
+        <div class="searchOrder">{$searchOrderby}</div>
+    </div>
+    <!--@js(/js/module/search/result.js)-->
+    <!--
+        $count = 10
+    -->
+    <ul class="prdList">
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$seo_alt_tag}" width="86" height="86"><span module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+                <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                <ul class="spec">
+                    <li class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</li>
+                   <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price}</li><span id="span_product_tax_type_text">{$product_tax_type_text}</span>
+                    <li class="price sale {$product_sale_visible}">{$product_sale_price}</li>
+                    <li class="price sale {$optimum_discount_price_visible}">{$optimum_discount_price}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="cart">{$basket_icon}</li>
+                    <li class="summary {$summary_desc|display}">{$summary_desc}</li>
+                    <li class="price {$product_promotion_display|display}">
+                        <div class="discountPeriod {$product_promotion_display|display}">
+                            <a href="#none" class="btnNormal">할인기간</a>
+                            <div class="layerDiscountPeriod">
+                                <div class="inner">
+                                    <strong class="title">할인기간</strong>
+                                    <p class="timeleft">{$product_promotion_date}</p>
+                                    <ul>
+                                        <li><span>할인금액</span>{$product_promotion_dc_price}</li>
+                                        <li><span>할인기간</span>{$product_promotion_start_date} ~<br>{$product_promotion_end_date}</li>
+                                    </ul>
+                                    <a href="#none" class="btnClose">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="thumbnail">
+                <a href="{$link_product_detail}"><img src="{$image_medium}" alt="{$seo_alt_tag}" width="86" height="86"><span module="Search_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                <span class="wish">{$list_wish_icon}</span>
+            </div>
+            <div class="description">
+                <strong class="name {$product_name_display|display}"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                <ul class="spec">
+                    <li class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</li>
+                    <li class="price {$product_price_display|display} {$product_sale_strike}">{$disp_product_price}</li><span id="span_product_tax_type_text">{$product_tax_type_text}</span>
+                    <li class="price sale {$product_sale_visible}">{$product_sale_price}</li>
+                    <li class="price sale {$optimum_discount_price_visible}">{$optimum_discount_price}</li>
+                    <li class="mileage {$mileage_icon_display}">{$mileage_value}</li>
+                    <li class="cart">{$basket_icon}</li>
+                    <li class="summary {$summary_desc|display}">{$summary_desc}</li>
+                    <li class="price {$product_promotion_display|display}">
+                        <div class="discountPeriod {$product_promotion_display|display}">
+                            <a href="#none" class="btnNormal">할인기간</a>
+                            <div class="layerDiscountPeriod">
+                                <div class="inner">
+                                    <strong class="title">할인기간</strong>
+                                    <p class="timeleft">{$product_promotion_date}</p>
+                                    <ul>
+                                        <li><span>할인금액</span>{$product_promotion_dc_price}</li>
+                                        <li><span>할인기간</span>{$product_promotion_start_date} ~<br>{$product_promotion_end_date}</li>
+                                    </ul>
+                                    <a href="#none" class="btnClose">닫기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div module="search_paging" class="ec-base-paginate typeList">
+    <a href="{$param_before}" class="btnPrev">이전 페이지</a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}" class="btnNext">다음 페이지</a>
+</div>
+
+<!-- 상세검색 레이어 팝업 -->
+<!--@import(/product/shoppQ/searchData_typePopup.html)-->

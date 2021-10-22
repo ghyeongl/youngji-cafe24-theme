@@ -1,0 +1,33 @@
+.xans-myshop-wishlist .title { margin:30px 0 10px 10px; }
+.xans-myshop-wishlist .title h3 { color:#353535; font-size:12px; }
+
+/* List */
+.xans-myshop-wishlist td.thumb img { max-width:80px; }
+.xans-myshop-wishlist td.price { word-break:normal; }
+.xans-myshop-wishlist td.button a { width:90px; margin:1px 0; }
+.xans-myshop-wishlist .name .ec-set-product-name { display:block; margin:0 0 3px; }
+.xans-myshop-wishlist td div.option,
+.xans-myshop-wishlist td ul.option > li { margin:9px 0 0; color:#707070; line-height:16px; }
+.xans-myshop-wishlist td ul.option > li > strong { display:block; color:#353535; }
+.xans-myshop-wishlist td div.option span.file a,
+.xans-myshop-wishlist td ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#707070; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 2px; }
+.xans-myshop-wishlist td .mileage { display:block; }
+
+/* 옵션변경 레이어 */
+.xans-myshop-wishlist .optionModify { display:none; width:450px; color:#707070; }
+.xans-myshop-wishlist .optionModify .prdInfo { margin:0 0 10px; padding:0 0 10px; border-bottom:1px dotted #b0b1b3; line-height:1.5; }
+.xans-myshop-wishlist .optionModify .prdInfo li { color:#353535; font-weight:bold; }
+.xans-myshop-wishlist .optionModify .prdInfo li.option { color:#707070; font-weight:normal; }
+.xans-myshop-wishlist .optionModify .prdModify h4 { color:#353535; font-size:12px; }
+.xans-myshop-wishlist .optionModify .prdModify li { padding:6px 0 0; }
+.xans-myshop-wishlist .optionModify .prdModify li:after { content:""; display:block; clear:both; }
+.xans-myshop-wishlist .optionModify .prdModify li span { float:left; width:110px; margin:3px 0 0; }
+.xans-myshop-wishlist .optionModify .prdModify li select { float:right; width:294px; line-height:24px; font-size:12px; }
+.xans-myshop-wishlist .optionModify .prdModify li input[type=text] { float:right; width:284px; }
+
+/* 배송비레이어 */
+.xans-myshop-wishlist .shippingFee { position:relative; display:inline-block; text-align:left; }
+.xans-myshop-wishlist .shippingFee .ec-base-tooltip { display:block; margin:0 0 0 -170px; width:360px; }
+.xans-myshop-wishlist .shippingFee .ec-base-tooltip table th { width:40px; }
+.xans-myshop-wishlist .shippingFee .ec-base-tooltip table th,
+.xans-myshop-wishlist .shippingFee .ec-base-tooltip table td { padding:7px 10px 8px 10px; text-align:left; }

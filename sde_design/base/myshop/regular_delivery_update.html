@@ -1,0 +1,62 @@
+<!--@layout(/layout/basic/popup.html)-->
+<!--@css(/css/module/myshop/regularDeliveryUpdate.css)-->
+ 
+<div class="ec-base-layer" module="myshop_OrderRegularManageDetailReceiveredit">
+    <!--
+        $isRuleBasedAddrForm = T
+    -->
+    <h1>수령자 정보 변경</h1>
+    <div class="wrap">
+        <div class="xans-myshop ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>수령자 정보 변경</caption>
+                <colgroup>
+                    <col style="width:110px;">
+                    <col style="width:auto;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">수령자명 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="" alt="필수"></th>
+                        <td>{$form.receiver_name}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">일반전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="" alt="필수"></th>
+                        <td>
+                            {$form.tel}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">휴대전화 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="" alt="필수"></th>
+                        <td>{$form.phone}
+                        </td>
+                    </tr>
+                    <tr class="{$display_addr|display}">
+                        <th scope="row">주소 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="" alt="필수"></th>
+                        <td>{$form.address}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">배송메시지 <img src="//img.echosting.cafe24.com/skin/base/common/ico_required_blue.gif" class="" alt="필수"></th>
+                        <td>
+                            {$form.delivery_msg}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">희망배송시간</th>
+                        <td>
+                            <div class="quickdelivery">
+                                {$form.use_hope_shipping_time}
+                            </div>
+                            {$form.hope_shipping_time}
+                        </td>
+                    </tr>
+                    {$form.invoice_no}
+                    {$form.is_store_pickup}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <button id="{$updateReceiverScriptionId}" type="submit" class="btnStrong">변경하기</button>
+        <a href="#none" onclick="self.close();" class="btnNormal">닫기</a>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>아이디 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>아이디 찾기</h2>
+</div>
+
+<div module="member_findidresult" class="ec-base-box typeThin">
+    <!--@css(/css/module/member/find_id_result.css)-->
+    <div class="findId">
+        <h3 class="boxTitle">아이디 찾기</h3>
+        <p class="info">고객님 아이디 찾기가 완료 되었습니다.</p>
+        <div class="ec-base-box typeMember gMessage">
+            <p class="message">저희 쇼핑몰을 이용해주셔서 감사합니다.<br />다음정보로 가입된 아이디가 총 <span class="txtEm">{$idCnt}</span>개 있습니다.</p>
+            <div class="information">
+                <p class="thumbnail"><img src="//img.echosting.cafe24.com/skin/base/member/img_member_default.gif" alt="" /></p>
+                <div class="description">
+                    <ul class="ec-base-desc gSmall">
+                        <li><strong class="term">이름</strong><strong class="desc"> : {$name}</strong></li>
+                        <li><strong class="term">{$searchType}</strong><span class="desc"> : {$searchInfo}</span></li>
+                        <li>{$searchIds}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ec-base-button gBlank20">
+            <a href="javascript:go_findlogin('{$id}');" class="btnSubmitFix sizeM">로그인</a>
+            <a href="javascript:go_findpwd('{$id}','{$mtype}');" class="btnEmFix sizeM">비밀번호 찾기</a>
+        </div>
+    </div>
+</div>

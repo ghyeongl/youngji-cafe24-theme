@@ -1,0 +1,230 @@
+#contents { position:relative; }
+.xans-order-form .orderStep { margin:0 0 20px; }
+
+/* Title */
+.xans-order-form .title { margin:40px 0 10px 10px; }
+.xans-order-form .title h3 { display:inline-block; vertical-align:middle; color:#353535; font-size:12px; }
+    .xans-order-form .orderListArea .title { position:relative; height:38px; margin:0; padding:0 0 0 9px; border:1px solid #d7d5d5; border-bottom:0; line-height:38px; background:#f6f6f6; }
+    .xans-order-form .orderListArea .title .button { position:absolute; right:10px; top:8px; }
+    .xans-order-form .orderArea .title { margin-top:30px; }
+    .xans-order-form .orderArea .title .required { margin:-15px 0 0; color:#353535; text-align:right; }
+    .xans-order-form .orderArea .title .required img { vertical-align:middle; }
+
+/* List */
+.xans-order-form .orderListArea .title + .ec-base-table table { margin:0; }
+.xans-order-form .ec-base-table tfoot td .gLeft { float:left; margin:6px 0 0; }
+.xans-order-form .ec-base-table td.thumb img { max-width:75px; }
+.xans-order-form .ec-base-table .name .ec-set-product-name { display:block; }
+.xans-order-form .ec-base-table td div.option,
+.xans-order-form .ec-base-table td ul.option > li { margin:9px 0 0; color:#707070; line-height:16px; }
+.xans-order-form .ec-base-table td ul.option > li > strong { display:block; color:#353535; }
+.xans-order-form .ec-base-table td div.option span.file a,
+.xans-order-form .ec-base-table td ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#707070; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 2px; }
+.xans-order-form .controlInfo { padding:10px 0 8px 10px; border-top:1px solid #e8e5e4; color:#f76560; font-size:11px; line-height:1.5; background:#fff8f5; }
+.xans-order-form .controlInfo.typeBtm { margin:-1px 0 0; border-top:0; border-bottom:1px solid #e8e5e4; }
+.xans-order-form .controlInfo li { padding:0 0 0 23px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_info.gif") no-repeat 0 1px; }
+
+.xans-order-form > .ec-base-button { padding:10px 0 50px; border-bottom:1px solid #868686; }
+
+.xans-order-form .ec-base-table.typeList tfoot td .gLeft { margin:0; }
+
+/* Write */
+.xans-order-form .orderArea ul.list { padding:17px 0 16px 18px; border-bottom:1px solid #e8e8e8; line-height:1.5; color:#707070; }
+.xans-order-form .orderArea ul.list li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-order-form .orderArea ul.list a { color:#295cef; }
+.xans-order-form .ec-base-table.typeWrite td { color:#707070; }
+.xans-order-form .ec-base-table.typeWrite label { color:#353535; }
+.xans-order-form .ec-base-table.typeWrite .recent { display:inline-block; margin:0 0 0 20px; }
+.xans-order-form .ec-base-table.typeWrite .recent .icoDefault { display:inline-block; margin:0 1px 0 3px; width:29px; height:18px; vertical-align:middle; overflow:hidden; text-indent:120%; left:-120%; white-space:nowrap; font-size:0; line-height:0; background:url("//img.echosting.cafe24.com/skin/base_ko_KR/order/ico_default.gif") no-repeat 0 0; }
+.xans-order-form .ec-base-table.typeWrite .recent label { display:inline-block; max-width:70px; margin:0 6px 0 2px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; vertical-align:middle; }
+.xans-order-form .ec-base-table.typeWrite .ui-datepicker-trigger { margin:0 10px 0 5px; }
+.xans-order-form .ec-base-table.typeWrite .inputDelivery { width:72px; }
+.xans-order-form .ec-base-table ul.grid li { margin:5px 0 0; }
+.xans-order-form .ec-base-table .delvMessage { margin:7px 0 0; }
+.xans-order-form .ec-base-table .delvMessage ul { margin:5px 0 0; }
+.xans-order-form .ec-base-table .delvMessage ul li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+
+/* joinArea */
+.xans-order-form .joinArea .ec-base-box { position:relative; padding:0; border-color:#777; }
+.xans-order-form .joinArea .ec-base-box:before { content:""; position:absolute; left:-1px; bottom:0; z-index:1; width:1px; height:100%; background: #777; }
+.xans-order-form .joinArea .ec-base-box:after { content:""; position:absolute; right:-1px; bottom:0; z-index:1; width:1px; height:100%; background: #777; }
+.xans-order-form .joinArea .ec-base-table { margin:-1px; }
+.xans-order-form .joinArea .ec-base-table:after { content:""; position:absolute; left:-1px; bottom:-1px; z-index:1; width:100%; height:1px; background: #777; }
+.xans-order-form .joinArea .ec-base-table td { background:#fff; }
+.xans-order-form .joinArea .agreeJoin { margin:17px 18px; }
+.xans-order-form .joinArea .agreeJoin .fChk { display:inline-block; position:relative; width:22px; height:22px; margin:0 8px 0 0; cursor:pointer; vertical-align:top; }
+.xans-order-form .joinArea .agreeJoin input { position:absolute; top:0; left:0; z-index:1; width:100%; height:100%; opacity:0; cursor:pointer; }
+.xans-order-form .joinArea .agreeJoin label { display:inline-block; height:22px; line-height:22px; cursor:pointer; }
+.xans-order-form .joinArea .agreeJoin .checkbox { position:absolute; top:0; left:0; width:100%; height:100%; background-image:url("//img.echosting.cafe24.com/skin/base/order/bg_join_check.png"); background-repeat:no-repeat; }
+.xans-order-form .joinArea .agreeJoin input:checked + em { background-position:-34px 0; }
+.xans-order-form .joinArea .guide { margin:-5px 0 27px 60px; }
+.xans-order-form .joinArea .guide .list li { line-height:18px; }
+.xans-order-form .joinArea .agreeMarketing { margin:6px 0 0 16px; }
+.xans-order-form .joinArea .agreeMarketing .gLabel input { margin:0 0 0 20px; }
+.xans-order-form .joinArea .eTooltip { display:inline-block; position:relative; }
+.xans-order-form .joinArea .ec-base-tooltip.typeUpper { left:25px; bottom:28px; width:390px; }
+.xans-order-form .joinArea .ec-base-tooltip.typeUpper .edge { left:20%; }
+
+/* Shipping */
+.xans-order-form .shippingArea th { border-top:1px solid #d7d5d5; border-left:1px solid #d7d5d5; border-right:1px solid #d7d5d5; text-align:left; font-weight:normal; line-height:39px; background:#fbfafa; }
+.xans-order-form .shippingArea th .method { padding:0 0 0 10px; }
+.xans-order-form .shippingArea td { border-top:1px solid #e9e9e9; border-left:1px solid #d7d5d5; border-right:1px solid #d7d5d5; word-break:break-all; }
+.xans-order-form .shippingArea ul.list { padding:15px 0 15px 15px; border-bottom:1px solid #d7d5d5; line-height:1.5; color:#707070; }
+.xans-order-form .shippingArea ul.list li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-order-form .shippingArea ul.list li.map { margin:10px 10px 0 0; max-width:100%; }
+.xans-order-form .shippingArea ul.list li.map img { margin-top:5px; max-width:100%; border:1px solid #e8e8e8; vertical-align:middle; }
+
+/* Total */
+.xans-order-form .totalArea .ec-base-table.total table { z-index:2; border-color:#777; }
+.xans-order-form .totalArea .ec-base-table.total th { height:39px; background:#fbfafa; }
+.xans-order-form .totalArea .ec-base-table.total td { height:58px; }
+.xans-order-form .totalArea .ec-base-table.total td .box { word-break:normal; }
+.xans-order-form .totalArea .ec-base-table.total .txt23 { font-size:23px; letter-spacing:-1px; }
+
+.xans-order-form .totalArea .ec-base-table.gMerge table { margin:-1px 0 0; }
+.xans-order-form .totalArea .ec-base-table.gMerge + .ec-base-table.gMerge table { margin:-2px 0 0; }
+.xans-order-form .totalArea .ec-base-table tr.sum td { font-weight:bold; background:#fbfafa; }
+
+.xans-order-form .totalArea .detail .couponArea { margin:5px 0 0; }
+.xans-order-form .totalArea .detail .couponArea .coupon { padding:0 0 0 9px; color:#707070; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-order-form .totalArea .detail .info { margin:17px 0 8px; }
+.xans-order-form .totalArea .detail .info li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-order-form .totalArea .detail .naverInfo { margin:0 0 8px; color:#707070; }
+.xans-order-form .totalArea .detail .naverInfo h4 { margin:25px 0 13px; color:#353535; font-size:12px; font-weight:normal; }
+.xans-order-form .totalArea .detail .naverInfo ul li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-order-form .totalArea .detail .naverInfo ol li { padding:0 0 0 25px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_number.png") no-repeat; }
+.xans-order-form .totalArea .detail .naverInfo ol li.item1 { background-position:-484px 0; }
+.xans-order-form .totalArea .detail .naverInfo ol li.item2 { background-position:-434px -100px; }
+.xans-order-form .totalArea .detail .naverInfo ol li.item3 { background-position:-384px -200px; }
+.xans-order-form .totalArea .detail .naverInfo ol li.item4 { background-position:-334px -300px; }
+.xans-order-form .totalArea .detail .naverInfo ol li.item5 { background-position:-284px -400px; }
+.xans-order-form .totalArea .detail .naverInfo ol li.item6 { background-position:-234px -500px; }
+.xans-order-form .totalArea .detail .mileage { margin:0 0 10px; padding:0 0 7px; border-bottom:1px dotted #cdcdcd; }
+
+/* Payment */
+.xans-order-form .payArea { overflow:hidden; position:relative; padding:0 241px 0 0; border:1px solid #777; color:#353535; line-height:1.5; }
+.xans-order-form .payArea:after { position:absolute; top:0; right:240px; display:block; content:""; width:1px; height:100%; background:#777; }
+.xans-order-form .payArea .payment { float:left; width:100%; }
+.xans-order-form .payArea .method { padding:17px 20px 15px; font-weight:bold; border-bottom:3px double #dedede; }
+.xans-order-form .payArea .method span { display:inline-block; margin:0 15px 5px 0; }
+.xans-order-form .payArea .method span img { vertical-align:middle; margin:0 2px 0 0; }
+.xans-order-form .payArea .payment > .ec-base-table { padding:10px 20px; }
+.xans-order-form .payArea .ec-base-table th,
+.xans-order-form .payArea .ec-base-table td { padding:5px 0 5px 9px; vertical-align:middle; }
+.xans-order-form .payArea .info { padding:15px 20px; }
+.xans-order-form .payArea .info th { width:130px; padding:8px 0 0; font-weight:normal; text-align:left; }
+.xans-order-form .payArea .info td { padding:5px 0; }
+.xans-order-form .payArea .info input { width:190px; }
+.xans-order-form .payArea .info td .grid { margin:4px 0 0; }
+.xans-order-form .payArea .agree { padding:0 20px; }
+.xans-order-form .payArea .payHelp { margin:0 0 0 130px; }
+.xans-order-form .payArea .agree > table > tbody > tr > th { width:130px; padding:20px 0; border-top:1px solid #e8e8e8; font-weight:normal; text-align:left; }
+.xans-order-form .payArea .agree > table > tbody > tr > td { padding:20px 0; border-top:1px solid #e8e8e8; }
+.xans-order-form .payArea .agree .cashReceipt label { padding:0 30px 0 0; }
+.xans-order-form .payArea .agree .cashReceipt strong { font-weight:normal; }
+.xans-order-form .payArea .agree .cashReceipt .mobile,
+.xans-order-form .payArea .agree .cashReceipt .regno { margin:10px 0 0; }
+.xans-order-form .payArea .agree .cashReceipt .grid { margin:4px 0 0; }
+.xans-order-form .payArea .agree .textArea { position:relative; margin:0 0 8px; padding:0 80px 0 0; }
+.xans-order-form .payArea .agree .textArea textarea { width:96%; height:57px; }
+.xans-order-form .payArea .agree .textArea a { position:absolute; right:0; top:0; }
+.xans-order-form .payArea .agree .guarantee label { padding:0 30px 0 0; }
+.xans-order-form .payArea .agree .guarantee a { color:#295cef; font-weight:bold; }
+.xans-order-form .payArea .agree .guarantee div:first-child p:first-child { margin:0 0 15px; }
+.xans-order-form .payArea .agree .guarantee #eguarantee_personal { margin:20px 0 0; border:1px solid #d6d4d4; }
+.xans-order-form .payArea .agree .guarantee #eguarantee_personal p { height:33px; padding:0 10px; line-height:33px; border-top:1px solid #e8e7e7; }
+.xans-order-form .payArea .agree .guarantee #eguarantee_personal p:first-child { border:0; }
+.xans-order-form .receipt .title { display:block; margin:20px 0 0; }
+.xans-order-form .receipt .info { padding:0; }
+.xans-order-form .receipt .ec-base-table { margin:10px 0 0; }
+.xans-order-form .payArea .total { float:right; width:240px; margin:0 -241px 0 0; text-align:right; background:#fbfafa; }
+.xans-order-form .payArea .total h4 { margin:17px 10px 0 0; color:#353535; font-size:12px; }
+.xans-order-form .payArea .total h4 span { font-weight:normal; }
+.xans-order-form .payArea .total .price { margin:20px 10px 0 0; color:#008bcc; font-size:14px; }
+.xans-order-form .payArea .total .price input#total_price { width:190px; height:auto; padding:0; border:0; color:#008bcc; font-size:28px; font-weight:bold; letter-spacing:-1px; line-height:normal; background:#fbfafa; }
+.xans-order-form .payArea .total .price strong,
+.xans-order-form .payArea .total .price span { vertical-align:-5px; }
+.xans-order-form .payArea .total .paymentAgree { position:relative; margin:30px 0 0 14px; padding:0 0 0 24px; text-align:left; }
+.xans-order-form .payArea .total .paymentAgree input { position:absolute; left:0; top:2px; }
+.xans-order-form .payArea .total .regularDeliveryComment { margin:5px 0 0; padding:0 0 0 38px; text-align:left; font-size:11px; color:#f76560; background: url(//img.echosting.cafe24.com/skin/base/common/ico_info.gif) no-repeat 14px 1px; }
+.xans-order-form .payArea .total .ec-base-button { margin:6px 10px 0; }
+.xans-order-form .payArea .total .mileage .ec-base-desc { padding:10px 10px 9px 0; border-top:1px solid #d7d5d5; }
+.xans-order-form .payArea .total .mileage .ec-base-desc + .ec-base-desc { border-color:#e9e9e9; }
+
+/* 이용약관 */
+.xans-order-form .termArea { overflow:hidden; margin:10px 0 0; padding:10px 14px 0 4px; border:1px solid #d7d5d5; }
+.xans-order-form .termArea .check { min-height:14px; padding:10px; margin:-10px -14px 10px -4px; border-bottom:1px solid #e9e9e9; background:#fbfafa; }
+.xans-order-form .termArea .inner { width:100%; padding:10px 0 10px; }
+.xans-order-form .termArea .box { position:relative; margin:10px 10px 20px; padding-left:160px; }
+.xans-order-form .termArea .box h4 { position:absolute; top:0; left:0; width:150px; font-size:12px; }
+.xans-order-form .termArea .box textarea { margin:0 0 10px; }
+
+/* 이용안내 */
+.xans-order-form .help .content a { color:#707070; }
+.xans-order-form .help .content div h4:first-child { margin-top:22px; }
+
+/* 총 주문금액 상세내역 레이어 */
+.xans-order-form .totalDetail { display:none; z-index:110; width:300px; color:#707070; }
+.xans-order-form .totalDetail .content p { text-align:right; }
+.xans-order-form .totalDetail .content .ec-base-desc { margin:8px 0 0; padding-top:6px; border-top:1px dotted #b0b1b3; }
+
+/* Input Size */
+.xans-order-form #oname, .xans-order-form #oname2,
+.xans-order-form #rname, .xans-order-form #fname, .xans-order-form #fname2,
+.xans-order-form #english_oname, .xans-order-form #pron_name,
+.xans-order-form #si_gun_dosi, .xans-order-form #ju_do,
+.xans-order-form #ocity, .xans-order-form #ostate { width:180px; }
+
+.xans-order-form #oaddr1, .xans-order-form #oaddr2,
+.xans-order-form #raddr1, .xans-order-form #raddr2,
+.xans-order-form #faddress, .xans-order-form #faddress2 { width:450px; margin:5px 5px 0 0; }
+
+.xans-order-form #ophone1_1, .xans-order-form #ophone2_1,
+.xans-order-form #rphone1_1, .xans-order-form #rphone2_1,
+.xans-order-form #cashreceipt_user_mobile1 { width:60px; }
+.xans-order-form #ophone1_2, .xans-order-form #ophone1_3,
+.xans-order-form #ophone2_2, .xans-order-form #ophone2_3,
+.xans-order-form #rphone1_2, .xans-order-form #rphone1_3,
+.xans-order-form #rphone2_2, .xans-order-form #rphone2_3,
+.xans-order-form #cashreceipt_user_mobile2, .xans-order-form #cashreceipt_user_mobile3 { width:60px; margin:0 4px; }
+.xans-order-form #cashreceipt_reg_no { width:70px; }
+.xans-order-form #fphone1_ex2, .xans-order-form #fphone2_ex2 { margin:0 4px; }
+
+.xans-order-form #oemail { width:450px; margin:0 0 7px; }
+.xans-order-form #oemail1 { width:180px; margin:0 4px 0 0; }
+.xans-order-form #oemail2 { width:180px; margin:0 4px; }
+
+.xans-order-form #omessage, .xans-order-form #fmessage, .xans-order-form #question { width:750px; height:40px; }
+.xans-order-form #nm_terms, .xans-order-form #mall_agreement,
+.xans-order-form #delivery_info_offer_content, .xans-order-form #fdelivery_info_offer_content, .xans-order-form #privacy_agreement_for_identification,
+.xans-order-form #information_agreement, .xans-order-form #consignment_agreement, .xans-order-form #privacy_agreement, .xans-order-form #subscription_info_content { width:100%; height:80px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+
+.xans-order-form #hdateY,
+.xans-order-form #fhdateY { width:60px; margin:0 9px 0 0; }
+.xans-order-form #hdateM, .xans-order-form #hdateD,
+.xans-order-form #hdateW, .xans-order-form #fhdateM, .xans-order-form #fhdateD { width:50px; margin:0 9px 0 14px; }
+.xans-order-form #fhdateW { margin:0 9px 0 14px; }
+
+.xans-order-form #nm_agreement1, .xans-order-form #delivery_info_offer_check1, .xans-order-form #fdelivery_info_offer_check1 { margin-left:20px; }
+
+.xans-order-form #input_mile,
+.xans-order-form #either_input_mile,
+.xans-order-form #input_deposit { width:190px; padding:0 9px 0 0; text-align:right; font-weight:bold; }
+
+.xans-order-form #order_password,
+.xans-order-form #order_password_confirm,
+.xans-order-form #question_passwd  { width:235px; }
+
+.xans-order-form #escrow_terms { width:400px; }
+.xans-order-form #eguarantee_year { width:30px; }
+.xans-order-form #eguarantee_month { width:20px; }
+.xans-order-form #eguarantee_day { width:20px; }
+.xans-order-form #bankaccount { width:90%; }
+
+.xans-order-form #tax_request_email1, .xans-order-form #tax_request_email2 {margin:0 4px 0 0; width:110px; }
+.xans-order-form #tax_request_address1, .xans-order-form #tax_request_address2 { margin:5px 0 0; width:400px; }
+
+#divNvPointInfo { display:none; position:absolute; z-index:99; width:245px; padding:10px; color:#777; font-size:11px; line-height:14px; background:#fff; border:1px solid #5B9761; }
+#divNvPointInfo a { display:block; padding:5px 0 0; color:#1ec228; }
+#divNvPointInfo a img { vertical-align:middle; }
+#imgNaverMileageHelp { cursor:pointer; }

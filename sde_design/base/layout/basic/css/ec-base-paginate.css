@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+  .ec-base-paginate { text-align:center; }
+  /* typeList */
+    .ec-base-paginate.typeList { padding:14px 0; font-size:0; line-height:0; }
+    .ec-base-paginate.typeList ol { margin:0 14px; }
+    .ec-base-paginate.typeList ol,
+    .ec-base-paginate.typeList ol li { display:inline-block; vertical-align:middle; }
+    .ec-base-paginate.typeList ol li:not(:first-child) { margin:0 0 0 7px; }
+    .ec-base-paginate.typeList ol li a { display:inline-block; width:31px; height:27px; border:1px solid #d9d9d9; border-radius:2px; font-size:15px; line-height:27px; color:#1b1b1b; vertical-align:middle; background:#fff; }
+    .ec-base-paginate.typeList ol li .this { border-color:#508bed; color:#508bed; }
+    .ec-base-paginate.typeList [class*='btn'] { display:inline-block; overflow:hidden; width:31px; height:27px; border:1px solid #d9d9d9; border-radius:2px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; vertical-align:middle; background:#fff; background-repeat:no-repeat; background-position:50% 50%; background-size:7px auto; }
+    .ec-base-paginate.typeList .btnPrev { background-image:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_prev.png"); }
+    .ec-base-paginate.typeList .btnNext { background-image:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_next.png"); }
+
+  /* typeMoreview */
+    .ec-base-paginate.typeMoreview { margin:0 auto; }
+    .ec-base-paginate.typeMoreview .btnMore { display:block; padding:12px 0; border-top:1px solid #f1f1f1; border-bottom:1px solid #d5d5d5; color:#757575; font-weight:bold; background:#f5f5f5; }
+    .ec-base-paginate.typeMoreview .icoMore { display:inline-block; margin:0 0 0 8px; width:13px; height:8px; font-size:0; line-height:0; vertical-align:baseline; background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_more.png") no-repeat 0 50%; background-size:13px auto; }
+
+  /* typeSwipe */
+    .ec-base-paginate.typeSwipe { font-size:0; line-height:0; }
+    .ec-base-paginate.typeSwipe button.circle { overflow:hidden; margin:0 3px 0 4px; width:13px; height:13px; border:0; border-radius:13px; cursor:pointer; background-color:#bbb; }
+    .ec-base-paginate.typeSwipe button.circle.selected { background-color:#4a5164; }
+    .ec-base-paginate.typeSwipe span { overflow:hidden; font-size:1px; line-height:0; color:transparent; text-indent:-150%; }
+    .ec-base-paginate.typeSwipe button.prev,
+    .ec-base-paginate.typeSwipe button.next { width:31px; font-size:15px; line-height:1.2em; border:0; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_prev.png") no-repeat 50% 50%; background-size:7px auto; }
+    .ec-base-paginate.typeSwipe button.next { background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_next.png") no-repeat 50% 50%; background-size:7px auto; }
+    .ec-base-paginate.typeSwipe .prev,
+    .ec-base-paginate.typeSwipe .next { display:none; }
+
+  /* typeZoom */
+    .ec-base-paginate.typeZoom .btnPrev,
+    .ec-base-paginate.typeZoom .btnNext { overflow:hidden; width:31px; height:27px; border:1px solid #d9d9d9; border-radius:2px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_prev.png") no-repeat 50% 50%; background-size:7px auto; }
+    .ec-base-paginate.typeZoom .btnNext { background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_next.png") no-repeat 50% 50%; background-size:7px auto;  }
+
+  /* typeTotal */
+    .paginate.typeTotal { color:#696969; }
+    .paginate.typeTotal > span { margin:0 8px;font-weight:bold; }
+    .paginate.typeTotal p { display:inline-block;vertical-align:middle; }
+    .paginate.typeTotal .icoPrev,
+    .paginate.typeTotal .icoNext { width:7px; height:13px; font-size:15px; line-height:1.2em; background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_prev.png") no-repeat 50% 50%; background-size:7px auto; }
+    .paginate.typeTotal .icoNext { background:url("//img.echosting.cafe24.com/skin/mobile/layout/btn_next.png") no-repeat 50% 50%; background-size:7px auto; }
+    .paginate.typeTotal p span { overflow:hidden; display:block; width:29px; text-indent:-999px; }
+    .paginate.typeTotal strong { color:#508bed; }
+

@@ -1,0 +1,40 @@
+<div module="coupon_productdetailajax">
+    <!--
+        $coupon_down_result_url = /coupon/coupon_down_result.html
+    -->
+    <!--@css(/css/module/coupon/productDetailAjax.css)-->
+    <div class="title">
+        <h3><span>쿠폰 다운로드</span></h3>
+        <p class="button"><a href="#none" id="btn_all_coupondown" class="btnNormal">전체쿠폰다운받기</a></p>
+    </div>
+    <div class="couponSkinArea">
+        <!--
+            진열 방식에따라 아래의 ul class 변경
+            1열 : ul class="grid1"
+            2열 : ul class="grid2"
+            3열 : ul class="grid3"
+        -->
+        <ul class="grid3">
+            <li>
+                <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                    <div class="detail" {$call_coupon_detail}>
+                        <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name|cut:13,...}</strong>
+                        <p class="discount" style="color:#d07b01; font-family:Dotum;"><span style="font-family:Verdana;">{$coupon_content}</span></p>
+                        <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+                    </div>
+                    <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></div>
+                </div>
+            </li>
+            <li>
+                <div class="coupon {$background_class}" style="background-image:url('{$background_url}')">
+                    <div class="detail" {$call_coupon_detail}>
+                        <strong class="title" style="color:#483b1b; font-family:Arial; font-size:11px;">{$coupon_name|cut:13,...}</strong>
+                        <p class="discount" style="color:#d07b01; font-family:Dotum;"><span style="font-family:Verdana;">{$coupon_content}</span></p>
+                        <p class="period" style="color:#685219; font-family:Dotum;">{$coupon_period}</p>
+                    </div>
+                    <div class="button"><a href="{$coupon_issue_url}"><img src="{$download_url}" alt="다운받기" /></a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <title>주문서 작성</title>
+    <!--@css(/css/module/order/ec_orderform/form_onetouch.css)-->
+    <!-- 사용자 스타일 수정이 필요한 경우, 신규 CSS 파일을 추가하여 #userStyle #mCafe24Order { } 셀렉터로 처리 가능합니다. -->
+    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+    <!--@js(/layout/basic/js/common.js)-->
+    <!--@js(/js/module/order/ec_orderform/orders.js)-->
+	<style type="text/css">
+        @media all and (max-width:639px) {
+            #product_dimmed { display:none; }
+        }
+    </style>
+</head>
+<body id="userStyle">
+    <!-- [상단영역] -->
+    <!--@import(/order/ec_orderform/header.html)-->
+    <div id="mCafe24Order" class="typeHeader" module="Order_form" unroll="1">
+        <!-- 이값은 지우면 안되는 값입니다. ($move_order_after 주문완료페이지 주소 / $move_basket 장바구니페이지 주소)
+            $move_order_after=/order/order_result.html
+            $move_basket=/order/basket.html
+            $paymethod_selector = textButton
+            $email_type=emailcompact
+			$product_weight_display=F
+        -->
+        <!-- [바로구매 주문상품] -->
+        <!--@import(/order/ec_orderform/product_detail.html)-->
+        <!-- [주문배송정보] 주문자정보, 배송지정보, 배송정보 -->
+        <!--@import(/order/ec_orderform/billingNshipping.html)-->
+        <!-- [추가정보입력] 추가입력, 기타문의사항 -->
+        <!--@import(/order/ec_orderform/additionalInput.html)-->
+        <!-- [주문상품] -->
+        <!--@import(/order/ec_orderform/orderProduct.html)-->
+        <!-- [사은품] -->
+        <div id="{$gift_orderform_id}">
+            <!--@import(/order/ec_orderform/gift.html)-->
+        </div>
+        <!-- [할인/부가결제] 할인/부가결제, 자동 할인내역 레이어 팝업 -->
+        <!--@import(/order/ec_orderform/discount.html)-->
+        <!-- [결제정보] -->
+        <!--@import(/order/ec_orderform/payment.html)-->
+        <!-- [결제수단] -->
+        <!--@import(/order/ec_orderform/paymethod.html)-->
+        <!-- [적립 혜택] -->
+        <!--@import(/order/ec_orderform/benefit.html)-->
+        <!-- [약관동의] -->
+        <!--@import(/order/ec_orderform/agreement.html)-->
+        <div class="ec-base-button gFull" id="orderFixItem">
+            <button type="button" class="btnSubmit" id="{$btn_payment_id}">
+                {$total_order_price_front_head}<span id="{$total_order_price_front_id}">{$total_order_price_front}</span>{$total_order_price_front_tail} <span class="{$subscription_hide_display|display}">결제하기</span><span class="{$subscription_show_display|display}">정기배송 신청하기</span>
+            </button>
+        </div>
+        <div class="helpArea">
+            <ul class="ec-base-help typeDash">
+                <li class="{$subscription_show_display|display}"><span class="txtEm">상기 금액은 결제 시점의 금액과 다를 수 있습니다.</span></li>
+                <li>무이자할부가 적용되지 않은 상품과 무이자할부가 가능한 상품을 동시에 구매할 경우 전체 주문 상품 금액에 대해 무이자할부가 적용되지 않습니다. 무이자할부를 원하시는 경우 장바구니에서 무이자할부 상품만 선택하여 주문하여 주시기 바랍니다.</li>
+                <li>최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</li>
+            </ul>
+        </div>
+        <!-- [주문 정보 확인 레이어팝업] -->
+        <!--@import(/order/ec_orderform/confirm.html)-->
+        <iframe id="{$payment_proc_id}" name="h_payment" width="0" height="0" frameborder="0" src=""></iframe>
+        <input type="hidden" id="sPrdName" name="sPrdName" value="{$sPrdName}">
+    </div>
+    <div id="progressPaybar" style="display:none;">
+        <div id="progressPaybarBackground" class="layerProgress"></div>
+        <div id="progressPaybarView">
+            <p class="graph">현재 결제가 진행중입니다.</p>
+            <p class="txt">
+                본 결제 창은 결제완료 후 자동으로 닫히며, <br>
+                결제 진행 중에 본 결제 창을 닫으시면<br>
+                주문이 되지 않으니 <br>
+                결제 완료 될 때 까지 닫지 마시기 바랍니다.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

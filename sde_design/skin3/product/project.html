@@ -1,0 +1,81 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Project_Package">
+    <!--@css(/css/module/product/project_package.css)-->
+    <div class="path" module="project_head">
+        <span>현재 위치</span>
+        <ol>
+            <li><a href="/">홈</a></li>
+            <li title="현재 위치"><strong>기획전</strong></li>
+        </ol>
+    </div>
+
+    <div class="title" module="product_headcategory">
+        <p class="banner">{$top_image_tag}</p>
+        <h2>{$title_text_or_image}</h2>
+    </div>
+
+
+    <ul class="menuCategory">
+        <li module="product_projectcategory" style="display:{$display};">
+            <a href="#{$cate_id}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+        </li>
+    </ul>
+
+    <div module="project_list">
+        <!--
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+        <h3><span id="{$cate_id}">{$category_name}</span></h3>
+
+
+        <div module="project_productlist" class="ec-base-product">
+            <ul class="prdList grid4">
+                <li id="anchorBoxId_{$product_no}">
+                    <div class="thumbnail">
+                        <div class="prdImg">
+                            <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" alt="{$seo_alt_tag}" /><span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                            <span class="wish">{$list_wish_icon}</span>
+                        </div>
+                        <div class="icon">
+                            <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</div>
+                            <div class="button">
+                               <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
+                               <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
+                           </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong class="name"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                        <ul module="project_ListItem" class="spec">
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="anchorBoxId_{$product_no}">
+                    <div class="thumbnail">
+                        <div class="prdImg">
+                            <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" alt="{$seo_alt_tag}" /><span module="project_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+                            <span class="wish">{$list_wish_icon}</span>
+                        </div>
+                        <div class="icon">
+                            <div class="promotion">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$pickup_icon}</div>
+                            <div class="button">
+                               <div class="likeButton {$disp_likeprd_class}"><button type="button">{$disp_likeprd_icon} <strong>{$disp_likeprd_count}</strong></button></div>
+                               <div class="option">{$option_preview_icon}</div> {$basket_icon} {$zoom_icon}
+                           </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <strong class="name"><a href="{$link_product_detail}">{$product_name}</a></strong>
+                        <ul module="project_ListItem" class="spec">
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                            <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

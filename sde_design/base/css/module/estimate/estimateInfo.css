@@ -1,0 +1,44 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img { margin:0; padding:0; border:0 none; }
+body { font:12px Dotum, AppleGothic, sans-serif; color:#333; background:#fff; }
+caption { display:none; }
+li { list-style:none; }
+
+.estimateArea {}
+
+.xans-estimate-print { overflow:hidden; padding:20px 30px; border-bottom:1px solid #6c6c6c; background:#eee; }
+.xans-estimate-print strong { display:block; color:#353535; }
+.xans-estimate-print ul { float:left; margin:7px 0 0; width:410px; color:#757575; font-size:12px; line-height:1.5; }
+.xans-estimate-print li { padding:0 0 0 9px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_dash.gif") no-repeat 0 7px; }
+.xans-estimate-print p { float:right; width:257px; }
+.xans-estimate-print p [class^='btn'] { position:relative; display:inline-block; box-sizing:border-box; width:80px; height:80px; padding:54px 2px 4px; font-weight:bold; font-size:12px; line-height:18px; color:#fff; text-decoration:none; text-align:center; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; border:1px solid transparent; border-radius:2px; }
+.xans-estimate-print p .btnPrint { background-color:#4a5164; }
+.xans-estimate-print p .btnDownload { background-color:#84868b; }
+.xans-estimate-print p .btnEmail { background-color:#84868b; }
+.xans-estimate-print p [class^='btn'] img { position:absolute; top:14px; left:50%; margin:0 0 0 -16px; }
+  .xans-estimate-print p [class^='btn'].gBreak { padding-top:46px; line-height:15px; }
+  .xans-estimate-print p [class^='btn'].gBreak img { top:7px; }
+
+.xans-estimate-estimateinfo { padding:0 20px 30px; }
+.xans-estimate-estimateinfo h1 { padding:30px 0; text-align:center; letter-spacing:10px; color:#000; }
+.xans-estimate-estimateinfo table { width:100%; border-spacing:0; border-collapse:collapse; border:0; margin:0 0 30px; }
+.xans-estimate-estimateinfo th,
+.xans-estimate-estimateinfo td { padding:4px 2px; border:1px solid #999; }
+.xans-estimate-estimateinfo p { padding:0 0 5px; }
+
+.number { text-align:center; }
+.prdCode { text-align:center; }
+.prdName img { width:60px; padding:0 4px 0 0; vertical-align:middle; }
+.maker {}
+.resource {}
+.unitPrice { text-align:right; }
+.quantity { text-align:center; }
+.totalPrice { text-align:right; }
+
+ul.sale { padding:3px 0 0; }
+ul.sale .title { width:150px; display:inline-block; }
+
+/* For Print */
+@media print {
+  .xans-estimate-print { display:none; }
+  table th { text-align:center; border:1px solid #999; }
+}

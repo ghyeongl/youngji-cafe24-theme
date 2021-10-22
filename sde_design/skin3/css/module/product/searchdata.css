@@ -1,0 +1,224 @@
+/* 검색&상품분류 */
+.xans-product-searchdata .searchField { padding:22px 0; margin:0 0 -1px; background:url("//img.echosting.cafe24.com/skin/base/product/bg_search_field.gif") repeat-x 0 100%; }
+.xans-product-searchdata .searchField fieldset { position:relative; display:table; margin:0 auto 10px; text-align:center; }
+.xans-product-searchdata .searchField fieldset .searchInput { position:relative; display:inline-block; width:262px; padding:0 36px 0 0; border:1px solid #565960; border-radius:1px; -webkit-border-radius:1px; -moz-border-radius:1px; }
+.xans-product-searchdata .searchField fieldset .autoDrop { display:none; z-index:2; position:absolute; top:100%; left:-1px; overflow:hidden; overflow-y:auto; max-height:100px; width:100%; border:1px solid #565960; text-align:left; background:#fff; }
+.xans-product-searchdata .searchField fieldset .autoDrop li a { display:block; padding:6px 10px; font-size:11px; color:#1c1c1c; }
+.xans-product-searchdata .searchField fieldset .autoDrop li a:hover,
+.xans-product-searchdata .searchField fieldset .autoDrop li.selected a { text-decoration:none; color:#fff; background:#a1a4ae; }
+.xans-product-searchdata .searchField fieldset .btnSearchOption { margin:0 0 0 7px; padding:3px 14px 3px 0; vertical-align:middle; color:#2e2e2e; font-size:12px; letter-spacing:-1px; outline:0; background:url("//img.echosting.cafe24.com/skin/base/common/ico_arrow2.gif") no-repeat 100% 50%; }
+.xans-product-searchdata .searchField .keyword { border:0; padding:0 10px; width:100%; height:32px; line-height:32px; outline:0; background:#fff; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; }
+.xans-product-searchdata .searchField .btnSearch { position:absolute; top:0; right:0; outline:0; }
+.xans-product-searchdata .searchField .keywordArea { max-width:600px; margin:3px auto 0; text-align:center; }
+.xans-product-searchdata .searchField .keywordArea .heading { display:inline-block; padding:3px 5px; border:1px solid #cbcbcb; color:#525252; font-size:11px; font-weight:normal; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; }
+.xans-product-searchdata .searchField .keywordArea .list { display:inline; }
+.xans-product-searchdata .searchField .keywordArea .list li { display:inline; margin:0 0 0 4px; }
+.xans-product-searchdata .searchField .keywordArea .list li a { display:inline-block; word-break:break-all; word-wrap:break-word; color:#525252; font-size:11px; }
+
+.xans-product-searchdata .xans-product-searchconditiondata { position:relative; padding:2px 8px 9px 127px; border:1px solid #d7d5d5; font-size:0; line-height:0; }
+#searchContent.xans-product-searchdata .xans-product-searchconditiondata { border-top:0; }
+.xans-product-searchdata .xans-product-searchconditiondata .list { display:inline; }
+.xans-product-searchdata .xans-product-searchconditiondata .list li { display:inline-block; height:14px; line-height:14px; margin:7px 5px 0 0; padding:4px 3px 4px 8px; border:1px solid #dadada; border-radius:24px; vertical-align:top; font-size:11px; color:#508bed; word-break:break-all; word-wrap:break-word; background:#fff; box-sizing:unset; -moz-box-sizing:unset; -webkit-box-sizing:unset; }
+.xans-product-searchdata .xans-product-searchconditiondata .btnSearchDelete { width:22px; height:22px; margin:-4px 0; font-size:0; line-height:0; outline:0; vertical-align:top; background:url("//img.echosting.cafe24.com/skin/base/product/btn_search_delete2.gif") no-repeat center center; }
+.xans-product-searchdata .xans-product-searchconditiondata .icoColor { display:inline-block; overflow:hidden; width:14px; height:14px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; border-radius:16px; vertical-align:top; }
+
+.xans-product-searchdata .xans-product-searchconditiondata .btnRefresh { position:absolute; left:19px; top:13px; padding:0 0 0 20px; text-align:left; outline:0; line-height:20px; color:#525252; background:url("//img.echosting.cafe24.com/skin/base/product/btn_refresh.gif") no-repeat 0 0; }
+.xans-product-searchdata .xans-product-searchconditiondata .btnRefresh:after { content:''; position:absolute; right:-17px; top:2px; width:1px; height:11px; background:#d3d1d2; }
+
+.xans-product-searchdata .xans-product-categoryhashtag { display:table; table-layout:fixed; padding:10px; font-family:GulimChe,Gulim; }
+.xans-product-searchdata .xans-product-categoryhashtag .heading { display:table-cell; width:41px; vertical-align:top; }
+.xans-product-searchdata .xans-product-categoryhashtag .heading > strong { display:inline-block; padding:3px 5px; border:1px solid #cbcbcb; color:#525252; font-size:11px; font-weight:normal; border-radius:10px; -webkit-border-radius:10px; -moz-border-radius:10px; }
+.xans-product-searchdata .xans-product-categoryhashtag .list { display:table-cell; width:auto; vertical-align:top; font-size:0; line-height:0; }
+.xans-product-searchdata .xans-product-categoryhashtag .list li { display:inline-block; margin:4px 10px 2px 0; }
+.xans-product-searchdata .xans-product-categoryhashtag .list li a { display:inline-block; word-break:break-all; word-wrap:break-word; text-decoration:underline; color:#525252; font-size:11px; line-height:14px; }
+/* 검색*/
+.xans-product-searchdata .searchResult { margin:30px 0 0; overflow:hidden; border:1px solid #d7d5d5; text-align:right; line-height:38px; }
+.xans-product-searchdata .searchResult .record { float:left; padding:0 0 0 8px; color:#008bcc; }
+.xans-product-searchdata .searchResult .xans-product-searchorderby { display:inline; margin:0 4px 0 0; }
+.xans-product-searchdata .searchResult .xans-product-searchorderby li { display:inline; padding:0 6px 0 10px; color:#2e2e2e; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/base/product/bg_result_type.gif") no-repeat 0 50%; }
+.xans-product-searchdata .searchResult .xans-product-searchorderby li:hover { color:#008bcc; text-decoration:none; }
+.xans-product-searchdata .searchResult .xans-product-searchorderby li:first-child { background:none; }
+.xans-product-searchdata .xans-product-searchconditiondata + .searchResult { margin-top:53px; }
+.xans-product-searchdata .noData { padding:50px 0; text-align:center; line-height:1.8em; }
+.xans-product-searchdata .noData > strong { display:block; color:#000; }
+.xans-product-searchdata .noData > strong.warning { display:block; color:#008bcc; }
+.xans-product-searchdata .noData ul { margin:10px 0 0; }
+/* 검색옵션 레이어팝업 */
+.searchOption { display:none; top:40px; width:460px; left:50%; margin: 0 0 0 -231px; text-align:left; }
+.searchOption.ec-base-layer .content { padding:15px; }
+.searchOption .boardWrite { position:relative; margin:10px 0 0; color:#353535; line-height:1.4; }
+.searchOption .boardWrite:first-child { margin-top:0; }
+.searchOption .boardWrite tbody th { padding:9px 0 8px 10px; text-align:left; word-break:break-all; word-wrap:break-word; }
+.searchOption .boardWrite td { padding:5px 10px 4px; vertical-align:middle; word-wrap:break-word; word-break:break-all; }
+.searchOption .boardWrite input[type=text] { width:309px; }
+.searchOption .desc { margin:7px 0 0; color:#919399; font-size:11px; }
+
+/* 상세검색 사이드바(#searchSidebar), PC 고정형(#searchSticky)  */
+#searchSidebar.searchData { z-index:1001; position:fixed; top:0; left:-231px; width:230px; bottom:0; border-right:1px solid #c6cbd6; color:#2e2e2e; background:#f3f3f3; }
+#searchSticky.searchData { z-index:100; width:180px; margin:-15px 0 0; background:#fff; }
+#searchSticky.sticky { position:fixed; top:0; }
+#searchSidebar.searchData.opened { left:0; }
+#searchSidebar .btnSearch { position:absolute; top:195px; right:-28px; padding:0 7px 0 9px; width:27px; outline:0; color:#e5e5e5; font-size:12px; background:url("//img.echosting.cafe24.com/skin/base/product/btn_search_sidebar.png") no-repeat 0 0; }
+#searchSidebar.gRight { left:inherit; right:-231px; border-right-width:0; border-left:1px solid #c6cbd6; }
+#searchSidebar.gRight.opened { left:inherit; right:0; }
+#searchSidebar.gRight .btnSearch { left:-28px; right:inherit; }
+#searchSidebar .btnSearch:before { position:absolute; top:-44px; left:0; display:block; content:""; width:27px; height:44px; background:url("//img.echosting.cafe24.com/skin/base/product/btn_search_sidebar_before.png") no-repeat 0 0; }
+#searchSidebar .btnSearch:after { position:absolute; top:100%; left:0; display:block; content:""; width:27px; height:29px; background:url("//img.echosting.cafe24.com/skin/base/product/btn_search_sidebar_after.png") no-repeat 0 0; }
+#searchSidebar.gRight .btnSearch { right:auto; left:-28px; background-image:url("//img.echosting.cafe24.com/skin/base/product/btn_search_sidebar_right.png"); }
+#searchSidebar.gRight .btnSearch:before { background-image:url("//img.echosting.cafe24.com/skin/base/product/btn_search_sidebar_before_right.png"); }
+#searchSidebar.gRight .btnSearch:after { background-image:url("//img.echosting.cafe24.com/skin/base/product/btn_search_sidebar_after_right.png"); }
+#searchSidebar.searchData .searchCondition { overflow:hidden; }
+#searchSidebar.searchData .searchArea { overflow-y:scroll; position:relative; width:217px; padding:20px 15px; }
+#searchSidebar.searchData .searchArea { position:relative; padding:20px 15px; }
+#searchSticky.searchData .searchArea { position:relative; }
+#searchSidebar.searchData .searchArea > .title { border-bottom:1px solid #565960; padding:0 0 17px; text-align:center; font-family:arial, sans-serif; font-size:18px; color:#131313; }
+#searchSticky.searchData .searchArea > .title { border-bottom:1px solid #565960; padding:4px 0 10px 2px; font-family:arial, sans-serif; font-size:14px; color:#0e0e0e; }
+#searchSticky.searchData .xans-product-searchfilterlist:last-of-type { margin:0 0 30px 0; }
+.searchData .xans-product-searchfilterlist { border-bottom:1px solid #d5d5d5; }
+.searchData .xans-product-searchfilterlist .title { position:relative; padding:10px 19px 10px 5px; text-transform:uppercase; font-size:12px; cursor:pointer; }
+#searchSticky.searchData .xans-product-searchfilterlist .title { position:relative; padding:10px 19px 10px 5px; text-transform:uppercase; font-size:12px; color:#444; cursor:pointer; }
+.searchData .xans-product-searchfilterlist .title:after { display:block; content:""; position:absolute; top:50%; right:6px; width:7px; height:5px; margin:-3px 0 0; background:url("//img.echosting.cafe24.com/skin/base/product/bg_search_toggle_title.gif") no-repeat 0 0; }
+.searchData .xans-product-searchfilterlist .content { display:none; margin:0 0 13px; }
+.searchData .xans-product-searchfilterlist.selected .content { display:block; }
+/* 체크박스 */
+  #searchSidebar.searchData .xans-product-searchfilterlist .check .xans-product-filterform { overflow:hidden; overflow-y:auto; max-height:100px; border:1px solid #dfdfdf; background:#fff; }
+  #searchSticky.searchData .xans-product-searchfilterlist .check .xans-product-filterform { overflow:hidden; overflow-y:auto; max-height:90px; }
+  #searchSidebar.searchData .xans-product-searchfilterlist .check li { margin:0 10px 7px 27px; line-height:14px; color:#525252; word-break:break-all; word-wrap:break-word; }
+  #searchSticky.searchData .xans-product-searchfilterlist .check li { margin:0 10px 9px 27px; line-height:14px; color:#525252; word-break:break-all; word-wrap:break-word; }
+  #searchSidebar.searchData .xans-product-searchfilterlist .check li:first-child { padding-top:10px; }
+  #searchSticky.searchData .xans-product-searchfilterlist .check li:first-child { padding-top:7px; }
+  .searchData .xans-product-searchfilterlist .check li.disabled { color:#d7d7d8; }
+  .searchData .xans-product-searchfilterlist .check li label { cursor:pointer; vertical-align:top; }
+  .searchData .xans-product-searchfilterlist .check li.disabled label { cursor:default; }
+  .searchData .xans-product-searchfilterlist .check li input { margin:0 0 0 -17px; vertical-align:top; }
+  .searchData .xans-product-searchfilterlist .check .icoColor { display:inline-block; margin:0 4px 0 0; width:12px; height:12px; background-image:url("//img.echosting.cafe24.com/skin/base/product/bg_color_circle.png"); background-repeat:no-repeat; background-position:0 0; }
+/* 텍스트버튼 */
+  .searchData .xans-product-searchfilterlist .button .xans-product-filterform { margin:-6px 0 0 -5px; font-size:0; line-height:0; }
+  .searchData .xans-product-searchfilterlist .button li { display:inline-block; padding:6px 0 0 5px; min-width:50%; max-width:100%; vertical-align:top; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; }
+  .searchData .xans-product-searchfilterlist .button li button { display:inline-block; width:100%; border:1px solid #ccc; padding:6px; outline:0; font-size:12px; line-height:16px; color:#525252; word-break:break-all; word-wrap:break-word; background:#fff; }
+  .searchData .xans-product-searchfilterlist .button li:hover button { border-color:#508bed; color:#508bed; }
+  .searchData .xans-product-searchfilterlist .button li.disabled button { border-color:#d7d7d8; color:#d7d7d8; cursor:default; }
+  .searchData .xans-product-searchfilterlist .button li.selected button { border:2px solid #508bed; padding:5px; color:#508bed; }
+  /* 텍스트버튼 풀타입 */
+    .searchData .xans-product-searchfilterlist .button.full .xans-product-filterform { margin:0; border-top:1px solid #ccc; }
+    .searchData .xans-product-searchfilterlist .button.full li { width:100%; padding:0; }
+    .searchData .xans-product-searchfilterlist .button.full li button { border-top:0; }
+    .searchData .xans-product-searchfilterlist .button.full li:hover button { margin-top:-1px; border-top:1px solid #508bed; }
+    .searchData .xans-product-searchfilterlist .button.full li.disabled button { position:relative; margin-top:-1px; border-top:1px solid #d7d7d8; }
+    .searchData .xans-product-searchfilterlist .button.full li.selected button { position:relative; margin:-1px 0 0; padding:5px; border:2px solid #508bed; }
+
+/* 텍스트버튼 해시태그 */
+   .searchData .xans-product-searchfilterlist .button.hashtag li { min-width:inherit; }
+
+/* 컬러칩 */
+  #searchSidebar.searchData .xans-product-searchfilterlist .colorChip .xans-product-filterform { padding:3px 5px; margin:-8px 0 0; font-size:0; line-height:0; }
+  #searchSticky.searchData .xans-product-searchfilterlist .colorChip .xans-product-filterform { padding:6px 5px 0; margin:-8px 0 0; font-size:0; line-height:0; }
+  .searchData .xans-product-searchfilterlist .colorChip li { position:relative; display:inline-block; width:20%; margin:8px 0 0; text-align:center; vertical-align:middle; }
+  #searchSidebar.searchData .xans-product-searchfilterlist .colorChip li .circle { display:inline-block; width:25px; height:25px; outline:0; cursor:pointer; background-image:url("//img.echosting.cafe24.com/skin/base/product/bg_colorchip_circle.png"); background-repeat:no-repeat; background-position:0 0; }
+  #searchSticky.searchData .xans-product-searchfilterlist .colorChip li .circle { display:inline-block; width:29px; height:29px; outline:0; cursor:pointer; background-image:url("//img.echosting.cafe24.com/skin/base/product/bg_colorchip_circle_29.png"); background-repeat:no-repeat; background-position:0 0; }
+  #searchSidebar.searchData .xans-product-searchfilterlist .colorChip li.selected .icoColorCheck { position:absolute; top:50%; left:50%; display:block; width:18px; height:15px; margin:-7px 0 0 -9px; background:url("//img.echosting.cafe24.com/skin/base/product/ico_color_selected.png") no-repeat 0 0; }
+  #searchSticky.searchData .xans-product-searchfilterlist .colorChip li.selected .icoColorCheck { position:absolute; top:50%; left:50%; display:block; width:18px; height:15px; margin:-8px 0 0 -9px; background:url("//img.echosting.cafe24.com/skin/base/product/ico_color_selected.png") no-repeat 0 0; }
+  .searchData .xans-product-searchfilterlist .colorChip li.disabled .circle { opacity:0.1; filter:alpha(opacity=10); cursor:default; }
+  .searchData .xans-product-searchfilterlist .colorChip li.disabled:after { position:absolute; top:50%; left:50%; display:block; content:""; width:14px; height:14px; margin:-8px 0 0 -6px; background:url("//img.echosting.cafe24.com/skin/base/product/ico_color_disable.png") no-repeat 0 0; }
+  #searchSticky.searchData .xans-product-searchfilterlist .colorChip li.disabled:after { margin:-7px 0 0 -7px; }
+
+/* 가격 금액 입력 */
+  .searchData .xans-product-searchfilterlist .button .priceInput { margin:9px 0 0; }
+  .searchData .xans-product-searchfilterlist .button .priceInput > input[type="text"] { width:47px; padding:5px 4px; margin:0 4px 0 0; }
+  #searchSticky.searchData .xans-product-searchfilterlist .button .priceInput { position:relative; height:30px; padding-right:32px; }
+  #searchSticky.searchData .xans-product-searchfilterlist .button .btnPriceSearch { position:absolute; right:0; top:0;  }
+
+/* 가격 범위 지정 */
+  .searchData .xans-product-searchfilterlist .priceSlide .slider { position:relative; padding:0 0 5px; margin:7px 5px 5px 8px; }
+  .searchData .xans-product-searchfilterlist .priceSlide .range { position:static; margin:0 0 0 0; border-radius:9px; border:1px solid #d9d9d8; height:9px; background:#e7e7e7; }
+  .searchData .xans-product-searchfilterlist .priceSlide .noUi-base { position:static; }
+  .searchData .xans-product-searchfilterlist .priceSlide .noUi-connect { position:absolute; top:-1px; height:9px; border-top:1px solid #3d7ce4; border-bottom:1px solid #3d7ce4; font-size:0; line-height:0; background:#508bed; }
+.searchData .xans-product-searchfilterlist .priceSlide .noUi-handle { position:absolute; top:-4px; display:block; margin:0 0 0 12px; width:12px; height:21px; border:0; border-radius:0; box-shadow:none; cursor:pointer; font-size:0; line-height:0; outline:0; background:url("//img.echosting.cafe24.com/skin/base/product/btn_price_handle.png") no-repeat 0 0; }
+  .searchData .xans-product-searchfilterlist .priceSlide .noUi-handle:before, .searchData .xans-product-searchfilterlist .priceSlide .noUi-handle:after { display:none; }
+  .searchData .xans-product-searchfilterlist .priceSlide .value { overflow:hidden; margin:0 0 0 3px; text-align:right; font-size:11px; }
+  .searchData .xans-product-searchfilterlist .priceSlide .value .minPrice { float:left; }
+
+/* 상세검색 상단형 */
+  #searchContent { position:relative; margin:-2px 0 0; }
+  #searchContent .searchArea { position:relative; border:1px solid #9fa4ac; }
+  #searchContent th { padding:13px 18px; border-top:1px solid #dfdfdf; border-right:1px solid #d7d5d5; font-size:12px; color:#2e2e2e; text-align:left; text-transform:uppercase; vertical-align:top; background:#f2f2f2; }
+  #searchContent tr td { padding:2px 6px; border-top:1px solid #eee; }
+  #searchContent tr:first-child th,
+  #searchContent tr:first-child td { border-top:0; }
+  #searchContent tr .extend { position:absolute; right:0; top:6px; bottom:6px; border-left:1px solid #eee; }
+  #searchContent tr .btnExtend { width:10px; height:10px; margin:-2px -6px 0 0; padding:15px 18px 14px;  font-size:1px; line-height:0; color:transparent; text-indent:-150%; background:#fff url("//img.echosting.cafe24.com/skin/base/product/btn_search_extend.png") no-repeat 50%; }
+  #searchContent tr.selected .btnExtend { background:#fff url("//img.echosting.cafe24.com/skin/base/product/btn_search_fold.png") no-repeat 50%; }
+  #searchContent tr .cell { position:relative; overflow:hidden; height:37px; }
+  #searchContent tr .priceSlide .cell { height:45px; }
+  #searchContent tr.selected .cell { height:auto; }
+  #searchContent tr .content { width:700px; }
+  #searchContent tr .colorChip .content { width:594px; margin:0 0 0 9px; }
+  #searchContent tr .colorChip .check { height:25px; }
+  #searchContent .btnAllExtend { overflow:hidden; position:absolute; right:-1px; bottom:-17px; z-index:1; width:53px; height:17px; font-size:1px; line-height:0; color:transparent; text-indent:-150%; background:transparent url("//img.echosting.cafe24.com/skin/base/product/btn_all_extend.png") no-repeat 0 0; }
+  #searchContent .btnAllExtend.open { background-image:url("//img.echosting.cafe24.com/skin/base/product/btn_all_extend_open.png"); }
+
+/* 체크박스 */
+  #searchContent tr .check li { display:inline-block; margin:7px 5px; word-break:break-all; word-wrap:break-word; vertical-align:top; }
+  #searchContent tr .check li label { display:inline-block; height:23px; padding:0 7px; line-height:24px; color:#525252; cursor:pointer; vertical-align:top; }
+  #searchContent tr .check li.disabled label { color:#d7d7d8; cursor:default; }
+
+/* 컬러칩 */
+  #searchContent tr .colorChip .xans-product-filterform { font-size:0; line-height:0; }
+  #searchContent tr .colorChip li { position:relative; display:inline-block; margin:7px 5px; text-align:center; vertical-align:middle; }
+  #searchContent tr .colorChip li .circle { display:inline-block; width:23px; height:23px; outline:0; cursor:pointer; background-image:url("//img.echosting.cafe24.com/skin/base/product/bg_colorchip_circle_23.png"); background-repeat:no-repeat; background-position:0 0; }
+  #searchContent tr .colorChip li.selected .icoColorCheck { position:absolute; top:50%; left:50%; display:block; width:13px; height:10px; margin:-5px 0 0 -6px; background:url("//img.echosting.cafe24.com/skin/base/product/ico_color_selected2.png") no-repeat 0 0; }
+  #searchContent tr .colorChip li.disabled .circle { opacity:0.1; filter:alpha(opacity=10); cursor:default; }
+  #searchContent tr .colorChip li.disabled:after { position:absolute; top:50%; left:50%; display:block; content:""; width:14px; height:14px; margin:-7px 0 0 -7px; background:url("//img.echosting.cafe24.com/skin/base/product/ico_color_disable.png") no-repeat 0 0; }
+  #searchContent tr .check .icoColor { display:inline-block; margin:6px 4px 0 0; width:12px; height:12px; vertical-align:top; background-image:url("//img.echosting.cafe24.com/skin/base/product/bg_color_circle.png"); background-repeat:no-repeat; background-position:0 0; }
+
+/* 텍스트버튼 */
+  #searchContent tr .button li { display:inline-block; margin:7px 5px; word-break:break-all; word-wrap:break-word; vertical-align:top; }
+  #searchContent tr .button li button { display:inline-block; height:23px; padding:0 7px; line-height:24px; color:#525252; cursor:pointer; vertical-align:top; background:transparent; }
+  #searchContent tr .button li.selected button { border-radius:23px; color:#fff; background:#508bed; }
+  #searchContent tr .button li.disabled button { color:#d7d7d8; cursor:default; outline:0; }
+
+/* 가격 */
+  #searchContent tr .button.full .xans-product-filterform { font-size:0; line-height:0; }
+  #searchContent tr .button.full li { display:inline-block; margin:7px 5px; }
+  #searchContent tr .button.full li button { display:inline-block; padding:0 7px; outline:0; font-size:12px; line-height:23px; color:#525252; word-break:break-all; word-wrap:break-word; letter-spacing:-0.06em; background:transparent; }
+  #searchContent tr .button.full li:hover button { border-color:#508bed; color:#508bed; }
+  #searchContent tr .button.full li.disabled button { border-color:#d7d7d8; color:#d7d7d8; cursor:default; }
+  #searchContent tr .button.full li.selected button { color:#508bed; }
+  #searchContent .button.full .content { width:450px; }
+  #searchContent tr.selected .button.full .content { width:806px; }
+  #searchContent tr.selected .button .priceInput { display:inline-block; position:static; }
+
+  #searchContent tr .button .priceInput { position:absolute; right:83px; top:0; margin:7px 0 7px 12px; line-height:22px; }
+  #searchContent tr .button .priceInput > input[type="text"] { width:63px; padding:2px 5px; margin:0 4px 0 0; border-color:#d9d9d9; border-radius:2px; }
+  #searchContent tr .button .btnPriceSearch img { display:none; }
+  #searchContent tr .button .btnPriceSearch #ec-product-searchdata-submit { display:inline-block; width:48px; height:22px; margin:0 0 0 4px; border:1px solid #b4b4b4; border-radius:2px; line-height:24px; color:#2e2e2e; text-align:center; vertical-align:top; }
+  #searchContent tr .button .btnPriceSearch a:hover { text-decoration:none; }
+
+/* 가격 범위 지정 */
+  #searchContent tr .priceSlide .slider { position:relative; width:500px; padding:0 0 5px; margin:7px 5px 5px 15px; }
+  #searchContent tr .priceSlide .range { position:static; margin:0 0 0 0; border:0; border-radius:9px; border:1px solid #d9d9d8; height:9px; background:#e7e7e7; }
+  #searchContent tr .priceSlide .noUi-base { position:static; }
+  #searchContent tr .priceSlide .noUi-connect { position:absolute; top:-1px; height:9px; border-top:1px solid #3d7ce4; border-bottom:1px solid #3d7ce4; font-size:0; line-height:0; background:#508bed; }
+  #searchContent tr .priceSlide .noUi-handle { position:absolute; top:-4px; display:block; margin:0 0 0 12px; width:12px; height:21px; border:0; border-radius:0; box-shadow:none; cursor:pointer; font-size:0; line-height:0; outline:0; background:url("//img.echosting.cafe24.com/skin/base/product/btn_price_handle.png") no-repeat 0 0; }
+  #searchContent tr .priceSlide .noUi-handle:before, #searchContent tr .priceSlide .noUi-handle:after { display:none; }
+  #searchContent tr .priceSlide .value { overflow:hidden; width:512px; margin:0 0 0 9px; text-align:right; font-size:11px; }
+  #searchContent tr .priceSlide .value .minPrice { float:left; }
+
+
+/* 결과 내 검색 */
+  .searchData .searchForm { position:relative; height:34px; }
+  .searchData .keyword { width:100%; height:34px; padding:0 44px 0 8px; box-sizing:border-box; border-radius:2px; border:1px solid #d8d8d8; }
+  .searchData .btnResearch { overflow:hidden; position:absolute; right:1px; top:1px; width:34px; height:32px; border-left:1px solid #d8d8d8; font-size:1px; line-height:0; color:transparent; text-indent:-150%; background:url('//img.echosting.cafe24.com/skin/base/product/btn_research.gif') no-repeat 0 0; }
+  .searchData .suggest ul { display:none; position:absolute; top:33px; z-index:10; width:100%; border:1px solid #d8d8d8; box-sizing:border-box; background:#fff; }
+  .searchData .suggest li { overflow:hidden; height:28px; padding:0 8px; color:#525252; line-height:30px; text-overflow:ellipsis; white-space:nowrap; }
+  .searchData .suggest li:hover, .searchData .suggest li.selected { cursor:pointer; background:#f1f1f1; }
+/* 상단형 결과 내 검색 */
+  #searchContent tr .search { padding:9px 6px 9px 9px; }
+  #searchContent tr .search .cell { overflow:inherit; height:24px; }
+  #searchContent .searchForm { position:relative; }
+  #searchContent .keyword { display:inline-block; width:257px; height:24px; padding:0 8px ; box-sizing:border-box; border-radius:2px; border:1px solid #d9d9d9; vertical-align:top; }
+  #searchContent .btnResearch { display:inline-block; height:24px; padding:0 12px; border:1px solid #b4b4b4; border-radius:2px; line-height:24px; color:#2e2e2e; vertical-align:top; background:#fff; }
+  #searchContent .suggest ul { display:none; position:absolute; top:23px; z-index:10; width:257px; border:1px solid #d9d9d9; box-sizing:border-box; background:#fff; }
+  #searchContent .suggest li { overflow:hidden; height:28px; padding:0 8px; color:#525252; line-height:30px; text-overflow:ellipsis; white-space:nowrap; }
+
+  #searchContent .suggest li:hover, #searchContent .suggest li.selected { cursor:pointer; background:#f1f1f1; }

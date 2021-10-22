@@ -1,0 +1,58 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Calendar_View" class="ec-base-layer">
+    <!--@css(/css/module/calendar/view.css)-->
+    <!--
+        $calendar_modify_url = calendar_modify.html
+     -->
+    <div class="header">
+        <h1>[{$view_date}] 작성 내역 확인 </h1>
+    </div>
+    <div class="content">
+        <table border="1" summary="">
+            <caption>일일 작성내역 확인 목록</caption>
+            <colgroup>
+                <col style="width:60px" />
+                <col style="width:auto" />
+                <col style="width:80px" />
+                <col style="width:40px" />
+                <col style="width:50px" />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">시간</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">확인</th>
+                    <th scope="col">수정</th>
+                </tr>
+            </thead>
+            <tbody class="{$list_display|display}">
+                <tr class="{$list_no}">
+                    <td>{$list_hour}:{$list_minute}</td>
+                    <td class="left">
+                        [추가정보] {$list_add_info}
+                        <p><a href="#none" onclick="{$action_view_content}">{$list_title}</a></p>
+                    </td>
+                    <td>{$list_writer}</td>
+                    <td><p class="{$list_confirm}"></p></td>
+                    <td><a href="#none" class="btnNormal {$action_modify_display|display}" onclick="{$action_modify}">수정</a></td>
+                </tr>
+                <tr class="{$list_no}">
+                    <td>{$list_hour}:{$list_minute}</td>
+                    <td class="left">
+                        [추가정보] {$list_add_info}
+                        <p><a href="#none" onclick="{$action_view_content}">{$list_title}</a></p>
+                    </td>
+                    <td>{$list_writer}</td>
+                    <td><p class="{$list_confirm}"></p></td>
+                    <td><a href="#none" class="btnNormal {$action_modify_display|display}" onclick="{$action_modify}">수정</a></td>
+                </tr>
+            </tbody>
+            <tbody class="{$list_none_display|display}">
+                <tr>
+                    <td colspan="5">등록 된 글이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

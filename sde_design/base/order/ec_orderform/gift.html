@@ -1,0 +1,89 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <!-- 이값은 지우면 안되는 값입니다.
+        $easyform_gift=T
+    -->
+    <div module="gift_selectorderform" class="giftArea">
+        <div id="ec-jigsaw-area-gift" class="ec-base-fold eToggle">
+            <div id="ec-jigsaw-title-gift" class="title">
+                <h2>사은품</h2>
+                <span id="ec-jigsaw-heading-gift" class="txtStrong gRight"></span>
+            </div>
+            <div class="contents">
+                <!-- app tag -->
+                <div id="ec-orderform-gift-head"></div>
+
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="thumbnail"><img src="{$gift_image}" class="{$giftImage_class}" alt="" width="90" height="90" /></div>
+                        <div class="description">
+                            <label class="giftChoice">
+                                <span class="{$display_orderform_choice|display}">{$product_choice}</span><strong class="prdName {$giftName_class}" title="상품명">{$product_name} {$soldout_icon}</strong>
+                            </label>
+                            <ul class="info">
+                                <li class="{$display_orderform_point|display}">{$gift_price}점</li>
+                                <li>{$option1}</li>
+                                <li>{$option2}</li>
+                                <li>{$option3}</li>
+                                <li>{$option4}</li>
+                                <li>{$option5}</li>
+                                <li>
+                                    <span class="ec-base-qty gBlank10 {$display_orderform_quantity_td|display}">
+                                        <button type="button" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg" class="down" alt="down" width="33" height="29" /></button>
+                                        {$product_amount}
+                                        <button type="button" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg" class="up" alt="up" width="33" height="29" /></button>
+                                    </span>
+                                    <span class="gBlank5 {$display_orderform_offer_auto_quantity_td|display}">
+                                        수량 : {$offer_auto_quantity}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- //참고 -->
+                <!-- 참고: 상품반복 -->
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="thumbnail"><img src="{$gift_image}" class="{$giftImage_class}" alt="" width="90" height="90" /></div>
+                        <div class="description">
+                            <label class="giftChoice">
+                                <span class="{$display_orderform_choice|display}">{$product_choice}</span><strong class="prdName {$giftName_class}" title="상품명">{$product_name} {$soldout_icon}</strong>
+                            </label>
+                            <ul class="info">
+                                <li class="{$display_orderform_point|display}">{$gift_price}점</li>
+                                <li>{$option1}</li>
+                                <li>{$option2}</li>
+                                <li>{$option3}</li>
+                                <li>{$option4}</li>
+                                <li>{$option5}</li>
+                                <li>
+                                    <span class="ec-base-qty gBlank10 {$display_orderform_quantity_td|display}">
+                                        <button type="button" onclick="{$action_change_amount_down}"><img src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg" class="down" alt="down" width="33" height="29" /></button>
+                                        {$product_amount}
+                                        <button type="button" onclick="{$action_change_amount_up}"><img src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg" class="up" alt="up" width="33" height="29" /></button>
+                                    </span>
+                                    <span class="gBlank5 {$display_orderform_offer_auto_quantity_td|display}">
+                                        수량 : {$offer_auto_quantity}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- //참고 -->
+
+                <div module="gift_point">
+                    <p class="point">보유 포인트 <span class="txtEm">{$total_point}</span>점 - 사용 포인트 <span class="txtEm">{$use_point}</span>점</p>
+                    <p class="rest"><strong>잔여 사은품 포인트 : </strong><span class="txtEm">{$able_point}점</span></p>
+                </div>
+
+                <!-- app tag -->
+                <div id="ec-orderform-gift-tail"></div>
+            </div>
+        </div>
+    </div>
+<!-- File end -->

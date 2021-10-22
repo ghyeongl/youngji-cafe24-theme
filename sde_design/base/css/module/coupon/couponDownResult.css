@@ -1,0 +1,10 @@
+.couponDownResult { overflow:hidden; position:fixed; top:50%; left:50%; z-index:1000; width:560px; margin:-148px 0 0 -280px; border:1px solid #7f8186; color:#747474; background-color:#fff; }
+.couponDownResult img { border:0; vertical-align:top; }
+.couponDownResult p { margin:0; }
+.couponDownResult .content { padding:30px 30px 20px; line-height:20px; }
+.couponDownResult .content .total { padding:0 0 0 6px; color:#000; font-size:12px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_triangle2.gif") no-repeat 0 6px; }
+.couponDownResult .content .total .point { color:#6292db; }
+.couponDownResult .content .desc { padding:0 0 5px 6px; }
+.couponDownResult .content .couponList { overflow-y:auto; height:120px; padding:10px; border:1px solid #d8d8d8; line-height:18px; }
+.couponDownResult .content .couponList ul { margin:0 0 10px; padding:0; }
+.couponDownResult .content .couponList ul li { list-style:none; margin:0; padding:0; }

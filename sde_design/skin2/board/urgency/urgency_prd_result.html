@@ -1,0 +1,62 @@
+<div module="Mall_UrgencycallPrdResult">
+    <p class="result">총 <strong>{$totalPrd}</strong>개</p>
+
+    <div class="ec-base-table typeList">
+        <table border="1" summary="">
+            <caption>검색결과</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:130px;" />
+                <col style="width:100px;" />
+            </colgroup>
+            <tbody class="head">
+                <tr>
+                    <td scope="col">상품명</td>
+                    <td scope="col">상품코드</td>
+                    <td scope="col">{$form.prdPagenum}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="scroll">
+            <table border="1" summary="">
+                <caption>검색결과</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:130px;" />
+                    <col style="width:85px;" />
+                </colgroup>
+                <tbody class="{$displayPrdlist|display} center">
+                    <tr>
+                        <td class="product left">
+                            <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                            <p>{$product_name}</p>
+                        </td>
+                        <td>{$product_code}</td>
+                        <td><a href="#none" class="btnNormal" onClick="{$selectfn}">선택</a></td>
+                    </tr>
+                    <tr>
+                        <td class="product left">
+                            <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                            <p>{$product_name}</p>
+                        </td>
+                        <td>{$product_code}</td>
+                        <td><a href="#none" class="btnNormal" onClick="{$selectfn}">선택</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="message {$displayEmpty | display}">검색 결과가 없습니다.</p>
+        </div>
+    </div>
+</div>
+
+<div module="Mall_UrgencycallPrdPage" class="ec-base-paginate typeSub">
+    <a href="#none" onClick="{$prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+    </ol>
+    <a href="#none" onClick="{$next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
+</div>

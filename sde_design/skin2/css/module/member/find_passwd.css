@@ -1,0 +1,29 @@
+.xans-member-findpasswd.ec-base-box { padding:49px 0 39px; }
+.xans-member-findpasswd .findPw { width:375px; margin:0 auto; }
+.xans-member-findpasswd .findPw fieldset { margin:0 2px; }
+.xans-member-findpasswd .findPw .ec-base-desc li { margin:8px 0 0; }
+.xans-member-findpasswd .findPw .ec-base-desc.typeBullet .term { margin:5px 0 0; }
+.xans-member-findpasswd .findPw .mobileauth .desc { line-height:1.5em; }
+.xans-member-findpasswd .findPw .ipin,
+.xans-member-findpasswd .findPw .mobileauth { position:relative; margin:10px 0 0 0; }
+.xans-member-findpasswd .findPw .ipin a,
+.xans-member-findpasswd .findPw .mobileauth a { position:absolute; bottom:0; left:134px; }
+.xans-member-findpasswd .findPw input[type=text],
+.xans-member-findpasswd .findPw input[type=password] { width:226px; height:28px; line-height:28px; }
+.xans-member-findpasswd .findPw #mobile1 { width:60px; }
+.xans-member-findpasswd .findPw #mobile2,
+.xans-member-findpasswd .findPw #mobile3 { width:59px; }
+
+.xans-member-findpasswd .findPw #ipin_view { height:72px; }
+.xans-member-findpasswd .findPw input[type=radio] + label,
+.xans-member-findpasswd .findPw input[type=checkbox] + label { margin:0 15px 0 2px; }
+.xans-member-findpasswd .findPw select { width:236px; height:34px; padding:0 4px; }
+.xans-member-findpasswd .findPw .ec-base-desc dt,
+.xans-member-findpasswd .findPw .ec-base-desc .term { padding:7px 4px 0 4px; }
+.xans-member-findpasswd .findPw .ec-base-desc dd,
+.xans-member-findpasswd .findPw .ec-base-desc .desc { padding:0 0 0 100px; line-height:18px; }
+/* size */
+.xans-member-findpasswd .findPw .ec-base-desc .term { width:35%; }
+.xans-member-findpasswd .findPw .ec-base-desc .desc { padding-left:35%; }
+.xans-member-findpasswd .findPw .ec-base-desc .desc .check { margin-bottom:15px; }
+.xans-member-findpasswd .findPw .ec-base-button { padding:40px 3px 10px 0; }

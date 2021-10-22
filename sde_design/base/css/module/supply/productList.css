@@ -1,0 +1,141 @@
+.ec-supply-product { position:relative; border-bottom:1px solid #e5e9f2; }
+.ec-supply-product.xans-product-listnormal { border:0; }
+.ec-supply-product .prdListWrap { overflow:hidden; }
+.ec-supply-product .prdList {  margin:0 0 0 -10px; }
+.ec-supply-product .prdList > .item { float:left; box-sizing:border-box; }
+.ec-supply-product .prdList .item .inner { width:100%; padding-left:10px; box-sizing:border-box; }
+.ec-supply-product.productList.typeThumb h2 { padding:0 100px 0 0;  }
+.ec-supply-product.productList.typeThumb .prdList { display:-webkit-flex; display:-ms-flex; display:flex; -ms-flex-wrap:wrap; -webkit-flex-wrap:wrap; flex-wrap:wrap; margin:0 0 0 -10px; }
+.ec-supply-product.productList.typeThumb .prdList > li { float:left; -webkit-flex-basis:50%; -ms-flex-basis:50%; flex-basis:50%; width:50%; box-sizing:border-box; }
+.ec-supply-product.productList.typeThumb .prdList > li > .inner { padding-left:10px; }
+.ec-supply-product.productList.typeThumb .prdList.small > li { -webkit-flex-basis:33.3%; -ms-flex-basis:33.3%; flex-basis:33.3%; width:33.3%; }
+ 
+/* list button */
+.ec-supply-product .sortingArea { position:relative; margin-bottom:40px; padding:0 64px 0 0; }
+.ec-supply-product .sortingArea .sort { position:relative; width:140px; }
+.ec-supply-product .sortingArea select#selArray { display:block; overflow:hidden; position:relative; height:28px; line-height:28px; width:100%; padding:0px 26px 0 8px; font-weight:normal; font-size:12px; text-overflow:ellipsis; white-space:nowrap; color:#5d5d5d; border:1px solid #dedfe2; box-sizing:border-box; background:#fff url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_select.gif') no-repeat 100% 0; background-size:20px auto; }
+.ec-supply-product .sortingArea .btnSorting { position:absolute; right:0; top:0; }
+.ec-supply-product .sortingArea .btnSorting button { overflow:hidden; position:relative; float:left; width:32px; height:28px; box-sizing:border-box; font-size:1px; line-height:0; color:transparent; background:#ededed; text-indent:150%; white-space:nowrap; }
+.ec-supply-product .sortingArea .btnSorting button.selected { border:1px solid #000; background:#fff; }
+.ec-supply-product .sortingArea .btnSorting button:before { content:''; position:absolute; left:50%; top:50%; width:12px; height:12px; margin:-6px 0 0 -6px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_btn_sorting.png') no-repeat 0 0; background-size:100px auto; }
+.ec-supply-product .sortingArea .btnSorting button.bigView:before { background-position:0 0; }
+.ec-supply-product .sortingArea .btnSorting button.bigView.selected:before { background-position:0 -50px; }
+.ec-supply-product .sortingArea .btnSorting button.smallView:before { background-position:-50px 0; }
+.ec-supply-product .sortingArea .btnSorting button.smallView.selected:before { background-position:-50px -50px; }
+ 
+/* paginate */
+.ec-supply-product .productPaginate.typeList { max-width:360px; margin:-3px auto 0; padding:0 0 48px; text-align:center; background:#fff; }
+.ec-supply-product .productPaginate.typeList [class*='btn'] { display:inline-block; overflow:hidden; position:relative; width:30px; height:30px; font-size:1px; line-height:0; color:transparent; border:1px solid #dedfe2; vertical-align:top; text-indent:150%; white-space:nowrap; }
+.ec-supply-product .productPaginate.typeList [class*='btn']:before { content:''; position:absolute; left:50%; top:50%; width:8px; height:13px; margin:-6px 0 0 -4px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_btn_paginate.png') no-repeat 0 0; background-size:100px auto; }
+.ec-supply-product .productPaginate.typeList .btnNext:before { background-position:-50px 0; }
+.ec-supply-product .productPaginate.typeList .page { display:inline-block; height:32px; vertical-align:top; }
+.ec-supply-product .productPaginate.typeList .page:after { content:''; display:block; clear:both; }
+.ec-supply-product .productPaginate.typeList .page li { float:left; }
+.ec-supply-product .productPaginate.typeList .page li a { display:inline-block; margin:0 18px; font-size:15px; line-height:32px; color:#999; text-decoration:none; }
+.ec-supply-product .productPaginate.typeList .page .other { }
+.ec-supply-product .productPaginate.typeList .page .this { font-weight:bold; color:#000; }
+ 
+/* sale date */
+.ec-supply-product .discountPeriod { position:relative; display:inline-block; }
+.ec-supply-product .layerDiscountPeriod { display:none; position:absolute; top:24px; left:50%; width:247px; margin:0 0 0 -124px; z-index:2; padding:15px; border:1px solid #565960; background:#fff; -webkit-box-shadow:3px 3px 3px 0px rgba(0,0,0,0.15); -moz-box-shadow:3px 3px 3px 0px rgba(0,0,0,0.15);box-shadow:3px 3px 3px 0px rgba(0,0,0,0.15); }
+.ec-supply-product .layerDiscountPeriod strong.title { display:block; margin:0 0 12px; padding:0 35px 0 0; font-weight:bold; color:#2e2e2e; }
+.ec-supply-product .layerDiscountPeriod strong.title img { vertical-align:middle; }
+.ec-supply-product .layerDiscountPeriod .content p { margin:2px 0 0; font-size:11px; line-height:16px; color:#757575; letter-spacing:-1px; }
+.ec-supply-product .layerDiscountPeriod .content p strong { font-weight:normal; font-size:12px; color:#2e2e2e; }
+.ec-supply-product .layerDiscountPeriod .content p strong span { font-size:11px; }
+.ec-supply-product .layerDiscountPeriod .btnClose { position:absolute; right:14px; top:14px; }
+.ec-supply-product .layerDiscountPeriod .edge { z-index:20; position:absolute; left:50%; top:-6px; display:block; margin:0 0 0 -5px; width:10px; height:6px; }
+.ec-supply-product .layerDiscountPeriod .edge:before,
+.ec-supply-product .layerDiscountPeriod .edge:after { display:inline-block; content:""; position:absolute; top:0; width:0; height:0; border:solid transparent; }
+.ec-supply-product .layerDiscountPeriod .edge:before { margin:1px 0 0; border-bottom-color:#565960; border-width:0 5px 5px 5px; }
+.ec-supply-product .layerDiscountPeriod .edge:after { left:1px; margin:2px 0 0; border-bottom-color:#fff; border-width:0 4px 4px 4px; }
+ 
+/* swipe productPaginate */
+.ec-supply-product .productPaginate { position:absolute; right:16px; top:29px; }
+.ec-supply-product .prdListWrap.swiper-container-horizontal .prdList { margin: 0; }
+.ec-supply-product .prdListWrap.swiper-container-horizontal .prdList .item .inner { padding-left: 0; }
+.ec-supply-product .swiper-pagination-bullets:after,
+.ec-supply-product .productPaginate:after { content:''; display:block; clear:both; }
+.ec-supply-product .swiper-pagination-bullets .swiper-pagination-bullet,
+.ec-supply-product .productPaginate li { cursor:pointer; float:left; overflow:hidden; width:12px; height:12px; margin:0 0 0 6px; border-radius:6px; font-size:1px; line-height:0; color:transparent; background:#cacaca; }
+.ec-supply-product .swiper-pagination-bullets .swiper-pagination-bullet-active,
+.ec-supply-product .productPaginate li.current { background:#000; }
+  
+  
+.ec-supply-product .prdList > .item { float:left; box-sizing:border-box; }
+.ec-supply-product .prdList .item .inner { width:100%; padding-left:10px; box-sizing:border-box; }
+  
+.ec-supply-product { position:relative; width:100%; padding:20px 16px 0; box-sizing:border-box; background-color:#fff; }
+.ec-supply-product h2 { overflow:hidden; margin:0 0 15px; font-size:18px; line-height:27px; color:#000; }
+.ec-supply-product img { max-width:100%; }
+.ec-supply-product li { vertical-align:top; }
+.ec-supply-product .prdList:after { content:''; display:block; clear:both; }
+  
+.xans-product-listrecommend .thumbnail,
+.xans-product-listnew .thumbnail { position:relative; max-height:282px; overflow:hidden; }
+.ec-supply-product .thumbnail a { display:block; position:relative; font-size:0; background:#f6f6f8; }
+.ec-supply-product .thumbnail a img { max-width:100%; max-height:100%; width:100%; height:auto; }
+.ec-supply-product .thumbnail .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size:30% auto; } /* ??????????????? */
+.ec-supply-product .thumbnail .icon { position:absolute; bottom:0; left:0; font-size:0; white-space:normal; }
+.ec-supply-product .thumbnail .icon img { margin:0 4px 0 0; }
+  
+.ec-supply-product .description { min-height:102px; padding:7px 20px 20px 0; text-align:left; box-sizing:border-box; word-break:break-all; }
+.ec-supply-product .description .name { display:block; display:-webkit-box; overflow:hidden; word-wrap:break-word; max-height:36px; font-weight:normal; line-height:18px; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.ec-supply-product .description .name a { display:block; }
+.ec-supply-product .description .name a:hover { text-decoration:none; }
+.ec-supply-product .description .name a,
+.ec-supply-product .description .name a > span { font-size:12px; line-height:18px; color:#000; }
+.ec-supply-product .description .price { font-size:12px; color:#000; }
+.ec-supply-product .description .strike,
+.ec-supply-product .description .mPriceStrike { color:#999; } /* 할인 전 가격 */
+.ec-supply-product .description .spec .mileage { display:inline-block; }
+.ec-supply-product .description .color { overflow:hidden; margin:0; }
+.ec-supply-product .description .color .chips { float:left; width:12px; height:10px; margin:0 2px 2px 0; font-size:0; line-height:0; border:1px solid #e3e3e3; }
+.ec-supply-product .description .likeButton button { border:0; background:none; }
+.ec-supply-product .description .likeButton button strong { margin:0 0 0 3px; font-size:11px; line-height:20px; color:#757575; }
+.ec-supply-product .description .likeButton.selected button strong { line-height:20px; color:#2e2e2e; }
+.ec-supply-product .description .icon { display:block; margin:17px 0 0 0; }
+.ec-supply-product .description .icon img { margin:2px 2px 0 0; vertical-align:middle; }
+  
+.ec-supply-product.productList { position:relative; width:100%; padding:20px 16px 0; box-sizing:border-box; background-color:#fff; }
+.ec-supply-product.productList h2 { overflow:hidden; margin:0 0 15px; font-size:18px; line-height:27px; color:#000; }
+.ec-supply-product.productList img { max-width:100%; }
+.ec-supply-product.productList li { vertical-align:top; }
+.ec-supply-product.productList .prdList:after { content:''; display:block; clear:both; }
+.ec-supply-product.productList .thumbnail { position:relative; overflow:hidden; }
+.ec-supply-product.productList .thumbnail a { display:block; position:relative; font-size:0; background:#f6f6f8; }
+.ec-supply-product.productList .thumbnail a img { max-width:100%; max-height:100%; width:100%; height:auto; }
+.ec-supply-product.productList .thumbnail .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size:30% auto; } /* ??????????????? */
+.ec-supply-product.productList .thumbnail .icon { position:absolute; bottom:0; left:0; font-size:0; white-space:normal; }
+.ec-supply-product.productList .thumbnail .icon img { margin:0 4px 0 0; }
+.ec-supply-product.productList .description { min-height:102px; padding:7px 20px 20px 0; text-align:left; box-sizing:border-box; word-break:break-all; }
+.ec-supply-product.productList .description .name { display:block; display:-webkit-box; overflow:hidden; word-wrap:break-word; max-height:36px; font-weight:normal; line-height:18px; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.ec-supply-product.productList .description .name a { display:block; }
+.ec-supply-product.productList .description .name a:hover { text-decoration:none; }
+.ec-supply-product.productList .description .name a,
+.ec-supply-product.productList .description .name a > span { font-size:12px; line-height:18px; color:#000; }
+.ec-supply-product.productList .description .price { font-size:12px; color:#000; }
+.ec-supply-product.productList .description .strike,
+.ec-supply-product.productList .description .mPriceStrike { color:#999; } /* 할인 전 가격 */
+.ec-supply-product.productList .description .spec .mileage { display:inline-block; }
+.ec-supply-product.productList .description li.cart { }
+.ec-supply-product.productList .description .color { overflow:hidden; margin:0; }
+.ec-supply-product.productList .description .color .chips { float:left; width:12px; height:10px; margin:0 2px 2px 0; font-size:0; line-height:0; border:1px solid #e3e3e3; }
+.ec-supply-product.productList .description .likeButton button { border:0; background:none; }
+.ec-supply-product.productList .description .likeButton button strong { margin:0 0 0 3px; font-size:11px; line-height:20px; color:#757575; }
+.ec-supply-product.productList .description .likeButton.selected button strong { line-height:20px; color:#2e2e2e; }
+.ec-supply-product.productList .description .icon { display:block; margin:17px 0 0 0; }
+.ec-supply-product.productList .description .icon img { margin:2px 2px 0 0; vertical-align:middle; }
+ 
+/* xans-product-listrecommend paginate */
+.ec-mormal-product.productPaginate.typeList { max-width:360px; margin:-3px auto 0; padding:0 0 48px; text-align:center; background:#fff; }
+.ec-mormal-product.productPaginate.typeList [class*='btn'] { display:inline-block; overflow:hidden; position:relative; width:30px; height:30px; font-size:1px; line-height:0; color:transparent; border:1px solid #dedfe2; vertical-align:top; text-indent:150%; white-space:nowrap; }
+.ec-mormal-product.productPaginate.typeList [class*='btn']:before { content:''; position:absolute; left:50%; top:50%; width:8px; height:13px; margin:-6px 0 0 -4px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_btn_paginate.png') no-repeat 0 0; background-size:100px auto; }
+.ec-mormal-product.productPaginate.typeList .btnNext:before { background-position:-50px 0; }
+.ec-mormal-product.productPaginate.typeList .page { display:inline-block; height:32px; vertical-align:top; }
+.ec-mormal-product.productPaginate.typeList .page:after { content:''; display:block; clear:both; }
+.ec-mormal-product.productPaginate.typeList .page li { float:left; }
+.ec-mormal-product.productPaginate.typeList .page li a { display:inline-block; margin:0 18px; font-size:15px; line-height:32px; color:#999; text-decoration:none; }
+.ec-mormal-product.productPaginate.typeList .page .other { }
+.ec-mormal-product.productPaginate.typeList .page .this { font-weight:bold; color:#000; }
+.ec-supply-product .sortingArea .btnSorting button { border:0; outline:0; }

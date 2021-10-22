@@ -1,0 +1,15 @@
+.ec-base-help { margin:8px 4px; font-size:12px; color:#757575; }
+p.ec-base-help,
+div.ec-base-help,
+ul.ec-base-help li,
+ol.ec-base-help li { padding:0 0 2px 18px; line-height:1.5; text-align:left; background:url("//img.echosting.cafe24.com/skin/mobile/common/ico_help.png") no-repeat 0 2px; background-size:14px auto; }
+  /* Ordered List */
+    ol { list-style:none; }
+    ol.ec-base-help { counter-reset:rank 0; }
+    ol.ec-base-help li { position:relative; padding:0 0 0 13px; background:none; }
+    ol.ec-base-help li:before { counter-increment:rank 1; content:counter(rank)'.'; position:absolute; top:0; left:0; }
+  /* typeDash */
+    p.ec-base-help.typeDash,
+    ul.ec-base-help.typeDash li { position:relative; padding:0 0 0 10px; background:none; }
+    p.ec-base-help.typeDash:before,
+    ul.ec-base-help.typeDash li:before { content:""; position:absolute; top:9px; left:0; width:5px; height:1px; background:#757575; }

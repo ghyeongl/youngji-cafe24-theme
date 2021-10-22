@@ -1,0 +1,19 @@
+.xans-board-inquiryform .title h3 { margin:50px 0 7px; color:#444; font-size:12px; }
+.xans-board-inquiryform .required { margin:0 0 10px; text-align:right; }
+
+/* product */
+.xans-board-inquiryhead { margin:0 0 20px; }
+.xans-board-inquiryhead .information h3 { margin:17px 0 5px; font-size:14px; color:#2e2e2e; }
+.xans-board-inquiryhead .information .price { font-size:14px; font-weight:bold; color:#008bcc; }
+.xans-board-inquiryhead .information .button { margin:19px 0 0 0; padding:13px 0 0 0; border-top:1px solid #e8e8e8; }
+.xans-board-inquiryhead .information > img { vertical-align:middle; margin:0 0 0 1px; }
+
+/* write */
+.xans-board-inquiryform .ec-base-table tr.agree td textarea { width:560px; height:140px; margin:0 0 10px; }
+.xans-board-inquiryform .ec-base-table #bi_inquire_subject { width:390px; }
+.xans-board-inquiryform .ec-base-table #bi_inquirer_email { width:280px; }
+.xans-board-inquiryform .ec-base-table #bi_inquirer_phone1,
+.xans-board-inquiryform .ec-base-table #bi_inquirer_phone2 { margin:0 4px 0 0; }
+.xans-board-inquiryform .ec-base-table #bi_inquirer_phone2 { width:90px; margin:0 0 0 4px; }
+
+.xans-board-inquiryform .ec-base-button { margin:10px 0 40px; }

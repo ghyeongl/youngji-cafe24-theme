@@ -1,0 +1,34 @@
+.xans-product-relation ul.link { margin:30px 0 11px; border-bottom:1px solid #292929; border-left:0; line-height:1.5; *zoom:1; }
+.xans-product-relation ul.link:after { content:""; display:block; clear:both; }
+.xans-product-relation ul.link li { float:left; width:12.4%; margin:0 0 0 -1px; border-top:1px solid #cbcdce; }
+.xans-product-relation ul.link li.selected { width:13%; }
+.xans-product-relation ul.link li a { display:block; height:38px; padding:0 15px; border-right:1px solid #cbcdce; border-left:1px solid #cbcdce; color:#757575; line-height:38px; text-decoration:none; text-align:center; background:#f0f2f2; }
+.xans-product-relation ul.link li.selected a { position:relative; top:-1px; margin:0 0 -1px; border:1px solid #292929; color:#fff; font-weight:bold; background:#4a5164; }
+.xans-product-relation ul.link li:first-child,
+.xans-product-relation ul.link li.selected:first-child { margin-left:0; }
+
+/* 관련상품 구매형 */
+.xans-product-relation .relation { padding:20px 0 50px; color:#8f8f91; line-height:1.8em; }
+.xans-product-relation .relation h3 { padding:0 10px 0 9px; color:#444; font-size:12px; }
+.xans-product-relation .relation ul.prdList { display:table; width:100%; min-width:756px; margin:-8px 0 0; font-size:0; line-height:0; }
+.xans-product-relation .relation ul.prdList img { vertical-align:middle; }
+.xans-product-relation .relation ul.prdList li.item { display:inline-block; margin:20px 0; color:#757575; vertical-align:top; *display:inline; *zoom:1; }
+.xans-product-relation .relation ul.prdList li.item .box { margin:0 auto; font-size:12px; line-height:18px; }
+.xans-product-relation .relation ul.prdList li.item { width:20%; }
+.xans-product-relation .relation ul.prdList li.item .box { width:189px; }
+.xans-product-relation .relation ul.prdList li.item .box strong { display:block; margin:3px 0 10px; color:#008bcc; }
+.xans-product-relation .relation ul.prdList li.item .thumb { width:187px; height:255px; margin:0 0 16px; border:1px solid #ececec; }
+.xans-product-relation .relation ul.prdList li.item .option li { text-align:right; margin:0 0 5px; color:#2e2e2e; }
+.xans-product-relation .relation ul.prdList li.item .option li:after { content:""; display:block; clear:both; }
+.xans-product-relation .relation ul.prdList li.item .option li span { float:left; text-align:left; width:50px; word-wrap:break-word; line-height:21px; }
+.xans-product-relation .relation ul.prdList li.item .option li span.txtByte { float:right; width:57px; text-align:right; vertical-align:middle; letter-spacing:-1px; }
+.xans-product-relation .relation ul.prdList li.item .option li span.txtByte strong { display:inline-block; }
+.xans-product-relation .relation ul.prdList li.item .option select { width:139px; }
+.xans-product-relation .relation ul.prdList li.item .option input { width:70px; border:1px solid #d5d5d5; height:22px; }
+.xans-product-relation .relation ul.prdList li.item .box .quantity { position:relative; display:block; }
+.xans-product-relation .relation ul.prdList li.item .box .quantity span { display:inline-block; width:50px; color:#2e2e2e; }
+.xans-product-relation .relation ul.prdList li.item .box .quantity input { width:22px; height:23px; padding: 0 2px 0 3px; line-height:23px; border:1px solid #d4d8d9; border-radius: 3px 0 0 3px; }
+.xans-product-relation .relation ul.prdList li.item .box .quantity .up { position:absolute; left:78px; top:0; }
+.xans-product-relation .relation ul.prdList li.item .box .quantity .down { position:absolute; left:78px; bottom:0; }
+.xans-product-relation .relation .btnArea { overflow:hidden; margin:20px 0 0; text-align:right; *zoom:1; }
+.xans-product-relation .relation .btnArea span.right { float:right; }

@@ -1,0 +1,37 @@
+#popup { height:100%; background:transparent; }
+.popup .ec-base-layer { position:relative; }
+/* ec-base-layer */
+.ec-base-layer { position:fixed; z-index:300; top:0; bottom:0; left:0; right:0; min-width:320px; width:100%; height:100%; display:-webkit-flex; display:-ms-flex; display:flex; background:#f1f1f1;
+    -webkit-flex-direction:column; -moz-flex-direction:column; -ms-flex-direction:column; flex-direction:column;
+}
+.ec-base-layer h1 { width:100%; height:36px; text-align:center; font-size:15px; line-height:36px; color:#fff; box-sizing:border-box; background:#4a5164; }
+.ec-base-layer .wrap { -webkit-flex:1; -moz-flex:1; -ms-flex:1; flex:1; height:100%; padding:14px; font-size:12px; overflow-x:auto; overflow-y:auto; box-sizing:border-box; -webkit-overflow-scrolling:touch; }
+.ec-base-layer .btnClose { overflow:hidden; position:absolute; right:0; top:0; z-index:510; width:36px; height:36px; border:0; padding:0; font-size:0; text-indent:-150%; background:url("//img.echosting.cafe24.com/skin/mobile/common/btn_close_white.png") center center no-repeat; background-size:14px 14px; }
+  /* theme */
+    .ec-base-layer[class*="theme1"] .wrap { background:#fff; }
+  /* gClearFlex */
+    .ec-base-layer.gClearFlex { display:block; padding:0 0 94px; box-sizing:border-box; }
+    .ec-base-layer.gClearFlex .wrap { -webkit-flex:none; -moz-flex:none; -ms-flex:none; flex:none; height:auto; }
+  /* typeModal */
+    .ec-base-layer.typeModal { overflow:hidden; z-index:500; top:50px; bottom:auto; left:0; right:0; min-width:280px; max-width:600px; width:92%; height:auto; margin:auto; border-radius:5px;
+        -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:    0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+        box-shadow:         0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+    }
+    .ec-base-layer.typeModal h1 { padding:0 14px; line-height:35px; font-size:13px; text-align:left; border-bottom:1px solid #ccc; color:#1b1b1b; background:#f1f1f1; border-radius:5px 5px 0 0; }
+    .ec-base-layer.typeModal .wrap { max-height:200px; min-height:100px; padding:14px; background:#fff; }
+    .ec-base-layer.typeModal .btnClose { background:url("//img.echosting.cafe24.com/skin/mobile/common/btn_close_black.png") center center no-repeat; background-size:14px 14px; }
+  /* typeWide */
+    .ec-base-layer.typeWide { background:#e3e4e7; }
+    .ec-base-layer.typeWide h1 { height:56px; padding:0 42px; line-height:56px; font-size:20px; font-weight:normal; box-sizing:border-box; }
+    .ec-base-layer.typeWide .wrap { padding:0; font-size:16px; line-height:1.4em; letter-spacing:-0.4px; }
+    .ec-base-layer.typeWide .btnClose { top:10px; right:10px; background-image:url("//img.echosting.cafe24.com/skin/mobile/order/btn_close.png"); background-size:21px 21px; }
+    .ec-base-layer.typeWide > .ec-base-button.gFull { padding:15px 14px 8px; }   
+ 
+/* ec-base-button */
+  .ec-base-layer .wrap + div > .ec-base-button,
+  .ec-base-layer .wrap + .ec-base-button,
+  .ec-base-layer > .ec-base-button { margin:0; padding:7px 14px 7px 10px; border-radius:0 0 5px 5px; box-sizing:border-box; }
+  .ec-base-layer .ec-base-button.gFull { padding:7px 14px 0; }
+  .ec-base-layer .ec-base-button.gFixed .ec-base-button { padding:0; border-top:0; }
+  .ec-base-layer .wrap + .ec-base-button > .ec-base-button { padding:0; }

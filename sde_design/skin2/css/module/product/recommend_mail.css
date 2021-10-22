@@ -1,0 +1,9 @@
+#popup { width:620px; }
+
+.xans-product-recommmail .ec-base-box.typeProduct { margin:0 0 20px; }
+.xans-product-recommmail .infomation .icon { margin:0 0 14px; }
+.xans-product-recommmail .infomation h2 { font-size:14px; color:#f2e2e2e; }
+.xans-product-recommmail .infomation .price { margin:5px 0 0; font-weight:bold; font-size:14px; color:#008bcc;}
+
+.xans-product-recommmail table .captcha { margin:5px 0 0; }
+.xans-product-recommmail table .captcha  #tmp_image_name_str { width:80px; }

@@ -1,0 +1,13 @@
+.xans-myshop-orderregularmanagedetailreceiveredit .inputTypeText,
+.xans-myshop-orderregularmanagedetailreceiveredit textarea,
+.xans-myshop-orderregularmanagedetailreceiveredit select { width:100%; max-width:276px; }
+.xans-myshop-orderregularmanagedetailreceiveredit .noPost{ display:inline-block; }
+.xans-myshop-orderregularmanagedetailreceiveredit #tel1,
+.xans-myshop-orderregularmanagedetailreceiveredit #phone1 { max-width:60px; }
+.xans-myshop-orderregularmanagedetailreceiveredit #phone2,
+.xans-myshop-orderregularmanagedetailreceiveredit #phone3,
+.xans-myshop-orderregularmanagedetailreceiveredit #tel2,
+.xans-myshop-orderregularmanagedetailreceiveredit #tel3 { max-width:80px; }
+.xans-myshop-orderregularmanagedetailreceiveredit #personalId1 { max-width:90px; }
+.xans-myshop-orderregularmanagedetailreceiveredit #personalId2 { max-width:184px; }
+.xans-myshop-orderregularmanagedetailreceiveredit .ec-base-button { text-align:center; }

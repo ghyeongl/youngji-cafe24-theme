@@ -1,0 +1,160 @@
+<!-- File start -->
+<!--
+        이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+        이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+        원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+-->
+<div id="ec-jigsaw-area-productdetail">
+    <div module="product_detail" class="product_detail ec-base-fold eToggle selected">
+        <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+        <!--@css(/css/module/product/detail.css)-->
+        <!--@js(/js/module/product/detail.js)-->
+
+        <div id="ec-jigsaw-title-productdetail" class="title">
+            <h2>주문상품</h2>
+        </div>
+        <div class="contents">
+            <!-- app tag -->
+            <div id="ec-orderform-product-detail-head"></div>
+
+            <div class="overview" module="product_image">
+                <!--@js(/js/module/product/image.js)-->
+                <div class="prdImgView">
+                    <p class="prdImg">
+                        <a href="#none" id="prdDetailImg" data-param="{$zoom_param}">
+                            <img src="{$big_img}" class="bigImage" alt="{$seo_alt_tag}"><span module="product_Imagestyle"><span
+                                    class="prdIcon {$icon_class_name}"
+                                    style="background-image:url('{$icon_url}');"></span></span>
+                        </a>
+                    </p>
+                    <div module="Product_mobileImage">
+                        <!--@css(/css/module/product/mobileImage.css)-->
+                        <!--
+                            $swipe = yes
+                        -->
+                        <ul>
+                            <li data-param="{$zoom_param}">
+                                <p class="thumbnail">
+                                    <img src="{$big_img}" class="{$thumb_img_class}" alt=""><span
+                                        module="product_Imagestyle"><span class="prdIcon {$icon_class_name}"
+                                            style="background-image:url('{$icon_url}');"></span></span>
+                                </p>
+                            </li>
+                            {$aAddImage}
+                        </ul>
+                    </div>
+                </div>
+                <div id="product_dimmed"></div>
+                <a href="/product/product_detail_info.html?product_no={$product_no}" target="_blank" class="btnDetail">상세정보</a>
+            </div>
+            <div class="prdCont">
+                <div class="product_info">
+                    <div class="head">
+                        <h3 class="name">{$name}</h3>
+                        <p class="prdIcon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$img_mileage_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons}</p>
+                        <p class="summary_desc">{$summary_desc}</p>
+                        <strong class="sale">
+                            <span id="span_product_price_text" class="{$product_price_class} {$product_sale_strike}">{$product_price}</span>{$txt_product_price}
+                        </strong>
+                        <span id="span_product_price_text">{$product_tax_type_text}</span>
+                        <span class="soldOut"></span>
+
+                        <div class="delivery_price">
+                            <span class="txt_delivery">배송비</span> <span>{$delivery_price}</span>
+                        </div>
+                    </div>
+
+                    <div module="product_option">
+                        <div module="product_addoption">
+                            <div class="optionArea">
+                                <p class="optionName">{$add_option_name}</p>
+                                <p class="optionValue">
+                                    {$form.add_option}
+                                    <span class="byte" title="현재글자수/최대글자수">[ <strong class="length">0</strong> / {$option_maxlength} ]</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div module="product_option">
+                            <div class="optionArea">
+                                <div class="optionName">{$option_name}</div>
+                                <div class="optionValue">{$form.option}<p class="value">{$option_desc}</p>
+                                </div>
+                            </div>
+                            <div module="product_quantity" class="quantity">
+                                <div class="option_name">수량</div>
+                                <div class="ec-base-qty">
+                                    <div class="controlls">
+                                        <button type="button" class="{$quantity_down_class} QuantityDown">down</button>
+                                        {$form.quantity}
+                                        <button type="button" class="{$quantity_up_class} QuantityUp">up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 다중선택형 -->
+                        <div class="quantity {$quantity_display|display}">
+                            <strong class="option_name">수량</strong>
+                            <div class="ec-base-qty">
+                                <div class="controlls">
+                                    <button type="button" class="{$quantity_down_class} QuantityDown">down</button>
+                                    {$form.quantity}
+                                    <button type="button" class="{$quantity_up_class} QuantityUp">up</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 단일선택형 -->
+                        <div module="product_quantity" class="quantity">
+                            <strong>수량</strong>
+                            <div class="ec-base-qty">
+                                <div class="controlls">
+                                    <button type="button" class="{$quantity_down_class} QuantityDown">down</button>
+                                    {$form.quantity}
+                                    <button type="button" class="{$quantity_up_class} QuantityUp">up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="{$total.total_id}" class="{$total.total_display|display}">
+                    <table border="1" summary="">
+                        <caption>상품 목록</caption>
+                        <colgroup>
+                            <col style="width:auto;">
+                            <col style="width:80px;">
+                            <col style="width:110px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">상품 정보</th>
+                                <th scope="col">가격</th>
+                                <th scope="col">삭제</th>
+                            </tr>
+                        </thead>
+                        <!-- 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다. -->
+                        <tbody>
+                            <!-- 상품 목록 -->
+                        </tbody>
+                        <!-- // 옵션선택 또는 세트상품 선택시 상품이 추가되는 영역입니다. 쇼핑몰 화면에는 아래와 같은 마크업구조로 표시됩니다. 삭제시 기능이 정상동작 하지 않습니다. -->
+                    </table>
+                </div>
+
+
+                <div id="{$total.total_price_id}" class="totalPrice">
+                    <strong>총상품금액(수량)</strong> <span class="{$total.total_cnt}"><strong class="price">0</strong></span>
+                </div>
+
+                <!-- module 삭제 시 기능이 정상 동작하지 않습니다. -->
+                <div class="prdDesc">
+                    <div module="product_action" id="{$fixed_action_button}" style="display:none;">
+                        <div id="NaverChk_Button" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- app tag -->
+            <div id="ec-orderform-product-detail-tail"></div>
+        </div>
+    </div>
+</div>
+<!-- File end -->

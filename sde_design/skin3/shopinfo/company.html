@@ -1,0 +1,66 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>회사소개</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>회사소개</h2>
+</div>
+
+<div module="mall_company">
+    <!--@css(/css/module/mall/company.css)-->
+    <div class="ec-base-table" module="Layout_footer">
+        <table border="1">
+            <caption>회사소개</caption>
+            <colgroup>
+                <col style="width:180px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">상점명</th>
+                    <td>{$mall_name}</td>
+                </tr>
+                <tr>
+                    <th scope="row">대표이사</th>
+                    <td><a href="mailto:{$email}">{$president_name}</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">대표전화</th>
+                    <td><a href="tel:{$phone}">{$phone}</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">주소</th>
+                    <td>{$mall_addr1}<br />{$mall_addr2}</td>
+                </tr>
+                <tr>
+                    <th scope="row">사업자등록번호</th>
+                    <td>{$company_regno}</td>
+                </tr>
+                <tr>
+                    <th scope="row">통신판매업신고</th>
+                    <td>{$network_regno}</td>
+                </tr>
+                <tr class="{$cpo_email|display}">
+                    <th scope="row">개인정보 관리책임</th>
+                    <td><a href="mailto:{$cpo_email}">{$cpo_name}</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">호스팅제공</th>
+                    <td>카페24(주)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>{$info}</div>
+
+    <div class="{$map_display|display}">
+        <h3>위치</h3>
+        <p>{$map_image}</p>
+    </div>
+</div>

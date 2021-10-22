@@ -1,0 +1,10 @@
+/* 게시판 전체 공통 */
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+/* 비밀글 보기 */
+.xans-board-secure.ec-base-box { padding:49px 0 39px;  text-align:center; }
+.xans-board-secure .secret { width:370px; margin:0 auto; }
+.xans-board-secure .secret .info { margin:5px 0 40px; line-height:150%; color:#757575; }
+.xans-board-secure .secret .password label { display:inline-block; margin:10px 0 5px; width:118px; font-weight:normal; vertical-align:top; text-align:left; }
+.xans-board-secure .secret .password input { width:236px; height:28px; line-height:28px; }
+.xans-board-secure .secret .ec-base-button { padding:40px 0 10px 0; }

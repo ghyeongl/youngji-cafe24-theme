@@ -1,0 +1,9 @@
+.xans-member-findpasswdmethod.ec-base-box { padding:49px 0 39px; }
+.xans-member-findpasswdmethod .inner { width:375px; margin:0 auto; }
+.xans-member-findpasswdmethod .inner .ec-base-desc li { margin:5px 0 0; }
+.xans-member-findpasswdmethod .inner .ec-base-desc li.mobile .number { text-decoration:none; }
+.xans-member-findpasswdmethod .inner input[type=text] { width:172px; }
+
+.xans-member-findpasswdmethod .inner .ec-base-desc .term { width:35%; }
+.xans-member-findpasswdmethod .inner .ec-base-desc .desc { padding-left:35%; }
+.xans-member-findpasswdmethod  .inner .ec-base-button { padding:40px 3px 10px 0; }

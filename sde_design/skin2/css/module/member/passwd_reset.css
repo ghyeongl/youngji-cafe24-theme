@@ -1,0 +1,12 @@
+.xans-member-passwordreset.ec-base-box { padding:49px 0 39px; }
+.xans-member-passwordreset .inner { width:390px; margin:0 auto; }
+.xans-member-passwordreset .inner .ec-base-desc li { margin:8px 0 0;  }
+.xans-member-passwordreset .inner li .txtInfo { margin:10px 0 20px; }
+.xans-member-passwordreset .inner .ec-base-desc li.mobile .number { text-decoration:none; }
+.xans-member-passwordreset .inner input[type="password"] { width:236px; height:28px; line-height:28px; }
+
+.xans-member-passwordreset .inner .ec-base-desc .term { width:35%; }
+.xans-member-passwordreset .inner .ec-base-desc .desc { padding-left:35%; }
+.xans-member-passwordreset .inner .ec-base-button { padding: 40px 3px 10px 0; }
+
+.xans-member-passwordreset .inner fieldset { margin:0 2px; }

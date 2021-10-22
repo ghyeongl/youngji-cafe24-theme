@@ -1,0 +1,79 @@
+<!-- 비회원 -->
+<div module="Mall_UrgencycallOrdLogout" class="ec-base-table typeWrite {$displayLogout|display}">
+    <table border="1" summary="">
+        <caption>주문번호 검색</caption>
+        <colgroup>
+            <col style="width:100px;" />
+            <col style="width:auto;" />
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="row">주문번호</th>
+                <td>
+                    <input type="text" id="{$order_id1}" class="inputOrdNum" /> - <input type="text" id="{$order_id2}" class="inputOrdNum" /> <a href="#none" class="btnEmFix" onclick="{$insertfn}">등록</a>
+                    <span class="gBlank5">예) 00000000 - 0000000</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- // 비회원 -->
+
+<div class="ec-base-table typeList">
+    <table border="1" summary="" module="Mall_UrgencycallOrdHeader" class="{$displayLogin|display}">
+        <caption>검색결과</caption>
+        <colgroup>
+            <col style="width:auto;" />
+            <col style="width:130px;" />
+            <col style="width:100px;" />
+        </colgroup>
+        <tbody class="head">
+            <tr>
+                <td scope="col">상품명</td>
+                <td scope="col">주문번호</td>
+                <td scope="col">{$form.ordPagenum}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div module="Mall_UrgencycallOrdResult" class="scroll {$displayLogin|display}">
+        <table border="1" summary="">
+            <caption>검색결과</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:130px;" />
+                <col style="width:85px;" />
+            </colgroup>
+            <tbody class="{$displayPrdlist|display} center">
+                <tr>
+                    <td class="product left">
+                        <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                        <p>{$product_name}</p>
+                    </td>
+                    <td>{$order_id}</td>
+                    <td><a href="#none" class="btnNormal" onclick="{$selectfn}">선택</a></td>
+                </tr>
+                <tr>
+                    <td class="product left">
+                        <span class="thumb"><img src="{$image_tiny}" alt="" /></span>
+                        <p>{$product_name}</p>
+                    </td>
+                    <td>{$order_id}</td>
+                    <td><a href="#none" class="btnNormal" onclick="{$selectfn}">선택</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="message {$displayEmpty | display}">검색 결과가 없습니다.</p>
+    </div>
+</div>
+
+<div module="Mall_UrgencycallOrdPage" class="ec-base-paginate typeSub {$displayLogin|display}">
+    <a href="#none" onClick="{$prev}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+        <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+    </ol>
+    <a href="#none" onClick="{$next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
+</div>

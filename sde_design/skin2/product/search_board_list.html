@@ -1,0 +1,64 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Search_FromPackage" class="ec-base-layer">
+    <!--@css(/css/module/product/search_FromPackage.css)-->
+    <div class="header">
+        <h1>상품검색</h1>
+    </div>
+
+    <div class="content">
+        <div module="Search_BoardForm">
+            <fieldset class="ec-base-box">
+                <legend>상품검색</legend>
+                {$form.search_type}
+                {$form.keyword}
+                <button type="submit" class="btnSubmit">검색하기</button>
+            </fieldset>
+            <div class="resultArea">
+                <p class="total">총 <strong>{$total_count}</strong>개 의 상품이 검색되었습니다.</p>
+                <p class="limit">{$form.limit}</p>
+            </div>
+        </div>
+
+        <div class="ec-base-table typeList">
+            <table border="1" summary="">
+                <caption>제품 검색결과입니다</caption>
+                <colgroup>
+                    <col style="width:100px" />
+                    <col style="width:auto" />
+                    <col style="width:80px" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">상품 이미지</th>
+                        <th scope="col">상품 정보</th>
+                        <th scope="col">선택</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <tr module="Search_BoardList" unroll="1">
+                        <td class="thumb"><img src="{$image_medium}" alt="" /></td>
+                        <td class="left">
+                            {$product_name}
+                            <strong class="gBlank5 txtEm">{$price_unit_head}{$product_price}{$price_unit_tail} {$product_tax_type_text}</strong>
+                        </td>
+                        <td><a href="#none" onclick="{$action_product_select}" class="btnNormal">선택</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div module="search_paging" class="ec-base-paginate typeSub">
+            <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first2.gif" alt="첫 페이지" /></a>
+            <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지" /></a>
+            <ol>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+                <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+            </ol>
+            <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지" /></a>
+            <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last2.gif" alt="마지막 페이지" /></a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div module="Layout_SearchHeader" class="searchBox" id="{$search_box_id}">
+    <!--@css(/css/module/layout/searchHeader.css)-->
+    <!--
+        $category_page=/product/list.html
+    -->
+    <fieldset>
+        <legend>검색</legend>
+        <div class="searchForm">
+            {$form.keyword}
+            <button type="button" class="btnDelete">삭제</button>
+            <button type="submit" class="btnSearch">검색</button>
+        </div>
+    </fieldset>
+    <div module="search_hotkeyword">
+        <strong class="title">인기검색어</strong>
+        <ul class="keyword">
+            <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+            <li><a href="{$hot_keyword_url}">{$hot_keyword_name}</a></li>
+        </ul>
+    </div>
+</div>

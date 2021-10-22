@@ -1,0 +1,14 @@
+.xans-calendar-headweek { position:relative; text-align:center; }
+.xans-calendar-headweek .date { display:inline; color:#d9bca0; font-size:30px; letter-spacing:-1px; }
+.xans-calendar-headweek .date img { vertical-align:middle; }
+.xans-calendar-headweek .button { position:absolute; right:0; top:0px; }
+
+.xans-calendar-weekpackage .calendar { margin:20px 0 0; }
+.xans-calendar-listweekhead th { padding:8px 0; color:#d9bca0; border-top:1px solid #d9bca0; }
+.xans-calendar-listweekhead th.sun { color:#e5541e; }
+.xans-calendar-listweekhead th.sat { color:#7cbed7; }
+
+.xans-calendar-listweek th,
+.xans-calendar-listweek td { padding:5px; border:1px solid #e2ddd0; background:#f7f4ec; color:#8f8f91; font-weight:normal; vertical-align:middle;  line-height:1.6; }
+.xans-calendar-listweek .week_today, .xans-calendar-listweek .exist_data { background:#f4eacf; }
+.xans-calendar-listweek td li a { color:#8f8f91; line-height:1.6; }

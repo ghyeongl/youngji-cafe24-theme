@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <!--@css(/layout/basic/css/common.css)-->
+    <!--@css(/layout/basic/css/layout.css)-->
+    <!--@css(/layout/basic/css/ec-base-ui.css)-->
+    <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+    <!--@css(/layout/basic/css/ec-base-help.css)-->
+    <!--@css(/layout/basic/css/ec-base-product.css)-->
+    <!--@css(/layout/basic/css/ec-base-button.css)-->
+    <!--@css(/layout/basic/css/ec-base-box.css)-->
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/layout/basic/css/ec-base-tab.css)-->
+    <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+    <!--@css(/layout/basic/css/ec-base-table.css)-->
+    <!--@css(/layout/basic/css/ec-base-fold.css)-->
+    <!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+
+<!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+<!--@js(/layout/basic/js/common.js)-->
+</head>
+<body id="layout">
+<div id="wrap">
+    <!--@import(/layout/basic/sidebar.html)-->
+    <hr class="layout">
+    <div id="container">
+        <header id="header">
+            <div class="header">
+                <section id="topArea">
+                    <div class="searchWrap">
+                        <p class="category"><a href="#none" class="fold">카테고리</a></p>
+                        <h1 module="Layout_LogoTop"><a href="/">{$mobile_title}</a></h1>
+                        <p class="search"><button type="button">검색</button></p>
+                        <p module="Layout_orderBasketcount">
+                            <a href="/order/basket.html" class="btnBasket">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+                        </p>
+                    </div>
+                    <!--@import(/layout/basic/navigation.html)-->
+                </section>
+                <!--@import(/layout/basic/search.html)-->
+            </div>
+        </header>
+        <hr class="layout">
+        <div id="contents">
+            <!--@contents-->
+        </div>
+        <hr class="layout">
+        <!--@import(/layout/basic/footer.html)-->
+    </div>
+</div>
+</body>
+</html>

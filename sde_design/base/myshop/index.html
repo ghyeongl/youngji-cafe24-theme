@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+<!--@css(/layout/basic/css/ec-base-product.css)-->
+<!--@css(/layout/basic/css/ec-base-paginate.css)-->
+<!--@css(/layout/basic/css/ec-base-ui.css)-->
+<!--@css(/layout/basic/css/ec-base-help.css)-->
+<!--@css(/layout/basic/css/ec-base-button.css)-->
+<!--@css(/layout/basic/css/ec-base-box.css)-->
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<!--@css(/layout/basic/css/ec-base-table.css)-->
+<!--@css(/layout/basic/css/ec-base-fold.css)-->
+<!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+<!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+
+<!--@css(/gridsystem/resource/css/vendor.css)-->
+<!--@css(/gridsystem/resource/css/common.css)-->
+<!--@css(/gridsystem/resource/css/layout.css)-->
+<!--@css(/gridsystem/resource/css/font/font.css)-->
+
+<!-- The code in includes "JQuery 1.4.4". Be careful to add another version of jQuery. -->
+<!--@js(/gridsystem/resource/js/jquery.plugin.js)-->
+<!--@js(/gridsystem/resource/js/common.js)-->
+<!--@css(/myshop/index.css)-->
+</head>
+<body id="main" class="dnd">
+    <div id="wrap">
+        <div id="container" class="gridContainer" style="display: grid;grid-template-columns: repeat(4,1fr);min-height: 0;min-width: 0;">
+<div class="gridItem" data-component-id="1" id="grid_id_1565920664007_0" style="grid-area: 1 / 1 / 3 / 5;min-width: 0;">
+    <div class="dnd_module_9742c60d3a2ee81fffada3eade8d931d">
+<!-- MOMA COMPONENT ID 1 -->
+<aside id="aside" module="layout_slide" class="slidingMenu">
+    <!--@import(/layout/sidebar.html)-->
+    <button type="button" class="btnClose">닫기</button>
+</aside>
+<header id="header">
+    <div class="header">
+        <h1 module="Layout_LogoTop"><a href="/index.html" class="link">{$mall_name}</a></h1>
+        <div class="headerMenu gLeft">
+            <span module="layout_slide" class="hidden"></span>
+            <button type="button" class="btnCate">카테고리</button>
+            <button type="button" class="btnSearch">검색</button>
+        </div>
+        <div class="searchLayer">
+            <div module="Layout_SearchHeader">
+                <div class="topSearch">
+                    {$form.keyword}
+                    <button type="button" class="btnSearch" onclick="{$action_search_submit}">검색</button>
+                    <button type="button" class="btnDelete">삭제</button>
+                </div>
+                <div class="hotKeyword" module="search_hotkeyword">
+                    <strong class="title">인기검색어</strong>
+                    <div class="keyword">
+                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerMenu gRight">
+            <span module="Layout_orderBasketcount" class="btnBasket">
+                <a href="/order/basket.html">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+            </span>
+            <a href="/myshop/index.html" module="Layout_statelogoff" class="btnMy">로그인</a>
+            <a href="/myshop/index.html" module="Layout_statelogon" class="btnMy">마이쇼핑</a>
+        </div>
+    </div>
+</header>
+<!-- //MOMA COMPONENT ID 1 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="2" id="grid_id_1565920664008_1" style="grid-area: 3 / 1 / 4 / 5;min-width: 0;">
+    <div class="dnd_module_c785e267507864e0f86dfc2033986f74">
+<!-- MOMA COMPONENT ID 2 -->
+<nav id="navigation">
+    <div class="inner" module="Layout_category">
+        <div class="horizontal-scrollable">
+            <ul class="category">
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="btnCateLayer eToggleCateLayer">카테고리 레이어보기</button>
+    <div class="categoryLayer" module="Layout_category">
+        <ul class="category">
+            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="navDimmed"></div>
+<!-- //MOMA COMPONENT ID 2 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="45" id="grid_id_1565920664008_2" style="grid-area: 4 / 1 / 5 / 5;min-width: 0;">
+    <div class="dnd_module_1c2c213715439227197068c568b1cf54">
+<!-- MOMA COMPONENT 45 --> 
+<div id="titleArea">
+    <h2>마이쇼핑</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}" class="btnBack">뒤로가기</a>
+    </span>
+</div>
+<div module="layout_logincheck">
+    <!--
+        $url = /member/login.html
+    -->
+</div>
+<div module="myshop_asyncbenefit" class="{$display_benefit|display}">
+    <div class="info">
+        <div class="">
+            <div class="memberInfo">
+                <a href="/member/modify.html" class="memberModify"><span>회원정보 수정</span></a>
+                <strong class="name">{$member_name}님</strong><br>
+                <strong class="group">{$group_name}</strong>
+                
+                <div module="myshop_asyncbankbook">
+                    <ul>
+                        <li><span class="label">{$mileage_name}</span><a href="/myshop/mileage/historyList.html" class="link">{$avail_mileage}</a></li>
+                        <li class="{$display_deposit|display}"><span class="label">{$deposit_name}</span><a href="/myshop/deposits/historyList.html" class="link">{$total_deposit}</a></li>
+                        <li class="{$display_coupon|display}"><span class="label">쿠폰</span><a href="/myshop/coupon/coupon.html" class="link">{$coupon_cnt}개</a></li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <div class="myshopDiscount">
+        <p class="{$display_no_benefit|display} {$display_no_benefit_class}">{$dc_pay} {$dc_min_price} 구매시 {$dc_price}{$dc_type} {$use_dc} 혜택을 드려요! {$dc_max_percent}</p>
+        <p class="{$display_with_all|display} {$display_with_all_class}">{$dc_pay} {$dc_min_price_mileage} 구매시 {$dc_price_mileage}{$dc_type_mileage} {$use_dc_mileage} 혜택을 드려요! {$dc_max_mileage_percent}</p>
+    </div>
+</div>
+<!-- // MOMA COMPONENT 45 --> 
+</div>
+</div>
+<div class="gridItem" data-component-id="46" id="grid_id_1565920664008_3" style="grid-area: 5 / 1 / 10 / 5;min-width: 0;">
+    <div class="dnd_module_507772837a23683c50a8344dc83bf446">
+<!-- MOMA COMPONENT ID 46 -->
+<div module="myshop_orderstate">
+    <div module="layout_logincheck">
+        <!--
+			$url = /member/login.html
+		-->
+    </div>
+    <div class="inner">
+        <strong class="title">내 주문 현황 <span class="duration">최근 3개월 기준</span></strong>
+        <div class="orderState">
+            <ul class="order">
+                <li>
+                    <a href="{$shppiedBeforeUrl}">
+                        {$shppiedBeforeCount}
+                        <strong class="label">입금전</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$shppiedStandbyUrl}">
+                        {$shppiedStandbyCount}
+                        <strong class="label">배송준비중</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$shppiedBeginUrl}">
+                        {$shppiedBeginCount}
+                        <strong class="label">배송중</strong>
+                    </a>
+                </li>
+                <li>
+                    <a href="{$shppiedComplateUrl}">
+                        {$shppiedComplateCount}
+                        <strong class="label">배송완료</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul class="cs">
+                <li class="cancel">
+                    <a href="{$orderCancelUrl}">
+                        <strong class="label">취소</strong>{$orderCancelCount}
+                    </a>
+                </li>
+                <li>
+                    <a href="{$orderExchangeUrl}">
+                        <strong class="label">교환</strong>{$orderExchangeCount}
+                    </a>
+                </li>
+                <li class="return">
+                    <a href="{$orderReturnUrl}">
+                        <strong class="label">반품</strong>{$orderReturnCount}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //MOMA COMPONENT ID 46 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="47" id="grid_id_1565920664008_4" style="grid-area: 10 / 1 / 16 / 5;min-width: 0;">
+    <div class="dnd_module_5aebcd542ab18d9364e394c6614b408d">
+<!-- MOMA COMPONENT ID 47 -->
+<div module="myshop_main">
+    <div module="layout_logincheck">
+        <!--
+            $url = /member/login.html
+        -->
+    </div>
+    <strong class="title">주문</strong>
+    <ul>
+        <li><a href="/order/basket.html">장바구니 <span class="count {$basket_count_display|display}">{$basket_count}</span></a></li>
+        <li><a href="/myshop/wish_list.html">관심상품 <span class="count {$wish_count_display|display}">{$wish_count}</span></a></li>
+        <li><a href="/myshop/order/list.html">주문조회</a></li>
+    </ul>
+</div>
+<!-- //MOMA COMPONENT ID 47 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="48" id="grid_id_1574234521002_7" style="grid-area: 16 / 1 / 26 / 5;min-width: 0;">
+    <div class="dnd_module_022adfc471eb9d2f655a9eb3799b0b43">
+<!-- MOMA COMPONENT ID 48 -->
+<div module="myshop_main">
+    <div module="layout_logincheck">
+        <!--
+            $url = /member/login.html
+        -->
+    </div>
+    <strong class="title">회원</strong>
+    <ul>
+        <li module="Layout_attendBanner">
+            <!--
+                $stamp_type_url = /attend/stamp.html
+                $comment_type_url = /attend/comment.html
+            -->
+            <a href="{$attend_url}">출석체크</a>
+        </li>
+        <li class="{$deposit_display|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name}</a></li>
+        <li class="{$coupon_display|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <span class="count {$coupon_count_display|display}">({$coupon_count})</span></a></li>
+        <li><a href="/myshop/mileage/historyList.html">{$mileage_name}</a></li>
+        <li class="{$board_display|display}"><a href="/myshop/board_list.html">게시물 관리</a></li>
+        <!-- <li><a href="/board/gallery/list.html">상품리뷰 관리</a></li>-->
+        <!--@import(/board/smartreview/provider/myshop_index.html)-->
+        <li><a href="/myshop/addr/list.html">배송주소록 관리</a></li>
+        <li class="regularDelivery {$regular_delivery_display|display}"><a href="/myshop/regular_delivery.html">예약결제 관리</a></li>
+    </ul>
+</div>
+<!-- //MOMA COMPONENT ID 48 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="49" id="grid_id_1565920664008_6" style="grid-area: 26 / 1 / 28 / 5;min-width: 0;">
+    <div class="dnd_module_42b3a7588b8a72d91aba2ca08695b7dc">
+<!-- MOMA COMPONENT ID 49 -->
+<div module="myshop_main">
+    <div module="layout_logincheck">
+        <!--
+            $url = /member/login.html
+        -->
+    </div>
+    <strong class="title">기타</strong>
+    <ul>
+        <li class="{$consult_display|display}"><a href="/board/consult/list.html">1:1 맞춤상담</a></li>
+        <li class="{$myLike_display|display}"><a href="{$myLike_href}">좋아요</a></li>
+    </ul>
+</div>
+<!-- //MOMA COMPONENT ID 49 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="15" id="grid_id_1575016964071_7" style="grid-area: 28 / 1 / 38 / 5;min-width: 0;">
+    <div class="dnd_module_3865037d1db28c40406f2a127c19756c">
+<!-- MOMA COMPONENT 15 -->
+<footer id="footer">
+    <div module="Layout_Info" class="customer">
+        <a href="tel:{$phone}" class="link tel">
+            <span class="title">고객센터</span>
+            <span class="sub">{$phone}</span>
+        </a>
+        <a href="/board/consult/list.html" class="link consult">
+            <span class="title">1:1문의하기</span>
+            <span class="sub">Q&amp;A</span>
+        </a>
+    </div>
+    <div module="Layout_footer" class="company">
+        <ul class="util">
+            <li><a href="/shopinfo/guide.html" class="link">이용안내</a></li>
+            <li><a href="/shopinfo/company.html" class="link">회사소개</a></li>
+            <li class="commercial-law"><a href='/shopinfo/commercial_law.html'>특정 상거래 법에 근거한 표시</a></li>
+            <li><a href="/member/privacy.html" class="link"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="/member/mall_agreement.html" class="link">이용약관</a></li>
+        </ul>
+        <div class="info">
+            <strong class="name">{$company_name}</strong>
+            <span class="address">{$mall_addr1} {$mall_addr2}</span>
+            <dl>
+                <dt>대표이사:</dt>
+                <dd>{$president_name}</dd>
+                <dt>사업자등록번호:</dt>
+                <dd>{$company_regno}</dd>
+            </dl>
+            <dl>
+                <dt>통신판매업신고:</dt>
+                <dd>{$network_regno}</dd>
+                <dd class="business_info">{$biz_no_link}</dd>
+            </dl>
+            <dl class="{$cpo_email|display}">
+                <dt>개인정보관리책임:</dt>
+                <dd><a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></dd>
+                <dt>호스팅제공:</dt>
+                <dd>카페24(주)</dd>
+            </dl>
+            <dl>
+                <dt>E-mail:</dt>
+                <dd><a href="mailto:{$email}">{$email}</a></dd>
+            </dl>                    
+        </div>
+        <p class="copyright">Copyright&copy; {$mall_name}. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- // MOMA COMPONENT 15 -->
+</div>
+</div>
+        </div>
+    </div>
+<!--@js(/myshop/index.js)-->
+<!-- body -->
+<div module="Popup_MultiPopup">
+    <!--
+            $banner_popup_no =
+            ※ Enter ID (number) of Pop-up.
+        -->
+    {$popup}
+</div>
+</body>
+</html>

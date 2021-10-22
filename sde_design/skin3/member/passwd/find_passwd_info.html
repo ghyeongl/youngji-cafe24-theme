@@ -1,0 +1,38 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>비밀번호 찾기</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>비밀번호 찾기</h2>
+</div>
+
+<div module="member_findpasswd" class="ec-base-box typeThin">
+    <!--@css(/css/module/member/find_passwd.css)-->
+    <!--
+        $nextURL = /member/passwd/find_passwd_question.html
+     -->
+    <div class="findPw">
+        <h3 class="boxTitle">비밀번호 찾기</h3>
+        <fieldset>
+            <legend>비밀번호 찾기 1단계 정보 입력</legend>
+            <ul class="ec-base-desc">
+                <li><strong class="term">회원유형</strong><span class="desc">{$form.searchType}<span class="check gBlank5">{$form.check_method}</span></span></li>
+                <li class="gBlank20 {$display_id|display}"><strong class="term">아이디</strong><span class="desc">{$form.member_id}</span></li>
+                <li id="name_view" class="name"><strong class="term" id="name_lable">이름</strong><span class="desc">{$form.name}</span></li>
+                <li id="ssn_view" class="ssn_no"><strong class="term" id="ssn_name">법인번호로 찾기</strong><span class="desc"> {$form.ssn} <span class="gBlank5 txtInfo">(-) 없이 숫자만 입력하세요.</span></span></li>
+                <li id="email_view" class="email" style="display:none;"><strong class="term">이메일로 찾기</strong><span class="desc">{$form.email}</span></li>
+                <li id="mobile_view" class="mobile" style="display:none;"><strong class="term">휴대폰 번호로 찾기</strong><span class="desc">{$form.mobile1} - {$form.mobile2} - {$form.mobile3}</span></li>
+                <li id="ipin_view" class="ipin" style="display:none;"><strong class="term">아이핀인증으로 찾기</strong><span class="desc txtInfo">회원가입을 아이핀으로 가입하신 <br />회원님께서는 아이핀으로 인증하세요. <a href="#none" class="btnNormal" onclick="{$action_func_find_passwd_question}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_icon_ipin.gif" alt="" /> 아이핀인증</a></span></li>
+                <li id="mobile_auth_view" class="mobileauth" style="display:none;"><strong class="term">휴대폰인증으로 찾기</strong><span class="desc txtInfo">본인 명의의 휴대폰으로 아이디 찾기를<br /> 진행할 수 있습니다. 휴대폰 명의자의<br /> 정보로 가입한 아이디 찾기가 가능합니다.</span></li>
+            </ul>
+            <div class="ec-base-button gColumn">
+                <a href="#none" class="btnSubmit sizeM" onclick="{$action_func_find_passwd_question}">확인</a>
+            </div>
+        </fieldset>
+    </div>
+</div>

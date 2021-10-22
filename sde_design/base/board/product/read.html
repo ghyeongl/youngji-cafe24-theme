@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes">
+<!--@css(/layout/basic/css/ec-base-product.css)-->
+<!--@css(/layout/basic/css/ec-base-paginate.css)-->
+<!--@css(/layout/basic/css/ec-base-ui.css)-->
+<!--@css(/layout/basic/css/ec-base-help.css)-->
+<!--@css(/layout/basic/css/ec-base-button.css)-->
+<!--@css(/layout/basic/css/ec-base-box.css)-->
+<!--@css(/layout/basic/css/ec-base-layer.css)-->
+<!--@css(/layout/basic/css/ec-base-table.css)-->
+<!--@css(/layout/basic/css/ec-base-fold.css)-->
+<!--@css(/layout/basic/css/ec-base-prdInfo.css)-->
+<!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+
+<!--@css(/gridsystem/resource/css/vendor.css)-->
+<!--@css(/gridsystem/resource/css/common.css)-->
+<!--@css(/gridsystem/resource/css/layout.css)-->
+<!--@css(/gridsystem/resource/css/font/font.css)-->
+
+<!-- The code in includes "JQuery 1.4.4". Be careful to add another version of jQuery. -->
+<!--@js(/gridsystem/resource/js/jquery.plugin.js)-->
+<!--@js(/gridsystem/resource/js/common.js)-->
+<!--@css(/board/product/read.css)-->
+</head>
+<body id="main" class="dnd">
+    <div id="wrap">
+        <div id="container" class="gridContainer" style="display: grid;grid-template-columns: repeat(4,1fr);min-height: 0;min-width: 0;">
+<div class="gridItem" data-component-id="1" id="grid_id_1571884691343_0" style="grid-area: 1 / 1 / 3 / 5;min-width: 0;">
+    <div class="dnd_module_9742c60d3a2ee81fffada3eade8d931d">
+<!-- MOMA COMPONENT ID 1 -->
+<aside id="aside" module="layout_slide" class="slidingMenu">
+    <!--@import(/layout/sidebar.html)-->
+    <button type="button" class="btnClose">닫기</button>
+</aside>
+<header id="header">
+    <div class="header">
+        <h1 module="Layout_LogoTop"><a href="/index.html" class="link">{$mall_name}</a></h1>
+        <div class="headerMenu gLeft">
+            <span module="layout_slide" class="hidden"></span>
+            <button type="button" class="btnCate">카테고리</button>
+            <button type="button" class="btnSearch">검색</button>
+        </div>
+        <div class="searchLayer">
+            <div module="Layout_SearchHeader">
+                <div class="topSearch">
+                    {$form.keyword}
+                    <button type="button" class="btnSearch" onclick="{$action_search_submit}">검색</button>
+                    <button type="button" class="btnDelete">삭제</button>
+                </div>
+                <div class="hotKeyword" module="search_hotkeyword">
+                    <strong class="title">인기검색어</strong>
+                    <div class="keyword">
+                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                        <a href="{$hot_keyword_url}">{$hot_keyword_name}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerMenu gRight">
+            <span module="Layout_orderBasketcount" class="btnBasket">
+                <a href="/order/basket.html">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+            </span>
+            <a href="/myshop/index.html" module="Layout_statelogoff" class="btnMy">로그인</a>
+            <a href="/myshop/index.html" module="Layout_statelogon" class="btnMy">마이쇼핑</a>
+        </div>
+    </div>
+</header>
+<!-- //MOMA COMPONENT ID 1 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="2" id="grid_id_1571884691343_1" style="grid-area: 3 / 1 / 4 / 5;min-width: 0;">
+    <div class="dnd_module_c785e267507864e0f86dfc2033986f74">
+<!-- MOMA COMPONENT ID 2 -->
+<nav id="navigation">
+    <div class="inner" module="Layout_category">
+        <div class="horizontal-scrollable">
+            <ul class="category">
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+                <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            </ul>
+        </div>
+    </div>
+    <button type="button" class="btnCateLayer eToggleCateLayer">카테고리 레이어보기</button>
+    <div class="categoryLayer" module="Layout_category">
+        <ul class="category">
+            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+            <li><a href="{$link_product_list}" class="link">{$name_or_img_tag}</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="navDimmed"></div>
+<!-- //MOMA COMPONENT ID 2 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="55" id="grid_id_1571884691343_2" style="grid-area: 4 / 1 / 42 / 5;min-width: 0;">
+    <div class="dnd_module_d9534547b5aaccf62b8e92836ccb639c">
+<!-- MOMA COMPONENT ID 55 -->
+<div module="board_ReadPackage_4" class="boardReadPackage">
+    <div module="board_title_4">
+        <h2 class="title">{$board_name}</h2>
+        <span module="Layout_MobileAction">
+            <a href="#none" onclick="{$go_back}" class="btnBack">뒤로가기</a>
+        </span>
+    </div>
+    <div module="board_Product_4" class="brdProduct">
+        <div class="productInfo">
+            <div class="prdBox">
+                <div class="thumbnail"><a href="{$link_product_detail}" class="link"><img src="{$product_img}" alt="" width="68" height="68" onerror="this.src='//img.echosting.cafe24.com/skin/mobile_ko_KR/board/img_no.png'" /></a></div>
+                <div class="description">
+                    <strong class="prdName"><a href="{$link_product_detail}">{$product_name}</a>{$user_icon} {$new_icon} {$recommend_icon} {$soldout_icon} {$mileage_icon}</strong>
+                    <ul class="info">
+                        <li class="price">{$product_price} {$product_tax_type_text}</li>
+                    </ul>
+                    <a href="{$link_product_detail}" class="btnDetail">상품상세보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div module="board_read_4" class="brdRead">
+        <!--
+        	$login_page_url = /member/login.html
+            $deny_access_url = /board/product/list.html
+        -->
+        <div class="head">
+            <h3 class="subject">{$subject}</h3>
+            <div class="description">
+                <div class="info">
+                    <span class="point {$config.is_use_point|display}"><img src="//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_star{$point_count}.png" alt="{$point_count}점" height="10"></span>
+                    <span class="id" title="작성자">{$member_icon}{$writer}<span class="{$config.display_ip|display}">(ip:{$ip})</span> {$admin_mileage}</span>
+                </div>
+                <div class="append">
+                    <span class="date {$config.use_date|display}" title="작성일">{$write_date}</span>
+                    <span class="{$config.use_cnt|display}">조회 {$hit_count}</span>
+                    <span class="{$config.is_use_recom|display}">추천 {$vote_count}</span>
+                    <span class="vote {$config.is_use_recom|display}">
+                        <a href="#none" class="button" onclick="{$action_vote}">추천</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="image">{$content_image}</div>
+            {$content}
+            <div class="attach {$config.use_attach|display}" title="첨부파일">
+                {$attach_file}
+            </div>
+        </div>
+        <div class="foot">
+            <div class="formGroup">
+                <span class="gLeft">
+                    <a href="/board/product/reply.html{$param_reply}" class="button {$reply_button_auth|display}">답변쓰기</a>
+                </span>
+                <span class="gRight">
+                    <a href="/board/product/modify.html{$param_modify}" class="button {$modify_button_auth|display}">수정</a>
+                    <button type="button" class="button {$delete_button_auth|display}" onclick="{$action_delete}">삭제</button>
+                </span>
+            </div>
+            <div class="passwordGroup {$delete_button_auth|display}">
+                <div class="password {$board_password_type}">
+                    <span class="form {$config.use_password|display}">{$form.password}</span>
+                    <p class="help {$config.use_password|display}">비밀번호 입력후 수정 혹은 삭제해주세요.</p>
+                </div>
+            </div>
+            <a href="{$link_board_list}" class="btnList">목록보기</a>
+        </div>
+    </div>
+</div>
+<div module="board_CommentPackage_4" class="boardCommentPackage">
+    <div class="brdCmtTitle">
+        <h3>댓글목록</h3>
+    </div>
+    <div module="board_commentempty_4" class="empty">
+        등록된 댓글이 없습니다.
+    </div>
+    <div module="board_commentlist_4" class="brdCmtList">
+        <!--
+        	$delete_page_url = /board/product/comment_del.html
+            $delete_success_url = /board/product/read.html
+        -->
+        <ul class="brdCmt">
+            <li class="{$comment_reply_css}" id="{$comment_reply_id}">
+                <div class="info">
+                    <span class="point {$config.is_use_point|display}">
+                        <img src="//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_star{$comment_point_count}.png" alt="{$comment_point_count}점" height="10"></span>
+                    <span class="writer" title="작성자">{$comment_name}</span>
+                    <span class="regdate" title="작성일">{$comment_write_date}</span>
+                </div>
+                <div class="comment">
+                    <span class="spam {$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_spam.png" alt="스팸글" width="13"></span>
+                    <span class="icon">{$icon_mobile}{$comment_icon_lock}</span>{$comment_content}
+                </div>
+                <div class="formGroup">
+                    <div class="gLeft">
+                        <button type="button" class="btnReply replyList {$comment_reply_list_display|display}" onclick="{$action_comment_view}">댓글의 댓글<span class="number">{$comment_reply_count}</span></button>
+                    </div>
+                    <div class="gRight">
+                        <button type="button" class="button theme1" onclick="{$action_comment_update_new}">수정</button>
+                        <button type="button" class="button theme1" onclick="{$action_comment_delete}">삭제</button>
+                        <button type="button" class="button theme2 {$comment_reply_display|display}" onclick="{$action_comment_reply_new}">쓰기</button>
+                    </div>
+                </div>
+            </li>
+            <li class="{$comment_reply_css}" id="{$comment_reply_id}">
+                <div class="info">
+                    <span class="point {$config.is_use_point|display}">
+                        <img src="//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_star{$comment_point_count}.png" alt="{$comment_point_count}점" height="10"></span>
+                    <span class="writer" title="작성자">{$comment_name}</span>
+                    <span class="regdate" title="작성일">{$comment_write_date}</span>
+                </div>
+                <div class="comment">
+                    <span class="spam {$is_spam_display|display}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/board/ico_spam.png" alt="스팸글" width="13"></span>
+                    <span class="icon">{$icon_mobile}{$comment_icon_lock}</span>{$comment_content}
+                </div>
+                <div class="formGroup">
+                    <div class="gLeft">
+                        <button type="button" class="btnReply replyList {$comment_reply_list_display|display}" onclick="{$action_comment_view}">댓글의 댓글<span class="number">{$comment_reply_count}</span></button>
+                    </div>
+                    <div class="gRight">
+                        <button type="button" class="button theme1" onclick="{$action_comment_update_new}">수정</button>
+                        <button type="button" class="button theme1" onclick="{$action_comment_delete}">삭제</button>
+                        <button type="button" class="button theme2 {$comment_reply_display|display}" onclick="{$action_comment_reply_new}">쓰기</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div module="board_commentpaging_4" class="brdPaginate typeList">
+        <a href="{$param_prev}" class="btnPrev">이전 페이지</a>
+        <ol class="page">
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+            <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        </ol>
+        <a href="{$param_next}" class="btnNext">다음 페이지</a>
+    </div>
+    <div module="board_commentform_4" class="brdCmtModify">
+        <div class="brdEditor">
+            <fieldset>
+                <legend>댓글 수정</legend>
+                <strong class="titEditor">댓글 수정</strong>
+                <div class="info">
+                    <span class="name">{$form.comment_name}</span>
+                    <span class="password">{$form.comment_password}</span>
+                </div>
+                <span class="comment">
+                    {$form.comment_modify}
+                    <span class="byte {$config.comment_size|display}"><strong class="current">{$comment_byte}</strong>/{$comment_size} byte</span>
+                </span>
+                <div class="formGroup">
+                    <div class="gLeft">
+                        <span class="secret {$comment_secret_display|display}">
+                            <label>{$form.secure} 비밀댓글</label>
+                        </span>
+                    </div>
+                    <div class="gRight">
+                        <a href="#none" class="button large theme1" onclick="{$action_comment_cancel_new}">취소</a>
+                        <a href="#none" class="button large theme2" onclick="{$action_comment_update}">수정</a>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div module="board_commentformsecret_4" class="formGroup cmtSecret">
+        {$form.secure_password}
+        <div class="gRight">
+            <a href="#none" class="button large theme1" onclick="{$action_secret_submit}">취소</a>
+            <a href="#none" class="button large theme2" onclick="{$action_secret_cancel}">확인</a>
+        </div>
+    </div>
+    <div module="board_commentwrite_4" class="brdCmtWrite">
+        <div class="brdEditor {$comment_write_display|display}">
+            <fieldset>
+                <legend>댓글쓰기</legend>
+                <strong class="titEditor">댓글쓰기</strong>
+                <div class="info">
+                    <span class="name {$comment_input_name|display}">{$form.comment_name}</span>
+                    <span class="password">{$form.comment_password}</span>
+                </div>
+                <p class="help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+                <span class="comment">
+                    {$form.comment}
+                    <span class="byte {$config.comment_size|display}"><strong class="current">{$comment_byte}</strong>/{$comment_size} byte</span>
+                </span>
+                <div class="byteRating {$config.is_use_point|display}">
+                    <strong class="label">평점</strong>
+                    <span class="rating">
+                        {$form.comment_point}
+                    </span>
+                </div>
+                <div class="captcha {$config.use_captcha_comment|display}">
+                    <span class="image">
+                        {$captcha_image}
+                        <span class="btnRefresh">{$captcha_refresh}</span>
+                    </span>
+                    <div class="form">
+                        {$form.captcha}
+                    </div>
+                    <p class="help">위에 보이는 문자를 공백없이 입력하세요. (대소문자구분)</p>
+                </div>
+                <div class="formGroup">
+                    <div class="gLeft">
+                        <span class="secret {$comment_secret_display|display}">
+                            <label>{$form.secure} 비밀글</label>
+                        </span>
+                    </div>
+                    <div class="gRight">
+                        <button type="button" class="button large theme2 {$comment_button|display}" onclick="{$action_comment_insert}">등록하기</button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="brdCmtAuthority {$comment_write_display_none|display}">
+            {$comment_auth_name}에게만 댓글 작성 권한이 있습니다.
+        </div>
+    </div>
+    <div module="board_commentreply_4" class="brdCmtReply">
+        <div class="brdEditor {$comment_write_display|display}">
+            <fieldset>
+                <legend>댓글의 댓글쓰기</legend>
+                <strong class="titEditor">댓글의 댓글쓰기</strong>
+                <div class="info">
+                    <span class="name {$comment_input_name|display}">{$form.comment_name}</span>
+                    <p class="password">{$form.comment_password}</p>
+                </div>
+                <p class="help {$password_rule_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p>
+                <span class="comment">
+                    {$form.comment}
+                    <span class="byte {$config.comment_size|display}"><strong class="current">{$comment_byte}</strong>/{$comment_size} byte</span>
+                </span>
+                <div class="captcha {$config.use_captcha_comment|display}">
+                    <span class="image">
+                        {$captcha_image}
+                        <span class="btnRefresh">{$captcha_refresh}</span>
+                    </span>
+                    <div class="form">
+                        {$form.captcha}
+                    </div>
+                    <p class="help">위에 보이는 문자를 공백없이 입력하세요. (대소문자구분)</p>
+                </div>
+                <div class="formGroup">
+                    <div class="gLeft">
+                        <span class="secret {$comment_secret_display|display}">
+                            <label>{$form.secure} 비밀글</label>
+                        </span>
+                    </div>
+                    <div class="gRight">
+                        <button type="button" class="button large theme2 {$comment_button|display}" onclick="{$action_comment_insert}">등록하기</button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="brdCmtAuthority {$comment_write_display_none|display}">
+            {$comment_auth_name}에게만 댓글 작성 권한이 있습니다.
+        </div>
+    </div>
+</div>
+<div module="board_movement_4" class="brdPaginate typeBoard">
+    <ul class="page">
+        <li class="prev {$prev_display|display}"><strong class="label">이전글</strong><a href="{$link_board_detail_prev}" class="link">{$prev_subject}</a></li>
+        <li class="next {$next_display|display}"><strong class="label">다음글</strong><a href="{$link_board_detail_next}" class="link">{$next_subject}</a></li>
+    </ul>
+</div>
+<div module="board_listsgroup_4" class="boardListGroup">
+    <div class="brdListTitle">
+        <h3>관련글 보기</h3>
+    </div>
+    <ul class="brdList">
+        <!--
+            $count = 2
+            $product_name_cut = 30
+        -->
+        <li>
+            <a href="{$link_board_detail}" class="link">
+                <strong class="subject">{$icon_re}{$icon_lock}{$icon_file}<span class="text">{$subject}</span><span class="commentCnt">{$comment_count}</span>{$icon_hit}{$icon_new}</strong>
+                <span class="category">{$product_name}</span>
+                <span class="info">
+                    <span class="point {$point_display|display}"><img src="//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_star{$point_count}.png" alt="{$point_count}점" height="10"></span>
+                    <span class="id" title="작성자">{$writer}</span>
+                    <span class="name">{$product_name}</span>
+                </span>
+                <span class="append">
+                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="{$link_board_detail}" class="link">
+                <strong class="subject">{$icon_re}{$icon_lock}{$icon_file}<span class="text">{$subject}</span><span class="commentCnt">{$comment_count}</span>{$icon_hit}{$icon_new}</strong>
+                <span class="category">{$product_name}</span>
+                <span class="info">
+                    <span class="point {$point_display|display}"><img src="//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_star{$point_count}.png" alt="{$point_count}점" height="10"></span>
+                    <span class="id" title="작성자">{$writer}</span>
+                    <span class="name">{$product_name}</span>
+                </span>
+                <span class="append">
+                    <span class="date {$date_display|display}" title="작성일">{$write_date}</span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- //MOMA COMPONENT ID 55 -->
+</div>
+</div>
+<div class="gridItem" data-component-id="15" id="grid_id_1575017054899_3" style="grid-area: 42 / 1 / 52 / 5;min-width: 0;">
+    <div class="dnd_module_3865037d1db28c40406f2a127c19756c">
+<!-- MOMA COMPONENT 15 -->
+<footer id="footer">
+    <div module="Layout_Info" class="customer">
+        <a href="tel:{$phone}" class="link tel">
+            <span class="title">고객센터</span>
+            <span class="sub">{$phone}</span>
+        </a>
+        <a href="/board/consult/list.html" class="link consult">
+            <span class="title">1:1문의하기</span>
+            <span class="sub">Q&amp;A</span>
+        </a>
+    </div>
+    <div module="Layout_footer" class="company">
+        <ul class="util">
+            <li><a href="/shopinfo/guide.html" class="link">이용안내</a></li>
+            <li><a href="/shopinfo/company.html" class="link">회사소개</a></li>
+            <li class="commercial-law"><a href='/shopinfo/commercial_law.html'>특정 상거래 법에 근거한 표시</a></li>
+            <li><a href="/member/privacy.html" class="link"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="/member/mall_agreement.html" class="link">이용약관</a></li>
+        </ul>
+        <div class="info">
+            <strong class="name">{$company_name}</strong>
+            <span class="address">{$mall_addr1} {$mall_addr2}</span>
+            <dl>
+                <dt>대표이사:</dt>
+                <dd>{$president_name}</dd>
+                <dt>사업자등록번호:</dt>
+                <dd>{$company_regno}</dd>
+            </dl>
+            <dl>
+                <dt>통신판매업신고:</dt>
+                <dd>{$network_regno}</dd>
+                <dd class="business_info">{$biz_no_link}</dd>
+            </dl>
+            <dl class="{$cpo_email|display}">
+                <dt>개인정보관리책임:</dt>
+                <dd><a href="mailto:{$cpo_email}">{$cpo_name}({$cpo_email})</a></dd>
+                <dt>호스팅제공:</dt>
+                <dd>카페24(주)</dd>
+            </dl>
+            <dl>
+                <dt>E-mail:</dt>
+                <dd><a href="mailto:{$email}">{$email}</a></dd>
+            </dl>                    
+        </div>
+        <p class="copyright">Copyright&copy; {$mall_name}. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- // MOMA COMPONENT 15 -->
+</div>
+</div>
+        </div>
+    </div>
+<!--@js(/board/product/read.js)-->
+<!-- body -->
+<div module="Popup_MultiPopup">
+    <!--
+            $banner_popup_no =
+            ※ Enter ID (number) of Pop-up.
+        -->
+    {$popup}
+</div>
+</body>
+</html>

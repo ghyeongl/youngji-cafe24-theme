@@ -1,0 +1,65 @@
+<!-- File start -->
+    <!--
+            이 파일은 원터치 주문서의 읽기 전용 파일입니다.
+            이 파일은 기능 업그레이드 시, 자동으로 개선된 소스가 적용되어 별도로 디자인 수정을 하지 않아도 됩니다 .
+            원터치 주문서 조각 html 파일을 수정할 경우, 작성한 정보가 유실되거나 주문서 최신 기능이 자동 업그레이드되지 않을 수 있으니 유의해 주세요.
+    -->
+    <div id="ec-jigsaw-area-additionalInput" class="ec-base-fold eToggle selected {$additionalInput_display|display}">
+        <div id="ec-jigsaw-title-additionalInput" class="title">
+            <h2>추가입력</h2>
+        </div>
+        <div class="contents">
+            <!-- app tag -->
+            <div id="ec-orderform-additionalInput-head"></div>
+            <!-- 추가입력 -->
+            <div class="addArea {$ordadd.display|display}">
+                <div class="ec-base-table typeWrite">
+                    <table border="1">
+                        <caption>추가입력</caption>
+                        <colgroup>
+                            <col style="width:122px" />
+                            <col style="width:auto" />
+                        </colgroup>
+                        <tbody module="Order_ordadd">
+                            <tr>
+                                <th scope="row">{$subject} <span class="{$required_icon}"></span></th>
+                                <td>{$html}{$content}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">{$subject} <span class="{$required_icon}"></span></th>
+                                <td>{$html}{$content}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- 기타 문의사항 -->
+            <div class="questionArea {$question_display|display}">
+                <div class="ec-base-table typeWrite">
+                    <table border="1">
+                        <caption>기타 문의사항</caption>
+                        <colgroup>
+                            <col style="width:122px" />
+                            <col style="width:auto" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">기타 문의사항</th>
+                                <td>
+                                    {$form.question}
+                                    <p class="ec-base-help"><a href="/board/product/list.html?board_no={$question_board_no}" target="_blank">{$question_board_name}</a>에 자동 저장됩니다.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">비밀번호</th>
+                                <td>{$form.question_passwd} <p class="ec-base-help {$question_passwd_help_display|display}">영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- app tag -->
+            <div id="ec-orderform-additionalInput-tail"></div>
+        </div>
+    </div>
+<!-- File end -->

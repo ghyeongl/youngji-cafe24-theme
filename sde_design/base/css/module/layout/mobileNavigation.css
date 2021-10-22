@@ -1,0 +1,8 @@
+.xans-layout-mobilenavigation { position:relative; padding:0 16px; z-index:299; }
+.xans-layout-mobilenavigation ul { overflow-y:hidden; overflow-x:auto; height:40px; white-space:nowrap; -webkit-overflow-scrolling:touch; background:#fff; }
+.xans-layout-mobilenavigation ul li { display:inline-block; text-align:center; margin:0 0 0 24px; }
+.xans-layout-mobilenavigation ul li:first-child { margin:0; }
+.xans-layout-mobilenavigation ul li a { display:block; word-break:break-all; padding:11px 0; font-size:14px; color:#000; text-decoration:none; }
+
+.xans-layout-mobilenavigation ul::-webkit-scrollbar,
+.xans-layout-mobilenavigation ul::-webkit-scrollbar-thumb { display:none; }

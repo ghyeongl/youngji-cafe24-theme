@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* IE의 그리드계산 버그를 보완하기 위해서 opacity:0을 주고, common.js 에서 opacity:1로 돌려놓음 */
+body { opacity:0; }
+
+.gridContainer { display:-ms-grid; display:grid; -ms-grid-columns:25% 25% 25% 25%; grid-template-columns:25% 25% 25% 25%; }
+.gridContainer .gridItem { max-width: 898px; min-width :0;}
+.gridContainer .gridItem.gridHidden { overflow:hidden; }
+
+.gridContainer { display:-ms-grid; display:grid;  }
+
+.gridContainer .titleArea { overflow:hidden; position:relative; padding:18px 45px 19px 56px; border-top:1px solid #eee; background:#fff; }
+.gridContainer .titleArea h2.title { font-size:15px; text-align:center; }
+.gridContainer .titleArea .btnBack { overflow:hidden; position:absolute; left:17px; top:19px; width:20px; height:20px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/detail/btn_title_back.png') no-repeat 0 0; background-size:20px auto; }
+
+
+#container { height:100%; min-height:auto !important; -webkit-transition:-webkit-transform .3s ease-out; transition:-webkit-transform .3s ease-out; }
+#dimmedSlider { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:300; background:rgba(0,0,0,.4);
+  -webkit-transition:-webkit-transform .3s ease-out; transition:-webkit-transform .3s ease-out; }
+
+/* aside */
+  #aside {
+    position:fixed; left:0; top:0px; bottom:0; overflow:auto; min-width:225px; max-width:360px; width:100%; background-color:#fff; z-index: 500;
+    -webkit-transform:translate(-100%, 0); transform:translate(-100%, 0);
+    -webkit-transition:-webkit-transform .3s ease-out; transition:-webkit-transform .3s ease-out;
+  }
+
+/* sideMenu expand */
+  html.expand body { overflow:hidden; }
+  html.expand #container { -webkit-transition:-webkit-transform .3s ease-out; transition:-webkit-transform .3s ease-out; }
+  html.expand #aside { z-index:500; overflow-x:hidden;
+    -webkit-transform:translate(0, 0); transform:translate(0, 0); -webkit-transition:-webkit-transform .3s ease-out; transition:-webkit-transform .3s ease-out; }
+
+/* 공통 */
+  .dimmed { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:150; background:rgba(0, 0, 0, .4); }
+  .dimmed.show { display:block; }
+
+@media all and (min-width:900px) {
+  body { border:1px solid #e5e9f2; border-width:0 1px; box-sizing:border-box; }
+}

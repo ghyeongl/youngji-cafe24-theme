@@ -1,0 +1,5 @@
+.popup #accountForm { height:100%; }
+.xans-myshop-orderhistoryaccount #acc_no,
+.xans-myshop-orderhistoryaccount #check_password,
+.xans-myshop-orderhistoryaccount #acc_bank { width:100%; }
+.xans-myshop-orderhistoryaccount .wrap .ec-base-button { border-top:0; }

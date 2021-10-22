@@ -1,0 +1,49 @@
+<div module="Mall_UrgencycallSearchoutline" class="ec-base-layer">
+    <!--@css(/layout/basic/css/popup.css)-->
+    <!--@css(/css/module/board/urgencycallSearchoutline.css)-->
+    <div class="header">
+        <h3>{$sPrdOrdText}</h3>
+    </div>
+
+    <div class="content">
+        <div id="tablist" class="ec-base-tab {$tabDisplay | display}">
+            <ul class="menu">
+                <li id="liOrdtab" class="selected" onClick="{$clickOrdTab}"><a href="#none" id="tabordno" name="tabordno">주문번호</a></li>
+                <li id="liPrdtab" onClick="{$clickPrdTab}" ><a href="#none" id="tabprdno" name="tabprdno">상품</a></li>
+            </ul>
+        </div>
+        {$form.isLogin}
+
+        <div id="urgencyOrder" class="urgencyOrder {$ordDisplay | display}"></div>
+
+        <div id="urgencyProduct" class="urgencyProduct {$prdDisplay | display}">
+            <div class="ec-base-table typeWrite">
+                <table border="1" summary="">
+                    <caption>상품검색</caption>
+                    <colgroup>
+                        <col style="width:120px;" />
+                        <col style="width:auto;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                {$form.selPrdsearch}
+                            </th>
+                            <td>
+                                {$form.txtProductInfo}
+                                <a href="#none" id="execSearch" class="btnEm" name="execSearch" onClick="{$search_product}">검색</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="prdSearchResult"></div>
+        </div>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" id="TopCloseBtn" class="btnNormalFix sizeS" onClick="{$closeSearchLayer}">닫기</a>
+    </div>
+
+    <a href="#none" id="BottomCloseBtn" class="close" onClick="{$closeSearchLayer}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
+</div>

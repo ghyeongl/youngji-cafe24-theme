@@ -1,0 +1,72 @@
+#contents { position:relative; }
+
+/* Tab */
+.xans-order-basketpackage .xans-order-tabinfo { margin:40px 0 0; }
+
+/* List */
+.xans-order-basketpackage .xans-order-empty p { margin:50px 0; text-align:center; font-weight:bold; color:#707070; }
+.xans-order-basketpackage .orderListArea .title { height:38px; margin:20px 0 0; padding:0 0 0 9px; border:1px solid #d7d5d5; border-bottom:0; line-height:38px; background:#f6f6f6; }
+.xans-order-basketpackage .orderListArea .title h3 { color:#353535; font-size:12px; }
+.xans-order-basketpackage .orderListArea .title + table { margin:0; }
+.xans-order-basketpackage .ec-base-table tfoot td .gLeft { float:left; margin:6px 0 0; }
+.xans-order-basketpackage .ec-base-table td.thumb img { max-width:80px; }
+.xans-order-basketpackage .ec-base-table td.button a { width:90px; margin:1px 0; }
+.xans-order-basketpackage .ec-base-table .name .ec-set-product-name { display:block; }
+.xans-order-basketpackage .ec-base-table .engName { display:block; }
+.xans-order-basketpackage .ec-base-table td div.option,
+.xans-order-basketpackage .ec-base-table td ul.option > li { margin:9px 0 0; color:#707070; line-height:16px; }
+.xans-order-basketpackage .ec-base-table td ul.option > li > strong { display:block; color:#353535; }
+.xans-order-basketpackage .ec-base-table td div.option span.file a,
+.xans-order-basketpackage .ec-base-table td ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#707070; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 2px; }
+
+.xans-order-basketpackage .xans-order-allotmentinfo { padding:10px 0 8px 10px; border-bottom:1px solid #e8e5e4; }
+.xans-order-basketpackage .xans-order-allotmentinfo .info { padding:8px 0 0 23px; color:#707070; font-size:11px; line-height:1.5; background:url("//img.echosting.cafe24.com/skin/base/common/ico_info.gif") no-repeat 0 8px; }
+
+.xans-order-basketpackage .xans-order-basketpriceinfoguide p.info { padding:8px 0 8px 33px; border-bottom:1px solid #e8e5e4; color:#757575; line-height:1.5; font-size:11px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_info.gif") no-repeat 9px 8px; }
+
+.xans-order-basketpackage .xans-order-selectorder { margin:0 0 40px; }
+.xans-order-basketpackage .xans-order-totalorder { margin:10px 0 40px; }
+
+.xans-order-basketpackage .xans-order-weight .totalWeight{text-align: right;padding: 10px 0 0;}
+.xans-order-basketpackage .xans-order-weight .totalWeight span{display: inline-block;min-width: 50px;}
+
+#NaverChk_Button { margin:10px 0; }
+
+/* Total */
+.xans-order-basketpackage .ec-base-table.total table { border-color:#777; }
+.xans-order-basketpackage .ec-base-table.total table th { height:39px; }
+.xans-order-basketpackage .ec-base-table.total table td { height:58px; }
+.xans-order-basketpackage .ec-base-table.total table td .box { word-break:normal; }
+.xans-order-basketpackage .ec-base-table.total table td .txt23 { font-size:23px; letter-spacing:-1px; }
+
+/* 총 상품금액 상세내역 레이어 */
+.xans-order-basketpackage .totalDetail { display:none; z-index:100; width:300px; color:#707070; }
+.xans-order-basketpackage .totalDetail .content p { text-align:right; }
+.xans-order-basketpackage .totalDetail .content .ec-base-desc { margin:8px 0 0; padding-top:6px; border-top:1px dotted #b0b1b3; }
+
+/* 옵션변경 레이어 */
+.xans-order-basketpackage .optionModify { display:none; width:450px; color:#707070; }
+.xans-order-basketpackage .optionModify .prdInfo { margin:0 0 10px; padding:0 0 10px; border-bottom:1px dotted #b0b1b3; line-height:1.5; }
+.xans-order-basketpackage .optionModify .prdInfo li { color:#353535; font-weight:bold; }
+.xans-order-basketpackage .optionModify .prdInfo li.option { color:#707070; font-weight:normal; }
+.xans-order-basketpackage .optionModify .prdModify h4 { color:#353535; font-size:12px; }
+.xans-order-basketpackage .optionModify .prdModify li { padding:6px 0 0; }
+.xans-order-basketpackage .optionModify .prdModify li:after { content:""; display:block; clear:both; }
+.xans-order-basketpackage .optionModify .prdModify li span { float:left; width:110px; margin:3px 0 0; }
+.xans-order-basketpackage .optionModify .prdModify li select { float:right; width:294px; line-height:24px; font-size:12px; }
+.xans-order-basketpackage .optionModify .prdModify li input[type=text] { float:right; width:284px; }
+
+/* 배송비할인 레이어 */
+.xans-order-basketpackage td .box.shipping { line-height:1.3em; }
+.xans-order-basketpackage td .box.shipping .shippingArea { font-size:12px; line-height:1.3em; }
+.xans-order-basketpackage .shippingFee { position:relative; display:inline-block; vertical-align:middle; text-align:left; }
+.xans-order-basketpackage .shippingFee .ec-base-tooltip { display:block; margin:0 0 0 -180px; width:360px; }
+.xans-order-basketpackage .ec-base-table.total .ec-base-tooltip table { border-color:#d7d5d5; }
+.xans-order-basketpackage .ec-base-table.total .ec-base-tooltip table th { width:40px; }
+.xans-order-basketpackage .ec-base-table.total .ec-base-tooltip table th,
+.xans-order-basketpackage .ec-base-table.total .ec-base-tooltip table td { padding:7px 10px 8px 10px; height:auto; font-size:12px; line-height:1.5; text-align:left; }
+
+/* App payment button box */
+#appPaymentButtonBox { max-width:247px; margin:10px auto 0; }
+#appPaymentButtonBox > div { margin:0 0 5px 0; }
+#appPaymentButtonBox > div:last-of-type { margin-bottom:0; }

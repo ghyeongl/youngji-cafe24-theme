@@ -1,0 +1,308 @@
+#dnd-container #dnd-content .preview-area .preview-column .column-box .slidingMenu { display: none; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d .hidden { opacity: 0; position: absolute; width: 0; height: 0; overflow: hidden; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header { z-index:300; position:relative; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .header { z-index:300; position:relative; padding:18px 0; text-align:center; vertical-align:top; background:#fff; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header.open .header { z-index:301; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  h1 { margin:0 95px; font-size:18px; text-align:center; color:#000; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  h1 .link:hover { text-decoration:none; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  h1 img { max-width:100%; vertical-align:middle; font-size:12px; max-height:30px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu { position:absolute; top:50%; margin-top:-15px; width:80px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gLeft { left:0; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gRight { right:0;  }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"],
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnBasket > a { position:relative; width:30px; height:30px; background-repeat:no-repeat; background-size:30px 30px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnBasket .count { overflow:hidden; position:absolute; right:0; top:2px; min-width:10px; padding:0 2px; height:14px; border-radius:14px; font-weight:bold; font-size:9px; line-height:13px; color:#fff; text-align:center; background:#ff0000; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"],
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"] a { display:inline-block; overflow:hidden; font-size:1px; line-height:0; color:transparent; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu:after { content:''; clear:both; display:block; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu [class*="btn"] { float:left; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gLeft [class*="btn"] { margin-left:10px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu.gRight [class*="btn"] { margin-right:10px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnCate { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_cate.png'); }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnSearch { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_search.png'); }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnBasket > a { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_basket.png'); }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .headerMenu .btnMy { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_my.png'); }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header  .searchLayer { display:none; position:fixed; right:0; top:0; z-index:401; max-width:900px; text-align:left; background:#fff; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header.open .searchLayer { display:block; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header.open #dimmedSlider { display:block !important; opacity:1; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch { position:relative; height:60px; padding:21px 85px 21px 40px; box-sizing:border-box; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch:before { content:''; position:absolute; left:20px; top:21px; width:10px; height:17px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat 0 0; background-size:150px auto; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword { width:100%; height:18px; padding:0; border:0; font-size:14px; line-height:18px; color:#000; border-radius:0; outline-style:none; -webkit-appearance:none; box-sizing:border-box; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword::-webkit-input-placeholder { font-size:14px; color:#999; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword:-ms-input-placeholder { font-size:14px; color:#999; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword::-moz-placeholder { font-size:14px; color:#999; opacity:1; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch #keyword:-moz-placeholder { font-size:14px; color:#999; opacity:1; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch [class*="btn"] { overflow:hidden; position:absolute; font-size:1px; line-height:0; color:transparent; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch [class*="btn"]:before { content:''; position:absolute; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnSearch { right:0; top:0; width:50px; height:60px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnSearch:before { right:16px; top:21px; width:18px; height:18px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat -50px 0; background-size:150px auto; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnDelete { right:50px; top:0; width:35px; height:60px; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .topSearch .btnDelete:before { right:10px; top:22px; width:15px; height:15px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat -100px 0; background-size:150px auto; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword { padding:15px 16px 28px; border-top:1px solid #ededed; background:#fbfbfd; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .title { font-weight:normal; font-size:12px; color:#abaeb5; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .keyword { margin:8px 0 0; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .keyword > a { display:inline-block; margin:7px 16px 0 0; font-size:14px; line-height:18px; color:#000; vertical-align:top; }
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer .hotKeyword .keyword > a:hover { text-decoration:none; }
+@media all and (max-width:899px) {
+    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer { left:0; width:100%; }
+}
+@media all and (min-width:900px) {
+    .dnd_module_9742c60d3a2ee81fffada3eade8d931d > header .searchLayer { left:50%; margin-left:-450px; }
+}
+.dnd_module_9742c60d3a2ee81fffada3eade8d931d #aside .btnClose { display:block; overflow:hidden; position:absolute; right:10px; top:15px; width:30px; height:30px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_aside_close.png') no-repeat 0 0; background-size:30px auto; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav { position:relative; z-index:299; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .btnCateLayer { overflow:hidden; position:absolute; right:0; top:0; z-index:301; width:50px; height:38px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/bg_category.png') no-repeat 0 0; background-size:50px auto; display:none; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .btnCateLayer:after { content:''; position:absolute; right:15px; top:10px; width:20px; height:20px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/btn_cate_layer.png') no-repeat 0 0; background-size:20px auto; -webkit-transition:transform .3s ease-out; transition:transform .3s ease-out; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav.open .btnCateLayer:after { -webkit-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg); }
+.dnd_module_c785e267507864e0f86dfc2033986f74 .navDimmed { display:none; position:fixed; left:0px; top:0; right:0px; bottom:0px; z-index:150; background:rgba(0,0,0,.4); }
+.dnd_module_c785e267507864e0f86dfc2033986f74 .navDimmed.show { display:block; }
+/* category 공통 */
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category { z-index:300; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category li .link { display:block; word-break:break-all; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category li .link:hover { text-decoration:none; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .category .sub-category { display:none; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner { position:relative; overflow:hidden; z-index:300; padding:0 16px; background:#fff; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .mCSB_horizontal.mCSB_inside > .mCSB_container { margin-bottom: 8px; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category { height:40px;  -webkit-overflow-scrolling:touch; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .mCSB_horizontal.mCSB_inside .category { white-space:nowrap; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category::-webkit-scrollbar { display:none; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category::-webkit-scrollbar-thumb { display:none; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li { display:inline-block; margin-left:24px; text-align:center; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li:first-child { margin:0; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li .link { padding:11px 0; font-size:14px; color:#000; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li .link img { max-height: 18px; vertical-align: middle; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer { position:absolute; left:0; right:0; top:100%; z-index:300; width:100%; height:0; visibility:hidden; padding:16px; border-top:1px solid #ededed; opacity:0; box-sizing:border-box; background:#fbfbfd; -webkit-transition:.3s ease-out; transition:.3s ease-out; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer .category { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; z-index:300; margin:0 -2px 0 0; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer li { float:left; width:33.33%; margin:-1px 0 0 -1px; border:1px solid #dedfe2; text-align:center; box-sizing:border-box; background:#fff; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer li .link { padding:9px 5px; font-size:12px; color:#999; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav .categoryLayer li .link img { max-height:18px; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav.open .categoryLayer { height:auto; visibility:inherit; opacity:1; }
+.dnd_module_c785e267507864e0f86dfc2033986f74 > nav.isShort .btnCateLayer { display:block; }
+@media all and (max-width:479px) {
+    .dnd_module_c785e267507864e0f86dfc2033986f74 > nav .inner .category li:last-child { margin-right:50px; }
+}
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .xans-board-title { overflow:hidden; position:relative; padding:18px 45px 19px 56px; border-top:1px solid #eee; background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .xans-board-title h2.title { font-size:15px; text-align:center; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .xans-board-title .btnBack { overflow:hidden; position:absolute; left:17px; top:19px; width:20px; height:20px; font-size:1px; line-height:0; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/detail/btn_title_back.png') no-repeat 0 0; background-size:20px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input, textarea, select { max-width:100%; font-size:13px; color:#000; vertical-align:middle; outline:0; border-radius:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type=text], input[type=password], input[type=number], input[type=tel], textarea {
+    padding:10px; font-size:13px; line-height:13px; font-weight:inherit; color:#353535; border:1px solid #dedfe2; border-radius:0; outline-style:none;
+    -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;
+}
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type=text], input[type=password], input[type=number], input[type=tel] { height:36px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=tel]:focus { border-color:#000; color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="file"] { overflow:hidden; max-width:100%; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="button"], input[type="text"], input[type="password"], input[type="tel"], input[type="image"], textarea { -webkit-appearance:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c select { max-width:100%; height:36px; margin:0; padding:0 20px 0 12px; border:1px solid #dedfe2; border-radius:0; font-size:13px; line-height:36px; color:#000; word-break:break-all; font-weight:inherit; -webkit-appearance:none; cursor:pointer; background:#fff url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_select.gif') no-repeat 100% 0; background-size:20px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c select:focus { border-color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c select::-ms-expand { display:none; } /* ie selectbox 화살표 제거 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c select.disabled, select:disabled,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c textarea.disabled, textarea:disabled { color:#bcbcbc; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c textarea { resize:none; line-height:1.2em; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c textarea.disabled { background-color:#fff; color:#bfbfbf; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="radio"] { width:20px; height:20px; border:0; cursor:pointer; background:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_radio.png") no-repeat 0 0; background-size:20px 20px; -webkit-appearance:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="radio"]:checked { background-image:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_radio_checked.png"); }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="radio"]:disabled { background-image:url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_radio_disabled.png"); }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c label { display:inline-block; margin:0 7px 0 0; min-height:20px; line-height:20px; font-size:13px; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type=radio] + label { margin:0 7px 0 4px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c label input[type=radio] { margin:0 4px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c label:last-child,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type=radio] + label:last-child { margin-right:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"] { width:20px; height:20px; border:0; cursor:pointer; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_checkbox.png') no-repeat 0 0; background-size:20px auto; -webkit-appearance:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"]:checked { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_checkbox_checked.png'); }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"]:disabled { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_checkbox_disabled.png'); }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"]:readonly { background-image:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/form/bg_checkbox_disabled.png'); }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"]:disabled + label { color:#abaeb5; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"]:readonly + label { color:#abaeb5; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c input[type="checkbox"] { margin:0 4px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c { background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardReadPackage { padding:0 0 10px; background:#f6f8fa; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardReadPackage .brdProduct .productInfo { padding:12px 8px; background:#f6f8fa; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .prdBox { display:-webkit-flex; display:-ms-flex; display:flex; padding:7px 0; border:1px solid #e5e9f2; background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .thumbnail { overflow:hidden; width:68px; height:68px; margin:0 0 0 7px; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .thumbnail > .link { display:block; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .thumbnail img { width:100%; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description { -webkit-flex:1; -ms-flex:1; flex:1; overflow:hidden; margin:5px 16px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description .prdName { display:block; font-weight:normal; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description .prdName a { display:inline-block; margin:0 6px 0 0; font-size:12px; line-height:18px; color:#000; text-decoration:none; word-break:break-all; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description .prdName img { margin:0 2px 0 0; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description .info li { font-size:12px; line-height:18px; color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description .btnDetail { display:inline-block; margin:5px 0 0; font-size:12px; line-height:17px; color:#0078ea; text-decoration:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdProduct .productInfo .description .btnDetail:after { content:''; display:inline-block; width:7px; height:10px; margin:3px 0 0 6px; vertical-align:top; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_detail.png') no-repeat 0 0; background-size:7px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardReadPackage .brdRead { border-bottom:1px solid #e5e9f2; background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head { padding:17px 16px 16px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head h3.subject { font-weight:normal; font-size:15px; line-height:20px; color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head h3.subject .adminAnswer { margin:0 0 10px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info { margin:10px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info a { font-size:12px; color:#999; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info .point { display:inline-block; height:10px; margin:1px 3px 0 0; vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info > span:before { content:''; display:inline-block; width:1px; height:8px; margin:3px 8px 0; vertical-align:top; background:#dddee0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info > span:first-child:before,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .info > span.point + span:before { display:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append { margin:3px 0 0; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append > span { display:inline-block; font-size:12px; color:#999; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append > span:before { content:''; display:inline-block; width:1px; height:8px; margin:3px 8px 0; background:#dddee0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append > span.point + span:before,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append > span:first-child:before { display:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append .vote { float:right; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append .vote:before { display:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append .vote .button { display:inline-block; border:1px solid #dedfe2; border-radius:4px; height:28px; padding:0 12px; font-size:12px; line-height:26px; color:#0078ea; text-align:center; text-decoration:none; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .head .description .append .vote .button:before { content:''; display:inline-block; width:12px; height:13px; margin:0  5px 0 0; vertical-align:middle; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_vote.png') no-repeat 0 0; background-size:12px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .body { padding:10px 16px; font-size:13px; color:#5d5d5d; line-height:20px; word-break:break-all; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .body .image { text-align:center; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .body img { display:inline-block; margin:0 0 16px; max-width:100%; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .body .attach { position:relative; margin:21px 0 0; padding:0 0 0 18px; line-height:20px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .body .attach a { font-size:13px; color:#999; text-decoration:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .body .attach:before { content:''; position:absolute; left:0; top:5px; width:12px; height:12px; vertical-align:middle; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_attach.png') no-repeat 0 0; background-size:12px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot { margin:0 16px; padding:0 0 20px; border-top:1px solid #e5e9f2; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .passwordGroup { padding:34px 0 25px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .passwordGroup .password .form input { width:100%; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .passwordGroup .password .help { margin:7px 0 0; font-size:12px; color:#999; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .formGroup { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; -webkit-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between; margin:20px 0 6px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .formGroup .gLeft { text-align:left; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .formGroup .gRight { text-align:right; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .formGroup .button { display:inline-block; height:28px; padding:0 10px; border:1px solid #dedfe2; border-radius:4px; font-size:12px; line-height:28px; color:#000; text-decoration:none; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .formGroup .gLeft .button { margin:0 4px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .formGroup .gRight .button { margin:0 0 0 4px; vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdRead .foot .btnList { display:inline-block; width:100%; height:36px; margin:10px 0; border:1px solid #000; font-size:13px; color:#000; line-height:36px; text-decoration:none; text-align:center; box-sizing:border-box; }
+/* 댓글영역 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage { overflow:hidden; background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtTitle { margin:0 16px; padding:16px 0 14px; border-bottom:2px solid #000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtTitle h3 { display:inline-block; font-size:13px; color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .empty { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-align-items:center; -ms-align-items:center; align-items:center; -webkit-justify-content:center; -ms-justify-content:center; justify-content:center; height:160px; padding:0 16px; font-size:12px; color:#999; text-align:center; box-sizing:border-box; }
+/* 비밀글 확인 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .cmtSecret { margin:16px 15px 34px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .cmtSecret #secure_password { -webkit-flex:1; -ms-flex:1; flex:1; }
+/* 권한 없음 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmtAuthority { margin:20px 16px; padding:12px 10px 11px; border-radius:4px; font-size:12px; color:#0078ea; text-align:center; background:#f6f8fa; }
+/* 댓글리스트 공통요소*/
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup { display:-webkit-flex; display:-ms-flex; display:flex; -webkit-flex-wrap:wrap; -ms-flex-wrap:wrap; flex-wrap:wrap; -webkit-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between; -webkit-align-items:center; -ms-align-items:center; align-items:center; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .gLeft { text-align:left; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .gRight { text-align:right; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .button { display:inline-block; height:28px; padding:0 10px; border-radius:4px; font-size:12px; line-height:28px; box-sizing:border-box; text-decoration:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .button.theme1 { border:1px solid #dedfe2; color:#000; background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .button.theme2 { border:1px solid #000; color:#fff; background:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .button.large { min-width:67px; height:36px; font-size:13px; line-height:36px; border-radius:0; text-align:center; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .button.large.theme1 { border-color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .gLeft .button { margin:0 4px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .formGroup .gRight .button { margin:0 0 0 4px; vertical-align:top; }
+/* brdPaginate */
+/* typeList */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList { padding:20px 0 48px; text-align:center; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList [class*='btn'] { display:inline-block; position:relative; width:30px; height:30px; font-size:1px; line-height:0; color:transparent; border:1px solid #dedfe2; vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList [class*='btn']:before { content:''; position:absolute; left:50%; top:50%; width:8px; height:13px; margin:-6px 0 0 -4px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_btn_paginate.png') no-repeat 0 0; background-size:100px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList .btnNext:before { background-position:-50px 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList .page { display:inline-block; height:32px; max-width:220px; vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList .page:after { content:''; display:block; clear:both; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList .page li { float:left; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList .page li a { display:inline-block; margin:0 18px; font-size:15px; line-height:32px; color:#999; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdPaginate.typeList .page .this { font-weight:bold; color:#000; }
+/* 댓글리스트 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtList { background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li { position:relative; padding:19px 16px; border-bottom:1px solid #e5e9f2; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info { margin:0 0 9px; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info > span { display:inline-block; font-size:12px; color:#999; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info > span:before { content:''; display:inline-block; width:1px; height:8px; margin:3px 8px 0; background:#dddee0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info > span:first-child:before,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info .point + span:before { display:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info .point { height:10px; margin:1px 3px 0 0; vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .info .writer a { color:#757575; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .comment { font-size:13px; line-height:20px; color:#5d5d5d; word-wrap:break-word; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .comment .icon > img { display:inline-block; width:inherit !important; height:inherit !important; margin:0 3px 0 0; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .comment + .formGroup { margin:25px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .formGroup .btnReply { display:inline-block; position:relative; padding:0 16px 0 0; font-size:14px; color:#000; vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .formGroup .btnReply:after { content:''; position:absolute; right:0; top:50%; width:8px; height:5px; margin:-2px 0 0; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/btn_reply.png') no-repeat 0 0; background-size:8px auto; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li > .formGroup .btnReply .number { margin:0 0 0 3px; color:#0078ea; }
+/* 댓글의 댓글영역 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li.replyArea { padding-left:36px; background:#f6f6f6; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdCmt li.replyArea:before { content:'댓글의 댓글'; position:absolute; left:22px; top:24px; width:6px; height:6px; font-size:1px; line-height:0; text-indent:-150%; color:transparent; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/board/ico_reply.png') no-repeat 0 0; background-size:6px auto; }
+/* 댓글쓰기(write), 댓글수정(modify), 댓글의 댓글 쓰기(reply) 공통 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .titEditor { display:block; margin:0 0 12px; font-size:13px; color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .info { display:-webkit-flex; display:-ms-flex; display:flex; margin:0 0 0 -10px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .info .name,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .info .password { -webkit-flex:1; -ms-flex:1; flex:1; margin:0 0 0 10px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .info input { width:100%; height:36px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .comment { display:block; margin:10px 0 0; word-wrap:break-word; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .comment textarea { width:100%; height:62px; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .comment .byte { display:block; margin:2px 0 0; font-size:12px; color:#999; text-align:right; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .comment .byte .current { color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .formGroup { margin:15px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .formGroup .secret label { height:20px; font-size:13px; color:#000; line-height:20px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .formGroup .secret label input[type="checkbox"] { vertical-align:top; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .byteRating { display:-webkit-flex; display:-ms-flex; display:flex; margin:12px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .byteRating .label { width:64px; padding:0 10px 0 0; font-weight:normal; font-size:13px; color:#757575; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .byteRating .rating { -webkit-flex:1; -ms-flex:1; flex:1; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .byteRating .rating em { font-style:normal; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .byteRating .rating input[type=radio] + label { margin:0 7px 0 4px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .captcha { margin:20px 0 32px; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .captcha:after { content:''; display:block; clear:both; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .captcha .image { float:left; min-height:36px; margin:0 10px 0 0; padding:5px; box-sizing:border-box; background:#dedfe2; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .captcha .form { overflow:hidden; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .captcha .form input[type="text"] { width:100%; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdEditor .captcha .help { clear:both; margin:7px 0 0; font-size:12px; color:#999; }
+/* 댓글 쓰기 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtWrite .brdEditor { margin:-1px 0 0; padding:20px 16px; border-top:1px solid #e5e9f2; background:#f6f6f6; }
+/* 댓글 수정 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtModify .brdEditor { padding:22px 16px 19px; border-top:1px solid #e5e9f2; background:#f6f6f6; }
+/* 댓글의 댓글 수정 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmt li.replyArea .brdCmtModify { margin-left:-36px; }
+/* 댓글의 댓글 쓰기 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtReply { margin:10px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardCommentPackage .brdCmtReply .brdEditor { padding:20px 16px; border-top:1px solid #e5e9f2; background:#f6f6f6; }
+/* 페이지네이션 typeBoard */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdPaginate.typeBoard .page { border-bottom:1px solid #e5e9f2; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdPaginate.typeBoard .page li { display:-webkit-flex; display:-ms-flex; display:flex; padding:15px 16px; border-top:1px solid #e5e9f2; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdPaginate.typeBoard .page .label { width:64px; padding:0 5px 0 0; font-weight:normal; font-size:13px; color:#757575; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .brdPaginate.typeBoard .page .link { -webkit-flex:1; -ms-flex:1; flex:1; font-size:13px; color:#000; text-decoration:none; word-break:break-all; }
+/* 관련글 보기 */
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup { overflow:hidden; margin:-1px 0 0; border-top:1px solid #e5e9f2; background:#fff; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup:before { content:''; display:block; height:10px; background:#f6f8fa; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdListTitle { margin:0 16px; padding:16px 0 14px; border-bottom:2px solid #000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdListTitle h3 { display:inline-block; font-size:13px; color:#000; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .empty { height:222px; padding:58px 10px 20px; font-size:12px; color:#999; text-align:center; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList li { display:-webkit-flex; display:-ms-flex; display:flex; border-bottom:1px solid #e5e9f2; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList li > .link { display:block; width:100%; padding:16px 16px 15px; text-decoration:none; word-break:break-all; box-sizing:border-box; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .subject { display:block; font-size:14px; color:#000; font-weight:normal; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .subject .text { margin:0 3px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .subject > img { display:inline-block; vertical-align:middle; margin:0 3px 0 0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .subject .commentCnt { margin:0 3px 0 0; color:#0078ea; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .category { display:inline-block; margin:5px 0 0; font-size:12px; color:#96accc; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .info { display:block; margin:10px 0 0; font-size:12px; color:#999; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .info .point { display:inline-block; height:10px; margin:1px 3px 0 0; vertical-align:middle; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .info > span:before { content:''; display:inline-block; width:1px; height:8px; margin:3px 8px 0; background:#dddee0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .info > span:first-child:before,
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .info > span.point + span:before { display:none; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .append { display:block; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .append { margin:3px 0 0; font-size:0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .append > span { display:inline-block; font-size:12px; color:#999; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .append > span:before { content:''; display:inline-block; width:1px; height:8px; margin:5px 8px 0; vertical-align:top; background:#dddee0; }
+.dnd_module_d9534547b5aaccf62b8e92836ccb639c .boardListGroup .brdList .append > span:first-child:before { display:none; }
+.dnd_module_3865037d1db28c40406f2a127c19756c { padding:10px 0 0; background:#f6f8fa; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer { display:-webkit-flex; display:-ms-flex; display:flex; margin:0 8px 10px; border:1px solid #e5e9f2; background:#fff; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer:after { content:''; display:block; clear:both; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link { position:relative; -webkit-flex:1; -ms-flex:1; flex:1; padding:23px 10px 17px; text-align:center; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:hover { text-decoration:none; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:before { content:''; display:block; width:24px; height:24px; margin:0 auto; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link.tel:before { background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/img_customer_tel.png') no-repeat 0 0; background-size:24px auto;}
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link.consult:before { background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/layout/img_customer_consult.png') no-repeat 0 0; background-size:24px auto; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:after { content:''; position:absolute; left:0; top:29px; bottom:29px; width:1px; background:#e5e9f2; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link:first-child:after { display:none; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link .title { display:block; margin:7px 0 2px; font-size:14px; color:#000; font-weight:bold; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .customer .link .sub { font-size:13px; color:#abaeb5; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company { padding:16px 16px 63px; font-size:12px; line-height:18px; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .link:hover { text-decoration:none; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .util { margin:0 0 28px; color:#5d5d5d; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .util:after { content:''; display:block; clear:both; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .util li { float:left; margin:0 22px 5px 0; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .util li.commercial-law { display: none; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .info { color:#999; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .name { display:block; font-weight:normal; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dt,
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd { display:inline-block; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd a { color:#999; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd + dt:before { content:''; display:inline-block; width:1px; height:10px; margin:3px 6px 0 2px; vertical-align:top; background:#cacaca; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .copyright { margin:10px 0 0; color:#999; }
+.dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd.business_info { display:none; }
+html[lang="ja"] .dnd_module_3865037d1db28c40406f2a127c19756c .company .util li.commercial-law { display: block; }
+html[lang="ko"] .dnd_module_3865037d1db28c40406f2a127c19756c .company .info dl dd.business_info { display:inline-block; }

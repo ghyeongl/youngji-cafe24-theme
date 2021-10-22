@@ -1,0 +1,54 @@
+/* 게시판 전체 공통 */
+.xans-board-title .title { min-height:30px; margin:10px 0 20px; border-bottom:1px solid #e8e8e8; }
+.xans-board-title .title h2 { display:inline-block; padding:0 0 0 12px; color:#2e2e2e; font-size:16px; *display:inline; *zoom:1; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_heading.gif") 0 50% no-repeat; }
+.xans-board-title .title p { display:inline-block; margin:0 0 0 6px; padding:0 0 0 10px; color:#939393; vertical-align:bottom; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar.gif") no-repeat 0 0; *display:inline; *zoom:1; }
+.xans-board-title p.imgArea { margin:0 0 20px; }
+
+.xans-board-listpackage-8 .boardSort { float:left; margin:0 0 10px; }
+
+/* 갤러리형 탭메뉴 */
+ul.xans-board-listheader-8 { text-align:right; margin:0 0 10px; }
+ul.xans-board-listheader-8 li { display:inline; }
+
+/* list */
+.xans-board-listpackage-8 { margin:0 0 20px; }
+
+/* 공지글 */
+.xans-board-listpackage-8 .notice { margin:0 0 20px; border:1px solid #d7d5d5; border-bottom:0; clear:both; }
+.xans-board-listpackage-8 .xans-board-notice-8 li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; color:#757575; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description { padding:15px 0 0 205px; line-height:18px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject { margin:0 0 30px; padding:0 0 10px; border-bottom:1px solid #d7d5d5; color:#000; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject a { font-weight:bold; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description .subject img { vertical-align:middle; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description strong { font-weight:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li .description em { display:block; font-style:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-notice-8 li:after { content:""; display:block; clear:both; }
+.xans-board-listpackage-8 .xans-board-notice-8 .imgLink { float:left; }
+.xans-board-listpackage-8 .xans-board-notice-8 .imgLink img { width:187px; border:1px solid #ececec; display:block; }
+
+/* 고정글 */
+.xans-board-listpackage-8 .xans-board-fixed-8 li { overflow:hidden; padding:15px; border-bottom:1px solid #d7d5d5; color:#757575; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description { padding:15px 0 0 205px; line-height:18px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject { margin:0 0 30px; padding:0 0 10px; border-bottom:1px solid #d7d5d5; color:#000; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject a { font-weight:bold; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description .subject img { vertical-align:middle; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description strong { font-weight:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li .description em { display:block; font-style:normal; font-size:11px; }
+.xans-board-listpackage-8 .xans-board-fixed-8 li:after { content:""; display:block; clear:both; }
+.xans-board-listpackage-8 .xans-board-fixed-8 .imgLink { float:left; }
+.xans-board-listpackage-8 .xans-board-fixed-8 .imgLink img { width:187px; border:1px solid #ececec; display:block; }
+
+/* 일반글 */
+.xans-board-listpackage-8 .xans-board-list-8 { clear:both; overflow:hidden; }
+.xans-board-listpackage-8 .xans-board-list-8 ul { width:100%; min-width:756px; margin:-20px 0 0; font-size:0; line-height:0; }
+.xans-board-listpackage-8 .xans-board-list-8 li { display:inline-block; *display:inline; *zoom:1; width:20%; margin:20px 0 40px 0; font-size:12px; color:#757575; line-height:18px; vertical-align:top; }
+.xans-board-listpackage-8 .xans-board-list-8 li .imgLink img { display:block; width:187px; height:255px; margin:0 auto 10px; border:1px solid #ececec; }
+.xans-board-listpackage-8 .xans-board-list-8 li .boardChk { display:block; margin:0 auto 10px; }
+.xans-board-listpackage-8 .xans-board-list-8 li a.imgLink,
+.xans-board-listpackage-8 .xans-board-list-8 li a.imgLink:hover { display:block; width:189px; margin:0 auto; color:#2e2e2e; }
+.xans-board-listpackage-8 .xans-board-list-8 li span { display:block; margin:15px auto 0; width:189px;}
+.xans-board-listpackage-8 .xans-board-list-8 li strong { font-weight:normal; }
+.xans-board-listpackage-8 .xans-board-list-8 li em { display:block; font-style:normal; }
+
+/* 게시글 없음, 검색결과없음 */
+.xans-board-listpackage-8 .boardListEmpty { margin:0 0 20px; text-align:center; }

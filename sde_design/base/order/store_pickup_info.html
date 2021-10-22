@@ -1,0 +1,76 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="Order_StorePickupInfo" class="ec-base-layer">
+    <!--@css(/css/module/order/storePickupInfo.css)-->
+    <h1>수령지 안내</h1>
+    <div class="wrap">
+        <dl class="ec-base-fold theme4 eToggle">
+            <dt><strong>{$sc_name}</strong><br />{$receive_addr}</dt>
+            <dd>
+                <div class="ec-base-table">
+                    <table border="1">
+                        <caption>수령지 안내</caption>
+                        <colgroup>
+                            <col style="width:100px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">전화번호</th>
+                                <td>{$main_phone} <a href="tel:{$main_phone}" class="btnTel">전화걸기</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">영업시간</th>
+                                <td>{$office_hour}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수령지안내</th>
+                                <td>{$receive_info}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">약도</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="map">{$receive_map}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+        </dl>
+        <dl class="ec-base-fold theme4 eToggle">
+        	<dt><strong>{$sc_name}</strong><br />{$receive_addr}</dt>
+            <dd>
+                <div class="ec-base-table">
+                    <table border="1">
+                        <caption>수령지 안내</caption>
+                        <colgroup>
+                            <col style="width:100px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">전화번호</th>
+                                <td>{$main_phone} <a href="tel:{$main_phone}" class="btnTel">전화걸기</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">영업시간</th>
+                                <td>{$office_hour}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수령지안내</th>
+                                <td>{$receive_info}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2">약도</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="map">{$receive_map}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dd>
+        </dl>
+    </div>
+    <button type="button" class="btnClose" onclick="window.close()">닫기</button>
+</div>

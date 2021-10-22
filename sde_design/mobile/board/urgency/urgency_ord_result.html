@@ -1,0 +1,71 @@
+<!-- 비회원 -->
+<div module="Mall_UrgencycallOrdLogout" class="{$displayLogout|display}">
+    <div class="ec-base-table typeWrite">
+        <table border="1">
+            <caption>주문번호 검색</caption>
+            <colgroup>
+                <col style="width:85px;">
+                <col style="width:auto;">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th scope="row">주문번호</th>
+                    <td>
+                        <input type="text" id="{$order_id1}" class="inputOrdNum"> - <input type="text" id="{$order_id2}" class="inputOrdNum"> <a href="#none" class="btnStrong" onclick="{$insertfn}">등록</a>
+                        <p class="ec-base-help typeDash">예) 00000000 - 0000000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- // 비회원 -->
+
+<div module="Mall_UrgencycallOrdResult" class="{$displayLogin|display}">
+    <div class="content">
+        <p class="ordPagenum">{$form.ordPagenum}</p>
+        <div class="boardList">
+            <div class="{$displayPrdlist|display}">
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="thumbnail"><img src="{$image_tiny}" alt="" width="71" height="71" /></div>
+                        <div class="description">
+                            <strong class="prdName">{$product_name}</strong>
+                            <div class="info">
+                                <li>주문번호 : {$order_id}</li>
+                            </div>
+                        </div>
+                        <div class="ec-base-button">
+                            <a href="#none" class="btnStrong" onClick="{$selectfn}">선택</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ec-base-prdInfo">
+                    <div class="prdBox">
+                        <div class="thumbnail"><img src="{$image_tiny}" alt="" width="71" height="71" /></div>
+                        <div class="description">
+                            <strong class="prdName">{$product_name}</strong>
+                            <div class="info">
+                                <li>주문번호 : {$order_id}</li>
+                            </div>
+                        </div>
+                        <div class="ec-base-button">
+                            <a href="#none" class="btnStrong" onClick="{$selectfn}">선택</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="empty {$displayEmpty|display}">검색 결과가 없습니다.</p>
+        </div>
+        <div module="Mall_UrgencycallOrdPage" class="ec-base-paginate typeList {$displayLogin|display}">
+            <a href="#none" class="btnPrev" onClick="{$prev}">이전 페이지</a>
+            <ol>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+                <li><a href="#none" onClick="{$select_pageno}" class="{$curPageClass}">{$num}</a></li>
+            </ol>
+            <a href="#none" class="btnNext" onClick="{$next}">다음 페이지</a>
+        </div>
+    </div>
+</div>

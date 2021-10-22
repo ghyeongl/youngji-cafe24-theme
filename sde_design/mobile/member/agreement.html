@@ -1,0 +1,81 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>회원가입</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div class="progress">
+    <ol>
+        <li class="done"><strong title="현재 위치">약관동의</strong></li>
+        <li>정보입력</li>
+        <li>가입완료</li>
+    </ol>
+</div>
+
+<div module="member_join">
+    <!--@css(/css/module/member/join_agreement.css)-->
+    <div class="agreeAll">
+        <h3>전체 동의</h3>
+        <p>
+            {$sAgreeAllChecked}
+            <label for="sAgreeAllChecked" class="{$display_marketing|display}"><strong>이용약관 및 개인정보수집 및 이용,<br> 쇼핑정보 수신(선택)에 모두 동의합니다.</strong></label>
+            <label for="sAgreeAllChecked" class="{$display_is_agree|display}"><strong>이용약관 및 개인정보수집 및 이용에 모두 동의합니다.</strong></label>
+        </p>
+    </div>
+    <div class="agreeArea">
+        <div class="title">
+            <h3>{$form.agree_service_check}<label for="agree_service_check0" class="check">이용약관 동의 (필수)</label></h3>
+            <a href="/member/agreement/agreement1.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$service_desc}</div>
+    </div>
+    <div class="agreeArea">
+        <div class="title">
+            <h3>{$form.agree_privacy_check}<label for="agree_privacy_check0" class="check">개인정보처리방침 동의 (필수)</label></h3>
+            <a href="/member/agreement/agreement2.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$privacy_desc}</div>
+    </div>
+    <div class="{$display_privacy_optional|display} agreeArea">
+        <div class="title">
+            <h3>{$form.agree_privacy_optional_check}<label for="agree_privacy_optional_check0" class="check">개인정보 수집 및 이용 동의 (선택)</label></h3>
+            <a href="/member/agreement/agreement6.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">
+            {$privacy_optional_desc}
+        </div>
+    </div>
+    <div class="{$display_information|display} agreeArea">
+        <div class="title">
+            <h3>{$form.agree_information_check}<label for="agree_information_check0" class="check">개인정보 제3자 제공 동의(선택)</label></h3>
+            <a href="/member/agreement/agreement3.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$information_desc}</div>
+    </div>
+    <div class="{$display_consignment|display} agreeArea">
+        <div class="title">
+            <h3>{$form.agree_consignment_check}<label for="agree_consignment_check0" class="check">개인정보 처리 위탁 동의(선택)</label></h3>
+            <a href="/member/agreement/agreement4.html" class="btnMore" target="_blank">전체보기</a>
+        </div>
+        <div class="contents">{$consignment_desc}</div>
+    </div>
+    <div class="agreeArea {$display_marketing|display}">
+        <div class="title">
+            <h3>{$sMarketingAgreeAllChecked}<label for="sMarketingAgreeAllChecked" class="check">쇼핑정보 수신 동의 (선택)</label></h3>
+            <ul class="additional">
+                <li class="{$display_is_sms|display}">{$form.is_sms}</li>
+                <li class="{$display_is_news_mail|display}">{$form.is_news_mail}</li>
+            </ul>
+        </div>
+        <div class="contents">
+            <p>할인쿠폰 및 혜택, 이벤트, 신상품 소식 등 쇼핑몰에서 제공하는 유익한 쇼핑정보를 SMS나 이메일로 받아보실 수 있습니다. 단, 주문/거래 정보 및 주요 정책과 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.</p>
+            <p>선택 약관에 동의하지 않으셔도 회원가입은 가능하며, 회원가입 후 회원정보수정 페이지에서 언제든지 수신여부를 변경하실 수 있습니다.</p>
+        </div>
+    </div>
+    <div class="ec-base-button gColumn">
+        <button type="button" class="btnSubmit" onclick="checkAgreement('/member/join.html');">다음</button>
+        <a href="#none" class="btnEm" onclick="history.go(-1); return false;">취소</a>
+    </div>
+</div>

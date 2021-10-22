@@ -1,0 +1,36 @@
+.xans-board-modify { padding:14px; }
+
+/* 테이블 */
+.xans-board-modify .ec-base-table.typeWrite { margin:-1px 0 7px; }
+.xans-board-modify .ec-base-table.typeWrite tbody td.write { padding:14px; }
+.xans-board-modify .ec-base-table.typeWrite p { margin:3px 0 0; }
+.xans-board-modify .ec-base-table.typeWrite #content { width:100%; height:100px; }
+.xans-board-modify .ec-base-table.typeWrite #email1,
+.xans-board-modify .ec-base-table.typeWrite #email2 { float:left; margin:0 1% 4px 0; width:45.5%; }
+.xans-board-modify .ec-base-table.typeWrite #email2 { float:right; margin:0 0 4px 0; }
+.xans-board-modify .ec-base-table.typeWrite #email3 { width:100%; }
+.xans-board-modify .ec-base-table.typeWrite .uccUrlSize { line-height:0; font-size:0; }
+.xans-board-modify .ec-base-table.typeWrite #ucc { margin:0 0 5px 0; width:100%; }
+.xans-board-modify .ec-base-table.typeWrite #ucc_width { display:inline-block; width:48%; }
+.xans-board-modify .ec-base-table.typeWrite #ucc_height { display:inline-block; margin:0 0 0 4%; width:48%; }
+.xans-board-modify .ec-base-table.typeWrite table #captcha { width:100%; }
+.xans-board-modify .ec-base-table.typeWrite #board_category { margin:0 0 7px; }
+.xans-board-modify .ec-base-table.typeWrite select,
+.xans-board-modify .ec-base-table.typeWrite input[type="text"],
+.xans-board-modify .ec-base-table.typeWrite input[type="password"] { width:100%; }
+.xans-board-modify .ec-base-table.typeWrite .size { overflow:hidden; margin:0; padding:0; width:0; height:0; font-size:0; }
+
+.xans-board-modify .privacy { margin:0 0 14px; padding:5px 15px; border:1px solid #ccc; background:#fff; }
+.xans-board-modify .privacy:after { content:""; display:block; clear:both; }
+.xans-board-modify .privacy p { float:left; width:82%; }
+.xans-board-modify .privacy p input { margin:0 5px 0 0; vertical-align:middle; }
+.xans-board-modify .privacy span { float:right; width:18%; font-size:11px; text-align:right; text-decoration:underline; }
+
+/* modify - 상담 */
+.xans-board-modify .boardModify td ul li strong { padding:14px 0 8px 8px; }
+
+/* modify - 상품 */
+.xans-board-modify .ec-base-prdInfo { margin:0; background:transparent; }
+.xans-board-modify .ec-base-prdInfo .prdBox { margin-top:0; }
+.xans-board-modify .ec-base-prdInfo .ec-base-button { margin:0; }
+.xans-board-modify .ec-base-prdInfo .ec-base-button a { margin-bottom:7px; }

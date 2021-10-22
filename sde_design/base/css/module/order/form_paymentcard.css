@@ -1,0 +1,11 @@
+.ec-order-payment-card .cardSelect { width:98%; }
+.ec-order-payment-card .pgBanner img { max-width:100%; height:auto; }
+.ec-order-payment-card .ec-base-help { margin:6px 0 5px 14px; }
+.ec-order-payment-card .paymentAgree { margin:-1px 0 0; border:1px solid #d5d5d5; font-size:11px; background-color:#fff; }
+.ec-order-payment-card .paymentAgree .all { position:relative; padding:0 0 0 9px; font-weight:bold; color:#508bed; }
+.ec-order-payment-card .paymentAgree .btnToggle { position:absolute; top:50%; right:5px; padding:0; margin:-8px 0 0 0; color:#353535; border:0; font-size:11px; cursor:pointer; outline:0; background:transparent; }
+.ec-order-payment-card .paymentAgree .btnToggle:after { display:inline-block; content:""; width:10px; height:10px; margin:-2px 0 0; vertical-align:middle; background:url("//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/ico_arrow_gray.png") no-repeat 0 0; background-size:10px auto; }
+.ec-order-payment-card .paymentAgree .detail { display:none; padding:0 0 0 22px; border-top:1px solid #e9e9e9; }
+.ec-order-payment-card .paymentAgree.selected .detail { display:block; }
+.ec-order-payment-card .paymentAgree.selected .check { position:relative; }
+.ec-order-payment-card .paymentAgree.selected .check .view { position:absolute; top:50%; right:14px; padding:0; margin:-8px 0 0 0; text-decoration:underline; color:#757575; border:0; font-size:11px; cursor:pointer; background:transparent; }

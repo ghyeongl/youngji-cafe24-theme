@@ -1,0 +1,43 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="calendar_Modify" class="ec-base-layer">
+    <!--@css(/css/module/calendar/modify.css)-->
+    <div class="header">
+        <h1>글 수정/삭제</h1>
+    </div>
+    <div class="content">
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+                <caption>캘린더 수정/삭제</caption>
+                <colgroup>
+                    <col style="width:110px;" />
+                    <col style="width:auto; ">
+                </colgroup>
+                <tr>
+                    <th scope="row">일시</th>
+                    <td>{$form.date} {$form.start_hour} {$form.start_minute} ~ {$form.end_hour} {$form.end_minute}</td>
+                </tr>
+                <tr>
+                    <th scope="row">제목</th>
+                    <td>{$form.title}</td>
+                </tr>
+                <tr>
+                    <th scope="row">내용</th>
+                    <td>{$form.contents}</td>
+                </tr>
+                <tr>
+                    <th scope="row">선택</th>
+                    <td>{$form.field}<br />{$field_info}</td>
+                </tr>
+                <tr>
+                    <th scope="row">관리자 확인</th>
+                    <td>{$form.confirm} 관리자가 해당 글을 확인하면 YES로 표기 됩니다.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none" class="btnEmFix sizeS" onclick="{$action_modify}">수정하기</a>
+        <a href="#none" class="btnBasicFix sizeS" onclick="{$action_delete}">삭제</a>
+        <a href="#none" class="btnNormalFix sizeS" onclick="window.close()">취소</a>
+    </div>
+</div>

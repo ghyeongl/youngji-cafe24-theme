@@ -1,0 +1,78 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div id="titleArea">
+    <h2>적립내역</h2>
+    <span module="Layout_MobileAction">
+        <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
+    </span>
+</div>
+
+<div module="myshop_historyList">
+    <!--@css(/css/module/myshop/historyList.css)-->
+    <!--
+        $only_html = no
+        $count = 10
+        $login_page = /member/login.html
+    -->
+    <div class="{$display_history|display}">
+        <div class="item">
+            <h3>
+                <span class="date" title="주문날짜">{$issue_date}</span>
+                <span class="number" title="관련주문번호">{$order_id_with_link}</span>
+            </h3>
+            <div class="ec-base-table gClearBorderTop">
+                <table border="1">
+                    <colgroup>
+                        <col style="width:100px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{$mileage_name}</th>
+                            <td>{$mileage_money}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">내용</th>
+                            <td>{$mileage_type}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="item">
+            <h3>
+                <span class="date" title="주문날짜">{$issue_date}</span>
+                <span class="number" title="관련주문번호">{$order_id_with_link}</span>
+            </h3>
+            <div class="ec-base-table gClearBorderTop">
+                <table border="1">
+                    <colgroup>
+                        <col style="width:100px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">{$mileage_name}</th>
+                            <td>{$mileage_money}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">내용</th>
+                            <td>{$mileage_type}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <p class="empty {$display_history_none|display}">적립내역이 없습니다.</p>
+</div>
+
+<div class="ec-base-paginate typeList" module="myshop_historyPaging">
+    <a href="{$prev_url}" class="btnPrev">이전 페이지</a>
+    <ol>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+        <li><a href="{$url_query}" class="{$param_class}">{$n}</a></li>
+    </ol>
+    <a href="{$next_url}" class="btnNext">다음 페이지</a>
+</div>

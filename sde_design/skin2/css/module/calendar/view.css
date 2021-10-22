@@ -1,0 +1,10 @@
+#popup { width:600px; height:500px; }
+.xans-calendar-view .content table { border:1px solid #d7d5d5; }
+.xans-calendar-view .content th { padding:12px 0 10px; border-right:1px solid #e3e3e3; background:#fbfafa; }
+.xans-calendar-view .content td { padding:6px 3px 4px; border-top:1px solid #e3e3e3; border-right:1px solid #e3e3e3; text-align:center; vertical-align:middle; }
+.xans-calendar-view .content td.left,
+.xans-calendar-view .calendar_view_contents td { text-align:left; padding-left:10px; }
+.confirm_yes,
+.confirm_no { display:inline-block; width:18px; height:16px; }
+.confirm_yes { background:url("//img.echosting.cafe24.com/skin/base/calendar/ico_confirm_yes.gif") 0 0 no-repeat; }
+.confirm_no { background:url("//img.echosting.cafe24.com/skin/base/calendar/ico_confirm_no.gif") 0 0 no-repeat; }

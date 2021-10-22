@@ -1,0 +1,15 @@
+.xans-layout-searchheader { display:none; position:absolute; top:0; left:0; right:0; z-index:301; background-color:#fff; }
+.xans-layout-searchheader .searchForm { position:relative; height:60px; box-sizing:border-box; padding:21px 85px 21px 40px; }
+.xans-layout-searchheader .searchForm:before { content:""; position:absolute; left:20px; top:21px; width:10px; height:17px;  font-size:1px; overflow:hidden; position:absolute; font-size:1px; line-height:0; color:transparent; background: url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat 0 0; background-size: 150px auto; }
+.xans-layout-searchheader .searchForm button { cursor: pointer; position:absolute; top:0; border:0; padding:0; margin:0; overflow:hidden; line-height:0; color:transparent; outline:0; background:transparent; }
+.xans-layout-searchheader .searchForm .btnDelete { right:50px; width:35px; height:60px; }
+.xans-layout-searchheader .searchForm .btnDelete:before { content:""; position:absolute; right:10px; top:22px; width:15px; height:15px; background: url("//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png") no-repeat -100px 0; background-size: 150px auto; }
+.xans-layout-searchheader #keyword { width:100%; height:18px; padding:0; border:0; font-size:14px; line-height:18px; color:#000; border-radius:0; outline-style:none; -webkiet-appearance:none; box-sizing:border-box; }
+.xans-layout-searchheader .searchForm .btnSearch { right:0; width:50px; height:60px; }
+.xans-layout-searchheader .searchForm .btnSearch:before { content:""; position:absolute; right:16px; top:21px; width:18px; height:18px; background:url('//img.echosting.cafe24.com/skin/dnd_ko_KR/common/module/sfix_top_search_form.png') no-repeat -50px 0; background-size: 150px auto; }
+
+.xans-layout-searchheader .xans-search-hotkeyword { padding:15px 16px 28px; border-top:1px solid #ededed; background:#fdfdfd; }
+.xans-layout-searchheader .xans-search-hotkeyword .title { font-weight:normal; font-size:12px; color:#abaeb5; }
+.xans-layout-searchheader .xans-search-hotkeyword .keyword { margin:8px 0 0; }
+.xans-layout-searchheader .xans-search-hotkeyword li { display:inline-block; }
+.xans-layout-searchheader .xans-search-hotkeyword li a { display:inline-block; margin:7px 16px 0 0; font-size:14px; line-height:18px; color:#000; vertical-align:top; }

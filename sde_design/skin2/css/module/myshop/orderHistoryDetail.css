@@ -1,0 +1,82 @@
+#contents { position:relative; }
+
+/* Title */
+.xans-myshop-orderhistorydetail .title { margin:40px 0 10px 10px; }
+.xans-myshop-orderhistorydetail .title h3 { color:#353535; font-size:12px; }
+.xans-myshop-orderhistorydetail .title > p { margin:-25px 0 10px; text-align:right; }
+.xans-myshop-orderhistorydetail .orderArea:first-child .title { margin-top:0; }
+
+/* table */
+.xans-myshop-orderhistorydetail .ec-base-table .list { padding:10px 0; line-height:1.5; }
+.xans-myshop-orderhistorydetail .ec-base-table .map { margin:0 10px 0 0; max-width:100%; }
+.xans-myshop-orderhistorydetail .ec-base-table .map img { margin-top:5px; max-width:100%; border:1px solid #e8e8e8; vertical-align:middle; }
+.xans-myshop-orderhistorydetail .ec-base-table .line { text-decoration:underline; }
+.xans-myshop-orderhistorydetail .ec-base-table .thumb img { width:80px; }
+.xans-myshop-orderhistorydetail .ec-base-table .name .ec-set-product-name { display:block; }
+.xans-myshop-orderhistorydetail .ec-base-table div.option,
+.xans-myshop-orderhistorydetail .ec-base-table ul.option > li { margin:9px 0 0; color:#757575; line-height:16px; }
+.xans-myshop-orderhistorydetail .ec-base-table ul.option > li > strong { display:block; color:#353535; }
+.xans-myshop-orderhistorydetail .ec-base-table div.option span.file a,
+.xans-myshop-orderhistorydetail .ec-base-table ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#757575; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 2px; }
+.xans-myshop-orderhistorydetail .ec-base-table td.state [class^="btn"] { margin:1px 0; }
+.xans-myshop-orderhistorydetail .ec-base-table tbody + tbody tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table tbody + tbody tr:first-child td { border-top:1px solid #e9e9e9; }
+.xans-myshop-orderhistorydetail .ec-base-table thead + tbody tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table thead + tbody tr:first-child td { border-top:0; }
+.xans-myshop-orderhistorydetail .productList { padding:0; }
+.xans-myshop-orderhistorydetail .productList > ul > li { display:table; table-layout:fixed; width:100%; border-top:1px solid #e9e9e9; }
+.xans-myshop-orderhistorydetail .productList > ul > li:first-child { border-top:0; }
+.xans-myshop-orderhistorydetail .productList > ul > li p,
+.xans-myshop-orderhistorydetail .productList > ul > li ul { display:table-cell; }
+.xans-myshop-orderhistorydetail .productList > ul > li .product { padding:9px 0 8px 10px; width:auto; }
+.xans-myshop-orderhistorydetail .productList > ul > li .quantity { padding:9px 0 8px 0; width:79px; text-align:center; border:solid #e9e9e9; border-width:0 1px 0 1px; }
+.xans-myshop-orderhistorydetail .productList > ul > li .price { padding:9px 0 8px 0; width:149px; text-align:center; }
+.xans-myshop-orderhistorydetail .productList span.option { display:block; }
+
+/* 결제정보, 최종결제정보 */
+.xans-myshop-orderhistorydetail .ec-base-table .sum th,
+.xans-myshop-orderhistorydetail .ec-base-table .sum td { font-weight:bold; background:#fbfafa; }
+.xans-myshop-orderhistorydetail .ec-base-table.total table { position:relative; z-index:1; margin:-1px 0 0; border:1px solid #777; }
+.xans-myshop-orderhistorydetail .ec-base-table.total table:before { display:none; }
+.xans-myshop-orderhistorydetail .ec-base-table.total tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table.total tr:first-child td { border-top:0; }
+.xans-myshop-orderhistorydetail .ec-base-table.total + .ec-base-table { margin-top:-12px; }
+.xans-myshop-orderhistorydetail .ec-base-table tfoot .gLeft { float:left; margin:6px 0 0; }
+
+/* 추가결제 */
+.xans-myshop-orderhistorydetailpaymentadd .ec-base-table.total{position:relative; z-index:1;border:1px solid #777;}
+.xans-myshop-orderhistorydetailpaymentadd .ec-base-table.total table {  margin:0; border:0; }
+
+/* 환불정보, 추가결제 */
+.xans-myshop-orderhistorydetail .coupon li { padding:0 0 0 6px; line-height:25px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_square3.gif") no-repeat 0 10px; }
+
+/* 고객알림 */
+.xans-myshop-orderhistorydetail .customer { padding:10px 19px; border:1px solid #d7d5d5; line-height:20px; }
+
+/* 총 주문금액 상세내역 레이어 */
+.xans-myshop-orderhistorydetail .totalDetail { display:none; width:300px; color:#757575; }
+.xans-myshop-orderhistorydetail .totalDetail .content p { margin:0 0 8px; padding:0 0 10px; color:#008bcc; font-size:16px; font-weight:bold; text-align:right; border-bottom:1px dotted #b0b1b3; }
+
+/* 취소/교환/반품 상세정보 레이어 */
+.csDetail { overflow:hidden; position:fixed; top:50%; left:50%; z-index:100; width:450px; margin:-250px 0 0 -225px; color:#757575; }
+.csDetail .content { overflow:auto; overflow-x:hidden; max-height:400px; }
+.csDetail .prdInfo { padding:10px 10px 5px; border:1px solid #e8e5e4; background:#fff8f5; }
+.csDetail .prdInfo h2 { color:#353535; font-size:12px; }
+.csDetail .prdInfo p,
+.csDetail .prdInfo ul > li { margin:9px 0 5px; color:#757575; line-height:16px; }
+.csDetail .prdInfo ul > li > strong { display:block; color:#353535; }
+.csDetail .csArea { margin:0 0 20px; }
+.csDetail .csArea h3 { margin:25px 0 7px; color:#353535; font-size:12px; }
+
+/* 배송비 추가결제*/
+.xans-myshop-orderhistorydetailrefundnew .ec-base-table.total{position:relative; z-index:1;border:1px solid #777;}
+.xans-myshop-orderhistorydetailrefundnew .ec-base-table.total table {  margin:0; border:0; }
+
+/* 복수 배송지 */
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody tr:first-child,
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody tr:first-child th,
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody tr:first-child td{border-top:0;}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody th{vertical-align:middle;padding-left:0;}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody td{border-left:1px solid #dfdfdf}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody td.left{border-left:0}
+.xans-myshop-orderhistorydetail .ec-base-table.multiDelivery tbody + tbody{border-top:1px solid #dfdfdf}

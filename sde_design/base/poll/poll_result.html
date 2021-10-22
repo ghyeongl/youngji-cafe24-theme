@@ -1,0 +1,31 @@
+<!--@layout(/layout/basic/popup.html)-->
+<div module="poll_result" class="ec-base-layer">
+    <!--@css(/css/module/poll/result.css)-->
+    <div class="header">
+        <h1>설문조사 결과</h1>
+    </div>
+
+    <div class="content">
+        <div class="ec-base-box typeThinBg">
+            <h2>{$title}</h2>
+            <p>- 총 투표수: {$total_count}</p>
+        </div>
+
+        <ol class="result">
+            <li>
+                <p class="title"><strong title="항목">{$comment_title}</strong><span title="투표수">({$comment_count}표)</span></p>
+                <p class="graph">
+                    <em title="투표율">{$comment_percentage}%</em>
+                    <span class="box"><span style="width:{$comment_percentage}%;">&nbsp;</span></span>
+                </p>
+            </li>
+            <li>
+                <p class="title"><strong title="항목">{$comment_title}</strong><span title="투표수">({$comment_count}표)</span></p>
+                <p class="graph">
+                    <em title="투표율">{$comment_percentage}%</em>
+                    <span class="box"><span style="width:{$comment_percentage}%;">&nbsp;</span></span>
+                </p>
+            </li>
+        </ol>
+    </div>
+</div>

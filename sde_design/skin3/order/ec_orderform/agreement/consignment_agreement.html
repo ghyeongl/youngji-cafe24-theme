@@ -1,0 +1,34 @@
+<!-- File start -->
+<body id="popup" class="popup">
+    <div module="Order_form" class="ec-base-layer">
+        <!--@css(/layout/basic/css/common.css)--><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
+        <!--@css(/layout/basic/css/ec-base-ui.css)-->
+        <!--@css(/layout/basic/css/ec-base-tooltip.css)-->
+        <!--@css(/layout/basic/css/ec-base-help.css)-->
+        <!--@css(/layout/basic/css/ec-base-product.css)-->
+        <!--@css(/layout/basic/css/ec-base-paginate.css)-->
+        <!--@css(/layout/basic/css/ec-base-tab.css)-->
+        <!--@css(/layout/basic/css/ec-base-layer.css)-->
+        <!--@css(/layout/basic/css/ec-base-box.css)-->
+        <!--@css(/layout/basic/css/ec-base-table.css)-->
+        <!--@css(/layout/basic/css/ec-base-desc.css)-->
+        <!--@css(/layout/basic/css/ec-base-button.css)-->
+
+        <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+        <!--@js(/js/common.js)-->
+        <!--@js(/layout/basic/js/popup.js)-->
+
+        <!--@css(/css/module/order/ec_orderform/agreement.css)-->
+        <div class="header">
+            <h1>개인정보취급 위탁 동의 (선택)</h1>
+        </div>
+        <div class="content">
+            <div class="agree">{$form.consignment_agreement}</div>
+        </div>
+        <div class="ec-base-button gFull">
+            <button type="button" class="btnEm" onclick="self.close();">확인</button>
+        </div>
+        <a href="#none" class="close" onclick="window.close()"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
+    </div>
+</body>
+<!-- File end -->

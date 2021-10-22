@@ -1,0 +1,46 @@
+#contents { position:relative; }
+.xans-order-result .orderStep {}
+
+/* 주문완료 */
+.xans-order-result .orderInfo { width:380px; margin:45px auto 0; padding:0 0 10px 130px; color:#353535; line-height:1.5; background:url("//img.echosting.cafe24.com/skin/base/order/bg_result.png") no-repeat 0 10px; }
+.xans-order-result .orderInfo p { margin:0 0 20px; }
+.xans-order-result .orderInfo p strong { display:block; margin:0 0 7px; color:#000; font-size:20px; }
+.xans-order-result .orderInfo p a { color:#008bcc; text-decoration:underline; font-weight:bold; }
+.xans-order-result .orderInfo li strong { font-size:14px; letter-spacing:-1px; }
+
+/* Title */
+.xans-order-result .title { margin:40px 0 10px 10px; }
+.xans-order-result .title h3 { color:#353535; font-size:12px; }
+    .xans-order-result .orderListArea .title { margin-top:30px; }
+
+/* View */
+.xans-order-result .ec-base-table td .map { margin:0 10px 0 0; max-width:100%; }
+.xans-order-result .ec-base-table td .map img { margin-top:5px; max-width:100%; border:1px solid #e8e8e8; vertical-align:middle; }
+
+/* List */
+.xans-order-result .orderListArea .title + .ec-base-table table { margin:0; }
+.xans-order-result .ec-base-table tfoot td .gLeft { float:left; margin:6px 0 0; }
+.xans-order-result .ec-base-table.typeList td.thumb img { max-width:75px; }
+.xans-order-result .ec-base-table.typeList .name .ec-set-product-name { display:block; }
+.xans-order-result .ec-base-table td div.option,
+.xans-order-result .ec-base-table td ul.option > li { margin:9px 0 0; color:#757575; line-height:16px; }
+.xans-order-result .ec-base-table td ul.option > li > strong { display:block; color:#353535; }
+.xans-order-result .ec-base-table td div.option span.file a,
+.xans-order-result .ec-base-table td ul.option > li > span.file a { margin:0 0 0 4px; padding:0 0 0 11px; color:#757575; text-decoration:underline; background:url("//img.echosting.cafe24.com/skin/base/common/ico_file.gif") no-repeat 0 2px; }
+
+.xans-order-result .ec-base-button { margin:10px 0 0; }
+
+/* Total */
+.xans-order-result .totalArea { margin:40px 0 0; }
+.xans-order-result .totalArea .ec-base-table.total table { z-index:2; border-color:#777; }
+.xans-order-result .totalArea .ec-base-table.total th { background:#fbfafa; }
+.xans-order-result .totalArea .ec-base-table.total td { height:58px; }
+.xans-order-result .totalArea .ec-base-table.total td .box { word-break:normal; }
+.xans-order-result .totalArea .ec-base-table.total .txt23 { font-size:23px; letter-spacing:-1px; }
+.xans-order-result .totalArea .ec-base-table.gMerge table { margin:-1px 0 0; }
+.xans-order-result .totalArea .ec-base-table.gMerge + .ec-base-table.gMerge table { margin:-2px 0 0; }
+.xans-order-result .totalArea .ec-base-table tr.sum td { font-weight:bold; background:#fbfafa; }
+
+/* 총 주문금액 상세내역 레이어 */
+.xans-order-result .totalDetail { display:none; width:300px; color:#757575; }
+.xans-order-result .totalDetail .content p { margin:0 0 8px; padding:0 0 10px; color:#008bcc; font-size:16px; font-weight:bold; text-align:right; border-bottom:1px dotted #b0b1b3; }

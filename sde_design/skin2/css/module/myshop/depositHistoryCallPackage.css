@@ -1,0 +1,7 @@
+#popup { width:800px; }
+.xans-myshop-depositrefundform table .price1 { font-size:16px; color:#008bcc; }
+.xans-myshop-depositrefundform table .price2 { font-size:16px; }
+.xans-myshop-depositrefundform table td #request_deposit_amt { width:100px; }
+.xans-myshop-depositrefundform table td #request_account_name { width:100px; }
+.xans-myshop-depositrefundform table td #request_account_no,
+.xans-myshop-depositrefundform table td #request_bank_code { width:200px; }

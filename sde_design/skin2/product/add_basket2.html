@@ -1,0 +1,57 @@
+<div module="Order_LayerBasketPackage" class="ec-base-layer">
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/product/basketAdd2.css)-->
+    <div class="header">
+        <h3>장바구니 담기</h3>
+    </div>
+    <div class="content" module="Order_LayerBasket">
+        <div class="totalCount">총 <strong>{$item_total}</strong> 개</div>
+        <ul class="prdList column4" module="Order_list">
+            <li class="item">
+                <div class="box">
+                    <a href="/product/detail.html{$param}"><img src="{$img}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" class="thumb" /></a>
+                    <p class="name">{$product_name_link}{$icon}</p>
+                    <p class="option">{$option_str}</p>
+                    <ul>
+                        <li class="price">{$purchase_price}</li>
+                        <li class="{$purchase_price_ref_display|display}"><strong>{$purchase_price_ref}</strong></li>
+                        <li class="{$discount_price_display|display}"><strong class="txtWarn">-{$discount_price}</strong></li>
+                        <li class="{$discount_price_ref_display|display}"><strong class="txtWarn">{$discount_price_ref}</strong></li>
+                        <li>수량 : {$quantity}</li>
+                    </ul>
+                    <p class="option {$subscription_show_display|display}"><strong>배송주기</strong> <span class="txtEm">{$subscription_option_str}</span></p>
+                </div>
+            </li>
+            <li class="item">
+                <div class="box">
+                    <a href="/product/detail.html{$param}"><img src="{$img}" onerror="this.src='//img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="{$name_alt}" class="thumb" /></a>
+                    <p class="name">{$product_name_link}{$icon}</p>
+                    <p class="option">{$option_str}</p>
+                    <ul>
+                        <li class="price">{$purchase_price}</li>
+                        <li class="{$purchase_price_ref_display|display}"><strong>{$purchase_price_ref}</strong></li>
+                        <li class="{$discount_price_display|display}"><strong class="txtWarn">-{$discount_price}</strong></li>
+                        <li class="{$discount_price_ref_display|display}"><strong class="txtWarn">{$discount_price_ref}</strong></li>
+                        <li>수량 : {$quantity}</li>
+                    </ul>
+                    <p class="option {$subscription_show_display|display}"><strong>배송주기</strong> <span class="txtEm">{$subscription_option_str}</span></p>
+                </div>
+            </li>
+        </ul>
+
+        <div module="Order_LayerBasketPaging" class="ec-base-paginate typeSub">
+            <a href="#none" {$param_before}><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev2.gif" alt="이전 페이지"></a>
+            <ol>
+                <li><a href="#none" {$param} class="{$param_class}">{$no}</a></li>
+                <li><a href="#none" {$param} class="{$param_class}">{$no}</a></li>
+            </ol>
+            <a href="#none" {$param_next}><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next2.gif" alt="다음 페이지"></a>
+        </div>
+    </div>
+    <div class="ec-base-button">
+        <a href="#none" class="btnSubmitFix sizeS" onclick="Basket.orderLayerAll(this)" link-order="/order/orderform.html?basket_type=all_buy" link-login="/member/login.html">바로 구매하기</a>
+        <a href="/order/basket.html{$basket_param}" class="btnNormalFix sizeS">장바구니 이동</a>
+        <a href="#none" onclick="$('#confirmLayer').remove();" class="btnNormalFix sizeS">쇼핑계속하기</a>
+    </div>
+    <a class="close" onclick="$('#confirmLayer').remove();"><img src="//img.echosting.cafe24.com/skin/base/common/btn_close.gif" alt="닫기" /></a>
+</div>

@@ -1,0 +1,22 @@
+<div module="product_searchdata" id="searchSidebar" class="searchData {$filter_class}">
+    <!--@css(/css/module/product/searchdata.css)-->
+    <button type="button" id="ec-searchdata-button" class="btnSearch">상세검색</button>
+    <form class="searchCondition" id="{$searchdata_form}" name="" method="get">
+        <input type="hidden" name="keyword" id="{$searchdata_keyword_hidden}" /><div class="searchArea" id="ec-searchdata-area">
+            <h2 class="title">SEARCH</h2>
+            <div module="product_SearchFilterList" class="selected">
+                <h3 class="title ec-searchdata-option-title">{$filter_name}</h3>
+                <div class="content {$filter_type}">
+                    <ul module="product_filterform">
+                        <li class="{$filter_class}">{$filter_value}</li>
+                        <li class="{$filter_class}">{$filter_value}</li>
+                    </ul>
+                    <div class="withinInput {$within_input_display|display}">{$within_input}<button type="button" class="btnResearch">검색</button>{$within_suggest}</div>
+                    <div class="priceInput {$price_input_display|display}">{$price_input} <span class="btnPriceSearch"><a href="#none" id="{$searchdata_submit}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_price_search.gif" alt="검색" /></a></span></div>
+                    <div class="slider {$price_slider_display|display}">{$price_slider}</div>
+                    <p class="value {$price_slider_display|display}">{$price_txt}</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

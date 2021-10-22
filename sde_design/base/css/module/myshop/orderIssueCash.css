@@ -1,0 +1,7 @@
+#popup { min-width:320px; }
+#popup div.wrap { background:#f1f1f1; }
+
+.xans-myshop-orderissuecash #regno { width:100%; }
+.xans-myshop-orderissuecash #mobile1 { margin:0 3px 0 0; }
+.xans-myshop-orderissuecash #mobile2,
+.xans-myshop-orderissuecash #mobile3 { width:45px; margin:0 3px; }

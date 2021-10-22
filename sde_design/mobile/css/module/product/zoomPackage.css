@@ -1,0 +1,19 @@
+html, body, .xans-product-zoom, .xans-product-zoompackage { height:100%; }
+.xans-product-zoompackage { position:relative; }
+.xans-product-zoompackage ul { height:100%; overflow-x:hidden; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+.xans-product-zoompackage ul li { height:100%; -webkit-transform:translate3d(0,0,0); }
+.xans-product-zoompackage ul li .thumbnail { display:inline-block; position:relative; width:100%; }
+.xans-product-zoompackage ul li .prdIcon { position:absolute; top:0; left:0; width:100%; height:100%; background-repeat:no-repeat; background-size:25% auto; }
+
+.xans-product-zoompackage .ec-base-paginate { position:fixed; bottom:0; width:100%; height:42px; padding-top:14px; border-top:1px solid #cecece; box-sizing:border-box; background:#e3e3e3; }
+
+/* Thumbnail icon position */
+.ec-product-bgLT { background-position:left top; }
+.ec-product-bgLC { background-position:left center; }
+.ec-product-bgLB { background-position:left bottom; }
+.ec-product-bgRT { background-position:right top; }
+.ec-product-bgRC { background-position:right center; }
+.ec-product-bgRB { background-position:right bottom; }
+.ec-product-bgCT { background-position:center top; }
+.ec-product-bgCC { background-position:center center; }
+.ec-product-bgCB { background-position:center bottom; }
