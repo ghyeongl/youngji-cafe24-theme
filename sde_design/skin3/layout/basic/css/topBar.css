@@ -1,0 +1,32 @@
+/* 폰트 */
+@import url("../../../css/module/fonts/fonts.css");
+
+.topBarTop { position: absolute; top:0; left:0; width: 100%; height:33px; line-height: 33px; font-family: 'Nanum Gothic', sans-serif; font-size: 12px; font-weight: 400; }
+.topBarTop:after { display: block; content: ""; }
+.topBarTop .leftOption { float: left; position: absolute; left: 0; }
+.topBarTop .leftOption li { float: left; margin-right: 10px; }
+.topBarTop .divider:before { float: left; display: inline-table; margin-right: 10px; content:"|"; font-family: 'Nanum Gothic', sans-serif; font-size: 12px; }
+.topBarTop .rightOption { float: left; position: absolute; right: 0; }
+.topBarTop .rightOption li { float: left; margin-left: 10px; }
+.topBarTop a { color: #000000; }
+
+.topBarMiddle { position: absolute; top: 33px; left: 0; width: 100%; height: 140px; }
+.topBarMiddle .logoImg { position: absolute; top: 59px; left: 0; width: 263px; height: 43px; }
+.topBarMiddle .searchBar { position: absolute; top: 58px; left: 334px; }
+.topBarMiddle .searchBar .border{ position: absolute; width: 530px; height: 41px; border-radius: 34px; border: 2px solid #2D346E; }
+.topBarMiddle .searchBar .searchIcon { position: absolute; top: 9px; left: 490px; width: 23px; height: 23px; }
+
+.topBarMenu { position: absolute; top: 173px; left: 0; width: 100%; height: 44px; }
+.topBarMenu .allCategory { position: absolute; top: 0; left: 0; width: 190px; height: 44px; }
+.topBarMenu .allCategory span { position: absolute; left: 48px; line-height: 44px; font-family: 'NanumSquare', sans-serif; font-size: 17px; font-weight: 700; }
+.topBarMenu .allCategory img { position: absolute; top: 13px; left: 14px; width: 18px; height: 18px; }
+.topBarMenu .leftMenu { position: absolute; left: 210px; width: 265px; line-height: 44px; text-align: center; font-family: 'NanumSquare', sans-serif; font-size: 17px; font-weight: 400;}
+.topBarMenu .leftMenu .allItems { position: absolute; left: 0; width: 75px; height: 44px; }
+.topBarMenu .leftMenu .bestItems { position: absolute; left: 95px; width: 75px; height: 44px; }
+.topBarMenu .leftMenu .newItems { position: absolute; left: 190px; width: 75px; height: 44px; }
+.topBarMenu .rightMenu { position: absolute; right: 0; width: 555px; line-height: 44px; text-align: center; font-family: 'NanumSquare', sans-serif; font-size: 17px; font-weight: 400; }
+.topBarMenu .rightMenu .buyNow { position: absolute; left: 0; width: 95px; height: 44px; }
+.topBarMenu .rightMenu .changeRefund { position: absolute; left: 115px; width: 95px; height: 44px; }
+.topBarMenu .rightMenu .alertBoard { position: absolute; left: 230px; width: 95px; height: 44px; }
+.topBarMenu .rightMenu .customerService { position: absolute; left: 345px; width: 95px; height: 44px; }
+.topBarMenu .rightMenu .companyIntro { position: absolute; left: 455px; width: 95px; height: 44px; }
