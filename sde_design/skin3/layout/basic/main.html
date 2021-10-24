@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="//www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,6 +11,12 @@
     <!-- // PG크로스브라우징필수내용 -->
 
     <title>기본 레이아웃</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/module/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/topBar.css">
+
+    <!--@css(/css/module/fonts/fonts.css)-->
+
     <!--@css(/layout/basic/css/common.css)--><!-- 해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요. -->
     <!--@css(/layout/basic/css/layout.css)-->
     <!--@css(/layout/basic/css/ec-base-ui.css)-->
@@ -23,6 +29,7 @@
     <!--@css(/layout/basic/css/ec-base-box.css)-->
     <!--@css(/layout/basic/css/ec-base-table.css)-->
     <!--@css(/layout/basic/css/ec-base-desc.css)-->
+    <!--@css(/layout/basic/css/topBar.css)-->
 
     <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
     <!--@js(/layout/basic/js/basic.js)-->
@@ -36,97 +43,109 @@
 </div>
 
 <div id="header">
+    <div class="topBarBackground"></div>
 <div class="inner">
     <div class="topArea">
-        <h1 module="Layout_LogoTop">
-            <!--@css(/css/module/layout/logotop.css)-->
-            <a href="/index.html">{$mall_name}</a>
-        </h1>
+        <!--
         <div module="Layout_SearchHeader">
+        -->
             <!--@css(/css/module/layout/searchHeader.css)-->
             <!--
                 $product_page=/product/detail.html
                 $category_page=/product/list.html
             -->
+            <!--
             <fieldset>
                 <legend>검색</legend>
                 {$form.keyword}<input type="image" src="//img.echosting.cafe24.com/skin/base/layout/btn_search.gif" alt="검색" onclick="{$action_search_submit}" /><ul class="autoDrop" id="{$search_auto_id}"></ul></fieldset>
         </div>
+        -->
     </div>
 
-    <div module="Layout_multishopList" class="list">
-        <!--@css(/css/module/layout/multishopList.css)-->
-        <button type="button" class="toggle"><span>{$current_language}</span></button>
-        <ul module="Layout_multishopListitem">
-            <li class="{$selected_class}">
-                <a href="//{$shop_domain}/">
-                    <span class="name">{$locale_language}</span>
-                    <span class="unit">{$currency_code}</span>
-                </a>
-            </li>
-            <li class="{$selected_class}">
-                <a href="//{$shop_domain}/">
-                    <span class="name">{$locale_language}</span>
-                    <span class="unit">{$currency_code}</span>
-                </a>
-            </li>
+
+    <div class="topBarTop">
+        <ul class="leftOption">
+            <li><a onclick="alert('해당 브라우저에서는 지원하지 않습니다. \nctrl + D를 눌러 즐겨찾기를 추가할 수 있습니다.');" style="cursor:pointer">즐겨찾기 추가</a></li>
+            <li class="divider"><a href="">개인고객용 스마트스토어 바로가기</a></li>
+            <li class="divider"><a href="">회사 홈페이지 바로가기</a></li>
         </ul>
-    </div>
-
-    <div module="Layout_multishopList" class="thumb">
-        <!--@css(/css/module/layout/multishopList.css)-->        
-        <div module="Layout_multishopListmultioption" class="multiOption">
-            <a href="#none">
-                <span module="Layout_multishopListmultioptionCountry" class="ship">
-                    <strong>Ship to</strong><span> : </span>
-                </span>
-                <span module="Layout_multishopListmultioptionLanguage" class="language">
-                    <strong>Language</strong><span> : {$language_name}</span>
-                </span>
-            </a>
+        <!-- 로그인 로그아웃 상태에 따라 나눔 -->
+        <div module="Layout_statelogoff">
+            <!--@css(/css/module/layout/statelogoff.css)-->
+            <ul class="rightOption">
+                <li><a href="/member/login.html" class="log">로그인</a></li>
+                <li class="divider"><a href="/member/join.html">회원가입</a></li>
+                <li class="divider"><a href="/order/basket.html">장바구니</a></li>
+                <li class="divider"><a href="/myshop/order/list.html">주문/배송 조회</a></li>
+                <li class="divider"><a href="/myshop/index.html">마이페이지</a></li>
+            </ul>
+        </div>
+        <div module="Layout_stateLogon">
+            <!--@css(/css/module/layout/statelogon.css)-->
+            <ul class="rightOption">
+                <li><a href="{$action_logout}" class="log">로그아웃</a></li>
+                <li class="divider"><a href="/order/basket.html">장바구니</a></li>
+                <li class="divider"><a href="/myshop/order/list.html">주문/배송 조회</a></li>
+                <li class="divider"><a href="/myshop/index.html">마이페이지</a></li>
+            </ul>
         </div>
     </div>
 
-    <div module="Layout_statelogoff">
-        <!--@css(/css/module/layout/statelogoff.css)-->
-        <a href="/member/login.html" class="log">로그인</a>
-        <a href="/member/join.html">회원가입</a>
-        <a href="/order/basket.html">장바구니 <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
-        <a href="/myshop/order/list.html">주문조회</a>
-        <a href="/myshop/index.html">마이쇼핑</a>
-        <a class="{$board_display|display}" href="/board/index.html">게시판</a>
+    <div class="topBarMiddle">
+        <img class="logoImg" src="../../SkinImg/customImg/topBarLogoImg.png" alt="logo">
+        <div class="searchBar">
+            <div module="Layout_SearchHeader">
+                <!--@css(/css/module/layout/searchHeader.css-->
+                <!--
+                    $product_page=/product/detail.html
+                    $category_page=/product/list.html
+                -->
+                <fieldset>
+                    <legend>검색</legend>
+                    {$form.keyword}<input class="searchIcon" type="image" src="../../SkinImg/customImg/topBarSearchBarIcon.svg" alt="search" onclick="{$action_search_submit}" /><ul class="autoDrop" id="{$search_auto_id"></ul>
+                </fieldset>
+            </div>
+        </div>
     </div>
 
-    <div module="Layout_stateLogon">
-        <!--@css(/css/module/layout/statelogon.css)-->
-        <span class="myinfo"><strong>{$name}</strong>님 환영합니다. <a href="/member/modify.html">회원정보수정</a></span>
-        <a href="{$action_logout}" class="log">로그아웃</a>
-        <a href="/order/basket.html">장바구니 <span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
-        <a href="/myshop/order/list.html">주문조회</a>
-        <a href="/myshop/index.html">마이쇼핑</a>
-        <a class="{$board_display|display}" href="/board/index.html">게시판</a>
+    <div class="topBarMenu">
+        <a href="" target="_blank">
+            <div class="allCategory">
+                <img src="../../SkinImg/customImg/topBarMenuAllCategoryIcon.svg" alt="burger menu">
+                <span>카테고리 전체보기</span>
+            </div>
+        </a>
+        <div class="leftMenu">
+            <a href="" target="_blank">
+                <div class="allItems">전체상품</div>
+            </a>
+            <a href="" target="_blank">
+                <div class="bestItems">베스트</div>
+            </a>
+            <a href="" target="_blank">
+                <div class="newItems">신상품</div>
+            </a>
+        </div>
+        <div class="rightMenu">
+            <a href="" target="_blank">
+                <div class="buyNow">구매하기</div>
+            </a>
+            <a href="" target="_blank">
+                <div class="changeRefund">교환/반품</div>
+            </a>
+            <a href="" target="_blank">
+                <div class="alertBoard">공지사항</div>
+            </a>
+            <a href="" target="_blank">
+                <div class="customerService">고객센터</div>
+            </a>
+            <a href="" target="_blank">
+                <div class="companyIntro">회사소개</div>
+            </a>
+        </div>
+
     </div>
 
-    <ul class="special">
-        <li><a href="/product/list.html?cate_no=24">신상품</a></li>
-        <li><a href="/product/list.html?cate_no=25">프리미엄</a></li>
-        <li><a href="/product/list.html?cate_no=26">스페셜상품</a></li>
-    </ul>
-
-    <ul module="Layout_shoppingInfo">
-        <!--@css(/css/module/layout/shoppingInfo.css)-->
-        <li class="{$use_mileage|display}"><a href="/myshop/mileage/historyList.html">{$mileage_name} <strong>{$mileage}</strong></a></li>
-        <li class="{$use_basket_cnt|display}"><a href="/order/basket.html">장바구니 <strong>{$basket_cnt}<span class="{$use_basket_price|display}">({$basket_price})</span></strong></a></li>
-        <li class="{$use_interest_prd|display}"><a href="/myshop/wish_list.html">관심상품 <strong>{$interest_prd_cnt}</strong></a></li>
-        <li class="{$use_like_product_cnt|display}">{$like_prd_tag}</li>
-        <li class="{$use_coupon_cnt|display}"><a href="/myshop/coupon/coupon.html">쿠폰 <strong>{$coupon_cnt}</strong></a></li>
-        <li class="{$use_deposit|display}"><a href="/myshop/deposits/historyList.html">{$deposit_name} <strong>{$deposit}</strong></a></li>
-    </ul>
-
-    <div class="link">
-        <a module="Layout_bookmark" href="/link/bookmark.html" target="_blank" onclick="winPop(this.href); return false;"><span>즐겨찾기</span></a>
-        <a module="Layout_shortcut" href="/link/shortcut.html" target="_blank" onclick="winPop(this.href); return false;">바로가기</a>
-    </div>
 </div>
 </div><hr class="layout" />
 

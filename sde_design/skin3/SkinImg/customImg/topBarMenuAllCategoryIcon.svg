@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_9" data-name="Rectangle 9" width="18" height="18" transform="translate(415 180)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(-415 -180)" clip-path="url(#clip-path)">
+    <g id="fi-rr-menu-burger" transform="translate(415 182.962)">
+      <rect id="Rectangle_10" data-name="Rectangle 10" width="17.774" height="1.481" rx="0.741" transform="translate(0 5.184)"/>
+      <rect id="Rectangle_11" data-name="Rectangle 11" width="17.774" height="1.481" rx="0.741" transform="translate(0 0)"/>
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="17.774" height="1.481" rx="0.741" transform="translate(0 10.368)"/>
+    </g>
+  </g>
+</svg>

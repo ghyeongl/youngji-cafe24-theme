@@ -5,8 +5,7 @@
       <paths name="cafe24_ghlabnote">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-            <mapping local="" />
+            <mapping deploy="/sde_design/skin3" local="$PROJECT_DIR$/sde_design/skin3" web="/" />
           </mappings>
         </serverdata>
       </paths>
