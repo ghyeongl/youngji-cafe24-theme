@@ -1,5 +1,5 @@
-.xans-layout-searchheader { float:right; margin:-50px 0 0; }
-.xans-layout-searchheader fieldset { position: absolute; top: 0; left:0; width: 530px; height: 41px; border:2px solid #2d346e; border-radius:34px; }
+.xans-layout-searchheader {  }
+.xans-layout-searchheader fieldset {  }
 .xans-layout-searchheader #keyword  { position: relative; top: 6px; left: 15px; width: 460px; height: 29px; padding:0 0 0 5px; border:0; line-height:32px; font-size:14px; color:#000000; }
 
 .xans-layout-searchheader fieldset .autoDrop { display:none; border:1px solid #565960; position:absolute; width: 530px; text-align:left; z-index:20; overflow:hidden; overflow-y:auto; max-height:100px;}

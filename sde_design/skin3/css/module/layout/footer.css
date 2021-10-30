@@ -1,4 +1,4 @@
-.xans-layout-footer { position:relative; float:right; width:1000px; height:234px; }
+.xans-layout-footer { position:relative; float:right; width:900px; height:234px; }
 .xans-layout-footer .utilMenu { overflow:hidden; height:44px; line-height:44px; *zoom:1; }
 .xans-layout-footer .utilMenu li { float:left; padding:0 10px 0 10px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_bar2.gif") no-repeat 0 15px; }
 .xans-layout-footer .utilMenu li.home { padding-left:0; background:none; }

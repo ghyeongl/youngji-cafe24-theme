@@ -1,11 +1,14 @@
-.xans-layout-category { margin:0 0 30px; }
-.xans-layout-category .position > ul > li { position:relative; z-index:10; }
-.xans-layout-category .position > ul > li > a { display:block; padding:12px 20px 12px 9px; color:#2e2e2e; font-size:14px; font-weight:bold; word-spacing:-1px; text-decoration:none; }
+.xans-layout-category {  }
+.xans-layout-category .position { position: absolute; top: 0; left: 0; width: 190px; height: 480px; background: #FFFFFF; }
+.xans-layout-category .position > ul > li { position:relative; z-index:10; width: 190px; height: 46px; }
+.xans-layout-category .position > ul > li > a { display:block;  }
+.xans-layout-category .position > ul > li > a > img { position: absolute; top: 14px; left: 14px; width: 18px; height: 18px; }
+.xans-layout-category .position > ul > li > a > span { position: absolute; top :14px; left: 48px; color:#000000; font-family: NanumSquare, sans-serif; font-size:17px; font-weight:normal; text-decoration:none; }
 .xans-layout-category .position > ul > li > a:hover,
 .xans-layout-category .position > ul > li.selected > a,
 .xans-layout-category .position > ul > li.on > a { color:#008bcc; }
 
-.xans-layout-category .sub-category { position:absolute; top:0; left:179px; width:158px; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; background:#fff; }
+.xans-layout-category .sub-category { position:absolute; top:0; left:190px; width:158px; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; background:#fff; }
 .xans-layout-category .sub-category ul { position:relative; }
 .xans-layout-category .sub-category ul:before { content:""; position:absolute; top:10px; left:-8px; display:inline-block; width:0; height:0; border-top:9px solid transparent; border-left:9px solid #bbb; border-bottom:9px solid transparent; -webkit-transform:rotate(180deg); transform:rotate(180deg); }
 .xans-layout-category .sub-category ul:after { content:""; position:absolute; top:11px; left:-7px; display:inline-block; width:0; height:0; border-top:8px solid transparent; border-left:8px solid #fff; border-bottom:8px solid transparent; -webkit-transform:rotate(180deg); transform:rotate(180deg); }
