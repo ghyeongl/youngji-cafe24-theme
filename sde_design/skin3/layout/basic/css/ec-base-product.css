@@ -7,10 +7,10 @@
 .ec-base-product img { vertical-align:middle; }
 .ec-base-product a[href^='/product/detail.html'] > img { border:5px solid #ececec; }
 
-.ec-base-product .prdList {width: 1140px; font-size:0; line-height:0; }
+.ec-base-product .prdList {width: 1140px; font-size:0; line-height:0; margin-bottom: 20px; }
 .ec-base-product .prdList > li { position:relative; width: 265px; display:inline-block; margin:0 20px 0 0; vertical-align:top; }
 
-.ec-base-product .prdList .chk { /* position:absolute; top: 0; left:0; right:0; display:block; */}
+.ec-base-product .prdList .chk { /* position:absolute; top: 0; left:0; right:0; display:block; */ }
 .ec-base-product .prdList .thumbnail { position:relative; text-align: center; }
 .ec-base-product .prdList .thumbnail .prdImg { position:relative; }
 .ec-base-product .prdList .thumbnail a img { max-width: 100%; height: 265px; }

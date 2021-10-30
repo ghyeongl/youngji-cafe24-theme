@@ -24,6 +24,7 @@
   #sidebar .banner p a.calendarBanner:before { background-position:-100px -50px; }
 #sidebar .banner [class*="Banner"]:hover { text-decoration:none; }
 #contents { position: relative; top: 0; float:left; width:100%; }
+#contents .mainArea { position: relative; width: 1120px; margin: 0 auto 0; }
 #banner { position:absolute; top:0; left:0; width:90px; }
 .containArea { position: absolute; left: 50%; width: 1340px; margin-left: -670px; }
 .contentArea { position: absolute; left: 110px; width: 1120px; }

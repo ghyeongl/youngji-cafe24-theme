@@ -1,4 +1,3 @@
-#contents .mainArea { position: relative; width: 1120px; margin: 0 auto 0; }
 #contents .mainNavigator { position: relative; height: 480px; }
 #contents .mainContents { position: relative; }
 #contents .navBackground { position: absolute; top: 0; left: 0; width: 100%; height: 480px; background: #B2A49B; z-index: -1; }
