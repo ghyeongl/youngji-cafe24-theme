@@ -42,14 +42,19 @@
 #bannerArea h2 { margin:0 0 16px; font-weight:normal; font-size:20px; color:#2e2e2e; text-align:center; }
 
 /* 탐색경로바 */
-.path { overflow:hidden; height:30px; line-height:30px; *zoom:1; }
+.path { overflow:hidden; height: 18px; margin-top: 13px; line-height:18px; *zoom:1; }
 .path span { overflow:hidden; position:absolute; width:0; height:0; white-space:nowrap; text-indent:100%; }
 .path ol { float:right; }
-.path li { float:left; padding:0 0 0 12px; margin:0 0 0 8px; color:#757575; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_path.gif") no-repeat 0 10px; }
+.path li { float:left; padding:0 0 0 12px; margin:0 0 0 8px; color:#757575; background:url("//img.echosting.cafe24.com/skin/base/layout/ico_path.gif") no-repeat 0 5px; }
 .path li:first-child { background:none; }
 .path li a { color:#757575; }
 .path li strong,
 .path li strong a { color:#2e2e2e; }
+
+/* 내부 상단 바 */
+.statBar { position: relative; top: 30px; height: 38px; border: 3px solid #e5e5e5; background: #ffffff }
+.statBar > span { position: relative; float: left; top: 12px; left: 15px; margin: auto 0; }
+.statBar > .path { position: relative; float: right; top: 12px; right: 15px; margin: auto 0; }
 
 /* 타이틀 */
 .titleArea { min-height:30px; margin:10px 0 20px; border-bottom:1px solid #e8e8e8; }

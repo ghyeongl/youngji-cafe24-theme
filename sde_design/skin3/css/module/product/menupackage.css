@@ -9,21 +9,21 @@
 .xans-product-menupackage .title .likeButton.selected button { color:#353535; }
  */
 
-.xans-product-menupackage .menuCategory { margin-top: 10px; border:2px solid #e0e0e0; font-size: 0; line-height:0; background: #e0e0e0 }
-.xans-product-menupackage .menuCategory > li { position: relative; display:inline-block; width: 186px; height: 38px; border: 1px solid #e0e0e0; vertical-align:top; background: #ffffff }
-.xans-product-menupackage .menuCategory > li > a { position: absolute;  top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: NanumSquare, sans-serif; font-size: 17px; font-weight: normal; color:#505050; }
+.xans-product-menupackage .menuCategory { margin-top: 30px; padding: 2px; font-size: 0; line-height:0; background: #e0e0e0 }
+.xans-product-menupackage .menuCategory > li { position: relative; display:inline-block; width: 186px; height: 38px; box-shadow: 0 0 0 1px #e0e0e0 inset; vertical-align:top; background: #ffffff }
+.xans-product-menupackage .menuCategory > li > a { position: absolute; top: 50%; left: 15px; transform: translateY(-50%); font-family: NanumSquare, sans-serif; font-size: 17px; line-height: 19px; font-weight: normal; color:#505050; }
 .xans-product-menupackage .menuCategory > li > a:hover { /* color:#008bcc; text-decoration:none; background-position:100% -95px */ }
 .xans-product-menupackage .menuCategory > li.selected > a { font-weight: bold; }
 .xans-product-menupackage .menuCategory > li .count { font-weight:normal; }
-.xans-product-menupackage .menuCategory > li > ul { padding:6px 0 0 0; }
-.xans-product-menupackage .menuCategory > li > ul > li { margin:8px 0 0 0; line-height:14px; }
-.xans-product-menupackage .menuCategory > li > ul > li > a { color:#575a63; }
+.xans-product-menupackage .menuCategory > li > ul {  }
+.xans-product-menupackage .menuCategory > li > ul > li { position: relative; display: block; top: 38px; width: 186px; height: 38px; margin: 0; line-height:14px; box-shadow: 0 0 0 1px #e0e0e0 inset; vertical-align:top; background: #ffffff}
+.xans-product-menupackage .menuCategory > li > ul > li > a { position: absolute; top: 50%; left: 20px; transform: translateY(-50%); font-family: NanumSquare, sans-serif; font-size: 17px; line-height: 19px; font-weight: normal; color:#505050; }
 .xans-product-menupackage .menuCategory > li > ul > li > a:hover,
 .xans-product-menupackage .menuCategory > li > ul > li.selected > a { color:#008bcc; }
 .xans-product-menupackage .menuCategory > li > ul > li > .button { display:inline-block; position:relative; width:9px; height:14px; margin:1px 0 0 3px; vertical-align:top; }
 
-.xans-product-menupackage .subCategory { display:none; position:absolute; left:50%; top:13px; z-index:11; width:300px; margin:0 0 0 -151px; padding:6px 0; border:1px solid #565960; font-size:0; line-height:0; background:#fff url("//img.echosting.cafe24.com/skin/base_ko_KR/product/bg_sub_category_line.gif") repeat-y 150px 0; }
-.xans-product-menupackage .subCategory li { display:inline-block; width:130px; margin:8px 0 8px 18px; font-size:12px; line-height:14px; vertical-align:top; }
+.xans-product-menupackage .subCategory { display:none; position:absolute; left:50%; top:13px; z-index:11; width:300px; margin:0 0 0 -151px; padding:6px 0; border:1px solid #565960; font-size: 0; line-height:0; background:#fff url("//img.echosting.cafe24.com/skin/base_ko_KR/product/bg_sub_category_line.gif") repeat-y 150px 0; }
+.xans-product-menupackage .subCategory li { display:inline-block; width:130px; margin:8px 0 8px 18px; font-family: "Nanum Gothic", sans-serif; font-size:12px; line-height:14px; vertical-align:top; }
 .xans-product-menupackage .subCategory li a { color:#575a63; }
 .xans-product-menupackage .subCategory li a:hover,
 .xans-product-menupackage .subCategory li.selected a { color:#008bcc; }

@@ -1,16 +1,16 @@
 <!--@layout(/layout/basic/layout.html)-->
 
-<div class="mainArea">
 <div module="Product_menupackage">
-    <link rel="stylesheet" type="text/css" href="../css/module/product/menupackage.css">
     <!--@css(/css/module/product/menupackage.css)-->
     <!--@js(/js/module/product/menucategory.js)-->
 
+    <!-- 카테고리 제목 -->
     <div class="title" module="product_headcategory">
         <p class="banner">{$top_image1_tag}{$top_image2_tag}{$top_image3_tag}</p>
         <h2><span>{$title_text_or_image}</span></h2>
     </div>
 
+    <!-- 경로 -->
     <div class="path" module="product_headcategory">
         <span>현재 위치</span>
         <ol>
@@ -24,10 +24,10 @@
 
     <!--@import(/product/shoppQ/searchContent.html)-->
 
+    <!-- 중분류 네비게이션 바 -->
     <ul class="menuCategory">
         <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
             <a href="{$link_product_list_sub}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
-            <!--
             <ul module="product_children">
                 <li class="{$selected}">
                     <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
@@ -50,12 +50,12 @@
                     </div>
                 </li>
             </ul>
-            -->
         </li>
     </ul>
 
 </div>
 
+<!-- 사용 안함 -->
 <div module="product_listrecommend" class="ec-base-product">
     <!--
         $count = 4
@@ -117,6 +117,7 @@
     </ul>
 </div>
 
+<!-- 사용 안함 -->
 <div module="product_listnew" class="ec-base-product">
     <!--
         $count = 5
@@ -178,8 +179,10 @@
     </ul>
 </div>
 
+<!-- 카테고리 내 상품 목록 -->
 <div module="product_normalpackage">
     <!--@css(/css/module/product/listnormal.css)-->
+    <!-- 갯수 및 정렬 방식 선택 바 -->
     <div module="product_normalmenu">
         <!--
             $compare_page = /product/compare.html
@@ -193,6 +196,7 @@
             <span class="compare {$product_compare_display|display}"><a href="#none" class="btnCompare" onclick="{$product_compare_action}">상품비교</a></span>
         </div>
 
+        <!-- 사용 안함 -->
         <fieldset class="condition {$select_search_display|display}">
             <legend>조건별 검색</legend>
             <p>
@@ -212,6 +216,7 @@
         </fieldset>
     </div>
 
+    <!-- 카테고리 내 상품 컴포넌트 -->
     <div module="product_listnormal" class="ec-base-product">
         <!--
             $count = 16
@@ -471,6 +476,7 @@
     </div>
 </div>
 
+<!-- 페이지 넘기기 -->
 <div module="product_normalpaging" class="ec-base-paginate">
     <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
     <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
@@ -488,5 +494,4 @@
     </ol>
     <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
     <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
-</div>
 </div>

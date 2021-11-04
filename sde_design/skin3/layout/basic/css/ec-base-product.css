@@ -56,7 +56,7 @@
 
 /* module="product_ListItem" */
 .ec-base-product .spec { position: relative; top: 8px; margin-top: -4px; }
-.ec-base-product .spec li { text-align:right; font-family: NanumGothic, sans-serif; font-weight: 400; }
+.ec-base-product .spec li { text-align:right; font-family: "Nanum Gothic", sans-serif; font-weight: 400; }
 /* product title (strong) */
 .ec-base-product .spec li .title { font-weight:normal; vertical-align:top; }
 .ec-base-product .spec li .title span { vertical-align:top; }

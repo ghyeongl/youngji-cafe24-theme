@@ -1,10 +1,14 @@
 <!--@layout(/layout/basic/main.html)-->
 <!--@css(/index.css)-->
 
+<!-- 광고 뒷 배경 -->
 <div class="navBackground"></div>
 
+<!-- 콘텐츠 너비 지정(1120px) -->
 <div class="mainArea">
+    <!-- 카테고리 및 광고 영역 -->
     <div class="mainNavigator">
+        <!-- 카테고리 목록 -->
         <div module="Layout_category">
             <!--@css(/css/module/layout/category.css)-->
             <!--@js(/js/module/layout/category.js)-->
@@ -17,13 +21,19 @@
                 </ul>
             </div>
         </div>
+
+        <!-- 메인 배너(광고) 어플리케이션 -->
         <div class="visual">
             <div app4you-smart-banner="smart-banner-admin-PC00001" app4you-smart-banner-html="true" class="xans-element- xans-smart-banner-admin xans-smart-banner-admin-PC00001">
                 <a href="#" style="cursor:default" onclick="APP4YOU_SMART_BANNER.incrementBanner('360357', event)"><img src="https://file.cafe24cos.com/banner-admin-live/upload/ghlabnote/70dc35f4-4520-45fc-96ea-8da5b71d779a.jpeg" style="width:100%"/></a>
             </div>
         </div>
     </div>
+
+    <!-- 사용 안함 -->
     <!--@import(/product/shoppQ/searchContent.html)-->
+
+    <!-- 전체 상품 리스트 -->
     <div module="product_listmain_1" class="ec-base-product">
         <!--
             $count = 16
@@ -32,6 +42,8 @@
             $basket_result = /product/add_basket.html
             $basket_option = /product/basket_option.html
         -->
+
+        <!-- "전체 상품" 제목 및 설명 -->
         <div class="title">
             <h2>
                 <span style="display: {$category_title_text_display};">{$category_title_text}</span>
@@ -40,14 +52,19 @@
             <h4>영지PMC에서 제공하는 모든 상품 목록입니다.</h4>
             <a href="">더보기 ></a>
         </div>
+
+        <!-- 상품 그리드 (4개) -->
         <ul class="prdList grid4">
+            <!-- 상품 컴포넌트 -->
             <li id="anchorBoxId_{$product_no}">
+                <!-- 상품 사진 -->
                 <div class="thumbnail">
                     <div class="prdImg">
                         <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
                     </div>
                 </div>
-                <!-- 글씨 사이즈 및 항목 변경은 사이트 참고-->
+
+                <!-- 상품 설명 (글씨 사이즈 및 항목 변경은 사이트 참고) -->
                 <div class="description">
                     <!--상품 제목-->
                     <strong class="name">
@@ -56,6 +73,7 @@
                             {$product_name}
                         </a>
                     </strong>
+
                     <!--상품 가격-->
                     <ul module="product_ListItem" class="spec">
                         <li class="{$item_display|display}"><strong class="title {$item_title_display|display}">{$item_title} :</strong> {$item_content}</li>
