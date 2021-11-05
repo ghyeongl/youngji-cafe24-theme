@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig authType="PASSWORD" host="ghlabnote.ftp.cafe24.com" id="cfc886da-a045-4c1b-97aa-7263a15f3311" port="22" nameFormat="DESCRIPTIVE" username="ghlabnote" />
-    </configs>
-  </component>
-</project>
