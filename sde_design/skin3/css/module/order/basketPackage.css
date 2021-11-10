@@ -25,7 +25,7 @@
 .xans-order-basketpackage .xans-order-basketpriceinfoguide p.info { padding:8px 0 8px 33px; border-bottom:1px solid #e8e5e4; color:#757575; line-height:1.5; font-size:11px; background:url("//img.echosting.cafe24.com/skin/base/common/ico_info.gif") no-repeat 9px 8px; }
 
 .xans-order-basketpackage .xans-order-selectorder { margin:0 0 40px; }
-.xans-order-basketpackage .xans-order-totalorder { margin:10px 0 40px; }
+.xans-order-basketpackage .xans-order-totalorder { margin:0 0 40px; }
 
 .xans-order-basketpackage .xans-order-weight .totalWeight{text-align: right;padding: 10px 0 0;}
 .xans-order-basketpackage .xans-order-weight .totalWeight span{display: inline-block;min-width: 50px;}
@@ -70,3 +70,12 @@
 #appPaymentButtonBox { max-width:247px; margin:10px auto 0; }
 #appPaymentButtonBox > div { margin:0 0 5px 0; }
 #appPaymentButtonBox > div:last-of-type { margin-bottom:0; }
+
+/* 장바구니 하단 버튼 */
+.btnLeftBasketOption { height: 44px; background-color: #F0F0F0; margin: 30px 20px 0 0; display:inline-block; box-sizing:border-box; padding: 12px 12px; border:1px solid #d1d1d1; border-radius:2px; font-family:"Nanum Gothic", Gulim, sans-serif; font-size:17px; line-height:normal; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#000000; }
+.btnRightBasketGoShop { height: 44px; background-color: #FFFFFF; margin: 30px 0 0 20px; display:inline-block; box-sizing:border-box; padding: 11px 20px; border:1px solid #d1d1d1; border-radius:2px; font-family:"Nanum Gothic", Gulim, sans-serif; font-size:20px; line-height:normal; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#505050; }
+.btnRightBasketOrderSelect { height: 44px; background-color: #FFFFFF; margin: 30px 0 0 20px; display:inline-block; box-sizing:border-box; padding: 11px 20px; border:1px solid #d1d1d1; border-radius:2px; font-family:"Nanum Gothic", Gulim, sans-serif; font-size:20px; line-height:normal; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#000000; }
+.btnRightBasketOrderAll { height: 44px; background-color: #3845AC ; margin: 30px 0 0 20px; display:inline-block; box-sizing:border-box; padding: 11px 20px; border:1px solid #d1d1d1; border-radius:2px; font-family:"Nanum Gothic", Gulim, sans-serif; font-size:20px; line-height:normal; font-weight:normal; text-decoration:none; vertical-align:middle; word-spacing:-0.5px; letter-spacing:0; text-align:center; white-space:nowrap; color:#FFFFFF; }
+
+/* 장바구니 하단 총 금액 표시란 색 지정 */
+.totalRow {background: #FBFAFA;}
