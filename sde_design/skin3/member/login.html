@@ -7,18 +7,15 @@
     </ol>
 </div>
 
-<div class="titleArea">
-    <h2>로그인</h2>
-</div>
 
-<div module="member_login" class="ec-base-box typeThin">
+<div module="member_login" class="ec-base-box typeThin loginGrid">
     <!--@css(/css/module/member/login.css)-->
     <!--
         $defaultReturnUrl = /index.html
         $forbidIpUrl = member/adminFail.html
     -->
     <div class="login">
-        <h3 class="boxTitle">회원로그인</h3>
+        <h3 class="boxTitle">로그인</h3>
         <fieldset>
             <legend>회원로그인</legend>
             <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
@@ -28,35 +25,25 @@
                 {$form.member_check_secret_connect}
             </p>
             <a href="#none" class="btnLogin" onclick="{$action_func_login}">로그인</a>
-            <ul class="snsArea">
-                <li class="{$display_naver|display}">
-                    <a href="#none" onclick="{$naver_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_naver_login.gif" alt="네이버 로그인" /></a>
-                </li>
-                <li class="{$display_facebook|display}">
-                    <a href="#none" onclick="{$facebook_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_facebook_login.gif" alt="Facebook으로 로그인" /></a>
-                </li>
-                <li class="{$display_google|display}">
-                    <a href="#none" onclick="{$google_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_google_login.gif" alt="구글 로그인" /></a>
-                </li>
-                <li class="{$display_kakao|display}">
-                    <a href="#none" onclick="{$kakao_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_kakao_login.gif" alt="카카오로 시작하기" /></a>
-                </li>
-                <li class="{$display_line|display}">
-                    <a href="#none" onclick="{$line_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_line_login.gif" alt="LINE 로그인" /></a>
-                </li>
-                <li class="{$display_apple|display}">
-                    <a href="#none" onclick="{$apple_func_login}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/member/btn_apple_login.gif" alt="Apple로 로그인" /></a>
-                </li>
-            </ul>
+
             <ul>
+                <li><a href="/member/join.html">회원가입</a></li>
                 <li><a href="/member/id/find_id.html">아이디찾기</a></li>
                 <li><a href="/member/passwd/find_passwd_info.html">비밀번호찾기</a></li>
-                <li><a href="/member/join.html">회원가입</a></li>
             </ul>
             <p class="link {$display_nomember|display}" id="noMemberWrap">
                 비회원님도 상품구매가 가능하나 다양한<br />회원혜택에서 제외됩니다.
                 <a href="{$returnUrl}" class="btnEm" onclick="{$action_nomember_order}">비회원구매</a>
             </p>
+        </fieldset>
+    </div>
+    <div class="nonmember">
+        <h3 class="boxTitle">비회원이신가요?</h3>
+        <fieldset class="nonmemberset">
+
+            <button type="button" onclick="location.href='/member/join.html'" class="nonmemberbtn1">회원가입하기</button>
+            <button type="button" onclick="location.href='/member/login.html'" class="nonmemberbtn1">개인고객용 스마트스토어 바로가기</button>
+
         </fieldset>
     </div>
 </div>
