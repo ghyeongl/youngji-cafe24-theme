@@ -35,8 +35,53 @@
 .xans-member-join .agreeArea ul.check li label { display: table-cell; padding-left: 2px; }
 .xans-member-join .agreeArea input.ec-base-chk { vertical-align: middle; margin: 0 2px 0 0; }
 
+
+.xans-member-join h3 { padding:50px 0 10px; font-size:16px; color:#2e2e2e; }
+.xans-member-join select { height:24px; margin:0 4px 0 0; }
+.xans-member-join input,
+.xans-member-join textarea { padding:4px; border:1px solid #d9d9d9; color:#202020; font-size:12px; }
+.xans-member-join input[type=radio],
+.xans-member-join input[type=checkbox] { width:14px; height:14px; margin:0 3px 0 0; padding:0; border:0; }
+.xans-member-join div.grid,
+.xans-member-join p.grid { margin:7px 0 0; }
+.xans-member-join ul.grid li { margin:5px 0 0; }
+.xans-member-join .required { margin:-25px 0 10px; color:#353535; text-align:right; }
+.xans-member-join .required img { vertical-align:middle; }
+.xans-member-join .boardWrite { table-layout:fixed; border:1px solid #d7d5d5; line-height:180%; }
+.xans-member-join .boardWrite th { width:130px; padding:10px 0 8px 20px; border-top:1px solid #e8e8e8; border-right:1px solid #e8e8e8; background-color:#fbfafa; text-align:left; font-weight:normal; vertical-align:middle; }
+.xans-member-join .boardWrite td { width:auto; padding:10px 0 8px 10px; border-top:1px solid #e8e8e8; }
+.xans-member-join .boardWrite tr:first-child th,
+.xans-member-join .boardWrite tr:first-child td { border-top:0; }
+.xans-member-join .boardWrite input { height:14px; }
+.xans-member-join .boardWrite select { height:24px; }
+.xans-member-join .boardWrite img { vertical-align:middle; }
+.xans-member-join .boardWrite a { text-decoration:none; }
+.xans-member-join .boardWrite label { padding:0 20px 0 0; }
+.xans-member-join .boardWrite.type th,
+.xans-member-join .boardWrite.type td { padding:18px 0 18px 20px; }
+.xans-member-join .boardWrite.typeAddinfo th,
+.xans-member-join .boardWrite.typeAddinfo td { border-top:0; border-bottom:1px solid #e8e8e8; }
+.xans-member-join .boardWrite.typeAddinfo label { display:inline-block; }
+.xans-member-join .boardWrite .birth { margin:0 0 0 16px; }
+.xans-member-join .boardWrite .interest { line-height:25px; }
+.xans-member-join .boardWrite .interest label { padding:0 15px 0 0; }
+.xans-member-join .boardWrite .account li { margin:5px 0 0; }
+.xans-member-join .boardWrite .account li:first-child { margin-top:0; }
+.xans-member-join .boardWrite .account strong { display:inline-block; width:55px; color:#202020; }
+.xans-member-join .boardWrite .account input { margin:0 10px 0 0; }
+.xans-member-join .agreeArea { padding:20px 20px 15px 20px; border:1px solid #d7d5d5; color:#747474; font-size:11px; line-height:20px; background:#fbfafa; }
+.xans-member-join .agreeArea .agree { overflow:auto; height:110px; padding:20px; border:1px solid #e6e6e6; background:#fff; }
+.xans-member-join .agreeArea .agree p { padding:0 0 17px; }
+.xans-member-join .agreeArea .check { padding:7px 0 0 0; color:#202020; font-size:12px; }
+.xans-member-join .btnArea { margin:20px 0 50px; text-align:center; }
+
+
 /* INPUT SIZE */
 .xans-member-join #hint_answer { width:500px; }
+.xans-member-join #postcode1,
+.xans-member-join #postcode2 { width:40px; text-align:center; }
+.xans-member-join #addr1,
+.xans-member-join #addr2 { width:280px; margin:5px 0 0; }
 .xans-member-join #phone1,
 .xans-member-join #mobile1 { width:60px; margin:0 4px 0 0; }
 .xans-member-join #phone2,
@@ -77,6 +122,8 @@
 .xans-member-join #add9 { width:500px; }
 
 #realNameAuth p span { display:inline-block; width:80px; }
+#ipinWrap img,
+#mobileWrap img { display:block; }
 
 /* 툴팁 */
 .xans-member-join .eTooltip { position:relative; display:inline-block; }
