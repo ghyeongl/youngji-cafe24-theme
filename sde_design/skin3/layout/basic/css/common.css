@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
 /* **************************** //필수 CSS 수정 및 삭제 불가 **************************** */
 
@@ -6,7 +8,7 @@
 
 html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img { margin:0; padding:0; }
 html { width:100%; height:100%; }
-body,code { font:0.75em "Nanum Gothic", NanumSquare , Verdana,Dotum,AppleGothic,sans-serif; color:#353535; background:#fff; }
+body,code { font:0.75em "Nanum Gothic", Verdana,Dotum,AppleGothic,sans-serif; color:#353535; background:#fff; }
 body { min-width:1340px; }
 body#popup { min-width:0; }
 li { list-style:none; }
