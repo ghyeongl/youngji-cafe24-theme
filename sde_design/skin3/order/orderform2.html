@@ -1,0 +1,614 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>주문접수</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h1>주문접수</h1>
+</div>
+
+<div module="Order_form" unroll=1>
+    <!--@css(/layout/basic/css/ec-base-layer.css)-->
+    <!--@css(/css/module/order/form.css)-->
+    <!-- 이값은 지우면 안되는 값입니다. ($move_order_after 주문완료페이지 주소 / $move_basket 장바구니페이지 주소)
+        $move_order_after=/order/order_result.html
+        $move_basket=/order/basket.html
+    -->
+    <p class="orderStep"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/img_step2.gif" alt="02 주문서작성" /></p>
+
+    <ul class="controlInfo">
+        <li>상품의 옵션 및 수량 변경은 상품상세 또는 장바구니에서 가능합니다.</li>
+        <li class="{$dc_prd_guide_display|display}">할인 적용 금액은 주문서작성의 결제예정금액에서 확인 가능합니다.</li>
+    </ul>
+    <!-- 주문내역 -->
+    <div class="orderListArea ec-base-table typeList gBorder">
+        <table border="1" summary="">
+            <colgroup>
+                <col style="width:92px"/>
+                <col style="width:auto"/>
+                <col style="width:120px"/>
+                <col style="width:120px"/>
+                <col style="width:120px"/>
+            </colgroup>
+
+            <thead>
+            <tr>
+                <th scope="col" class="thumb">이미지</th>
+                <th scope="col" class="product">상품정보</th>
+                <th scope="col" class="price">판매가</th>
+                <th scope="col" class="quantity">수량</th>
+                <th scope="col" class="total">합계</th>
+            </tr>
+            </thead>
+
+            <tbody module="Order_NormalList" class="center">
+            <tr>
+                <!-- 상품 이미지 썸네일 -->
+                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                <!-- 상품/옵션 정보 -->
+                <td class="product">
+                    <a href="/product/detail.html{$param}"><strong>{$product_name}</strong></a>
+                    <div class="option {$option_display|display}">{$option_str}</div>
+                    <ul class="option" module="Order_optionSet">
+                        <li><strong>{$product_name}</strong>{$option_detail_str} ({$qty}개)</li>
+                        <li><strong>{$product_name}</strong>{$option_detail_str} ({$qty}개)</li>
+                    </ul>
+                </td>
+                <!-- 상품 판매가 -->
+                <td class="price">
+                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                </td>
+                <!-- 수량 -->
+                <td class="quantity">{$product_quantity_text}</td>
+                <!-- 합계 -->
+                <td class="total"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+            </tr>
+            <tr>
+                <!-- 상품 이미지 썸네일 -->
+                <td class="thumb gClearLine"><a href="/product/detail.html{$param}"><img src="{$product_image}" onerror="this.src='http://img.echosting.cafe24.com/thumb/img_product_small.gif';" alt="" /></a></td>
+                <!-- 상품/옵션 정보 -->
+                <td class="product">
+                    <a href="/product/detail.html{$param}"><strong>{$product_name}</strong></a>
+                    <div class="option {$option_display|display}">{$option_str}</div>
+                    <ul class="option" module="Order_optionSet">
+                        <li><strong>{$product_name}</strong>{$option_detail_str} ({$qty}개)</li>
+                        <li><strong>{$product_name}</strong>{$option_detail_str} ({$qty}개)</li>
+                    </ul>
+                </td>
+                <!-- 상품 판매가 -->
+                <td class="price">
+                    <div class="{$discount}"><strong>{$product_price_front_head}{$product_price_front}{$product_price_front_tail}</strong><p class="{$product_price_display|display}">{$product_price_back_head}{$product_price_back}{$product_price_back_tail}</p></div>
+                    <div class="{$product_sale_price_display|display}"><strong>{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail}</strong><p class="{$product_sale_price_ref_display|display}">{$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail}</p></div>
+                </td>
+                <!-- 수량 -->
+                <td class="quantity">{$product_quantity_text}</td>
+                <!-- 합계 -->
+                <td class="total"><strong>{$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}</strong><div class="{$product_total_price_ref_display|display}">{$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail}</div></td>
+            </tr>
+            </tbody>
+
+            <tfoot>
+            <tr>
+                <td colspan="5"> 상품구매금액 <strong>{$normal_total_product_price}<span class="{$normal_total_option_price_display|display}"> ({$normal_total_option_price})</span></strong> + 배송비 [선택 필요] <span class="{$normal_total_benefit_price_display|display}"> - 상품할인금액 {$normal_total_benefit_price} </span> = 합계 : <strong class="total">{$price_unit_head}<span id="{$domestic_ship_fee_sum}">{$normal_total_price}</span>{$price_unit_tail}</strong> + 배송비 <span class="{$normal_total_ref_display|display}">{$normal_total_ref}</span></td>
+            </tr>
+            </tfoot>
+
+        </table>
+    </div>
+
+    <!-- 주문자 정보 -->
+    <div class="orderArea ec-base-table typeList gBorder">
+        <div class="title">
+            <h3>주문자 정보</h3>
+            <p class="required"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 필수입력사항</p>
+        </div>
+        <div class="boardWrite">
+            <table>
+                <caption>주문자 정보 입력</caption>
+                <tbody class="{$address_form} {$address_korean_display|display}">
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 주문하시는 분</th>
+                    <td>
+                        {$form.oname}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 휴대전화</th>
+                    <td>
+                        {$form.ophone2_}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">일반전화</th>
+                    <td>{$form.ophone1_}</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 이메일</th>
+                    <td>
+                        {$form.oemail}
+                    </td>
+                </tr>
+                <tr module="Order_ordadd">
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 연락 방법</th>
+                    <td>
+                        {$html}
+                        <p class="grid">주문 확정 시 선택하신 방법으로 연락 드립니다.</p>
+                    </td>
+                    <td style="display:none">
+                        {$html}
+                    </td>
+                    <td style="display:none">
+                        {$html}
+                    </td>
+                </tr>
+
+                </tbody>
+
+                <!-- 비회원 결제 -->
+                <tbody class="noMember {$nm_display|display}">
+                <tr>
+                    <th scope="row">주문조회 비밀번호 <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /></th>
+                    <td>{$form.order_password} (주문조회시 필요합니다. 4자에서 12자 영문 또는 숫자 대소문자 구분)</td>
+                </tr>
+                <tr>
+                    <th scope="row">주문조회 비밀번호<br />확인 <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /></th>
+                    <td>{$form.order_password_confirm}</td>
+                </tr>
+                <tr>
+                    <th scope="row">쇼핑몰 이용약관</th>
+                    <td>
+                        <span class="question"><label for="mall_agreement_radio">쇼핑몰 이용약관에 대하여 동의합니다.</label></span>{$form.mall_agreement_radio}
+                        <div class="grid">{$form.mall_agreement}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">비회원 구매 및 결제<br />개인정보취급방침</th>
+                    <td>
+                        <span class="question"><label for="nm_agreement">비회원 구매 및 결제 개인정보취급방침에 대하여 동의합니다.</label></span>{$form.nm_agreement}
+                        <div class="grid">{$form.nm_terms}</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 배송지 정보 -->
+    <div class="orderArea {$r_info_display|display} ec-base-table typeList gBorder">
+        <div class="title">
+            <h3>배송지 정보</h3>
+            <p class="required"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 필수입력사항</p>
+        </div>
+        <div class="boardWrite">
+            <table>
+                <caption>배송지 정보 입력</caption>
+                <tbody>
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 배송지 선택</th>
+                    <td>
+                        <div class="address">
+                            {$form.sameaddr}
+                            <a href="#none" id="{$btn_shipp_addr_id}" class="{$btn_address_display|display}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_address.gif" alt="주소록 보기" /></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 받으시는 분</th>
+                    <td>{$form.rname}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 휴대전화</th>
+                    <td>{$form.rphone2_}</td>
+                </tr>
+                <tr>
+                    <th scope="row">일반전화</th>
+                    <td>{$form.rphone1_}</td>
+                </tr>
+
+                <tr class="{$use_safe_phone_display|display}">
+                    <th scope="row">안심번호</th>
+                    <td>
+                        {$form.use_safe_phone}
+                        <p>- 안심번호 서비스는 개인정보 보호를 위하여 휴대폰번호 등 실제 연락처 대신에 1회성 임시 번호를 제공하는 서비스입니다.</p>
+                    </td>
+                </tr>
+                <tr module="Order_ordadd">
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 배송 방법</th>
+                    <td style="display:none">
+                        {$html}
+                    </td>
+                    <td>
+                        {$html}
+                    </td>
+                    <td style="display:none">
+                        {$html}
+                    </td>
+                </tr>
+                <tr module="Order_ordadd">
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 배송비 결제 방법</th>
+                    <td style="display:none">
+                        {$html}
+                    </td>
+                    <td style="display:none">
+                        {$html}
+                    </td>
+                    <td>
+                        {$html}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/ico_required.gif" alt="필수" /> 주소</th>
+                    <td>
+                        {$form.rzipcode1}
+                        <a href="#none" id="{$btn_search_rzipcode_id}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_zipcode.gif" alt="우편번호" /></a><br />
+                        {$form.raddr1} <span class="grid">기본주소</span><br />
+                        {$form.raddr2} <span class="grid">나머지주소</span>
+                    </td>
+                </tr>
+                <tr class="{$use_delivery_message_display|display}">
+                    <th scope="row">배송메시지</th>
+                    <td>
+                        {$form.omessage}
+                        <div class="message {$omessage_autosave_display|display}">
+                            <label>{$form.omessage_autosave}{$omessage_autosave_board} 자동저장</label>
+                            <ul>
+                                <li>배송메시지란에는 배송시 참고할 사항이 있으면 적어주십시오.</li>
+                                <li>게시글은 비밀글로 저장되며 비밀번호는 주문번호 뒷자리로 자동 저장됩니다.</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="{$delivery_info_offer_display|display}">
+                    <th scope="row">배송정보제공방침</th>
+                    <td>
+                        {$form.delivery_info_offer_content}
+                        <p class="grid"><span class="question">배송정보제공방침에 대하여 동의하십니까?</span>{$form.delivery_info_offer_check}</p>
+                    </td>
+                </tr>
+                <tr class="{$hope_shipping_display|display}">
+                    <th scope="row">희망배송일</th>
+                    <td>
+                        <ul class="grid">
+                            <li>{$form.hope_shipping_fast}</li>
+                            <li>{$hope_start_day} 이후 날짜를 입력해야 합니다.</li>
+                            <li>{$form.hdateY}년 {$form.hdateM}월 {$form.hdateD}일 {$form.hdateW}요일</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- 결제 예정 금액 -->
+    <div class="title">
+        <h3>결제 예정 금액</h3>
+    </div>
+    <div class="totalArea ec-base-table typeList gBorder">
+        <div class="summary">
+            <table>
+                <caption>결제 예정 금액</caption>
+                <thead>
+                <tr>
+                    <th scope="col"><span>총 주문 금액</span><a href="#none" onclick="{$total_order_layer_on}" class="more"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_list.gif" alt="내역보기" /></a></th>
+                    <th scope="col" class="{$total_sale_display|display}"><span>총 </span><span id="{$total_addsale_text_id}" class="{$total_addsale_text_display|display}">할인</span><span id="{$total_sale_plus_mark}" class="{$plus_mark_display|display}"> + </span><span id="{$total_addpay_text_id}" class="{$total_addpay_text_display|display}">부가결제</span><span> 금액</span></th>
+                    <th scope="col">총 결제예정 금액</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="{$total_sale_css}"><div class="box">{$total_product_ship_price_front_head}<strong id="{$total_product_ship_price_front_id}">{$total_product_ship_price_front}</strong>{$total_product_ship_price_front_tail} <span class="tail {$total_product_ship_price_ref_display|display}">{$total_product_ship_price_back_head}<span id="{$total_product_ship_price_back_id}" class="tail">{$total_product_ship_price_back}</span>{$total_product_ship_price_back_tail}</span></div></td>
+                    <td class="option {$total_sale_display|display}"><div class="box"><strong>-</strong>{$total_sale_price_front_head}<strong id="{$total_sale_price_front_id}">{$total_sale_price_front}</strong>{$total_sale_price_front_tail} <span class="tail {$total_sale_ref_display|display}">{$total_sale_price_back_head}<span id="{$total_sale_price_back_id}" class="tail">{$total_sale_price_back}</span>{$total_sale_price_back_tail}</span></div></td>
+                    <td class="total"><div class="box"><strong>=</strong>{$total_order_price_front_head}<strong id="{$total_order_price_front_id}">{$total_order_price_front}</strong>{$total_order_price_front_tail} <span class="tail {$total_order_price_ref_display|display}">{$total_order_price_back_head}<span id="{$total_order_price_back_id}" class="tail">{$total_order_price_back}</span>{$total_order_price_back_tail}</span></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="detail">
+            <div class="{$total_addsale_summary_display|display}">
+                <table border="1" summary="">
+                    <caption>할인 내역</caption>
+                    <tbody>
+                    <tr class="total">
+                        <th scope="row">총 할인금액</th>
+                        <td>{$price_unit_head}<strong id="{$total_addsale_price_id}">{$total_addsale_price}</strong>{$price_unit_tail}</td>
+                    </tr>
+                    <tr class="{$coupon_display|display} {$coupon_select_class}">
+                        <th scope="row">쿠폰할인</th>
+                        <td><a href="#none" id="{$btn_coupon_select}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_total_coupon.gif" alt="쿠폰적용" /></a></td>
+                    </tr>
+                    <!-- 참고 : 쿠폰적용 후 -->
+                    <tr class="{$coupon_modify_class}">
+                        <th scope="row">쿠폰할인</th>
+                        <td>
+                            <span class="{$coupon_total_discount_price_class}">{$price_unit_head}0{$price_unit_tail}</span>
+                            <a id="{$coupon_modify_btn_id}" href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_total_modify.gif" alt="수정" /></a>
+                            <div id="{$coupon_template_view_id}" style="display:none" class="coupon">
+                                <span id="{$coupon_template_contents_id}"></span>
+                                <span id="{$coupon_template_price_id}"></span>
+                                <span id="{$coupon_template_attr_D_id}"></span>
+                                <span id="{$coupon_template_attr_M_id}"></span>
+                                <span id="{$coupon_template_attr_C_id}"></span>
+                            </div>
+                            <div id="{$coupon_use_list_id}" style="display:none" class="couponArea"></div>
+                        </td>
+                    </tr><!-- //참고 -->
+                    <tr class="{$total_benefit_display|display}">
+                        <th scope="row">추가할인금액</th>
+                        <td>
+                            <span class="grid">{$price_unit_head}<span id="{$total_benefit_price_id}">{$total_benefit_price}</span>{$price_unit_tail}</span>
+                            <a href="#none" onclick="{$total_benefit_layer_on}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_list.gif" alt="내역보기" /></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="{$total_addpay_summary_display|display}">
+                <table border="1" summary="" class="option">
+                    <caption>부가결제 내역</caption>
+                    <tbody>
+                    <tr class="total">
+                        <th scope="row">총 부가결제금액</th>
+                        <td>{$price_unit_head}<strong id="{$total_addpay_price_id}">0</strong>{$price_unit_tail}</td>
+                    </tr>
+                    </tbody>
+                    <!-- 적립금 -->
+                    <tbody class="{$mileage_display|display}">
+                    <tr>
+                        <th scope="row">{$mileage_name}</th>
+                        <td>
+                            <p>{$mileage_unit_head} {$form.input_mile} {$mileage_unit_tail} (총 사용가능 {$mileage_name} : {$mileage_unit_head}<strong class="point">{$total_avail_mileage}</strong>{$mileage_unit_tail})</p>
+                            <ul class="info">
+                                <li>{$mileage_name}은 최소 {$mileage_min} 이상일 때 결제가 가능합니다.</li>
+                                <li id="{$mileage_max_unlimit_id}" class="{$mileage_max_unlimit_display|display}">최대 사용금액은 제한이 없습니다.</li>
+                                <li id="{$mileage_max_limit_id}" class="{$mileage_max_limit_display|display}">1회 구매시 적립금 최대 사용금액은 {$mileage_max}입니다.</li>
+                                <li>{$mileage_name}으로만 결제할 경우, 결제금액이 0으로 보여지는 것은 정상이며 [결제하기] 버튼을 누르면 주문이 완료됩니다.</li>
+                                <li id="{$mileage_shipfee_id}" class="{$mileage_shipfee_display|display}">적립금 사용 시 배송비는 적립금으로 사용 할 수 없습니다.</li>
+                                <li id="{$mileage_exception_id}" class="{$mileage_exception_display|display}">적립금 사용 시 해당 상품에 대한 적립금은 적립되지 않습니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <!-- 예치금 -->
+                    <tbody class="{$deposit_display|display}">
+                    <tr>
+                        <th scope="row">{$deposit_name}</th>
+                        <td>
+                            <p>{$price_unit_head} {$form.input_deposit} {$deposit_unit} (총 사용가능 {$deposit_name} : {$price_unit_head}<strong class="point">{$total_deposit}</strong>{$deposit_unit}{$deposit_refund_wait})</p>
+                            <ul class="info">
+                                <li>{$deposit_name}은 사용제한 없이 언제든 결제가 가능합니다.</li>
+                                <li>{$deposit_name}으로만 결제할 경우, 결제금액이 0으로 보여지는 것은 정상이며 [결제하기] 버튼을 누르면 주문이 완료됩니다.</li>
+                                <li>현금환불요청 예치금이 있을 경우, 현금환불요청 예치금을 차감한 금액만 사용할 수 있으며, 예치금 환불요청을 취소하시면 전액 사용 가능합니다.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- 결제수단 -->
+    <div class="title">
+        <h3>결제수단</h3>
+    </div>
+    <div class="payArea">
+        <div class="payment">
+            <div class="method">{$form.addr_paymethod}</div>
+            <div class="info">
+                <!-- 무통장입금 -->
+                <table border="1" summary="" id="{$payment_input_cash}" style="display:none;">
+                    <caption>무통장입금</caption>
+                    <tbody>
+                    <tr>
+                        <th scope="row">입금자명</th>
+                        <td>{$form.pname}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">입금은행</th>
+                        <td>
+                            {$form.bankaccount}
+                            <p class="grid {$bank_go_display|display}"><a href="#none" id="{$btn_bank_go_id}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_bank.gif" alt="은행사이트 바로가기" /></a></p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 실시간 계좌이체 -->
+                <table border="1" summary="" id="{$payment_input_tcash}" style="display:none;">
+                    <caption>실시간 계좌이체</caption>
+                    <tbody>
+                    <tr>
+                        <th scope="row">예금주명</th>
+                        <td>{$form.allat_account_nm}</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 에스크로(가상계좌) -->
+                <table border="1" summary="" id="{$payment_input_icash}" style="display:none;">
+                    <caption>에스크로(가상계좌)</caption>
+                    <tbody>
+                    <tr>
+                        <th scope="row">에스크로</th>
+                        <td>{$form.flagEscrowIcashUse}<label for="flagEscrowIcashUse0">에스크로(구매안전)서비스를 적용합니다.</label></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!-- 무통장입금, 카드결제, 휴대폰결제, 실시간계좌이체 -->
+                <div id="{$pg_paymethod_info}" class="payHelp">
+                    <p id="{$pg_paymethod_info_shipfee}">최소 결제 가능 금액은 결제금액에서 배송비를 제외한 금액입니다.</p>
+                    <p id="{$pg_paymethod_info_pg}">소액 결제의 경우 PG사 정책에 따라 결제 금액 제한이 있을 수 있습니다.</p>
+                </div>
+
+                <!-- 케이페이 도움말 -->
+                <div id="{$kpay_info}" class="payHelp">
+                    <p>휴대폰에 설치된 케이페이 앱에서 비밀번호 입력만으로 빠르고 안전하게 결제가 가능한 서비스 입니다.</p>
+                    <p>안드로이드의 경우 구글 플레이, 아이폰의 경우 앱 스토어에서 케이페이 앱을 설치 한 후,<br/>
+                        최초 1회 카드정보를 등록하셔야 사용 가능합니다.</p>
+                </div>
+                <!-- 페이나우 도움말 -->
+                <div id="{$paynow_info}" class="payHelp">
+                    <p>휴대폰에 설치된 페이나우 앱에서 비밀번호 입력만으로 빠르고 안전하게 결제가 가능한 서비스 입니다.</p>
+                    <p>안드로이드의 경우 구글 플레이, 아이폰의 경우 앱 스토어에서 페이나우 앱을 설치 한 후,<br/>
+                        최초 1회 카드 및 계좌 정보를 등록하셔야 사용 가능합니다</p>
+                </div>
+                <!-- 페이코 도움말 -->
+                <div id="{$payco_info}" class="payHelp">
+                    <p>페이코 결제 팝업창에서 비밀번호 입력만으로 빠르고 안전하게 결제가 가능한 서비스 입니다.</p>
+                    <p><a href="http://www.payco.com" target="_blank">www.payco.com</a> 에 회원가입 후, 최초 1회 카드 및 계좌 정보를 등록하셔야 사용 가능합니다.</p>
+                </div>
+            </div>
+            <div class="agree">
+                <table border="1" summary="">
+                    <caption>결제관련동의</caption>
+                    <!-- 현금영수증 발행 -->
+                    <tbody id="{$cashreceipt_display_area}" class="cashReceipt {$cashreceipt_display|display}">
+                    <tr>
+                        <th scope="row">현금영수증<br />발행</th>
+                        <td>
+                            {$form.cashreceipt_user_type}
+                            <div class="mobile" id="{$cashreceipt_mobile_display_area}">
+                                <strong>휴대전화 : </strong>
+                                {$form.cashreceipt_user_mobile}
+                            </div>
+                            <div class="regno" id="{$cashreceipt_regno_display_area}">
+                                <strong>사업자등록번호 : </strong>
+                                {$form.cashreceipt_reg_no}
+                                <p class="grid">입력 시 '-' 없이 숫자만 입력하세요.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <!-- 청약철회방침 -->
+                    <tbody class="{$subscription_display|display}">
+                    <tr>
+                        <th scope="row">청약철회방침</th>
+                        <td>
+                            <div class="textArea">
+                                {$form.subscription_terms}
+                                <a href="#none" onclick="{$subscription_script}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_more.gif" alt="전체보기" /></a>
+                            </div>
+                            <p>{$form.subscription_agreement_chk}<label for="subscription_agreement_chk0"><strong>동의함</strong></label></p>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <!-- 전자보증보험-->
+                    <tbody class="guarantee {$eguarantee_display|display}">
+                    <tr>
+                        <th scope="row">전자보증보험</th>
+                        <td>
+                            <div>
+                                <p>전자보증보험 발급 여부 : {$form.eguarantee_flag}</p>
+                                <p>전자보증보험 안내(100% 매매보호 안전결제) <a href="/common/usafe_notice.php" target="_blank" onclick="window.open(this.href,'new','height=500 width=550 toolbar=no location=no directory=no status=no resizable=no'); return false;">[자세히보기]</a></p>
+                                <p>물품대금결제시 구매자의 피해보호를 위해 '(주)서울보증보험'의 보증보험증권이 발급됩니다.</p>
+                                <p>증권이 발급되는 것의 의미는, 물품대금 결제시에 소비자에게 서울보증보험의 쇼핑몰보증보험 계약체결서를 인터넷상으로 자동 발급하여, 피해발생시 쇼핑몰보증보험으로써 완벽하게 보호받을 수 있습니다.</p>
+                                <p>또한, 입력하신 개인정보는 증권발급을 위해 필요한 정보이며 다른 용도로 사용되지 않습니다. </p>
+                                <p>전자보증보험 발생시 별도의 수수료가 부과되지 않습니다.</p>
+                            </div>
+                            <div id="{$eguarantee_personal_id}">
+                                <p>생년월일 : {$form.eguarantee_year} 년 {$form.eguarantee_month} 월 {$form.eguarantee_day} 일</p>
+                                <p>성별 : {$form.eguarantee_user_gender}</p>
+                                <p>개인정보 이용동의 : {$form.eguarantee_personal_agreement}</p>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <!-- Daum 비회원 구매 동의 -->
+                    <tbody class="{$daum_agreement_display|display}">
+                    <tr>
+                        <th scope="row">Daum 비회원 구매<br />쇼핑정보 제공동의</th>
+                        <td>
+                            <div class="textArea">
+                                {$form.daum_terms}
+                                <a href="#none" onclick="{$daum_agreement_script}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_more.gif" alt="전체보기" /></a>
+                            </div>
+                            <p>{$form.daum_agreement_chk}<label for="daum_agreement_chk0"><strong>동의함</strong></label></p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 최종결제금액 -->
+        <div class="total">
+            <h4><strong id="{$current_pay_name}">{$current_pay_name_default}</strong> <span>최종결제 금액</span></h4>
+            <p class="price"><span>{$price_unit_head}</span>{$form.total_price}<span>{$price_unit_tail}</span></p>
+            <p class="paymentAgree" id="{$chk_purchase_agreement}">{$form.chk_purchase_agreement}</p>
+            <div class="button"><a href="#none"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/order/btn_payment.gif" id="{$btn_payment_id}" alt="결제하기" /></a></div>
+            <div class="mileage">
+                <p><strong>총 적립예정금액</strong><span id="{$total_mileage_price_id}">{$price_unit_head}{$total_mileage_price}{$price_unit_tail}</span></p>
+                <ul>
+                    <li><strong>상품별 {$mileage_name}</strong><span id="{$total_product_mileage_price_id}">{$price_unit_head}{$total_product_mileage_price}{$mileage_unit}{$price_unit_tail}</span></li>
+                    <li><strong>회원 {$mileage_name}</strong><span id="{$total_member_mileage_price_id}">{$price_unit_head}{$total_member_mileage_price}{$mileage_unit}</span></li>
+                    <li><strong>쿠폰 {$mileage_name}</strong><span id="{$total_coupon_mileage_price_id}">{$price_unit_head}0{$mileage_unit}</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 무이자 할부 이용안내 -->
+    <div class="freeInfo">
+        <h3>무이자 할부 이용안내</h3>
+        <p>무이자할부가 적용되지 않은 상품과 무이자할부가 가능한 상품을 동시에 구매할 경우 전체 주문 상품 금액에 대해 무이자할부가 적용되지 않습니다.<br />무이자할부를 원하시는 경우 장바구니에서 무이자할부 상품만 선택하여 주문하여 주시기 바랍니다.</p>
+    </div>
+    <!-- 이용안내 -->
+    <div class="help">
+        <h3>이용안내</h3>
+        <div class="content">
+            <h4>WindowXP 서비스팩2를 설치하신후 결제가 정상적인 단계로 처리되지 않는경우, 아래의 절차에 따라 해결하시기 바랍니다.</h4>
+            <ul>
+                <li class="item1">{$pg_safe_install}</li>
+                <li class="item2">{$pg_ms_info}</li>
+                <li class="item3">{$pg_manual_install}</li>
+            </ul>
+            <!-- 크로스 브라우징 지원 -->
+            <div class="{$closs_display|display}">
+                <h4>아래의 쇼핑몰일 경우에는 모든 브라우저 사용이 가능합니다.</h4>
+                <ul>
+                    <li class="item1"><strong>KG이니시스, KCP, LG U+를 사용하는 쇼핑몰일 경우</strong></li>
+                    <li class="item2">결제가능브라우저 : 크롬,파이어폭스,사파리,오페라 브라우저에서 결제 가능<br />(단, window os 사용자에 한하며 리눅스/mac os 사용자는 사용불가)</li>
+                    <li class="item3">최초 결제 시도시에는 플러그인을 추가 설치 후 반드시 브라우저 종료 후 재시작해야만 결제가 가능합니다.<br />(무통장, 휴대폰결제 포함)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 총 주문금액 상세내역 레이어 -->
+    <div id="{$total_order_layer}" class="totalDetail">
+        <h3>총 주문금액 상세내역</h3>
+        <div class="content">
+            <p id="{$total_product_ship_price_detail_id}">{$price_unit_head}{$total_product_ship_price}{$price_unit_tail}</p>
+            <ul>
+                <li><strong>상품금액</strong><span>{$price_unit_head}{$total_product_base_price}{$price_unit_tail}</span></li>
+                <li class="{$total_vat_price_display|display}"><strong>부가세</strong><span>{$price_unit_head}{$total_vat_price}{$price_unit_tail}</span></li>
+                <li><strong>배송비</strong><span id="{$total_ship_price_id}">{$price_unit_head}{$total_ship_price}{$price_unit_tail}</span></li>
+                <li><strong>지역별 배송비</strong><span id="{$total_local_ship_price_id}">{$price_unit_head}0{$price_unit_tail}</span></li>
+            </ul>
+        </div>
+        <div class="close"><a href="#none" onclick="{$total_order_layer_off}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png" alt="닫기" /></a></div>
+    </div>
+    <!-- 추가할인금액 내역보기 레이어 -->
+    <div id="{$total_benefit_layer}" class="totalDetail">
+        <h3>추가할인금액 내역보기</h3>
+        <div class="content">
+            <p id="{$total_benefit_price_layer_id}">{$price_unit_head}{$total_benefit_price}{$price_unit_tail}</p>
+            <ul>
+                <li class="{$total_periodsale_price_display|display}"><strong>기간할인</strong><span id="{$total_periodsale_price_id}">{$price_unit_head}{$total_periodsale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_membersale_price_display|display}"><strong>회원할인</strong><span id="{$total_membersale_price_id}">{$price_unit_head}{$total_membersale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_rebuysale_price_display|display}"><strong>{$rebuysale_head}재구매할인</strong><span id="{$total_rebuysale_price_id}">{$price_unit_head}{$total_rebuysale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_bulksale_price_display|display}"><strong>대량구매할인</strong><span id="{$total_bulksale_price_id}">{$price_unit_head}{$total_bulksale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_livelinkonsale_price_display|display}"><strong>바로가기(링콘)할인</strong><span id="{$total_livelinkonsale_price_id}">{$price_unit_head}{$total_livelinkonsale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_pbpsale_price_display|display}"><strong>어바웃pbp할인</strong><span id="{$total_pbpsale_price_id}">{$price_unit_head}{$total_pbpsale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_newproductsale_price|display}"><strong>신규상품할인</strong><span id="{$total_newproductsale_price_id}">{$price_unit_head}{$total_newproductsale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_paymethodsale_price_display|display}"><strong>결제수단할인</strong><span id="{$total_paymethodsale_price_id}">{$price_unit_head}{$total_paymethodsale_price}{$price_unit_tail}</span></li>
+                <li class="{$total_membergroupsale_price_display|display}"><strong>회원등급할인</strong><span id="{$total_membergroupsale_price_id}">{$price_unit_head}{$total_membergroupsale_price}{$price_unit_tail}</span></li>
+            </ul>
+        </div>
+        <div class="close"><a href="#none" onclick="{$total_benefit_layer_off}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/common/btn_close.png" alt="닫기" /></a></div>
+    </div>
+    <!-- 안심번호 팝업 레이어 -->
+    <div id="{$safe_phone_popup_layer}"></div>
+    <!-- 결제진행바 -->
+    <iframe id="{$payment_proc_id}" name="h_payment" width="0" height="0" frameborder="0" src=""></iframe>
+    <!-- //결제진행바 -->
+</div>

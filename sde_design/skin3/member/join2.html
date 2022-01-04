@@ -1,0 +1,164 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>회원 가입</strong></li>
+    </ol>
+</div>
+
+<div class="titleArea">
+    <h2>회원 가입</h2>
+</div>
+
+<div module="member_join">
+    <!--@css(/css/module/member/join.css)-->
+    <!--
+        $returnUrl = /member/join_result.html
+        $checkIdUrl = /member/check_id.html
+        $personalName = 이름
+        $companyName = 법인명
+        $companySsn = 법인번호
+     -->
+
+    <h3>기본정보</h3>
+    <p class="required"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 필수입력사항</p>
+    <div class="boardWrite">
+        <table border="1" summary="">
+            <caption>회원 기본정보</caption>
+            <tbody>
+            <tr class="{$display_use_id|display}">
+                <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 아이디</th>
+                <td>{$form.member_id} <span id="{$idMsg_id}"></span> (영문소문자/숫자, 4~16자)</td>
+            </tr>
+            <tr>
+                <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 비밀번호</th>
+                <td>{$form.passwd} {$passwd_type_desc}</td>
+            </tr>
+            <tr>
+                <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 비밀번호 확인</th>
+                <td>{$form.user_passwd_confirm}</td>
+            </tr>
+
+            <tr>
+                <th scope="row" id="{$name_title}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 이름</th>
+                <td>
+                    <span id="{$name_contents}">{$form.name}</span>
+                    <span id="under14Msg" class="displaynone">14세 미만 사용자는 법정대리인 동의가 필요합니다.</span>
+                </td>
+            </tr>
+            <tr id="{$companyRow}">
+                <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 상호명</th>
+                <td id="companyName">{$form.cname}</td>
+            </tr>
+            <tr id="{$companyNoRow}">
+                <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 사업자번호</th>
+                <td id="companySsn">
+                    {$form.cssn}
+                    <a href="#none" class="btnNormal {$display_cssn_dupl|display}" onclick="{$action_cssn_dupl}">중복확인</a>
+                    <span id="{$cssnMsg_id}"></span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">주소 <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" class="{$display_required_address|display}" alt="필수" /></th>
+                <td>
+                    {$form.postcode1}
+                    <a href="#none" onclick="{$action_find_address}" id="{$btn_find_post}"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/btn_zipcode.gif" alt="우편번호" /></a><br />
+                    {$form.addr1} 기본주소<br />
+                    {$form.addr2} 나머지주소
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">일반전화 <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" class="{$display_required_phone|display}" alt="필수" /></th>
+                <td>{$form.phone}</td>
+            </tr>
+            <tr>
+                <th scope="row">휴대전화 <img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" class="{$display_required_cell|display}" alt="필수" /></th>
+                <td>{$form.mobile}</td>
+            </tr>
+            <tr class="{$display_is_sms|display}">
+                <th scope="row">SMS 수신여부</th>
+                <td>{$form.is_sms}<p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/member/ico_required.gif" alt="필수" /> 이메일</th>
+                <td>{$form.email}</td>
+            </tr>
+            <tr class="{$display_is_news_mail|display}">
+                <th scope="row">이메일 수신여부</th>
+                <td>{$form.is_news_mail}<p>쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>전체 동의</h3>
+    <div class="ec-base-box typeThinBg gStrong">
+        <p>{$sAgreeAllChecked}<label for="sAgreeAllChecked"><strong>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</strong></label></p>
+    </div>
+
+    <div class="ec-base-box typeThinBg agreeArea">
+        <h3>[필수] 이용약관 동의</h3>
+        <div class="content">
+            {$service_desc}
+        </div>
+        <p class="check"><span>이용약관에 동의하십니까?</span> {$form.agree_service_check}</p>
+    </div>
+
+    <div class="ec-base-box typeThinBg agreeArea">
+        <h3>[필수] 개인정보 수집 및 이용 동의</h3>
+        <div class="content">
+            {$privacy_desc}
+        </div>
+        <p class="check"><span>개인정보 수집 및 이용에 동의하십니까?</span> {$form.agree_privacy_check}</p>
+    </div>
+
+    <div class="ec-base-box typeThinBg agreeArea {$display_privacy_optional|display}">
+        <h3>[선택] 개인정보 수집 및 이용 동의</h3>
+        <div class="content">
+            {$privacy_optional_desc}
+        </div>
+        <p class="check"><span>개인정보 수집 및 이용에 동의하십니까?</span> {$form.agree_privacy_optional_check}</p>
+    </div>
+
+    <div class="ec-base-box typeThinBg agreeArea {$display_information|display}">
+        <h3>[선택] 개인정보 제3자 제공 동의</h3>
+        <div class="content">
+            {$information_desc}
+        </div>
+        <p class="check"><span>개인정보 제3자 제공에 동의하십니까?</span> {$form.agree_information_check}</p>
+    </div>
+
+    <div class="ec-base-box typeThinBg agreeArea {$display_consignment|display}">
+        <h3>[선택] 개인정보 처리 위탁 동의</h3>
+        <div class="content">
+            {$consignment_desc}
+        </div>
+        <p class="check"><span>개인정보 처리 위탁에 동의하십니까?</span> {$form.agree_consignment_check}</p>
+    </div>
+
+    <div class="ec-base-box typeThinBg agreeArea {$display_marketing|display}">
+        <h3>[선택] 쇼핑정보 수신 동의</h3>
+        <div class="content">
+            <p>할인쿠폰 및 혜택, 이벤트, 신상품 소식 등 쇼핑몰에서 제공하는 유익한 쇼핑정보를 SMS나 이메일로 받아보실 수 있습니다.</p>
+            <p>단, 주문/거래 정보 및 주요 정책과 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.</p>
+            <p>선택 약관에 동의하지 않으셔도 회원가입은 가능하며, 회원가입 후 회원정보수정 페이지에서 언제든지 수신여부를 변경하실 수 있습니다.</p>
+        </div>
+        <ul class="check">
+            <li class="{$display_is_sms|display}">
+                <span>SMS 수신을 동의하십니까?</span> {$form.is_sms}
+            </li>
+            <li class="{$display_is_news_mail|display}">
+                <span>이메일 수신을 동의하십니까?</span> {$form.is_news_mail}
+            </li>
+        </ul>
+    </div>
+
+    <div class="ec-base-button">
+        <a href="#none" class="btnSubmitFix sizeM" onclick="{$action_func_join}">회원가입</a>
+    </div>
+
+    <!--@import(/member/join_confirm.html)-->
+</div>
